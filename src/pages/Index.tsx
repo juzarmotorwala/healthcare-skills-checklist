@@ -1,16 +1,115 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import { checklists, specialtyGroups, getChecklistsByGroup } from "@/data/checklistData";
+import { Search, ClipboardCheck, ArrowRight } from "lucide-react";
+import { Input } from "@/components/ui/input";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+export default function Index() {
+  const [search, setSearch] = useState("");
+
+  const filteredByGroup = specialtyGroups.map(group => ({
+    group,
+    items: getChecklistsByGroup(group).filter(c =>
+      c.shortTitle.toLowerCase().includes(search.toLowerCase()) ||
+      c.title.toLowerCase().includes(search.toLowerCase())
+    ),
+  })).filter(g => g.items.length > 0);
+
+  const totalChecklists = checklists.length;
+  const populatedCount = checklists.filter(c => c.categories.length > 0).length;
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="min-h-screen bg-background">
+      {/* Hero */}
+      <header className="relative overflow-hidden border-b">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
+        <div className="relative max-w-6xl mx-auto px-4 py-16 sm:py-24 text-center">
+          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1.5 rounded-full text-xs font-medium mb-6">
+            <ClipboardCheck className="h-3.5 w-3.5" />
+            {totalChecklists} Professional Checklists
+          </div>
+          <h1 className="text-3xl sm:text-5xl font-serif text-foreground mb-4 tracking-tight">
+            Healthcare Skills
+            <br />
+            <span className="text-primary">Competency Portal</span>
+          </h1>
+          <p className="text-muted-foreground max-w-lg mx-auto mb-8 text-sm sm:text-base leading-relaxed">
+            Comprehensive skills checklists for healthcare professionals. Self-assess
+            your competencies across {totalChecklists} clinical specialties.
+          </p>
+
+          {/* Search */}
+          <div className="max-w-md mx-auto relative">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+            <Input
+              placeholder="Search specialties..."
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+              className="pl-10 h-11 bg-card shadow-sm"
+            />
+          </div>
+        </div>
+      </header>
+
+      {/* Directory */}
+      <main className="max-w-6xl mx-auto px-4 py-12">
+        {filteredByGroup.length === 0 ? (
+          <div className="text-center py-16">
+            <p className="text-muted-foreground">No checklists match "{search}"</p>
+          </div>
+        ) : (
+          <div className="space-y-12">
+            {filteredByGroup.map(({ group, items }, gIdx) => (
+              <section key={group} className="animate-fade-in" style={{ animationDelay: `${gIdx * 80}ms` }}>
+                <div className="flex items-center gap-3 mb-4">
+                  <h2 className="text-xl font-serif text-foreground">{group}</h2>
+                  <span className="text-xs bg-muted text-muted-foreground px-2 py-0.5 rounded-full">
+                    {items.length}
+                  </span>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                  {items.map(item => {
+                    const hasContent = item.categories.length > 0;
+                    return (
+                      <Link
+                        key={item.slug}
+                        to={`/checklist/${item.slug}`}
+                        className="group flex items-center gap-3 bg-card border rounded-lg px-4 py-3 hover:shadow-md hover:border-primary/30 transition-all duration-200"
+                      >
+                        <span className="text-xl flex-shrink-0">{item.icon}</span>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm font-medium text-foreground truncate group-hover:text-primary transition-colors">
+                            {item.shortTitle}
+                          </p>
+                          {hasContent ? (
+                            <p className="text-xs text-secondary">
+                              {item.categories.length} categories ·{" "}
+                              {item.categories.reduce((s, c) => s + c.skills.length, 0)} skills
+                            </p>
+                          ) : (
+                            <p className="text-xs text-muted-foreground">Coming soon</p>
+                          )}
+                        </div>
+                        <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all flex-shrink-0" />
+                      </Link>
+                    );
+                  })}
+                </div>
+              </section>
+            ))}
+          </div>
+        )}
+      </main>
+
+      {/* Footer */}
+      <footer className="border-t bg-card/50 mt-12">
+        <div className="max-w-6xl mx-auto px-4 py-8 text-center">
+          <p className="text-xs text-muted-foreground">
+            Healthcare Skills Competency Portal · {totalChecklists} Checklists ·{" "}
+            {populatedCount} Fully Populated
+          </p>
+        </div>
+      </footer>
     </div>
   );
-};
-
-const Index = PlaceholderIndex;
-
-export default Index;
+}
