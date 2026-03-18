@@ -8,6 +8,7 @@ export interface ProficiencyRatings {
 
 interface ChecklistTableProps {
   categories: ChecklistCategory[];
+  onRatingChange?: () => void;
 }
 
 export interface ChecklistTableHandle {
