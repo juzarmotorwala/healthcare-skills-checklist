@@ -1,12 +1,29 @@
+import { useState, useRef, useCallback } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getChecklistBySlug } from "@/data/checklistData";
-import ChecklistTable from "@/components/ChecklistTable";
+import ChecklistTable, { ChecklistTableHandle } from "@/components/ChecklistTable";
+import CandidateInfoForm, { CandidateInfo } from "@/components/CandidateInfoForm";
+import SavePdfButton from "@/components/SavePdfButton";
 import { ArrowLeft, ClipboardList } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export default function ChecklistPage() {
   const { slug } = useParams<{ slug: string }>();
   const checklist = slug ? getChecklistBySlug(slug) : undefined;
+  const tableRef = useRef<ChecklistTableHandle>(null);
+
+  const [candidateInfo, setCandidateInfo] = useState<CandidateInfo>({
+    fullName: "",
+    email: "",
+    lastFourSSN: "",
+    dob: "",
+  });
+
+  // Force re-render when ratings change to update button state
+  const [, setRatingTick] = useState(0);
+  const bumpTick = useCallback(() => setRatingTick(t => t + 1), []);
 
   if (!checklist) {
     return (
@@ -26,9 +43,22 @@ export default function ChecklistPage() {
 
   const hasContent = checklist.categories.length > 0;
 
+  const infoComplete =
+    candidateInfo.fullName.trim().length > 0 &&
+    emailRegex.test(candidateInfo.email.trim()) &&
+    candidateInfo.lastFourSSN.length === 4 &&
+    candidateInfo.dob.length > 0;
+
+  const allRated =
+    tableRef.current
+      ? tableRef.current.getRatedCount() === tableRef.current.getTotalSkills() &&
+        tableRef.current.getTotalSkills() > 0
+      : false;
+
+  const canSave = infoComplete && allRated;
+
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
       <header className="border-b bg-card/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="max-w-4xl mx-auto px-4 py-3 flex items-center gap-3">
           <Link
@@ -47,20 +77,50 @@ export default function ChecklistPage() {
       </header>
 
       <main className="max-w-4xl mx-auto px-4 py-8">
-        {/* Title section */}
         <div className="mb-8">
           <h1 className="text-2xl sm:text-3xl font-serif text-foreground mb-2">
             {checklist.title}
           </h1>
           <p className="text-muted-foreground text-sm leading-relaxed max-w-2xl">
-            Rate your proficiency for each skill using the 1–4 scale below. This
-            checklist serves as a guideline for client facilities to assess your
-            experience level.
+            Rate your proficiency for each skill using the 1–4 scale below. Fill
+            in your details and rate every skill to enable PDF download.
           </p>
         </div>
 
         {hasContent ? (
-          <ChecklistTable categories={checklist.categories} />
+          <div className="space-y-6">
+            <CandidateInfoForm info={candidateInfo} onChange={setCandidateInfo} />
+
+            <ChecklistTable
+              ref={tableRef}
+              categories={checklist.categories}
+              onRatingChange={bumpTick}
+            />
+
+            {/* Save section */}
+            <div className="bg-card rounded-lg border shadow-sm p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div>
+                <p className="text-sm font-medium text-foreground">
+                  {canSave
+                    ? "✅ Ready to save — all fields complete!"
+                    : "Complete all fields to save"}
+                </p>
+                {!canSave && (
+                  <ul className="text-xs text-muted-foreground mt-1 space-y-0.5">
+                    {!infoComplete && <li>• Fill in all candidate information</li>}
+                    {!allRated && <li>• Rate every skill (select 1–4)</li>}
+                  </ul>
+                )}
+              </div>
+              <SavePdfButton
+                disabled={!canSave}
+                candidateInfo={candidateInfo}
+                checklistTitle={checklist.title}
+                categories={checklist.categories}
+                ratings={tableRef.current?.getRatings() ?? {}}
+              />
+            </div>
+          </div>
         ) : (
           <div className="bg-card border rounded-xl p-12 text-center space-y-4">
             <ClipboardList className="h-12 w-12 mx-auto text-muted-foreground/40" />
