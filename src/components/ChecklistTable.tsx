@@ -32,7 +32,7 @@ const proficiencyColors = [
 ];
 
 const ChecklistTable = forwardRef<ChecklistTableHandle, ChecklistTableProps>(
-  ({ categories }, ref) => {
+  ({ categories, onRatingChange }, ref) => {
     const [ratings, setRatings] = useState<ProficiencyRatings>({});
     const [collapsed, setCollapsed] = useState<Record<string, boolean>>({});
 
