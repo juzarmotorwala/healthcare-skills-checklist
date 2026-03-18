@@ -55,6 +55,7 @@ const ChecklistTable = forwardRef<ChecklistTableHandle, ChecklistTableProps>(
         ...prev,
         [skill]: prev[skill] === value ? null : value,
       }));
+      onRatingChange?.();
     };
 
     const allRated = ratedSkills === totalSkills && totalSkills > 0;
