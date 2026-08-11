@@ -24,9 +24,13 @@ export default function ChecklistPage() {
     dob: "",
   });
 
-  // Force re-render when ratings change to update button state
-  const [, setRatingTick] = useState(0);
-  const bumpTick = useCallback(() => setRatingTick(t => t + 1), []);
+  // Rated count is lifted into real state (updated with the value the child
+  // just computed) rather than read off tableRef during this render — the
+  // ref is only current *after* the child commits, which is one click behind
+  // during this component's own render pass. That lag was capping the
+  // submit button at permanently-disabled once every skill was rated.
+  const [ratedCount, setRatedCount] = useState(0);
+  const handleRatingChange = useCallback((count: number) => setRatedCount(count), []);
 
   if (!checklist) {
     return (
@@ -55,11 +59,8 @@ export default function ChecklistPage() {
     candidateInfo.lastFourSSN.length === 4 &&
     candidateInfo.dob.length > 0;
 
-  const allRated =
-    tableRef.current
-      ? tableRef.current.getRatedCount() === tableRef.current.getTotalSkills() &&
-        tableRef.current.getTotalSkills() > 0
-      : false;
+  const totalSkills = checklist.categories.reduce((sum, cat) => sum + cat.skills.length, 0);
+  const allRated = totalSkills > 0 && ratedCount === totalSkills;
 
   const canSave = infoComplete && allRated;
 
@@ -102,7 +103,7 @@ export default function ChecklistPage() {
             <ChecklistTable
               ref={tableRef}
               categories={checklist.categories}
-              onRatingChange={bumpTick}
+              onRatingChange={handleRatingChange}
             />
 
             {/* Save section */}

@@ -11,7 +11,13 @@ export interface ProficiencyRatings {
 
 interface ChecklistTableProps {
   categories: ChecklistCategory[];
-  onRatingChange?: () => void;
+  // Called with the freshly-computed rated count whenever a rating changes.
+  // We pass the value directly rather than making the parent read it off a
+  // ref during its own render — refs are only guaranteed fresh *after* the
+  // child has committed, and a parent reading tableRef.current mid-render
+  // was seeing last click's value, one click behind (submit button could
+  // get stuck disabled forever on the very last skill rated).
+  onRatingChange?: (ratedCount: number) => void;
 }
 
 export interface ChecklistTableHandle {
@@ -56,11 +62,13 @@ const ChecklistTable = forwardRef<ChecklistTableHandle, ChecklistTableProps>(
     };
 
     const setRating = (key: string, value: number) => {
-      setRatings(prev => ({
-        ...prev,
-        [key]: prev[key] === value ? null : value,
-      }));
-      onRatingChange?.();
+      const next = {
+        ...ratings,
+        [key]: ratings[key] === value ? null : value,
+      };
+      setRatings(next);
+      const nextRatedCount = Object.values(next).filter(v => v !== null && v !== undefined).length;
+      onRatingChange?.(nextRatedCount);
     };
 
     const allRated = ratedSkills === totalSkills && totalSkills > 0;

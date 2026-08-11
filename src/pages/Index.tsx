@@ -71,9 +71,6 @@ export default function Index() {
               <section key={group} className="animate-fade-in" style={{ animationDelay: `${gIdx * 80}ms` }}>
                 <div className="flex items-center gap-3 mb-4">
                   <h2 className="text-xl font-serif text-foreground">{group}</h2>
-                  <span className="text-xs bg-muted text-muted-foreground px-2 py-0.5 rounded-full">
-                    {items.length}
-                  </span>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                   {items.map(item => {
