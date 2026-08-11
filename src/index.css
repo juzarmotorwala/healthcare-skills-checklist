@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=DM+Serif+Display&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=DM+Serif+Display&display=swap');
 
 @layer base {
   :root {
@@ -15,10 +15,10 @@
     --popover: 0 0% 100%;
     --popover-foreground: 210 29% 15%;
 
-    --primary: 210 65% 45%;
+    --primary: 203 74% 51%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 168 40% 45%;
+    --secondary: 125 90% 28%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 210 20% 94%;
@@ -27,12 +27,12 @@
     --accent: 210 30% 92%;
     --accent-foreground: 210 29% 15%;
 
-    --destructive: 0 72% 51%;
+    --destructive: 8 75% 51%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 210 20% 90%;
     --input: 210 20% 90%;
-    --ring: 210 65% 45%;
+    --ring: 203 74% 51%;
 
     --radius: 0.625rem;
 
@@ -45,10 +45,11 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    --clinical-green: 168 40% 45%;
-    --clinical-blue: 210 65% 45%;
+    --clinical-green: 125 90% 28%;
+    --clinical-blue: 203 74% 51%;
     --clinical-light-blue: 210 60% 96%;
     --clinical-warm: 30 40% 96%;
+    --brand-red: 8 75% 51%;
   }
 
   .dark {
@@ -61,10 +62,10 @@
     --popover: 210 29% 13%;
     --popover-foreground: 210 20% 94%;
 
-    --primary: 210 65% 55%;
+    --primary: 203 74% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 168 40% 50%;
+    --secondary: 125 60% 40%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 210 20% 18%;
@@ -73,12 +74,12 @@
     --accent: 210 20% 18%;
     --accent-foreground: 210 20% 94%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 8 60% 40%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 210 20% 20%;
     --input: 210 20% 20%;
-    --ring: 210 65% 55%;
+    --ring: 203 74% 60%;
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -89,10 +90,11 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    --clinical-green: 168 40% 50%;
-    --clinical-blue: 210 65% 55%;
+    --clinical-green: 125 60% 40%;
+    --clinical-blue: 203 74% 60%;
     --clinical-light-blue: 210 30% 15%;
     --clinical-warm: 30 20% 15%;
+    --brand-red: 8 60% 40%;
   }
 }
 

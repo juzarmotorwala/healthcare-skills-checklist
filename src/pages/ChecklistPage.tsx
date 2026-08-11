@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { getChecklistBySlug } from "@/data/checklistData";
 import ChecklistTable, { ChecklistTableHandle } from "@/components/ChecklistTable";
 import CandidateInfoForm, { CandidateInfo } from "@/components/CandidateInfoForm";
-import SavePdfButton from "@/components/SavePdfButton";
+import SubmitButton from "@/components/SubmitButton";
 import { ArrowLeft, ClipboardList } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -17,6 +17,9 @@ export default function ChecklistPage() {
   const [candidateInfo, setCandidateInfo] = useState<CandidateInfo>({
     fullName: "",
     email: "",
+    phone: "",
+    city: "",
+    state: "",
     lastFourSSN: "",
     dob: "",
   });
@@ -46,6 +49,9 @@ export default function ChecklistPage() {
   const infoComplete =
     candidateInfo.fullName.trim().length > 0 &&
     emailRegex.test(candidateInfo.email.trim()) &&
+    candidateInfo.phone.trim().length >= 7 &&
+    candidateInfo.city.trim().length > 0 &&
+    candidateInfo.state.trim().length > 0 &&
     candidateInfo.lastFourSSN.length === 4 &&
     candidateInfo.dob.length > 0;
 
@@ -61,6 +67,7 @@ export default function ChecklistPage() {
     <div className="min-h-screen bg-background">
       <header className="border-b bg-card/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="max-w-4xl mx-auto px-4 py-3 flex items-center gap-3">
+          <img src="/brand/monogram.png" alt="BrothersTech" className="h-7 w-7 flex-shrink-0" />
           <Link
             to="/"
             className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -83,7 +90,8 @@ export default function ChecklistPage() {
           </h1>
           <p className="text-muted-foreground text-sm leading-relaxed max-w-2xl">
             Rate your proficiency for each skill using the 1–4 scale below. Fill
-            in your details and rate every skill to enable PDF download.
+            in your details and rate every skill to submit — a copy will be
+            emailed to you automatically.
           </p>
         </div>
 
@@ -102,8 +110,8 @@ export default function ChecklistPage() {
               <div>
                 <p className="text-sm font-medium text-foreground">
                   {canSave
-                    ? "✅ Ready to save — all fields complete!"
-                    : "Complete all fields to save"}
+                    ? "✅ Ready to submit — all fields complete!"
+                    : "Complete all fields to submit"}
                 </p>
                 {!canSave && (
                   <ul className="text-xs text-muted-foreground mt-1 space-y-0.5">
@@ -112,8 +120,9 @@ export default function ChecklistPage() {
                   </ul>
                 )}
               </div>
-              <SavePdfButton
+              <SubmitButton
                 disabled={!canSave}
+                slug={checklist.slug}
                 candidateInfo={candidateInfo}
                 checklistTitle={checklist.title}
                 categories={checklist.categories}

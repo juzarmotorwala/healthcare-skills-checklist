@@ -24,6 +24,11 @@ export default function Index() {
       <header className="relative overflow-hidden border-b">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
         <div className="relative max-w-6xl mx-auto px-4 py-16 sm:py-24 text-center">
+          <img
+            src="/brand/monogram.png"
+            alt="BrothersTech"
+            className="h-14 w-14 mx-auto mb-4"
+          />
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1.5 rounded-full text-xs font-medium mb-6">
             <ClipboardCheck className="h-3.5 w-3.5" />
             {totalChecklists} Professional Checklists
@@ -33,6 +38,9 @@ export default function Index() {
             <br />
             <span className="text-primary">Competency Portal</span>
           </h1>
+          <p className="text-xs uppercase tracking-widest text-muted-foreground/70 mb-2">
+            BrothersTech Inc.
+          </p>
           <p className="text-muted-foreground max-w-lg mx-auto mb-8 text-sm sm:text-base leading-relaxed">
             Comprehensive skills checklists for healthcare professionals. Self-assess
             your competencies across {totalChecklists} clinical specialties.
@@ -103,10 +111,13 @@ export default function Index() {
 
       {/* Footer */}
       <footer className="border-t bg-card/50 mt-12">
-        <div className="max-w-6xl mx-auto px-4 py-8 text-center">
+        <div className="max-w-6xl mx-auto px-4 py-8 text-center space-y-1">
           <p className="text-xs text-muted-foreground">
             Healthcare Skills Competency Portal · {totalChecklists} Checklists ·{" "}
             {populatedCount} Fully Populated
+          </p>
+          <p className="text-xs text-muted-foreground/60">
+            BrothersTech Inc. — Built by brothers. Powered by tech.
           </p>
         </div>
       </footer>
