@@ -1,6 +1,6 @@
 import { jsPDF } from "jspdf";
 import { ChecklistCategory } from "@/data/checklistData";
-import { MONOGRAM_BASE64, WORDMARK_BASE64, WORDMARK_ASPECT } from "@/lib/brandAssets";
+import { COMBINED_LOGO_BASE64, COMBINED_LOGO_ASPECT } from "@/lib/brandAssets";
 
 const proficiencyLabels = ["No Experience", "Need Training", "With Supervision", "Independent"];
 
@@ -37,17 +37,14 @@ export function downloadSubmissionPdf(sub: SubmissionForPdf) {
     }
   };
 
-  const logoBoxHeight = 14;
+  const logoHeight = 12;
+  const logoWidth = logoHeight * COMBINED_LOGO_ASPECT;
   try {
-    doc.addImage(`data:image/png;base64,${MONOGRAM_BASE64}`, "PNG", margin, y, logoBoxHeight, logoBoxHeight);
-    const wordmarkHeight = 8;
-    const wordmarkWidth = wordmarkHeight * WORDMARK_ASPECT;
-    const wordmarkY = y + (logoBoxHeight - wordmarkHeight) / 2;
-    doc.addImage(`data:image/png;base64,${WORDMARK_BASE64}`, "PNG", margin + 18, wordmarkY, wordmarkWidth, wordmarkHeight);
+    doc.addImage(`data:image/png;base64,${COMBINED_LOGO_BASE64}`, "PNG", margin, y, logoWidth, logoHeight);
   } catch (_e) {
     // logo embed is best-effort; continue without it if it fails
   }
-  y += logoBoxHeight + 8;
+  y += logoHeight + 10;
 
   doc.setFontSize(16);
   doc.setFont("helvetica", "bold");
