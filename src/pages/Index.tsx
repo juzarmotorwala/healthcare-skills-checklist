@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { checklists, specialtyGroups, getChecklistsByGroup } from "@/data/checklistData";
-import { Search, ClipboardCheck, ArrowRight } from "lucide-react";
+import { Search, ArrowRight } from "lucide-react";
 import { Input } from "@/components/ui/input";
 
 export default function Index() {
@@ -16,7 +16,6 @@ export default function Index() {
   })).filter(g => g.items.length > 0);
 
   const totalChecklists = checklists.length;
-  const populatedCount = checklists.filter(c => c.categories.length > 0).length;
 
   return (
     <div className="min-h-screen bg-background">
@@ -24,26 +23,27 @@ export default function Index() {
       <header className="relative overflow-hidden border-b">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
         <div className="relative max-w-6xl mx-auto px-4 py-16 sm:py-24 text-center">
-          <img
-            src="/brand/monogram.png"
-            alt="BrothersTech"
-            className="h-14 w-14 mx-auto mb-4"
-          />
-          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-3 py-1.5 rounded-full text-xs font-medium mb-6">
-            <ClipboardCheck className="h-3.5 w-3.5" />
-            {totalChecklists} Professional Checklists
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <img
+              src="/brand/monogram.png"
+              alt="BrothersTech"
+              className="h-12 w-12"
+            />
+            <img
+              src="/brand/wordmark.png"
+              alt="Brotherstech"
+              className="h-7 sm:h-8 w-auto"
+            />
           </div>
           <h1 className="text-3xl sm:text-5xl font-serif text-foreground mb-4 tracking-tight">
             Healthcare Skills
             <br />
             <span className="text-primary">Competency Portal</span>
           </h1>
-          <p className="text-xs uppercase tracking-widest text-muted-foreground/70 mb-2">
-            BrothersTech Inc.
-          </p>
           <p className="text-muted-foreground max-w-lg mx-auto mb-8 text-sm sm:text-base leading-relaxed">
-            Comprehensive skills checklists for healthcare professionals. Self-assess
-            your competencies across {totalChecklists} clinical specialties.
+            Comprehensive Skills Checklists For Healthcare Professionals.
+            <br />
+            Self-Assess Your Competencies Across {totalChecklists} Clinical Specialties.
           </p>
 
           {/* Search */}
@@ -89,12 +89,7 @@ export default function Index() {
                           <p className="text-sm font-medium text-foreground truncate group-hover:text-primary transition-colors">
                             {item.shortTitle}
                           </p>
-                          {hasContent ? (
-                            <p className="text-xs text-secondary">
-                              {item.categories.length} categories ·{" "}
-                              {item.categories.reduce((s, c) => s + c.skills.length, 0)} skills
-                            </p>
-                          ) : (
+                          {!hasContent && (
                             <p className="text-xs text-muted-foreground">Coming soon</p>
                           )}
                         </div>
@@ -111,13 +106,9 @@ export default function Index() {
 
       {/* Footer */}
       <footer className="border-t bg-card/50 mt-12">
-        <div className="max-w-6xl mx-auto px-4 py-8 text-center space-y-1">
+        <div className="max-w-6xl mx-auto px-4 py-8 text-center">
           <p className="text-xs text-muted-foreground">
-            Healthcare Skills Competency Portal · {totalChecklists} Checklists ·{" "}
-            {populatedCount} Fully Populated
-          </p>
-          <p className="text-xs text-muted-foreground/60">
-            BrothersTech Inc. — Built by brothers. Powered by tech.
+            Healthcare Skills Competency Portal — BrothersTech Inc. All Rights Reserved {new Date().getFullYear()}.
           </p>
         </div>
       </footer>

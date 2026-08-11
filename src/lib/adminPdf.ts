@@ -1,5 +1,6 @@
 import { jsPDF } from "jspdf";
 import { ChecklistCategory } from "@/data/checklistData";
+import { MONOGRAM_BASE64, WORDMARK_BASE64, WORDMARK_ASPECT } from "@/lib/brandAssets";
 
 const proficiencyLabels = ["No Experience", "Need Training", "With Supervision", "Independent"];
 
@@ -14,6 +15,10 @@ export interface SubmissionForPdf {
   candidateDob: string;
   categories: ChecklistCategory[];
   ratings: Record<string, number | null>;
+  // ISO timestamp (or any Date-parseable string) of the original submission —
+  // used in the electronic attestation line so it reflects when the candidate
+  // actually submitted, not when the admin re-downloaded it.
+  submittedAt: string;
 }
 
 // Regenerates the exact same PDF the candidate received, from stored submission
@@ -32,12 +37,23 @@ export function downloadSubmissionPdf(sub: SubmissionForPdf) {
     }
   };
 
-  doc.setFontSize(18);
-  doc.setFont("helvetica", "bold");
-  doc.text(sub.checklistTitle, margin, y);
-  y += 10;
+  try {
+    doc.addImage(`data:image/png;base64,${MONOGRAM_BASE64}`, "PNG", margin, y - 10, 14, 14);
+    const wordmarkHeight = 6;
+    const wordmarkWidth = wordmarkHeight * WORDMARK_ASPECT;
+    doc.addImage(`data:image/png;base64,${WORDMARK_BASE64}`, "PNG", margin + 18, y - 9, wordmarkWidth, wordmarkHeight);
+  } catch (_e) {
+    // logo embed is best-effort; continue without it if it fails
+  }
 
-  doc.setFontSize(9);
+  y += 3;
+  doc.setFontSize(16);
+  doc.setFont("helvetica", "bold");
+  doc.setTextColor(20, 20, 20);
+  doc.text(sub.checklistTitle, margin, y);
+  y += 8;
+
+  doc.setFontSize(8);
   doc.setFont("helvetica", "normal");
   doc.setTextColor(120, 120, 120);
   doc.text(`Re-generated: ${new Date().toLocaleDateString()}`, margin, y);
@@ -117,16 +133,25 @@ export function downloadSubmissionPdf(sub: SubmissionForPdf) {
     y += 4;
   }
 
-  checkPage(30);
-  y += 10;
-  doc.setDrawColor(150, 150, 150);
-  doc.line(margin, y, margin + 80, y);
+  checkPage(20);
+  y += 8;
+  const submittedAt = new Date(sub.submittedAt).toLocaleString();
+  doc.setDrawColor(200, 200, 200);
+  doc.setFillColor(248, 250, 252);
+  doc.roundedRect(margin, y, contentWidth, 16, 2, 2, "FD");
   doc.setFontSize(8);
-  doc.setTextColor(100, 100, 100);
-  doc.text("Candidate Signature", margin, y + 5);
-
-  doc.line(margin + 100, y, margin + contentWidth, y);
-  doc.text("Date", margin + 100, y + 5);
+  doc.setFont("helvetica", "italic");
+  doc.setTextColor(80, 80, 80);
+  const attestLine1 = doc.splitTextToSize(
+    `Electronically submitted by ${sub.candidateName} on ${submittedAt} via the BrothersTech Skills Checklist portal.`,
+    contentWidth - 8,
+  );
+  doc.text(attestLine1, margin + 4, y + 6);
+  doc.text(
+    "Submission of this form constitutes the candidate's attestation that the information above is accurate.",
+    margin + 4,
+    y + 12,
+  );
 
   const fileName = `${sub.checklistTitle.replace(/[^a-zA-Z0-9]/g, "_")}_${sub.candidateName.replace(/\s+/g, "_")}.pdf`;
   doc.save(fileName);

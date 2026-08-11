@@ -115,6 +115,7 @@ export default function AdminDashboard() {
       candidateDob: row.candidate_dob,
       categories: checklist?.categories ?? [],
       ratings: row.ratings,
+      submittedAt: row.created_at,
     });
   };
 
