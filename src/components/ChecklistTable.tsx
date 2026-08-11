@@ -1,9 +1,12 @@
-import { useState, useRef, forwardRef, useImperativeHandle } from "react";
+import { useState, forwardRef, useImperativeHandle } from "react";
 import { ChecklistCategory } from "@/data/checklistData";
 import { ChevronDown, ChevronRight } from "lucide-react";
 
+// Keyed by "categoryIndex:skillIndex" rather than skill name — some checklists
+// have two skills sharing the same name in different categories (or even the
+// same category), and name-based keys silently merged those into one entry.
 export interface ProficiencyRatings {
-  [skillName: string]: number | null;
+  [positionKey: string]: number | null;
 }
 
 interface ChecklistTableProps {
@@ -31,10 +34,12 @@ const proficiencyColors = [
   "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-300",
 ];
 
+const skillKey = (catIdx: number, skillIdx: number) => `${catIdx}:${skillIdx}`;
+
 const ChecklistTable = forwardRef<ChecklistTableHandle, ChecklistTableProps>(
   ({ categories, onRatingChange }, ref) => {
     const [ratings, setRatings] = useState<ProficiencyRatings>({});
-    const [collapsed, setCollapsed] = useState<Record<string, boolean>>({});
+    const [collapsed, setCollapsed] = useState<Record<number, boolean>>({});
 
     const totalSkills = categories.reduce((sum, cat) => sum + cat.skills.length, 0);
     const ratedSkills = Object.values(ratings).filter(v => v !== null && v !== undefined).length;
@@ -46,14 +51,14 @@ const ChecklistTable = forwardRef<ChecklistTableHandle, ChecklistTableProps>(
       getRatedCount: () => ratedSkills,
     }));
 
-    const toggleCategory = (title: string) => {
-      setCollapsed(prev => ({ ...prev, [title]: !prev[title] }));
+    const toggleCategory = (catIdx: number) => {
+      setCollapsed(prev => ({ ...prev, [catIdx]: !prev[catIdx] }));
     };
 
-    const setRating = (skill: string, value: number) => {
+    const setRating = (key: string, value: number) => {
       setRatings(prev => ({
         ...prev,
-        [skill]: prev[skill] === value ? null : value,
+        [key]: prev[key] === value ? null : value,
       }));
       onRatingChange?.();
     };
@@ -80,7 +85,7 @@ const ChecklistTable = forwardRef<ChecklistTableHandle, ChecklistTableProps>(
           </div>
           {!allRated && (
             <p className="text-xs text-muted-foreground mt-2">
-              All skills must be rated to save as PDF
+              All skills must be rated to submit
             </p>
           )}
         </div>
@@ -102,17 +107,17 @@ const ChecklistTable = forwardRef<ChecklistTableHandle, ChecklistTableProps>(
 
         {/* Categories */}
         {categories.map((category, catIdx) => {
-          const isCollapsed = collapsed[category.title];
-          const catRated = category.skills.filter(s => ratings[s.name] != null).length;
+          const isCollapsed = collapsed[catIdx];
+          const catRated = category.skills.filter((_, skillIdx) => ratings[skillKey(catIdx, skillIdx)] != null).length;
 
           return (
             <div
-              key={category.title}
+              key={catIdx}
               className="bg-card rounded-lg border shadow-sm overflow-hidden animate-fade-in"
               style={{ animationDelay: `${catIdx * 60}ms` }}
             >
               <button
-                onClick={() => toggleCategory(category.title)}
+                onClick={() => toggleCategory(catIdx)}
                 className="w-full flex items-center justify-between px-4 py-3 hover:bg-accent/50 transition-colors"
               >
                 <div className="flex items-center gap-2">
@@ -138,35 +143,38 @@ const ChecklistTable = forwardRef<ChecklistTableHandle, ChecklistTableProps>(
                       <span key={n} className="text-center">{n}</span>
                     ))}
                   </div>
-                  {category.skills.map((skill, idx) => (
-                    <div
-                      key={skill.name}
-                      className={`grid grid-cols-1 sm:grid-cols-[1fr_repeat(4,3rem)] gap-1 px-4 py-2.5 items-center ${
-                        idx % 2 === 0 ? "bg-card" : "bg-muted/20"
-                      } hover:bg-accent/30 transition-colors`}
-                    >
-                      <span className="text-sm text-foreground">{skill.name}</span>
-                      <div className="flex sm:contents gap-2 mt-1 sm:mt-0">
-                        {[1, 2, 3, 4].map(level => {
-                          const isSelected = ratings[skill.name] === level;
-                          return (
-                            <button
-                              key={level}
-                              onClick={() => setRating(skill.name, level)}
-                              className={`h-8 w-8 sm:h-7 sm:w-7 mx-auto rounded-md text-xs font-semibold transition-all duration-150 ${
-                                isSelected
-                                  ? proficiencyColors[level - 1] + " ring-2 ring-primary/30 scale-110"
-                                  : "bg-muted/50 text-muted-foreground hover:bg-accent"
-                              }`}
-                              aria-label={`Rate ${skill.name} as ${proficiencyLabels[level - 1]}`}
-                            >
-                              {level}
-                            </button>
-                          );
-                        })}
+                  {category.skills.map((skill, skillIdx) => {
+                    const key = skillKey(catIdx, skillIdx);
+                    return (
+                      <div
+                        key={key}
+                        className={`grid grid-cols-1 sm:grid-cols-[1fr_repeat(4,3rem)] gap-1 px-4 py-3 items-center ${
+                          skillIdx % 2 === 0 ? "bg-card" : "bg-muted/20"
+                        } hover:bg-accent/30 transition-colors`}
+                      >
+                        <span className="text-base font-medium text-foreground">{skill.name}</span>
+                        <div className="flex sm:contents gap-2 mt-1.5 sm:mt-0">
+                          {[1, 2, 3, 4].map(level => {
+                            const isSelected = ratings[key] === level;
+                            return (
+                              <button
+                                key={level}
+                                onClick={() => setRating(key, level)}
+                                className={`h-10 w-10 sm:h-9 sm:w-9 mx-auto rounded-md text-base font-bold transition-all duration-150 ${
+                                  isSelected
+                                    ? proficiencyColors[level - 1] + " ring-2 ring-primary/30 scale-110"
+                                    : "bg-muted/50 text-muted-foreground hover:bg-accent"
+                                }`}
+                                aria-label={`Rate ${skill.name} as ${proficiencyLabels[level - 1]}`}
+                              >
+                                {level}
+                              </button>
+                            );
+                          })}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               )}
             </div>

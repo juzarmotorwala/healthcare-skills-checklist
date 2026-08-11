@@ -37,16 +37,18 @@ export function downloadSubmissionPdf(sub: SubmissionForPdf) {
     }
   };
 
+  const logoBoxHeight = 14;
   try {
-    doc.addImage(`data:image/png;base64,${MONOGRAM_BASE64}`, "PNG", margin, y - 10, 14, 14);
-    const wordmarkHeight = 6;
+    doc.addImage(`data:image/png;base64,${MONOGRAM_BASE64}`, "PNG", margin, y, logoBoxHeight, logoBoxHeight);
+    const wordmarkHeight = 8;
     const wordmarkWidth = wordmarkHeight * WORDMARK_ASPECT;
-    doc.addImage(`data:image/png;base64,${WORDMARK_BASE64}`, "PNG", margin + 18, y - 9, wordmarkWidth, wordmarkHeight);
+    const wordmarkY = y + (logoBoxHeight - wordmarkHeight) / 2;
+    doc.addImage(`data:image/png;base64,${WORDMARK_BASE64}`, "PNG", margin + 18, wordmarkY, wordmarkWidth, wordmarkHeight);
   } catch (_e) {
     // logo embed is best-effort; continue without it if it fails
   }
+  y += logoBoxHeight + 8;
 
-  y += 3;
   doc.setFontSize(16);
   doc.setFont("helvetica", "bold");
   doc.setTextColor(20, 20, 20);
@@ -83,7 +85,8 @@ export function downloadSubmissionPdf(sub: SubmissionForPdf) {
   doc.text("1 = No Experience  |  2 = Need Training  |  3 = With Supervision  |  4 = Independent", margin, y);
   y += 8;
 
-  for (const category of sub.categories) {
+  for (let catIdx = 0; catIdx < sub.categories.length; catIdx++) {
+    const category = sub.categories[catIdx];
     checkPage(14);
     doc.setFillColor(240, 245, 250);
     doc.roundedRect(margin, y, contentWidth, 8, 1, 1, "F");
@@ -103,9 +106,10 @@ export function downloadSubmissionPdf(sub: SubmissionForPdf) {
     doc.text("Rating", margin + contentWidth - 30, y + 4);
     y += 7;
 
-    for (const skill of category.skills) {
+    for (let skillIdx = 0; skillIdx < category.skills.length; skillIdx++) {
+      const skill = category.skills[skillIdx];
       checkPage(7);
-      const rating = sub.ratings[skill.name];
+      const rating = sub.ratings[`${catIdx}:${skillIdx}`];
       doc.setFont("helvetica", "normal");
       doc.setFontSize(8);
       doc.setTextColor(50, 50, 50);
