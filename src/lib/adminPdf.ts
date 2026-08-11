@@ -1,6 +1,6 @@
 import { jsPDF } from "jspdf";
 import { ChecklistCategory } from "@/data/checklistData";
-import { MONOGRAM_BASE64, WORDMARK_BASE64, WORDMARK_ASPECT } from "@/lib/brandAssets";
+import { MONOGRAM_BASE64, NAME_FONT_BASE64, BRAND_GREEN, BRAND_BLUE } from "@/lib/brandAssets";
 
 const proficiencyLabels = ["No Experience", "Need Training", "With Supervision", "Independent"];
 
@@ -37,13 +37,21 @@ export function downloadSubmissionPdf(sub: SubmissionForPdf) {
     }
   };
 
-  const logoBoxHeight = 14;
+  const logoBoxHeight = 20;
   try {
     doc.addImage(`data:image/png;base64,${MONOGRAM_BASE64}`, "PNG", margin, y, logoBoxHeight, logoBoxHeight);
-    const wordmarkHeight = 8;
-    const wordmarkWidth = wordmarkHeight * WORDMARK_ASPECT;
-    const wordmarkY = y + (logoBoxHeight - wordmarkHeight) / 2;
-    doc.addImage(`data:image/png;base64,${WORDMARK_BASE64}`, "PNG", margin + 18, wordmarkY, wordmarkWidth, wordmarkHeight);
+    doc.addFileToVFS("NeueKaineBlackItalic.ttf", NAME_FONT_BASE64);
+    doc.addFont("NeueKaineBlackItalic.ttf", "NeueKaine", "italic", "bold");
+    doc.setFont("NeueKaine", "italic", "bold");
+    doc.setFontSize(26);
+    const nameX = margin + logoBoxHeight + 4;
+    const nameY = y + logoBoxHeight / 2 + 26 * 0.35 * 0.352778;
+    doc.setTextColor(...BRAND_GREEN);
+    doc.text("Brothers", nameX, nameY);
+    const brothersWidth = doc.getTextWidth("Brothers");
+    doc.setTextColor(...BRAND_BLUE);
+    doc.text("tech", nameX + brothersWidth, nameY);
+    doc.setFont("helvetica", "normal");
   } catch (_e) {
     // logo embed is best-effort; continue without it if it fails
   }
