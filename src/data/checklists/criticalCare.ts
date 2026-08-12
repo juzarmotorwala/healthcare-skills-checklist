@@ -12,7 +12,7 @@ export const criticalCareChecklists: ChecklistSpec[] = [
       { name: "Atropine" }, { name: "Dopamine" }, { name: "Dobutrex" }, { name: "Lidocaine" }, { name: "NTG" }, { name: "Morphine (Titrate)" }, { name: "Verapamil" }, { name: "Thrombolytic Agents" }, { name: "Prep/Titration of Emergency Drugs" }, { name: "Corticosteroids" }, { name: "Dilantin" }, { name: "Magnesium Sulfate" },
     ]},
     { title: "Respiratory", skills: [
-      { name: "Lung Transplant" }, { name: "Establishing an Airway" }, { name: "Pulse Oximetry" }, { name: "Interpretation of ABG" }, { name: "Drawing ABG Blood Sample from A-Line" }, { name: "Incentive Spirometer" },
+      { name: "Lung Transplant" }, { name: "Establishing an Airway" }, { name: "Pulse Oximetry" }, { name: "Interpretation of ABG" }, { name: "Drawing ABG Blood Sample from A-Line" }, { name: "Incentive Spirometer" }, { name: "Mechanical Ventilation Modes (AC/SIMV/PSV)" }, { name: "Ventilator Weaning Protocols" }, { name: "High-Flow Nasal Cannula" }, { name: "Non-Invasive Ventilation (BiPAP/CPAP)" }, { name: "ARDS Management (Prone Positioning)" }, { name: "Chest Physiotherapy" },
     ]},
     { title: "Neurology", skills: [
       { name: "Assessment of Neuro Signs" }, { name: "Use of Glasgow Coma Scale" }, { name: "Seizure Precautions" }, { name: "Assist with Lumbar Puncture" }, { name: "ICP Monitoring" }, { name: "Cranial Nerve Assessment" }, { name: "LOC Assessment" },
@@ -23,8 +23,14 @@ export const criticalCareChecklists: ChecklistSpec[] = [
     { title: "Gastrointestinal", skills: [
       { name: "NG Tube Insertion" }, { name: "Gastrostomy Tube" }, { name: "Jejunostomy Tube" }, { name: "Enterostomal Care" },
     ]},
+    { title: "Renal & Fluid Management", skills: [
+      { name: "Continuous Renal Replacement Therapy (CRRT) Management" }, { name: "Fluid Balance Calculation" }, { name: "Electrolyte Replacement Protocols" }, { name: "Acute Kidney Injury Management" }, { name: "Diuretic Titration" },
+    ]},
+    { title: "Patient Safety & Quality", skills: [
+      { name: "Sedation Vacation/Spontaneous Awakening Trials" }, { name: "Delirium Screening (CAM-ICU)" }, { name: "VAP Prevention Bundle" }, { name: "CLABSI Prevention Bundle" }, { name: "Early Mobility Protocols" }, { name: "Family Presence During Resuscitation" }, { name: "Rapid Response/Code Blue Participation" },
+    ]},
     { title: "Equipment", skills: [
-      { name: "Bear I" }, { name: "Bear II" }, { name: "Bennett 7200" }, { name: "CPAP" }, { name: "PEEP" }, { name: "Servo 900c" }, { name: "Hewlett-Packard" }, { name: "Spacelab" },
+      { name: "Multi-Parameter Bedside Monitor" }, { name: "Ventilator Setup and Alarms" }, { name: "CPAP/PEEP Devices" }, { name: "Rapid Infuser" }, { name: "Targeted Temperature Management Device" }, { name: "Continuous Cardiac Output Monitoring" }, { name: "Feeding Pump" }, { name: "Sequential Compression Devices" },
     ]},
     { title: "Age Specific Competencies", skills: [
       { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
@@ -153,19 +159,43 @@ export const criticalCareChecklists: ChecklistSpec[] = [
       { name: "Level I Trauma Center" }, { name: "Level II Trauma Center" }, { name: "Non-Trauma Center Emergency Department" }, { name: "Pediatric Emergency Department" }, { name: "Emergency Department - Combined Adult/Pediatric" },
     ]},
     { title: "Cardiac", skills: [
-      { name: "Defibrillation/Cardioversion" }, { name: "Assisting with Insertion of Central Lines" }, { name: "12-Lead EKG" }, { name: "Cardiac Arrest/CPR" }, { name: "Cardiac Monitoring" }, { name: "Pacemakers - External" },
+      { name: "Defibrillation/Cardioversion" }, { name: "Assisting with Insertion of Central Lines" }, { name: "12-Lead EKG" }, { name: "Cardiac Arrest/CPR" }, { name: "Cardiac Monitoring" }, { name: "Pacemakers - External" }, { name: "Chest Pain Protocol" }, { name: "STEMI Activation" }, { name: "Post-ROSC Care" }, { name: "Cardiac Enzyme/Troponin Trending" }, { name: "Hypertensive Emergency Management" }, { name: "Aortic Dissection Recognition" },
     ]},
     { title: "Respiratory", skills: [
-      { name: "Establishing an Airway" }, { name: "Pulse Oximetry" }, { name: "Interpretation of ABG" }, { name: "Incentive Spirometer" }, { name: "Tracheostomy Care" }, { name: "Ventilator Care" }, { name: "Chest Tube Management" },
+      { name: "Establishing an Airway" }, { name: "Pulse Oximetry" }, { name: "Interpretation of ABG" }, { name: "Incentive Spirometer" }, { name: "Tracheostomy Care" }, { name: "Ventilator Care" }, { name: "Chest Tube Management" }, { name: "BiPAP/CPAP Initiation" }, { name: "Rapid Sequence Intubation Assist" }, { name: "Asthma/COPD Exacerbation Management" }, { name: "Pulmonary Embolism Workup" }, { name: "Pneumothorax Recognition" },
     ]},
     { title: "Trauma", skills: [
-      { name: "Cervical Spine Immobilization" }, { name: "Fracture/Splinting" }, { name: "Wound Management" }, { name: "Burns Assessment and Care" }, { name: "Head Injury Assessment" }, { name: "Abdominal Trauma" },
+      { name: "Cervical Spine Immobilization" }, { name: "Fracture/Splinting" }, { name: "Wound Management" }, { name: "Burns Assessment and Care" }, { name: "Head Injury Assessment" }, { name: "Abdominal Trauma" }, { name: "Primary/Secondary Trauma Survey" }, { name: "Trauma Activation Protocol" }, { name: "FAST Exam Assist" }, { name: "Penetrating Trauma Management" }, { name: "Multi-System Trauma Triage" },
+    ]},
+    { title: "Neurological Emergency", skills: [
+      { name: "Stroke Alert/tPA Protocol" }, { name: "NIH Stroke Scale" }, { name: "Seizure Management" }, { name: "Altered Mental Status Workup" }, { name: "Concussion/Head Injury Assessment" }, { name: "Status Epilepticus Management" }, { name: "Meningitis/Encephalitis Assessment" }, { name: "Post-Ictal Care" },
+    ]},
+    { title: "Pediatric Emergency", skills: [
+      { name: "Pediatric Assessment Triangle" }, { name: "Weight-Based/Broselow Dosing" }, { name: "Pediatric Fever Workup" }, { name: "Non-Accidental Trauma Recognition" }, { name: "Pediatric Resuscitation" }, { name: "Pediatric Respiratory Distress Management" }, { name: "Pediatric Dehydration Assessment" }, { name: "Pediatric Pain Assessment (FLACC)" },
+    ]},
+    { title: "OB/GYN Emergency", skills: [
+      { name: "Precipitous Delivery Assist" }, { name: "Ectopic Pregnancy Assessment" }, { name: "Vaginal Bleeding Assessment" }, { name: "Pelvic Exam Assist" }, { name: "Preeclampsia/Eclampsia Recognition" }, { name: "Sexual Assault Exam Coordination" }, { name: "Newborn Stabilization (Precipitous Delivery)" },
+    ]},
+    { title: "Orthopedic", skills: [
+      { name: "Fracture Reduction Assist" }, { name: "Splinting/Casting" }, { name: "Joint Dislocation Reduction Assist" }, { name: "Compartment Syndrome Assessment" }, { name: "Open Fracture Management" }, { name: "Neurovascular Assessment" },
+    ]},
+    { title: "Wounds & Burns", skills: [
+      { name: "Laceration Repair/Suturing" }, { name: "Wound Irrigation and Debridement" }, { name: "Burn Assessment (Rule of Nines)" }, { name: "Incision & Drainage of Abscess" }, { name: "Foreign Body Removal" }, { name: "Wound Closure Devices (Staples, Dermabond)" },
+    ]},
+    { title: "IV Therapy & Blood", skills: [
+      { name: "Difficult/Ultrasound-Guided IV Access" }, { name: "Massive Transfusion Protocol" }, { name: "Central Line Assist" }, { name: "Intraosseous Access" }, { name: "Fluid Resuscitation Protocols" },
+    ]},
+    { title: "Toxicology & Behavioral Emergency", skills: [
+      { name: "Overdose/Toxidrome Recognition" }, { name: "Activated Charcoal Administration" }, { name: "Naloxone Administration" }, { name: "Suicide/Self-Harm Risk Assessment" }, { name: "Psychiatric Hold/1013 Process" }, { name: "Chemical/Physical Restraint Protocol" },
     ]},
     { title: "Medication Administration", skills: [
-      { name: "IV Push Medications" }, { name: "IV Drip Medications" }, { name: "Blood Administration" }, { name: "Conscious Sedation" }, { name: "Rapid Sequence Intubation Meds" }, { name: "Thrombolytic Administration" },
+      { name: "IV Push Medications" }, { name: "IV Drip Medications" }, { name: "Blood Administration" }, { name: "Conscious Sedation" }, { name: "Rapid Sequence Intubation Meds" }, { name: "Thrombolytic Administration" }, { name: "Antibiotic Administration (Sepsis Protocol)" },
     ]},
-    { title: "Triage", skills: [
-      { name: "Emergency Severity Index (ESI)" }, { name: "Telephone Triage" }, { name: "Disaster Triage" }, { name: "Pediatric Triage" },
+    { title: "Equipment & Diagnostics", skills: [
+      { name: "Rapid Infuser" }, { name: "Point-of-Care Ultrasound Assist" }, { name: "Cardiac Monitor/Defibrillator" }, { name: "Blood Culture Collection" }, { name: "POC Glucose/Troponin/Rapid Strep Testing" }, { name: "12-Lead EKG Acquisition" },
+    ]},
+    { title: "Triage & Documentation", skills: [
+      { name: "Emergency Severity Index (ESI)" }, { name: "Telephone Triage" }, { name: "Disaster Triage" }, { name: "Pediatric Triage" }, { name: "Electronic Documentation/Charting by Exception" }, { name: "Chain of Custody Documentation" },
     ]},
   ]},
 

@@ -20,6 +20,24 @@ export const surgicalChecklists: ChecklistSpec[] = [
     { title: "GU/GYN", skills: [
       { name: "Hysterectomy" }, { name: "C-Section" }, { name: "TURP" }, { name: "Nephrectomy" }, { name: "Cystoscopy" },
     ]},
+    { title: "Circulating Duties", skills: [
+      { name: "Sponge, Sharps & Instrument Counts" }, { name: "Patient Positioning" }, { name: "Specimen Handling and Labeling" }, { name: "Intraoperative Documentation" }, { name: "Fire Safety Protocol" }, { name: "Time-Out/Patient Advocacy" },
+    ]},
+    { title: "Scrub Duties", skills: [
+      { name: "Sterile Field Setup and Maintenance" }, { name: "Instrument Passing Technique" }, { name: "Gowning and Gloving (Self and Team)" }, { name: "Back-Table/Mayo Stand Setup" },
+    ]},
+    { title: "Anesthesia Assist", skills: [
+      { name: "Positioning for Induction" }, { name: "Airway Equipment Assist" }, { name: "Regional Block Assist" }, { name: "Malignant Hyperthermia Response" },
+    ]},
+    { title: "Equipment & Technology", skills: [
+      { name: "Electrocautery Setup" }, { name: "Robotic Surgical System Assist (da Vinci)" }, { name: "C-Arm/Fluoroscopy Positioning" }, { name: "Laser Safety" },
+    ]},
+    { title: "Sterile Technique & Safety", skills: [
+      { name: "Surgical Asepsis Principles" }, { name: "Sterile Field Break/Correction" }, { name: "Surgical Skin Prep Technique" }, { name: "Universal Protocol Compliance" },
+    ]},
+    { title: "Emergency Procedures", skills: [
+      { name: "Malignant Hyperthermia Cart" }, { name: "Massive Hemorrhage Protocol" }, { name: "Emergency Conversion (Lap to Open)" }, { name: "Code Response in OR" },
+    ]},
     { title: "Age Specific Competencies", skills: [
       { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
     ]},

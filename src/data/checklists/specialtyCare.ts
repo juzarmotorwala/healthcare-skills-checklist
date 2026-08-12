@@ -20,6 +20,18 @@ export const specialtyCareChecklists: ChecklistSpec[] = [
     { title: "IV Therapy", skills: [
       { name: "IV Insertion" }, { name: "IV Medication Administration" }, { name: "Blood Product Administration" }, { name: "Central Line Care" }, { name: "TPN" },
     ]},
+    { title: "Endocrine/Diabetic Care", skills: [
+      { name: "Blood Glucose Monitoring" }, { name: "Insulin Sliding Scale" }, { name: "Hypoglycemia/Hyperglycemia Management" }, { name: "Thyroid Disorder Management" }, { name: "Diabetic Ketoacidosis Monitoring" },
+    ]},
+    { title: "Pain Management", skills: [
+      { name: "Pain Assessment Scales" }, { name: "PCA Pump Management" }, { name: "Multimodal Pain Management" }, { name: "Opioid Safety/Monitoring" },
+    ]},
+    { title: "Infection Control & Wound Care", skills: [
+      { name: "Isolation Precautions" }, { name: "Surgical Site Infection Monitoring" }, { name: "CAUTI/CLABSI Prevention" }, { name: "Wound Dressing Changes" },
+    ]},
+    { title: "Patient Safety & Discharge", skills: [
+      { name: "Fall Risk Assessment" }, { name: "Pressure Injury Risk Assessment (Braden)" }, { name: "Medication Reconciliation" }, { name: "Discharge Planning/Teaching" },
+    ]},
     { title: "Age Specific Competencies", skills: [
       { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
     ]},
@@ -149,20 +161,35 @@ export const specialtyCareChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "psychiatry", title: "Registered Nurse – Psychiatry Skills Checklist", shortTitle: "RN – Psychiatry", icon: "🧠", group: "Specialty Care", categories: [
-    { title: "General Nursing", skills: [
-      { name: "Admit/Orient Voluntary Clients" }, { name: "Admit/Orient Involuntary Clients" }, { name: "Initial Comprehensive Assessment" }, { name: "Initial Focused Assessment" }, { name: "Initial Screening Assessment" }, { name: "Ongoing Assessment" }, { name: "Suicide Risk Assessment" }, { name: "Homicide Risk Assessment" },
+    { title: "General Skills", skills: [
+      { name: "Admit/Orient Voluntary Clients" }, { name: "Admit/Orient Involuntary Clients" }, { name: "Therapeutic Milieu Maintenance" }, { name: "Shift-to-Shift Handoff (SBAR)" }, { name: "Electronic Documentation" }, { name: "Awareness of HCAHPS" }, { name: "Patient/Family Teaching" }, { name: "Unit Safety Checks" }, { name: "Visitor Management" }, { name: "Interdisciplinary Team Rounding" },
+    ]},
+    { title: "Psychiatric Assessment", skills: [
+      { name: "Initial Comprehensive Assessment" }, { name: "Initial Focused Assessment" }, { name: "Initial Screening Assessment" }, { name: "Ongoing Assessment" }, { name: "Suicide Risk Assessment" }, { name: "Homicide Risk Assessment" }, { name: "Mental Status Examination" }, { name: "Columbia Suicide Severity Rating Scale" }, { name: "Substance Use Screening (CAGE-AID)" }, { name: "Cognitive/Orientation Assessment" },
+    ]},
+    { title: "Crisis Intervention", skills: [
+      { name: "Crisis Intervention" }, { name: "De-escalation Techniques" }, { name: "Restraint/Seclusion" }, { name: "Show of Support/Team Response" }, { name: "Post-Incident Debriefing" }, { name: "Behavioral Emergency Response Team Activation" }, { name: "Safety Planning" }, { name: "Means Restriction Counseling" }, { name: "PRN Medication for Agitation" }, { name: "Code Gray/Violent Patient Response" },
     ]},
     { title: "Patient Populations", skills: [
-      { name: "Acute Psychiatric" }, { name: "Substance Abuse/Detox" }, { name: "Dual Diagnosis" }, { name: "Geriatric Psychiatry" }, { name: "Adolescent Psychiatry" }, { name: "Eating Disorders" }, { name: "PTSD" },
+      { name: "Acute Psychiatric" }, { name: "Substance Abuse/Detox" }, { name: "Dual Diagnosis" }, { name: "Geriatric Psychiatry" }, { name: "Adolescent Psychiatry" }, { name: "Eating Disorders" }, { name: "PTSD" }, { name: "Forensic/Correctional Psychiatric Patients" }, { name: "Perinatal Mental Health" },
     ]},
-    { title: "Therapeutic Interventions", skills: [
-      { name: "Crisis Intervention" }, { name: "De-escalation Techniques" }, { name: "Group Therapy" }, { name: "Individual Therapy" }, { name: "Milieu Management" }, { name: "Restraint/Seclusion" },
+    { title: "Therapeutic Communication", skills: [
+      { name: "Group Therapy" }, { name: "Individual Therapy" }, { name: "Milieu Management" }, { name: "Motivational Interviewing" }, { name: "Limit Setting" }, { name: "Trauma-Informed Care" }, { name: "Active Listening" }, { name: "Therapeutic Boundaries" }, { name: "Family Therapy Facilitation" }, { name: "Cognitive Behavioral Techniques" },
     ]},
-    { title: "Medications", skills: [
-      { name: "Antipsychotics" }, { name: "Antidepressants" }, { name: "Mood Stabilizers" }, { name: "Anxiolytics" }, { name: "PRN Medications" }, { name: "IM Medications" },
+    { title: "Psychopharmacology", skills: [
+      { name: "Antipsychotics" }, { name: "Antidepressants" }, { name: "Mood Stabilizers" }, { name: "Anxiolytics" }, { name: "PRN Medications" }, { name: "IM Medications" }, { name: "Medication Side Effect Monitoring" }, { name: "Clozapine/High-Alert Medication Monitoring" }, { name: "Extrapyramidal Symptom Monitoring" }, { name: "Medication Education/Adherence Counseling" },
     ]},
-    { title: "Legal/Ethical", skills: [
-      { name: "Involuntary Commitment" }, { name: "Patient Rights" }, { name: "Confidentiality/HIPAA" }, { name: "Mandatory Reporting" }, { name: "Advance Directives" },
+    { title: "Substance Use/Withdrawal", skills: [
+      { name: "CIWA-Ar Alcohol Withdrawal Protocol" }, { name: "COWS Opioid Withdrawal Protocol" }, { name: "Detox Monitoring" }, { name: "Dual Diagnosis Treatment Coordination" }, { name: "Benzodiazepine Withdrawal Protocol" }, { name: "Naloxone Administration" }, { name: "Relapse Trigger Identification" }, { name: "Referral to Substance Use Treatment Programs" },
+    ]},
+    { title: "Safety/Environmental", skills: [
+      { name: "Environmental Safety Rounds/Contraband Checks" }, { name: "Elopement Precautions" }, { name: "Assault/Aggression Prevention" }, { name: "Personal Alarm/Duress Device Use" }, { name: "Sharps and Ligature Risk Assessment" }, { name: "Fall Precautions" }, { name: "One-to-One Observation" }, { name: "Room Search Procedures" },
+    ]},
+    { title: "Legal/Regulatory", skills: [
+      { name: "Involuntary Commitment" }, { name: "Patient Rights" }, { name: "Confidentiality/HIPAA" }, { name: "Mandatory Reporting" }, { name: "Advance Directives" }, { name: "Informed Consent for Treatment" }, { name: "Least Restrictive Environment Documentation" }, { name: "State Civil Commitment Statutes" },
+    ]},
+    { title: "Discharge/Community", skills: [
+      { name: "Discharge Planning" }, { name: "Community Resource Referral" }, { name: "Relapse Prevention Planning" }, { name: "Family Psychoeducation" }, { name: "Follow-up Appointment Coordination" }, { name: "Safety Plan at Discharge" }, { name: "Coordination with Outpatient Psychiatry" }, { name: "Peer Support Program Referral" },
     ]},
   ]},
 
