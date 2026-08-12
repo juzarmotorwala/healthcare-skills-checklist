@@ -1,7 +1,7 @@
 import { ChecklistSpec } from "../checklistData";
 
 export const specialtyCareChecklists: ChecklistSpec[] = [
-  { slug: "medsurg", title: "Med/Surg Skills Checklist", shortTitle: "Med/Surg", icon: "🩻", group: "Specialty Care", categories: [
+  { slug: "medsurg", title: "Registered Nurse – Med/Surg Skills Checklist", shortTitle: "RN – Med/Surg", icon: "🩻", group: "Specialty Care", categories: [
     { title: "Cardiac", skills: [
       { name: "Angina" }, { name: "Post Acute MI" }, { name: "Congestive Heart Failure" }, { name: "Post Cardiac Cath" }, { name: "Post Cardiac Surgery" }, { name: "Dysrhythmia Recognition" }, { name: "Pacemaker Care" },
     ]},
@@ -25,7 +25,7 @@ export const specialtyCareChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "oncology", title: "Oncology Skills Checklist", shortTitle: "Oncology", icon: "🎗️", group: "Specialty Care", categories: [
+  { slug: "oncology", title: "Registered Nurse – Oncology Skills Checklist", shortTitle: "RN – Oncology", icon: "🎗️", group: "Specialty Care", categories: [
     { title: "Radiation Therapy", skills: [
       { name: "Skin Assessment" }, { name: "Total Body Irradiation" }, { name: "Side Effect Management" }, { name: "External Radiotherapy" }, { name: "Brachytherapy" }, { name: "Radiation Safety Precautions" },
     ]},
@@ -46,7 +46,7 @@ export const specialtyCareChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "dialysis-nursing", title: "Dialysis Nursing Skills Checklist", shortTitle: "Dialysis Nursing", icon: "🫘", group: "Specialty Care", categories: [
+  { slug: "dialysis-nursing", title: "Registered Nurse – Dialysis Skills Checklist", shortTitle: "RN – Dialysis", icon: "🫘", group: "Specialty Care", categories: [
     { title: "Work Settings", skills: [
       { name: "Acute/Inpatient Dialysis" }, { name: "Chronic/Outpatient Dialysis" }, { name: "Dialysis Home Care" }, { name: "Pediatric Dialysis" }, { name: "Apheresis" }, { name: "Plasmapheresis" },
     ]},
@@ -79,7 +79,40 @@ export const specialtyCareChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "wound-care", title: "Wound Care Skills Checklist", shortTitle: "Wound Care", icon: "🩹", group: "Specialty Care", categories: [
+  { slug: "dialysis-tech", title: "Dialysis Technician Skills Checklist", shortTitle: "Dialysis Technician", icon: "🩸", group: "Specialty Care", categories: [
+    { title: "Hemodialysis Setup", skills: [
+      { name: "Machine setup and priming" }, { name: "Dialyzer/bloodline assembly" }, { name: "Water treatment system checks" }, { name: "Dialysate preparation and testing" },
+    ]},
+    { title: "Patient Care", skills: [
+      { name: "AV fistula/graft cannulation" }, { name: "Catheter connection/disconnection (under supervision)" }, { name: "Pre/post treatment vital signs" }, { name: "Weight assessment and fluid removal calculation" }, { name: "Monitoring during treatment" },
+    ]},
+    { title: "Complications & Safety", skills: [
+      { name: "Hypotension recognition and response" }, { name: "Cramping management" }, { name: "Clotting/access issues" }, { name: "Infection control and aseptic technique" }, { name: "Emergency response protocols" },
+    ]},
+    { title: "Equipment & Documentation", skills: [
+      { name: "Equipment disinfection/reprocessing" }, { name: "Treatment flow sheet documentation" }, { name: "Supply inventory management" },
+    ]},
+  ]},
+
+  { slug: "long-term-acute-care", title: "Registered Nurse – Long Term Acute Care Skills Checklist", shortTitle: "RN – LTAC", icon: "🏥", group: "Specialty Care", categories: [
+    { title: "Complex Medical Management", skills: [
+      { name: "Ventilator weaning management" }, { name: "Prolonged mechanical ventilation care" }, { name: "Tracheostomy management" }, { name: "Multi-organ dysfunction monitoring" },
+    ]},
+    { title: "Wound & Skin", skills: [
+      { name: "Complex wound management" }, { name: "Negative pressure wound therapy" }, { name: "Pressure injury staging and prevention" },
+    ]},
+    { title: "Nutrition & GI", skills: [
+      { name: "Enteral feeding management" }, { name: "TPN administration" }, { name: "G-tube/J-tube care" },
+    ]},
+    { title: "IV Therapy", skills: [
+      { name: "Central line care" }, { name: "PICC line care" }, { name: "IV antibiotic administration" }, { name: "Blood product administration" },
+    ]},
+    { title: "Rehabilitation & Discharge", skills: [
+      { name: "Interdisciplinary rehab coordination" }, { name: "Long-term care planning" }, { name: "Family education for chronic complex care" }, { name: "Discharge to SNF/home coordination" },
+    ]},
+  ]},
+
+  { slug: "wound-care", title: "Registered Nurse – Wound Care Skills Checklist", shortTitle: "RN – Wound Care", icon: "🩹", group: "Specialty Care", categories: [
     { title: "Work Settings", skills: [
       { name: "Acute Care – Adult" }, { name: "Clinic – Adult" }, { name: "SNF/LTAC/Subacute" }, { name: "Hospice/Palliative Care" }, { name: "Acute/Long Term Care – Pediatrics" }, { name: "Clinic – Pediatrics" }, { name: "Home Health" },
     ]},
@@ -97,7 +130,7 @@ export const specialtyCareChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "psychiatry", title: "Psychiatry Skills Checklist", shortTitle: "Psychiatry", icon: "🧠", group: "Specialty Care", categories: [
+  { slug: "psychiatry", title: "Registered Nurse – Psychiatry Skills Checklist", shortTitle: "RN – Psychiatry", icon: "🧠", group: "Specialty Care", categories: [
     { title: "General Nursing", skills: [
       { name: "Admit/Orient Voluntary Clients" }, { name: "Admit/Orient Involuntary Clients" }, { name: "Initial Comprehensive Assessment" }, { name: "Initial Focused Assessment" }, { name: "Initial Screening Assessment" }, { name: "Ongoing Assessment" }, { name: "Suicide Risk Assessment" }, { name: "Homicide Risk Assessment" },
     ]},
@@ -133,7 +166,7 @@ export const specialtyCareChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "hospice", title: "Hospice Skills Checklist", shortTitle: "Hospice", icon: "🕊️", group: "Specialty Care", categories: [
+  { slug: "hospice", title: "Registered Nurse – Hospice Skills Checklist", shortTitle: "RN – Hospice", icon: "🕊️", group: "Specialty Care", categories: [
     { title: "Work Settings", skills: [
       { name: "Home Hospice" }, { name: "Inpatient Hospice" }, { name: "Pediatric Hospice" }, { name: "Home Health/Hospice Setting" },
     ]},
@@ -151,7 +184,7 @@ export const specialtyCareChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "home-health", title: "Home Health Skills Checklist", shortTitle: "Home Health", icon: "🏠", group: "Specialty Care", categories: [
+  { slug: "home-health", title: "Registered Nurse – Home Health Skills Checklist", shortTitle: "RN – Home Health", icon: "🏠", group: "Specialty Care", categories: [
     { title: "Cardiovascular", skills: [
       { name: "ACS/Post MI" }, { name: "Heart Failure" }, { name: "Post Cardiac Surgery" }, { name: "Cardiac Auscultation" }, { name: "Peripheral Pulse/Circulation Checks" },
     ]},
@@ -172,7 +205,7 @@ export const specialtyCareChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "skilled-nursing", title: "Skilled Nursing Skills Checklist", shortTitle: "Skilled Nursing", icon: "🏨", group: "Specialty Care", categories: [
+  { slug: "skilled-nursing", title: "Registered Nurse – Skilled Nursing Skills Checklist", shortTitle: "RN – Skilled Nursing", icon: "🏨", group: "Specialty Care", categories: [
     { title: "General Skills", skills: [
       { name: "Advanced directives" }, { name: "Awareness of HCAHPS" }, { name: "Patient/family teaching" }, { name: "Discharge planning" }, { name: "UR/Medicare review" }, { name: "Lift/transfer devices" }, { name: "Specialty beds" }, { name: "End of life care" },
     ]},
@@ -193,7 +226,7 @@ export const specialtyCareChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "long-term-care", title: "Long Term Care Skills Checklist", shortTitle: "Long Term Care", icon: "🧓", group: "Specialty Care", categories: [
+  { slug: "long-term-care", title: "Registered Nurse – Long Term Care Skills Checklist", shortTitle: "RN – Long Term Care", icon: "🧓", group: "Specialty Care", categories: [
     { title: "Cardiac", skills: [
       { name: "Use of cardiac monitors" }, { name: "Assessment of heart sounds" }, { name: "Cardiac Arrest" }, { name: "CPR" }, { name: "Care of patients with CHF" }, { name: "Atropine administration" },
     ]},
@@ -214,7 +247,7 @@ export const specialtyCareChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "ambulatory", title: "Ambulatory Skills Checklist", shortTitle: "Ambulatory", icon: "🚶", group: "Specialty Care", categories: [
+  { slug: "ambulatory", title: "Registered Nurse – Ambulatory Skills Checklist", shortTitle: "RN – Ambulatory", icon: "🚶", group: "Specialty Care", categories: [
     { title: "General Patient Care", skills: [
       { name: "Admit and Assess Patients" }, { name: "Advance Directives" }, { name: "Collect Appropriate Data" }, { name: "Discharge Teaching" }, { name: "Preoperative Teaching" }, { name: "Patient Prep" },
     ]},
@@ -232,7 +265,7 @@ export const specialtyCareChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "infection-control", title: "Infection Control Skills Checklist", shortTitle: "Infection Control", icon: "🦠", group: "Specialty Care", categories: [
+  { slug: "infection-control", title: "Registered Nurse – Infection Control Skills Checklist", shortTitle: "RN – Infection Control", icon: "🦠", group: "Specialty Care", categories: [
     { title: "Surveillance", skills: [
       { name: "Performs targeted surveillance" }, { name: "Outbreak investigations" }, { name: "Collaboration with Infection Control Committee" }, { name: "Collaboration with Hospital Epidemiologist" }, { name: "Performance improvement projects" },
     ]},

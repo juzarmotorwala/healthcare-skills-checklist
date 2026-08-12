@@ -96,4 +96,43 @@ export const alliedHealthChecklists: ChecklistSpec[] = [
       { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
     ]},
   ]},
+
+  { slug: "ophthalmic-tech", title: "Ophthalmic Technician Skills Checklist", shortTitle: "Ophthalmic Tech", icon: "👁️", group: "Allied Health", categories: [
+    { title: "Diagnostic Testing", skills: [
+      { name: "Visual acuity testing" }, { name: "Tonometry (IOP measurement)" }, { name: "Refraction/autorefraction" }, { name: "Visual field testing" }, { name: "OCT imaging" }, { name: "Fundus photography" },
+    ]},
+    { title: "Clinical Skills", skills: [
+      { name: "Pupil dilation" }, { name: "Slit lamp assist" }, { name: "Contact lens fitting assist" }, { name: "Minor procedure assist" },
+    ]},
+    { title: "Patient Care", skills: [
+      { name: "Patient history intake" }, { name: "Pediatric and geriatric patient handling" }, { name: "Equipment sterilization" },
+    ]},
+  ]},
+
+  { slug: "audiologist", title: "Audiologist Skills Checklist", shortTitle: "Audiologist", icon: "👂", group: "Allied Health", categories: [
+    { title: "Diagnostic Testing", skills: [
+      { name: "Pure tone audiometry" }, { name: "Speech audiometry" }, { name: "Tympanometry" }, { name: "Otoacoustic emissions (OAE) testing" }, { name: "Auditory brainstem response (ABR) testing" }, { name: "Newborn hearing screening" },
+    ]},
+    { title: "Treatment & Rehabilitation", skills: [
+      { name: "Hearing aid fitting and programming" }, { name: "Cochlear implant candidacy evaluation" }, { name: "Aural rehabilitation" }, { name: "Tinnitus management" },
+    ]},
+    { title: "Patient Care", skills: [
+      { name: "Pediatric hearing assessment" }, { name: "Geriatric hearing assessment" }, { name: "Patient/family counseling and education" },
+    ]},
+  ]},
+
+  { slug: "physician-assistant", title: "Physician Assistant Skills Checklist", shortTitle: "Physician Assistant", icon: "🩹", group: "Allied Health", categories: [
+    { title: "Clinical Assessment", skills: [
+      { name: "History and physical exam" }, { name: "Differential diagnosis development" }, { name: "Diagnostic test ordering and interpretation" }, { name: "Treatment planning" },
+    ]},
+    { title: "Procedures", skills: [
+      { name: "Suturing/wound repair" }, { name: "Joint/fracture reduction assist" }, { name: "Minor surgical procedures" }, { name: "First assist in surgery" },
+    ]},
+    { title: "Prescriptive & Documentation", skills: [
+      { name: "Prescriptive authority within scope" }, { name: "EMR documentation and coding" }, { name: "Care coordination with supervising physician" },
+    ]},
+    { title: "Specialty Exposure", skills: [
+      { name: "Emergency medicine" }, { name: "Primary care" }, { name: "Surgical specialties" }, { name: "Hospitalist medicine" },
+    ]},
+  ]},
 ];

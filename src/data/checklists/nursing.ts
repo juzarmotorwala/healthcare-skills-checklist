@@ -228,4 +228,172 @@ export const nursingChecklists: ChecklistSpec[] = [
       { name: "Newborn (birth to 30 days)" }, { name: "Infant (31 days to 1 year)" }, { name: "Toddler (ages 2-3 years)" }, { name: "Preschooler (ages 4-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
     ]},
   ]},
+
+  { slug: "float-rn", title: "Float RN Skills Checklist", shortTitle: "Float RN", icon: "🔀", group: "Nursing", categories: [
+    { title: "Cross-Unit Adaptability", skills: [
+      { name: "Rapid unit orientation and huddle briefing" }, { name: "Med/Surg patient care" }, { name: "Telemetry monitoring basics" }, { name: "Step-down/intermediate care basics" }, { name: "Basic ICU support tasks" }, { name: "Emergency department support" }, { name: "Prioritization across unfamiliar patient assignments" }, { name: "Rapid chart review and handoff (SBAR)" },
+    ]},
+    { title: "Clinical Skills", skills: [
+      { name: "Medication administration (oral, IV, IM, SQ)" }, { name: "IV insertion and maintenance" }, { name: "Vital signs and early warning score assessment" }, { name: "Wound care basics" }, { name: "Foley catheter insertion and care" }, { name: "NG tube insertion and care" }, { name: "Blood product administration" }, { name: "Code blue / rapid response participation" },
+    ]},
+    { title: "Systems & Documentation", skills: [
+      { name: "Epic" }, { name: "Cerner" }, { name: "Meditech" }, { name: "Multiple unit-specific charting workflows" }, { name: "Computerized Physician Order Entry (CPOE)" }, { name: "Barcode medication administration" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Neonatal (birth - 30 days)" }, { name: "Infant (1 month - 1 year)" }, { name: "Pediatric (1-12 years)" }, { name: "Adolescent (13-17 years)" }, { name: "Adult (18-64 years)" }, { name: "Geriatric (65+ years)" },
+    ]},
+  ]},
+
+  { slug: "rn-case-manager", title: "Registered Nurse Case Manager Skills Checklist", shortTitle: "RN Case Manager", icon: "📁", group: "Nursing", categories: [
+    { title: "Utilization Review", skills: [
+      { name: "InterQual Criteria" }, { name: "Milliman Care Guidelines" }, { name: "Medical necessity review" }, { name: "Concurrent review" }, { name: "Retrospective review" }, { name: "Denial management and appeals" }, { name: "Level of care determination" },
+    ]},
+    { title: "Discharge Planning & Care Coordination", skills: [
+      { name: "Assessment of post-acute needs" }, { name: "SNF/rehab placement coordination" }, { name: "Home health referral" }, { name: "DME coordination" }, { name: "Hospice referral" }, { name: "Insurance authorization" }, { name: "Interdisciplinary rounding" }, { name: "Readmission risk screening" },
+    ]},
+    { title: "Documentation & Compliance", skills: [
+      { name: "Electronic medical record case notes" }, { name: "Care plan development" }, { name: "CMS/Medicare Conditions of Participation" }, { name: "HIPAA compliance" }, { name: "Payer communication and authorization tracking" },
+    ]},
+    { title: "Communication", skills: [
+      { name: "Patient and family education" }, { name: "Physician collaboration" }, { name: "Payer/insurance liaison" }, { name: "Conflict resolution" },
+    ]},
+  ]},
+
+  { slug: "rn-first-assist", title: "Registered Nurse First Assist Skills Checklist", shortTitle: "RN First Assist", icon: "🔧", group: "Nursing", categories: [
+    { title: "Pre-Operative", skills: [
+      { name: "Patient positioning" }, { name: "Surgical site preparation" }, { name: "Sterile field setup" }, { name: "Instrument and equipment verification" }, { name: "Time-out/surgical safety checklist participation" },
+    ]},
+    { title: "Intra-Operative Assisting", skills: [
+      { name: "Tissue handling" }, { name: "Hemostasis technique" }, { name: "Suturing and wound closure" }, { name: "Retraction" }, { name: "Electrocautery use" }, { name: "Sponge, needle, and instrument counts" }, { name: "Specimen handling" },
+    ]},
+    { title: "Surgical Specialty Exposure", skills: [
+      { name: "General surgery" }, { name: "Orthopedic surgery" }, { name: "Cardiovascular/thoracic surgery" }, { name: "Gynecologic surgery" }, { name: "Urologic surgery" }, { name: "Neurosurgery" },
+    ]},
+    { title: "Post-Operative", skills: [
+      { name: "Dressing application" }, { name: "Post-op orders review" }, { name: "Hand-off to PACU/recovery" }, { name: "Post-op complication recognition" },
+    ]},
+  ]},
+
+  { slug: "rn-risk-manager", title: "Registered Nurse Risk Manager Skills Checklist", shortTitle: "RN Risk Manager", icon: "🛡️", group: "Nursing", categories: [
+    { title: "Patient Safety & Incident Management", skills: [
+      { name: "Incident investigation" }, { name: "Root cause analysis" }, { name: "Sentinel event reporting" }, { name: "Near-miss tracking and trending" }, { name: "Adverse event disclosure support" },
+    ]},
+    { title: "Regulatory & Compliance", skills: [
+      { name: "Joint Commission standards" }, { name: "CMS Conditions of Participation" }, { name: "State health department reporting" }, { name: "Policy and procedure development" }, { name: "Survey readiness" },
+    ]},
+    { title: "Claims & Quality", skills: [
+      { name: "Claims management support" }, { name: "Quality improvement project participation" }, { name: "Risk assessment and mitigation planning" }, { name: "Peer review process" }, { name: "Staff education on risk topics" },
+    ]},
+    { title: "Documentation", skills: [
+      { name: "Incident report systems (e.g., RL6, Midas)" }, { name: "Legal/risk documentation standards" }, { name: "Data trend reporting to leadership" },
+    ]},
+  ]},
+
+  { slug: "rn-phone-triage", title: "Registered Nurse Phone Triage Skills Checklist", shortTitle: "RN Phone Triage", icon: "☎️", group: "Nursing", categories: [
+    { title: "Telephonic Assessment", skills: [
+      { name: "Standardized triage protocols (e.g., Schmitt-Thompson)" }, { name: "Symptom-based assessment" }, { name: "Chief complaint prioritization" }, { name: "Emergency vs. non-emergency identification" }, { name: "De-escalation of anxious callers" },
+    ]},
+    { title: "Clinical Decision Support", skills: [
+      { name: "Protocol-driven disposition (ER, urgent care, self-care)" }, { name: "Medication and dosage guidance within scope" }, { name: "Recognition of red-flag symptoms" }, { name: "Escalation to on-call provider" },
+    ]},
+    { title: "Systems & Documentation", skills: [
+      { name: "Telehealth/telephonic charting platforms" }, { name: "Call documentation standards" }, { name: "EMR integration" }, { name: "HIPAA compliance in remote settings" },
+    ]},
+    { title: "Communication", skills: [
+      { name: "Active listening" }, { name: "Patient education over the phone" }, { name: "Multilingual/interpreter service coordination" }, { name: "Callback and follow-up protocols" },
+    ]},
+  ]},
+
+  { slug: "rn-iv-therapy", title: "Registered Nurse IV Therapy / Infusion Skills Checklist", shortTitle: "RN IV Therapy", icon: "💧", group: "Nursing", categories: [
+    { title: "Vascular Access", skills: [
+      { name: "Peripheral IV insertion" }, { name: "Ultrasound-guided IV insertion" }, { name: "PICC line care and maintenance" }, { name: "Central line care and maintenance" }, { name: "Port access (implanted ports)" }, { name: "Midline catheter care" },
+    ]},
+    { title: "Infusion Administration", skills: [
+      { name: "IV fluid administration" }, { name: "Chemotherapy/biologic infusion" }, { name: "Blood and blood product administration" }, { name: "Total parenteral nutrition (TPN)" }, { name: "Antibiotic infusion" }, { name: "Infusion pump programming and troubleshooting" },
+    ]},
+    { title: "Complication Management", skills: [
+      { name: "Infiltration/extravasation recognition and management" }, { name: "Phlebitis assessment" }, { name: "Line occlusion troubleshooting" }, { name: "Allergic/anaphylactic reaction response" }, { name: "Air embolism prevention" },
+    ]},
+    { title: "Documentation & Compliance", skills: [
+      { name: "Infusion Nurses Society (INS) standards" }, { name: "Site assessment documentation" }, { name: "Medication reconciliation" }, { name: "Patient education on home infusion" },
+    ]},
+  ]},
+
+  { slug: "crna", title: "Certified Registered Nurse Anesthetist Skills Checklist", shortTitle: "CRNA", icon: "💤", group: "Nursing", categories: [
+    { title: "Anesthesia Administration", skills: [
+      { name: "General anesthesia administration" }, { name: "Regional anesthesia (spinal, epidural, nerve block)" }, { name: "Monitored anesthesia care (MAC)" }, { name: "Airway management (intubation, LMA)" }, { name: "Difficult airway management" },
+    ]},
+    { title: "Perioperative Management", skills: [
+      { name: "Pre-anesthesia assessment" }, { name: "Hemodynamic monitoring and management" }, { name: "Emergence and recovery management" }, { name: "Pain management planning" },
+    ]},
+    { title: "Specialty Populations", skills: [
+      { name: "Obstetric anesthesia" }, { name: "Pediatric anesthesia" }, { name: "Cardiac/thoracic anesthesia" }, { name: "Trauma/emergency anesthesia" },
+    ]},
+    { title: "Emergency Management", skills: [
+      { name: "Malignant hyperthermia protocol" }, { name: "Anaphylaxis management" }, { name: "Advanced cardiac life support" },
+    ]},
+  ]},
+
+  { slug: "nurse-educator", title: "Nurse Educator Skills Checklist", shortTitle: "Nurse Educator", icon: "🎓", group: "Nursing", categories: [
+    { title: "Curriculum & Instruction", skills: [
+      { name: "Curriculum development" }, { name: "Competency-based education design" }, { name: "Simulation-based training" }, { name: "Skills lab instruction" }, { name: "Adult learning theory application" },
+    ]},
+    { title: "Onboarding & Orientation", skills: [
+      { name: "New hire orientation programs" }, { name: "Preceptor program development" }, { name: "Clinical competency validation" }, { name: "Annual mandatory education/compliance training" },
+    ]},
+    { title: "Evaluation", skills: [
+      { name: "Learning needs assessment" }, { name: "Performance evaluation and feedback" }, { name: "Education outcome tracking" },
+    ]},
+  ]},
+
+  { slug: "nurse-manager", title: "Nurse Manager Skills Checklist", shortTitle: "Nurse Manager", icon: "🗂️", group: "Nursing", categories: [
+    { title: "Unit Operations", skills: [
+      { name: "Staffing and scheduling" }, { name: "Budget management" }, { name: "Supply/resource management" }, { name: "Regulatory/survey readiness" },
+    ]},
+    { title: "Staff Leadership", skills: [
+      { name: "Performance management" }, { name: "Conflict resolution" }, { name: "Staff recruitment and retention" }, { name: "Team building" },
+    ]},
+    { title: "Quality & Patient Care", skills: [
+      { name: "Quality improvement initiatives" }, { name: "Patient satisfaction/HCAHPS management" }, { name: "Incident review and follow-up" }, { name: "Interdisciplinary rounding" },
+    ]},
+  ]},
+
+  { slug: "clinical-research-nurse", title: "Clinical Research Nurse Skills Checklist", shortTitle: "Clinical Research Nurse", icon: "🧪", group: "Nursing", categories: [
+    { title: "Clinical Trial Management", skills: [
+      { name: "Protocol adherence" }, { name: "Informed consent process" }, { name: "Subject screening and enrollment" }, { name: "Adverse event reporting" }, { name: "Investigational drug/device administration" },
+    ]},
+    { title: "Regulatory & Documentation", skills: [
+      { name: "Good Clinical Practice (GCP) standards" }, { name: "IRB submission support" }, { name: "Source document/CRF completion" }, { name: "FDA regulatory compliance" },
+    ]},
+    { title: "Patient Care", skills: [
+      { name: "Study subject education" }, { name: "Coordination with study sponsors/monitors" }, { name: "Specimen collection and processing per protocol" },
+    ]},
+  ]},
+
+  { slug: "transplant-coordinator", title: "Transplant Coordinator Skills Checklist", shortTitle: "Transplant Coordinator", icon: "🫂", group: "Nursing", categories: [
+    { title: "Pre-Transplant", skills: [
+      { name: "Donor/recipient evaluation coordination" }, { name: "Organ allocation process (UNOS)" }, { name: "Waitlist management" }, { name: "Living donor coordination" },
+    ]},
+    { title: "Peri-Transplant", skills: [
+      { name: "Organ procurement coordination" }, { name: "Cross-matching coordination" }, { name: "Surgical team communication" },
+    ]},
+    { title: "Post-Transplant", skills: [
+      { name: "Immunosuppression management education" }, { name: "Rejection monitoring coordination" }, { name: "Long-term follow-up coordination" }, { name: "Patient/family education and support" },
+    ]},
+  ]},
+
+  { slug: "rn-urology", title: "Registered Nurse – Urology Skills Checklist", shortTitle: "RN – Urology", icon: "🫘", group: "Nursing", categories: [
+    { title: "Assessment", skills: [
+      { name: "Genitourinary assessment" }, { name: "Post-op urologic surgery assessment" }, { name: "Bladder scanning" }, { name: "Urodynamic testing assist" },
+    ]},
+    { title: "Catheter & Drainage Management", skills: [
+      { name: "Foley catheter insertion/care" }, { name: "Suprapubic catheter care" }, { name: "Nephrostomy tube care" }, { name: "Ureteral stent management" }, { name: "Continuous bladder irrigation" },
+    ]},
+    { title: "Surgical Care", skills: [
+      { name: "Pre/post-op prostatectomy care" }, { name: "Post-op cystectomy/urinary diversion care" }, { name: "Ostomy/stoma care (urostomy)" }, { name: "Robotic urologic surgery recovery care" },
+    ]},
+    { title: "Patient Education", skills: [
+      { name: "Catheter care teaching" }, { name: "Incontinence management education" }, { name: "Post-op activity restrictions education" },
+    ]},
+  ]},
 ];

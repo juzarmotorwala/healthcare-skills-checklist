@@ -1,7 +1,7 @@
 import { ChecklistSpec } from "../checklistData";
 
 export const pediatricMaternalChecklists: ChecklistSpec[] = [
-  { slug: "pediatric", title: "Pediatric Skills Checklist", shortTitle: "Pediatric", icon: "👶", group: "Pediatric & Maternal", categories: [
+  { slug: "pediatric", title: "Registered Nurse – Pediatric Skills Checklist", shortTitle: "RN – Pediatric", icon: "👶", group: "Pediatric & Maternal", categories: [
     { title: "Work Settings", skills: [
       { name: "Pediatric MedSurg" }, { name: "Pediatric Step Down/Telemetry" }, { name: "Pediatric Oncology" }, { name: "Pediatric Ortho" }, { name: "Pediatric Neuro" },
     ]},
@@ -25,7 +25,7 @@ export const pediatricMaternalChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "pediatric-er", title: "Pediatric ER Skills Checklist", shortTitle: "Pediatric ER", icon: "🧒", group: "Pediatric & Maternal", categories: [
+  { slug: "pediatric-er", title: "Registered Nurse – Pediatric ER Skills Checklist", shortTitle: "RN – Pediatric ER", icon: "🧒", group: "Pediatric & Maternal", categories: [
     { title: "Cardiovascular", skills: [
       { name: "Cardiac Anomalies" }, { name: "CHF/Pulmonary Edema" }, { name: "Cardiogenic Shock" }, { name: "Cardioversion" }, { name: "Heart Sounds" },
     ]},
@@ -46,7 +46,7 @@ export const pediatricMaternalChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "picu", title: "PICU Skills Checklist", shortTitle: "PICU", icon: "🍼", group: "Pediatric & Maternal", categories: [
+  { slug: "picu", title: "Registered Nurse – PICU Skills Checklist", shortTitle: "RN – PICU", icon: "🍼", group: "Pediatric & Maternal", categories: [
     { title: "Work Settings", skills: [
       { name: "PICU" }, { name: "Pediatric CVICU" }, { name: "Pediatric Step Down" }, { name: "Pediatric PACU" },
     ]},
@@ -67,7 +67,7 @@ export const pediatricMaternalChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "nicu", title: "NICU Skills Checklist", shortTitle: "NICU", icon: "👣", group: "Pediatric & Maternal", categories: [
+  { slug: "nicu", title: "Registered Nurse – NICU Skills Checklist", shortTitle: "RN – NICU", icon: "👣", group: "Pediatric & Maternal", categories: [
     { title: "Patient Types", skills: [
       { name: "Neonates < 28 Weeks" }, { name: "Neonates 29-34 Weeks" }, { name: "Neonates > 34 Weeks" },
     ]},
@@ -91,7 +91,7 @@ export const pediatricMaternalChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "labor-delivery", title: "Labor & Delivery Skills Checklist", shortTitle: "Labor & Delivery", icon: "🤰", group: "Pediatric & Maternal", categories: [
+  { slug: "labor-delivery", title: "Registered Nurse – Labor & Delivery Skills Checklist", shortTitle: "RN – Labor & Delivery", icon: "🤰", group: "Pediatric & Maternal", categories: [
     { title: "Work Settings", skills: [
       { name: "L and D" }, { name: "LDRP" }, { name: "Antepartum" }, { name: "Mother Baby" },
     ]},
@@ -112,7 +112,7 @@ export const pediatricMaternalChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "ob-labor-delivery", title: "OB Labor & Delivery Skills Checklist", shortTitle: "OB Labor & Delivery", icon: "🫄", group: "Pediatric & Maternal", categories: [
+  { slug: "ob-labor-delivery", title: "Registered Nurse – OB Labor & Delivery Skills Checklist", shortTitle: "RN – OB Labor & Delivery", icon: "🫄", group: "Pediatric & Maternal", categories: [
     { title: "Patient Rights", skills: [
       { name: "Communicates and obtains information respecting privacy and confidentiality" }, { name: "Involves patient and family in care decisions including Advanced Directives" }, { name: "Complies with Organ Donation policy" }, { name: "Meets communication needs including interpreter services" },
     ]},
@@ -130,7 +130,22 @@ export const pediatricMaternalChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "post-partum", title: "Post Partum Skills Checklist", shortTitle: "Post Partum", icon: "🤱", group: "Pediatric & Maternal", categories: [
+  { slug: "ob-tech", title: "OB Technician Skills Checklist", shortTitle: "OB Tech", icon: "🩰", group: "Pediatric & Maternal", categories: [
+    { title: "Labor & Delivery Support", skills: [
+      { name: "Room setup and equipment preparation" }, { name: "Delivery table/instrument setup" }, { name: "Assisting with vaginal delivery" }, { name: "Assisting with C-section" }, { name: "Sterile technique and gowning" },
+    ]},
+    { title: "Patient Care", skills: [
+      { name: "Vital signs monitoring" }, { name: "External fetal monitor application" }, { name: "Patient positioning and comfort measures" }, { name: "Postpartum patient assistance" },
+    ]},
+    { title: "Newborn Support", skills: [
+      { name: "Newborn warmer setup" }, { name: "Assisting with initial newborn care" }, { name: "Specimen labeling and transport" },
+    ]},
+    { title: "Equipment & Supplies", skills: [
+      { name: "Sterilization of instruments" }, { name: "Supply stocking and inventory" }, { name: "Emergency cart checks" },
+    ]},
+  ]},
+
+  { slug: "post-partum", title: "Registered Nurse – Post Partum Skills Checklist", shortTitle: "RN – Post Partum", icon: "🤱", group: "Pediatric & Maternal", categories: [
     { title: "Work Settings", skills: [
       { name: "Couplet Care" }, { name: "Antepartum" }, { name: "Postpartum" }, { name: "Newborn Nursery" }, { name: "LDRP" },
     ]},

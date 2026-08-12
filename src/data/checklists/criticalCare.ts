@@ -1,7 +1,7 @@
 import { ChecklistSpec } from "../checklistData";
 
 export const criticalCareChecklists: ChecklistSpec[] = [
-  { slug: "icu", title: "ICU Skills Checklist", shortTitle: "ICU", icon: "🫀", group: "Critical Care", categories: [
+  { slug: "icu", title: "Registered Nurse – ICU Skills Checklist", shortTitle: "RN – ICU", icon: "🫀", group: "Critical Care", categories: [
     { title: "Cardiac", skills: [
       { name: "Defibrillation/Cardioversion" }, { name: "Assisting with Insertion of Central Lines" }, { name: "Pacemakers - External" }, { name: "Permanent or Temporary Pacemaker" }, { name: "Cardiac Arrest/CPR" }, { name: "A-Line (Transducer setup-D/C)" }, { name: "Swan Ganz (Transducer setup-D/C)" }, { name: "Balloon Pump (IABP)" }, { name: "SVO2 Monitoring" }, { name: "Automatic Internal Cardioverter Defib" },
     ]},
@@ -31,7 +31,7 @@ export const criticalCareChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "critical-care", title: "Critical Care Skills Checklist", shortTitle: "Critical Care", icon: "💓", group: "Critical Care", categories: [
+  { slug: "critical-care", title: "Registered Nurse – Critical Care Skills Checklist", shortTitle: "RN – Critical Care", icon: "💓", group: "Critical Care", categories: [
     { title: "General Skills", skills: [
       { name: "Advanced directives" }, { name: "Patient/family teaching" }, { name: "Restrictive devices (restraints)" }, { name: "Lift/transfer devices" }, { name: "Specialty beds" }, { name: "End of life care/palliative care" }, { name: "Knowledge of 'Do Not Use Abbreviations'" }, { name: "Charge/supervisor experience" }, { name: "Knowledge of Joint Commission National Patient Safety Goals" }, { name: "Knowledge/familiarity with HCAHPS scores" },
     ]},
@@ -64,7 +64,7 @@ export const criticalCareChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "telemetry", title: "Telemetry Skills Checklist", shortTitle: "Telemetry", icon: "📊", group: "Critical Care", categories: [
+  { slug: "telemetry", title: "Registered Nurse – Telemetry Skills Checklist", shortTitle: "RN – Telemetry", icon: "📊", group: "Critical Care", categories: [
     { title: "Cardiac", skills: [
       { name: "Acute Coronary Syndrome" }, { name: "Congestive Heart Failure" }, { name: "Post Open Heart (12-24 hours)" }, { name: "Carotid Endarterectomy" }, { name: "Post Vascular Surgery" }, { name: "Heart Transplant" }, { name: "Pacemaker - Temporary/Permanent" }, { name: "Pacemaker - Epicardial" }, { name: "Sheath Removal" }, { name: "Heart Sounds" },
     ]},
@@ -85,7 +85,7 @@ export const criticalCareChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "telemetry-stepdown", title: "Telemetry Stepdown Skills Checklist", shortTitle: "Telemetry Stepdown", icon: "📉", group: "Critical Care", categories: [
+  { slug: "telemetry-stepdown", title: "Registered Nurse – Telemetry Stepdown Skills Checklist", shortTitle: "RN – Telemetry Stepdown", icon: "📉", group: "Critical Care", categories: [
     { title: "Cardiovascular Care", skills: [
       { name: "Acute MI" }, { name: "CHF" }, { name: "Angina Hypertension" }, { name: "Cardiomyopathy/Cardiopulmonary Arrest" }, { name: "Abdominal Aortic Aneurysm" },
     ]},
@@ -100,7 +100,7 @@ export const criticalCareChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "intermediate-care", title: "Intermediate Care Skills Checklist", shortTitle: "Intermediate Care", icon: "🔄", group: "Critical Care", categories: [
+  { slug: "intermediate-care", title: "Registered Nurse – Intermediate Care Skills Checklist", shortTitle: "RN – Intermediate Care", icon: "🔄", group: "Critical Care", categories: [
     { title: "Cardiac", skills: [
       { name: "Acute Coronary Syndrome" }, { name: "Congestive Heart Failure" }, { name: "Post Open Heart" }, { name: "Carotid Endarterectomy" }, { name: "Post Vascular Surgery" }, { name: "Heart Transplant" }, { name: "Pacemaker" }, { name: "Heart Sounds" },
     ]},
@@ -115,7 +115,7 @@ export const criticalCareChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "pacu", title: "PACU Skills Checklist", shortTitle: "PACU", icon: "😴", group: "Critical Care", categories: [
+  { slug: "pacu", title: "Registered Nurse – PACU Skills Checklist", shortTitle: "RN – PACU", icon: "😴", group: "Critical Care", categories: [
     { title: "Cardiovascular", skills: [
       { name: "Open Heart Recovery" }, { name: "AAA Repair" }, { name: "Vascular Surgery" }, { name: "Pacemaker-Permanent & Temporary" }, { name: "Cardioversion" }, { name: "AICD Insertion" },
     ]},
@@ -133,7 +133,7 @@ export const criticalCareChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "cvor", title: "CVOR Skills Checklist", shortTitle: "CVOR", icon: "❤️‍🔥", group: "Critical Care", categories: [
+  { slug: "cvor", title: "Registered Nurse – CVOR Skills Checklist", shortTitle: "RN – CVOR", icon: "❤️‍🔥", group: "Critical Care", categories: [
     { title: "Scrub General Surgery", skills: [
       { name: "AKA/BKA (Amputation)" }, { name: "Radical Mastectomy" }, { name: "Abdominal-Perineal Resection" }, { name: "Cholecystectomy (Open)" }, { name: "Exploratory Laparotomy" }, { name: "Appendectomy" },
     ]},
@@ -148,7 +148,7 @@ export const criticalCareChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "emergency-department", title: "Emergency Department Skills Checklist", shortTitle: "Emergency Department", icon: "🚨", group: "Critical Care", categories: [
+  { slug: "emergency-department", title: "Registered Nurse – Emergency Department Skills Checklist", shortTitle: "RN – Emergency Department", icon: "🚨", group: "Critical Care", categories: [
     { title: "Work Settings", skills: [
       { name: "Level I Trauma Center" }, { name: "Level II Trauma Center" }, { name: "Non-Trauma Center Emergency Department" }, { name: "Pediatric Emergency Department" }, { name: "Emergency Department - Combined Adult/Pediatric" },
     ]},
@@ -175,7 +175,7 @@ export const criticalCareChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "urgent-care", title: "Urgent Care Skills Checklist", shortTitle: "Urgent Care", icon: "⏰", group: "Critical Care", categories: [
+  { slug: "urgent-care", title: "Registered Nurse – Urgent Care Skills Checklist", shortTitle: "RN – Urgent Care", icon: "⏰", group: "Critical Care", categories: [
     { title: "Cardiovascular", skills: [
       { name: "Auscultation/Irregular Heart Sounds" }, { name: "Peripheral Edema" }, { name: "PQRST Assessment" }, { name: "EKG Interpretation" }, { name: "Lab Tests (Cardiac Enzymes, Troponin, BNP)" }, { name: "Cardiac Monitor" }, { name: "AED/Defibrillation" },
     ]},
@@ -193,6 +193,18 @@ export const criticalCareChecklists: ChecklistSpec[] = [
     ]},
     { title: "Age Specific Competencies", skills: [
       { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
+    ]},
+  ]},
+
+  { slug: "paramedic", title: "Paramedic Skills Checklist", shortTitle: "Paramedic", icon: "🚨", group: "Critical Care", categories: [
+    { title: "Advanced Life Support", skills: [
+      { name: "Advanced airway management (intubation, supraglottic)" }, { name: "IV/IO access" }, { name: "Cardiac rhythm interpretation" }, { name: "Defibrillation/cardioversion" }, { name: "Advanced pharmacology administration" },
+    ]},
+    { title: "Emergency Response", skills: [
+      { name: "Trauma assessment and management" }, { name: "Mass casualty triage" }, { name: "Field extrication assist" }, { name: "Hazmat/scene safety awareness" },
+    ]},
+    { title: "Transport & Documentation", skills: [
+      { name: "Patient transport protocols" }, { name: "Inter-facility transport" }, { name: "ePCR documentation" }, { name: "Radio/hospital communication" },
     ]},
   ]},
 ];

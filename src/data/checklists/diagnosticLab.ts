@@ -153,4 +153,187 @@ export const diagnosticLabChecklists: ChecklistSpec[] = [
       { name: "Standard precautions" }, { name: "Sharps disposal" }, { name: "Infection control" }, { name: "Adverse reactions management" },
     ]},
   ]},
+
+  { slug: "cardiac-cath-tech", title: "Cardiac Cath Lab Technologist Skills Checklist", shortTitle: "Cardiac Cath Tech", icon: "🫀", group: "Diagnostic & Lab", categories: [
+    { title: "Procedures", skills: [
+      { name: "Diagnostic cardiac catheterization" }, { name: "PCI/angioplasty assist" }, { name: "Stent placement assist" }, { name: "Electrophysiology study assist" }, { name: "Pacemaker/ICD implant assist" }, { name: "Peripheral vascular intervention assist" },
+    ]},
+    { title: "Equipment & Technique", skills: [
+      { name: "Hemodynamic monitoring" }, { name: "Fluoroscopy operation" }, { name: "Sterile scrub technique" }, { name: "Contrast media administration" }, { name: "Intra-aortic balloon pump setup" }, { name: "Closure device application" },
+    ]},
+    { title: "Patient Care & Safety", skills: [
+      { name: "Pre-procedure patient prep" }, { name: "Conscious sedation monitoring" }, { name: "Radiation safety" }, { name: "Emergency response (code, arrhythmia)" }, { name: "Post-procedure site care" },
+    ]},
+  ]},
+
+  { slug: "cardiac-monitor-tech", title: "Cardiac Monitor Technician Skills Checklist", shortTitle: "Cardiac Monitor Tech", icon: "📟", group: "Diagnostic & Lab", categories: [
+    { title: "Rhythm Recognition", skills: [
+      { name: "Normal sinus rhythm identification" }, { name: "Atrial arrhythmias" }, { name: "Ventricular arrhythmias" }, { name: "Heart blocks" }, { name: "Life-threatening arrhythmia recognition" }, { name: "12-lead EKG interpretation basics" },
+    ]},
+    { title: "Monitoring Systems", skills: [
+      { name: "Central telemetry station operation" }, { name: "Alarm management and prioritization" }, { name: "Lead placement and troubleshooting" }, { name: "Documentation of rhythm strips" },
+    ]},
+    { title: "Communication & Escalation", skills: [
+      { name: "Notifying RN/physician of critical changes" }, { name: "Code blue notification protocol" }, { name: "Shift handoff reporting" },
+    ]},
+  ]},
+
+  { slug: "echo-vascular-tech", title: "Echocardiography / Vascular Ultrasound Technologist Skills Checklist", shortTitle: "Echo/Vascular Tech", icon: "🌊", group: "Diagnostic & Lab", categories: [
+    { title: "Echocardiography", skills: [
+      { name: "Transthoracic echocardiogram (TTE)" }, { name: "Transesophageal echocardiogram (TEE) assist" }, { name: "Stress echocardiography" }, { name: "Doppler and color flow imaging" }, { name: "Pediatric echocardiography" },
+    ]},
+    { title: "Vascular Studies", skills: [
+      { name: "Carotid duplex" }, { name: "Venous duplex/DVT studies" }, { name: "Arterial duplex" }, { name: "Ankle-brachial index (ABI)" }, { name: "Renal and abdominal vascular studies" },
+    ]},
+    { title: "Equipment & Technique", skills: [
+      { name: "Ultrasound machine operation" }, { name: "Image optimization" }, { name: "Measurement and calculation accuracy" }, { name: "Report generation" },
+    ]},
+    { title: "Patient Care", skills: [
+      { name: "Patient positioning and comfort" }, { name: "Pediatric and geriatric considerations" }, { name: "Infection control between studies" },
+    ]},
+  ]},
+
+  { slug: "eeg-tech", title: "EEG Technologist Skills Checklist", shortTitle: "EEG Tech", icon: "🧠", group: "Diagnostic & Lab", categories: [
+    { title: "Procedures", skills: [
+      { name: "Routine EEG" }, { name: "Ambulatory/long-term EEG monitoring" }, { name: "Video EEG monitoring" }, { name: "Evoked potential studies" }, { name: "Intraoperative neuromonitoring assist" },
+    ]},
+    { title: "Technical Skills", skills: [
+      { name: "Electrode placement (10-20 system)" }, { name: "Artifact recognition and troubleshooting" }, { name: "Equipment calibration" }, { name: "Seizure activation procedures" },
+    ]},
+    { title: "Patient Care & Safety", skills: [
+      { name: "Pediatric and adult patient prep" }, { name: "Seizure precautions" }, { name: "Documentation of clinical events" },
+    ]},
+  ]},
+
+  { slug: "ekg-tech", title: "EKG Technician Skills Checklist", shortTitle: "EKG Tech", icon: "📈", group: "Diagnostic & Lab", categories: [
+    { title: "Procedures", skills: [
+      { name: "12-lead EKG acquisition" }, { name: "Holter monitor placement" }, { name: "Stress test assist" }, { name: "Event monitor setup" },
+    ]},
+    { title: "Technical Skills", skills: [
+      { name: "Lead placement accuracy" }, { name: "Artifact troubleshooting" }, { name: "Basic rhythm recognition" }, { name: "Equipment maintenance" },
+    ]},
+    { title: "Patient Care", skills: [
+      { name: "Patient prep and education" }, { name: "Infection control" }, { name: "Documentation and transmission of results" },
+    ]},
+  ]},
+
+  { slug: "mammographer", title: "Mammographer Skills Checklist", shortTitle: "Mammographer", icon: "🎗️", group: "Diagnostic & Lab", categories: [
+    { title: "Procedures", skills: [
+      { name: "Screening mammography" }, { name: "Diagnostic mammography" }, { name: "Stereotactic breast biopsy assist" }, { name: "Breast ultrasound assist" }, { name: "3D tomosynthesis" },
+    ]},
+    { title: "Technical Skills", skills: [
+      { name: "Positioning technique" }, { name: "MQSA/ACR compliance" }, { name: "Image quality/QC" }, { name: "Radiation dose management" },
+    ]},
+    { title: "Patient Care", skills: [
+      { name: "Patient comfort and communication" }, { name: "Sensitivity to anxious patients" }, { name: "Documentation and BI-RADS familiarity" },
+    ]},
+  ]},
+
+  { slug: "mri-tech", title: "MRI Technologist Skills Checklist", shortTitle: "MRI Tech", icon: "🧲", group: "Diagnostic & Lab", categories: [
+    { title: "Procedures", skills: [
+      { name: "Brain/spine MRI" }, { name: "Musculoskeletal MRI" }, { name: "Abdominal/pelvic MRI" }, { name: "Cardiac MRI" }, { name: "MR angiography" }, { name: "Contrast-enhanced studies" },
+    ]},
+    { title: "Safety & Equipment", skills: [
+      { name: "MRI safety screening (implants, ferrous objects)" }, { name: "Contrast administration" }, { name: "Coil selection and setup" }, { name: "Sequence protocol selection" }, { name: "Emergency response in magnet room" },
+    ]},
+    { title: "Patient Care", skills: [
+      { name: "Claustrophobia management" }, { name: "Pediatric sedation coordination" }, { name: "Patient positioning" },
+    ]},
+  ]},
+
+  { slug: "nuclear-medicine-tech", title: "Nuclear Medicine Technologist Skills Checklist", shortTitle: "Nuclear Medicine Tech", icon: "☢️", group: "Diagnostic & Lab", categories: [
+    { title: "Procedures", skills: [
+      { name: "Bone scan" }, { name: "Cardiac perfusion (stress/rest) imaging" }, { name: "Thyroid uptake and scan" }, { name: "Renal scan" }, { name: "HIDA scan" }, { name: "Lung V/Q scan" },
+    ]},
+    { title: "Radiopharmaceutical Handling", skills: [
+      { name: "Radiopharmaceutical preparation" }, { name: "Dose calibration" }, { name: "Radiation safety and ALARA principles" }, { name: "Waste disposal compliance" },
+    ]},
+    { title: "Equipment", skills: [
+      { name: "Gamma camera operation" }, { name: "SPECT imaging" }, { name: "Image processing and QC" },
+    ]},
+  ]},
+
+  { slug: "pet-ct-tech", title: "PET/CT Technologist Skills Checklist", shortTitle: "PET/CT Tech", icon: "🔬", group: "Diagnostic & Lab", categories: [
+    { title: "Procedures", skills: [
+      { name: "Oncology PET/CT imaging" }, { name: "Cardiac PET imaging" }, { name: "Neurology PET imaging" }, { name: "Attenuation correction" },
+    ]},
+    { title: "Radiopharmaceutical & Safety", skills: [
+      { name: "FDG dose preparation and administration" }, { name: "Radiation safety/ALARA" }, { name: "Blood glucose screening pre-injection" }, { name: "Uptake time management" },
+    ]},
+    { title: "Equipment & Patient Care", skills: [
+      { name: "PET/CT scanner operation" }, { name: "Image fusion and QC" }, { name: "Diabetic patient protocol management" }, { name: "Claustrophobia/anxiety management" },
+    ]},
+  ]},
+
+  { slug: "polysomnography-tech", title: "Polysomnography Technologist Skills Checklist", shortTitle: "Polysomnography Tech", icon: "😴", group: "Diagnostic & Lab", categories: [
+    { title: "Procedures", skills: [
+      { name: "Diagnostic polysomnography (PSG)" }, { name: "CPAP/BiPAP titration study" }, { name: "Multiple sleep latency test (MSLT)" }, { name: "Home sleep apnea testing" }, { name: "Pediatric sleep studies" },
+    ]},
+    { title: "Technical Skills", skills: [
+      { name: "Electrode and sensor placement" }, { name: "Equipment calibration" }, { name: "Scoring sleep stages and events" }, { name: "Artifact troubleshooting" },
+    ]},
+    { title: "Patient Care", skills: [
+      { name: "Patient education pre-study" }, { name: "Overnight patient monitoring" }, { name: "Emergency response (desaturation, cardiac events)" },
+    ]},
+  ]},
+
+  { slug: "radiation-therapist", title: "Radiation Therapist Skills Checklist", shortTitle: "Radiation Therapist", icon: "🎯", group: "Diagnostic & Lab", categories: [
+    { title: "Treatment Delivery", skills: [
+      { name: "External beam radiation therapy (EBRT)" }, { name: "IMRT/VMAT delivery" }, { name: "Stereotactic radiosurgery (SRS/SBRT)" }, { name: "Brachytherapy assist" }, { name: "Patient positioning and immobilization" },
+    ]},
+    { title: "Simulation & Planning", skills: [
+      { name: "CT simulation" }, { name: "Treatment planning system familiarity" }, { name: "Image-guided radiation therapy (IGRT)" }, { name: "Daily setup verification" },
+    ]},
+    { title: "Patient Care & Safety", skills: [
+      { name: "Radiation safety principles" }, { name: "Side effect management and education" }, { name: "Skin care during treatment" }, { name: "Emotional support for oncology patients" },
+    ]},
+  ]},
+
+  { slug: "radiation-dosimetrist", title: "Radiation Therapy Dosimetrist Skills Checklist", shortTitle: "Dosimetrist", icon: "📐", group: "Diagnostic & Lab", categories: [
+    { title: "Treatment Planning", skills: [
+      { name: "3D conformal treatment planning" }, { name: "IMRT/VMAT plan optimization" }, { name: "Stereotactic planning (SRS/SBRT)" }, { name: "Brachytherapy dose planning" },
+    ]},
+    { title: "Technical Skills", skills: [
+      { name: "Treatment planning system software" }, { name: "Dose-volume histogram analysis" }, { name: "Monitor unit calculations" }, { name: "Plan quality assurance" },
+    ]},
+    { title: "Collaboration", skills: [
+      { name: "Physician plan review coordination" }, { name: "Medical physicist collaboration" }, { name: "Documentation and chart checks" },
+    ]},
+  ]},
+
+  { slug: "cytotechnologist", title: "Cytotechnologist Skills Checklist", shortTitle: "Cytotechnologist", icon: "🔬", group: "Diagnostic & Lab", categories: [
+    { title: "Specimen Analysis", skills: [
+      { name: "Pap smear screening" }, { name: "Non-gynecologic cytology (fluids, FNA)" }, { name: "Liquid-based cytology preparation" }, { name: "Microscopic slide screening" }, { name: "Abnormality identification and classification" },
+    ]},
+    { title: "Laboratory Technique", skills: [
+      { name: "Specimen preparation and staining" }, { name: "Quality control procedures" }, { name: "LIS documentation" }, { name: "Correlation with histology/biopsy results" },
+    ]},
+    { title: "Compliance", skills: [
+      { name: "CAP/CLIA regulatory compliance" }, { name: "Proficiency testing participation" },
+    ]},
+  ]},
+
+  { slug: "histology-tech", title: "Histology Technician Skills Checklist", shortTitle: "Histology Tech", icon: "🧫", group: "Diagnostic & Lab", categories: [
+    { title: "Specimen Processing", skills: [
+      { name: "Tissue grossing assist" }, { name: "Tissue processing/embedding" }, { name: "Microtomy/sectioning" }, { name: "Special stains (H&E, IHC)" }, { name: "Frozen section preparation" },
+    ]},
+    { title: "Laboratory Technique", skills: [
+      { name: "Equipment operation (microtome, embedding center)" }, { name: "Quality control and slide review" }, { name: "LIS documentation" },
+    ]},
+    { title: "Compliance", skills: [
+      { name: "CAP/CLIA regulatory compliance" }, { name: "Specimen chain of custody" },
+    ]},
+  ]},
+
+  { slug: "pathologist-assistant", title: "Pathologist / Pathologist Assistant Skills Checklist", shortTitle: "Pathologist Assistant", icon: "🩸", group: "Diagnostic & Lab", categories: [
+    { title: "Gross & Surgical Pathology", skills: [
+      { name: "Surgical specimen grossing" }, { name: "Autopsy assist" }, { name: "Frozen section preparation and consultation" }, { name: "Specimen photography and documentation" },
+    ]},
+    { title: "Diagnostic Support", skills: [
+      { name: "Microscopic slide preparation for physician review" }, { name: "Correlation with clinical/radiologic findings" }, { name: "Molecular/IHC test coordination" },
+    ]},
+    { title: "Compliance", skills: [
+      { name: "CAP/CLIA regulatory compliance" }, { name: "Chain of custody documentation" }, { name: "Quality assurance participation" },
+    ]},
+  ]},
 ];

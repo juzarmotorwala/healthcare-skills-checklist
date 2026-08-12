@@ -1,7 +1,7 @@
 import { ChecklistSpec } from "../checklistData";
 
 export const surgicalChecklists: ChecklistSpec[] = [
-  { slug: "or", title: "Operating Room Skills Checklist", shortTitle: "Operating Room (OR)", icon: "🔪", group: "Surgical", categories: [
+  { slug: "or", title: "Registered Nurse – Operating Room Skills Checklist", shortTitle: "RN – Operating Room", icon: "🔪", group: "Surgical", categories: [
     { title: "Work Setting", skills: [
       { name: "General OR" }, { name: "CVOR" }, { name: "Outpatient" }, { name: "Trauma" }, { name: "Peds-General OR" }, { name: "Peds-CVOR" },
     ]},
@@ -43,7 +43,7 @@ export const surgicalChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "perioperative", title: "Perioperative Skills Checklist", shortTitle: "Perioperative", icon: "🏗️", group: "Surgical", categories: [
+  { slug: "perioperative", title: "Registered Nurse – Perioperative Skills Checklist", shortTitle: "RN – Perioperative", icon: "🏗️", group: "Surgical", categories: [
     { title: "IV Therapy", skills: [
       { name: "Start peripheral IV" }, { name: "Insertion of A-lines" }, { name: "Insertion of CVP - jugular" }, { name: "Insertion of CVP - subclavian" }, { name: "Insertion of Swan-Ganz" },
     ]},
@@ -127,6 +127,54 @@ export const surgicalChecklists: ChecklistSpec[] = [
     ]},
     { title: "Age Specific", skills: [
       { name: "Newborn/neonate (birth-30 days)" }, { name: "Infant (31 days-1 year)" }, { name: "Toddler (ages 2-3 years)" }, { name: "Preschool (ages 4-5 years)" }, { name: "School age (ages 6-12 years)" }, { name: "Adolescent (ages 13-21 years)" }, { name: "Young adult (ages 22-39 years)" }, { name: "Adult (ages 40-64 years)" }, { name: "Older adult (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
+    ]},
+  ]},
+
+  { slug: "anesthesia-tech", title: "Anesthesia Technician Skills Checklist", shortTitle: "Anesthesia Tech", icon: "💉", group: "Surgical", categories: [
+    { title: "Equipment Preparation", skills: [
+      { name: "Anesthesia machine setup and check" }, { name: "Airway equipment preparation (LMA, ETT, video laryngoscope)" }, { name: "Invasive monitoring line setup (arterial, CVP)" }, { name: "Regional anesthesia tray setup" }, { name: "Difficult airway cart management" },
+    ]},
+    { title: "Intra-Operative Support", skills: [
+      { name: "Assisting with intubation" }, { name: "Assisting with central line/arterial line placement" }, { name: "Blood/fluid warmer operation" }, { name: "Rapid infuser operation" }, { name: "Cardiopulmonary bypass support (cardiac cases)" },
+    ]},
+    { title: "Equipment Maintenance & Safety", skills: [
+      { name: "Equipment sterilization and turnover" }, { name: "Medication gas/vaporizer management" }, { name: "Malignant hyperthermia cart familiarity" }, { name: "Troubleshooting equipment malfunctions" },
+    ]},
+  ]},
+
+  { slug: "perfusionist", title: "Perfusionist Skills Checklist", shortTitle: "Perfusionist", icon: "🫁", group: "Surgical", categories: [
+    { title: "Cardiopulmonary Bypass", skills: [
+      { name: "CPB circuit setup and priming" }, { name: "Cannulation assist" }, { name: "Bypass management" }, { name: "Myocardial protection/cardioplegia delivery" }, { name: "Weaning from bypass" },
+    ]},
+    { title: "Monitoring & Technique", skills: [
+      { name: "Hemodynamic monitoring during bypass" }, { name: "Blood gas and coagulation management" }, { name: "Hypothermia/rewarming management" }, { name: "ECMO management" }, { name: "Intra-aortic balloon pump management" },
+    ]},
+    { title: "Equipment & Safety", skills: [
+      { name: "Heart-lung machine operation" }, { name: "Cell saver/autotransfusion operation" }, { name: "Emergency protocols (air embolism, circuit failure)" }, { name: "Equipment QA and maintenance" },
+    ]},
+  ]},
+
+  { slug: "spd-shift-manager", title: "SPD Shift Manager Skills Checklist", shortTitle: "SPD Shift Manager", icon: "🗝️", group: "Surgical", categories: [
+    { title: "Department Operations", skills: [
+      { name: "Staff scheduling and workflow management" }, { name: "Instrument tray inventory management" }, { name: "Case cart preparation oversight" }, { name: "Equipment loan/repair coordination" },
+    ]},
+    { title: "Quality & Compliance", skills: [
+      { name: "Sterilization validation and documentation" }, { name: "AAMI/AORN standards compliance" }, { name: "Regulatory survey readiness" }, { name: "Incident/near-miss investigation" },
+    ]},
+    { title: "Staff Leadership", skills: [
+      { name: "Staff training and competency validation" }, { name: "Performance management" }, { name: "Cross-department communication (OR, sterile processing)" },
+    ]},
+  ]},
+
+  { slug: "surgical-first-assist", title: "Surgical First Assist Skills Checklist", shortTitle: "Surgical First Assist", icon: "🗡️", group: "Surgical", categories: [
+    { title: "Intra-Operative Assisting", skills: [
+      { name: "Tissue handling and exposure" }, { name: "Hemostasis technique" }, { name: "Suturing and wound closure" }, { name: "Retraction" }, { name: "Sponge, needle, and instrument counts" },
+    ]},
+    { title: "Surgical Specialty Exposure", skills: [
+      { name: "General surgery" }, { name: "Orthopedic surgery" }, { name: "Cardiovascular surgery" }, { name: "Neurosurgery" },
+    ]},
+    { title: "Pre/Post-Operative", skills: [
+      { name: "Sterile field setup" }, { name: "Positioning and prep assist" }, { name: "Dressing application" }, { name: "Post-op hand-off" },
     ]},
   ]},
 ];
