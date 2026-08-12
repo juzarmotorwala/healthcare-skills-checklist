@@ -103,6 +103,36 @@ export const therapyRehabChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
+  { slug: "recreation-therapist", title: "Recreation Therapist / Activity Therapist Skills Checklist", shortTitle: "Recreation Therapist", icon: "🎨", group: "Therapy & Rehab", categories: [
+    { title: "Assessment", skills: [
+      { name: "Leisure interest assessment" }, { name: "Functional/cognitive assessment for activity planning" }, { name: "Treatment goal development" },
+    ]},
+    { title: "Therapeutic Interventions", skills: [
+      { name: "Group activity facilitation" }, { name: "Adaptive sports and recreation" }, { name: "Arts and crafts programming" }, { name: "Music/sensory-based interventions" }, { name: "Community reintegration outings" },
+    ]},
+    { title: "Population-Specific Programming", skills: [
+      { name: "Geriatric/dementia programming" }, { name: "Pediatric programming" }, { name: "Behavioral health programming" }, { name: "Physical disability adaptation" },
+    ]},
+    { title: "Documentation", skills: [
+      { name: "Treatment plan documentation" }, { name: "Progress note charting" }, { name: "Interdisciplinary team collaboration" },
+    ]},
+  ]},
+
+  { slug: "exercise-physiologist", title: "Exercise Physiologist Skills Checklist", shortTitle: "Exercise Physiologist", icon: "🏃‍♂️", group: "Therapy & Rehab", categories: [
+    { title: "Testing & Evaluation", skills: [
+      { name: "Cardiopulmonary exercise testing" }, { name: "Stress test administration (exercise/pharmacological)" }, { name: "Body composition analysis" }, { name: "Functional capacity evaluation" },
+    ]},
+    { title: "Exercise Prescription", skills: [
+      { name: "Individualized exercise program design" }, { name: "Cardiac rehabilitation exercise sessions" }, { name: "Pulmonary rehabilitation exercise sessions" }, { name: "Chronic disease exercise management (diabetes, obesity)" },
+    ]},
+    { title: "Patient Monitoring", skills: [
+      { name: "Telemetry/EKG monitoring during exercise" }, { name: "Vital sign monitoring" }, { name: "Recognition of exercise intolerance/emergency response" },
+    ]},
+    { title: "Education", skills: [
+      { name: "Patient lifestyle/behavior change counseling" }, { name: "Risk factor modification education" },
+    ]},
+  ]},
+
   { slug: "acute-rehab", title: "Acute Rehab Skills Checklist", shortTitle: "Acute Rehab", icon: "🏋️", group: "Therapy & Rehab", categories: [
     { title: "Work Settings", skills: [
       { name: "General Acute Care" }, { name: "Home Health" }, { name: "Nursing Home" }, { name: "Outpatient Clinic" }, { name: "Pediatric Rehab" }, { name: "Acute Rehab Hospital" },

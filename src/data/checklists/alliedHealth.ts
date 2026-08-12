@@ -121,6 +121,51 @@ export const alliedHealthChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
+  { slug: "dietitian", title: "Dietitian / Clinical Nutritionist Skills Checklist", shortTitle: "Dietitian", icon: "🥗", group: "Allied Health", categories: [
+    { title: "Nutrition Assessment", skills: [
+      { name: "Nutrition-focused physical exam" }, { name: "Anthropometric measurements" }, { name: "Nutritional risk screening" }, { name: "Calorie/protein needs calculation" }, { name: "Diet history and intake analysis" },
+    ]},
+    { title: "Medical Nutrition Therapy", skills: [
+      { name: "Diabetes management" }, { name: "Renal diet management" }, { name: "Enteral nutrition planning" }, { name: "Parenteral nutrition (TPN) planning" }, { name: "Oncology nutrition support" }, { name: "Bariatric nutrition counseling" },
+    ]},
+    { title: "Specialized Diets", skills: [
+      { name: "Cardiac/low-sodium diets" }, { name: "Pediatric nutrition" }, { name: "Food allergy/intolerance management" }, { name: "Texture-modified/dysphagia diets" },
+    ]},
+    { title: "Documentation & Compliance", skills: [
+      { name: "EMR charting/nutrition notes" }, { name: "Interdisciplinary care plan participation" }, { name: "Regulatory/Joint Commission nutrition standards" }, { name: "Patient and family education" },
+    ]},
+  ]},
+
+  { slug: "orthopedic-tech", title: "Orthopedic Technician Skills Checklist", shortTitle: "Orthopedic Tech", icon: "🦴", group: "Allied Health", categories: [
+    { title: "Casting & Splinting", skills: [
+      { name: "Fiberglass/plaster cast application" }, { name: "Cast removal" }, { name: "Splint application (short/long arm/leg)" }, { name: "Cast padding and windowing" },
+    ]},
+    { title: "Traction & Fixation", skills: [
+      { name: "Skin traction setup" }, { name: "Skeletal traction assist" }, { name: "External fixator pin site care" }, { name: "Brace fitting and adjustment" },
+    ]},
+    { title: "Patient Care", skills: [
+      { name: "Fracture reduction assist" }, { name: "Neurovascular assessment" }, { name: "Crutch/walker fitting and training" }, { name: "Patient education on cast/brace care" },
+    ]},
+    { title: "Equipment", skills: [
+      { name: "Cast saw operation" }, { name: "Sterile instrument handling" }, { name: "Supply and equipment inventory" },
+    ]},
+  ]},
+
+  { slug: "dental-assistant", title: "Dental Assistant Skills Checklist", shortTitle: "Dental Assistant", icon: "🦷", group: "Allied Health", categories: [
+    { title: "Chairside Assisting", skills: [
+      { name: "Four-handed dentistry technique" }, { name: "Instrument transfer" }, { name: "Suction and moisture control" }, { name: "Impression taking assist" },
+    ]},
+    { title: "Sterilization & Infection Control", skills: [
+      { name: "Instrument sterilization/autoclave operation" }, { name: "Operatory disinfection" }, { name: "PPE and standard precautions" },
+    ]},
+    { title: "Radiography", skills: [
+      { name: "Intraoral X-ray positioning" }, { name: "Digital radiography systems" }, { name: "Radiation safety" },
+    ]},
+    { title: "Patient Care & Scheduling", skills: [
+      { name: "Patient chart preparation" }, { name: "Appointment scheduling" }, { name: "Patient education on oral hygiene" },
+    ]},
+  ]},
+
   { slug: "physician-assistant", title: "Physician Assistant Skills Checklist", shortTitle: "Physician Assistant", icon: "🩹", group: "Allied Health", categories: [
     { title: "Clinical Assessment", skills: [
       { name: "History and physical exam" }, { name: "Differential diagnosis development" }, { name: "Diagnostic test ordering and interpretation" }, { name: "Treatment planning" },

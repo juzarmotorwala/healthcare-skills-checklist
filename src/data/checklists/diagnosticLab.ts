@@ -301,6 +301,36 @@ export const diagnosticLabChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
+  { slug: "ultrasound-tech", title: "Diagnostic Medical Sonographer / Ultrasound Technologist Skills Checklist", shortTitle: "Ultrasound Tech", icon: "🔊", group: "Diagnostic & Lab", categories: [
+    { title: "Abdominal Sonography", skills: [
+      { name: "Liver/gallbladder/pancreas imaging" }, { name: "Renal ultrasound" }, { name: "Aorta/IVC imaging" }, { name: "Abdominal Doppler studies" },
+    ]},
+    { title: "OB/GYN Sonography", skills: [
+      { name: "First trimester ultrasound" }, { name: "Anatomy scan (2nd/3rd trimester)" }, { name: "Transvaginal ultrasound" }, { name: "Pelvic/gynecologic ultrasound" }, { name: "Fetal biophysical profile" },
+    ]},
+    { title: "Small Parts & Vascular", skills: [
+      { name: "Thyroid/neck ultrasound" }, { name: "Breast ultrasound" }, { name: "Musculoskeletal ultrasound" }, { name: "Venous/arterial duplex studies" },
+    ]},
+    { title: "Patient Care & Equipment", skills: [
+      { name: "Patient positioning and prep" }, { name: "Transducer selection and technique" }, { name: "Image optimization and measurement" }, { name: "Report generation and PACS" },
+    ]},
+  ]},
+
+  { slug: "medical-physicist", title: "Medical Physicist Skills Checklist", shortTitle: "Medical Physicist", icon: "⚛️", group: "Diagnostic & Lab", categories: [
+    { title: "Treatment Planning QA", skills: [
+      { name: "IMRT/VMAT plan verification" }, { name: "Patient-specific QA measurements" }, { name: "Monitor unit independent calculation" }, { name: "Brachytherapy plan review" },
+    ]},
+    { title: "Equipment Calibration", skills: [
+      { name: "Linear accelerator output calibration" }, { name: "CT/simulator QA" }, { name: "Imaging equipment QA (mammography, MRI, nuclear medicine)" }, { name: "Annual/monthly machine QA per AAPM protocols" },
+    ]},
+    { title: "Radiation Safety", skills: [
+      { name: "Shielding design and survey" }, { name: "Radiation dose monitoring/ALARA program" }, { name: "Incident investigation" },
+    ]},
+    { title: "Regulatory Compliance", skills: [
+      { name: "State/NRC licensing compliance" }, { name: "Joint Commission radiation oncology standards" }, { name: "Documentation and reporting" },
+    ]},
+  ]},
+
   { slug: "cytotechnologist", title: "Cytotechnologist Skills Checklist", shortTitle: "Cytotechnologist", icon: "🔬", group: "Diagnostic & Lab", categories: [
     { title: "Specimen Analysis", skills: [
       { name: "Pap smear screening" }, { name: "Non-gynecologic cytology (fluids, FNA)" }, { name: "Liquid-based cytology preparation" }, { name: "Microscopic slide screening" }, { name: "Abnormality identification and classification" },

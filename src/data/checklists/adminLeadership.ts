@@ -55,6 +55,21 @@ export const adminLeadershipChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
+  { slug: "psychologist", title: "Psychologist Skills Checklist", shortTitle: "Psychologist", icon: "🧠", group: "Administration & Leadership", categories: [
+    { title: "Assessment", skills: [
+      { name: "Psychological/diagnostic assessment" }, { name: "Cognitive/neuropsychological testing" }, { name: "Risk assessment (suicide/homicide)" }, { name: "Substance use assessment" },
+    ]},
+    { title: "Therapeutic Intervention", skills: [
+      { name: "Individual psychotherapy" }, { name: "Group therapy facilitation" }, { name: "Cognitive behavioral therapy (CBT)" }, { name: "Crisis intervention counseling" }, { name: "Family therapy" },
+    ]},
+    { title: "Crisis Management", skills: [
+      { name: "De-escalation techniques" }, { name: "Involuntary commitment evaluation" }, { name: "Safety planning" },
+    ]},
+    { title: "Documentation & Ethics", skills: [
+      { name: "Clinical documentation/treatment planning" }, { name: "HIPAA and confidentiality compliance" }, { name: "Interdisciplinary team collaboration" }, { name: "Ethical/legal standards of practice" },
+    ]},
+  ]},
+
   { slug: "clinical-documentation-specialist", title: "Clinical Documentation Specialist Skills Checklist", shortTitle: "CDS", icon: "📄", group: "Administration & Leadership", categories: [
     { title: "Documentation Review", skills: [
       { name: "Concurrent chart review" }, { name: "Clinical indicator identification" }, { name: "Query formulation (physician queries)" }, { name: "DRG/severity of illness validation" },

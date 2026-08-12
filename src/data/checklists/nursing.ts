@@ -73,6 +73,21 @@ export const nursingChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
+  { slug: "home-health-aide", title: "Home Health Aide Skills Checklist", shortTitle: "Home Health Aide", icon: "🏡", group: "Nursing", categories: [
+    { title: "Personal Care", skills: [
+      { name: "Bathing/showering assistance" }, { name: "Grooming and dressing assistance" }, { name: "Oral hygiene assistance" }, { name: "Toileting/incontinence care" }, { name: "Feeding assistance" }, { name: "Mobility/transfer assistance" },
+    ]},
+    { title: "Household Support", skills: [
+      { name: "Light housekeeping" }, { name: "Meal preparation" }, { name: "Laundry" }, { name: "Medication reminders" }, { name: "Errands/grocery assistance" },
+    ]},
+    { title: "Safety & Observation", skills: [
+      { name: "Fall risk awareness" }, { name: "Vital sign observation (non-invasive)" }, { name: "Recognizing changes in condition" }, { name: "Emergency response procedures" }, { name: "Infection control/hand hygiene" },
+    ]},
+    { title: "Documentation & Communication", skills: [
+      { name: "Visit note documentation" }, { name: "Reporting changes to supervising RN" }, { name: "Care plan adherence" }, { name: "Family communication" },
+    ]},
+  ]},
+
   { slug: "rn-supervisor", title: "RN Supervisor Skills Checklist", shortTitle: "RN Supervisor", icon: "👩‍⚕️", group: "Nursing", categories: [
     { title: "Universal Precautions", skills: [
       { name: "Working with patients in isolation" }, { name: "Working with patients in restraints" }, { name: "Patient/Family teaching" }, { name: "Patient Identification" }, { name: "Specialty beds" }, { name: "End of life care/palliative care" }, { name: "Knowledge of 'Do Not Use Abbreviations'" }, { name: "Charge/supervisor experience" }, { name: "Knowledge of Joint Commission National Patient Safety Goals" }, { name: "Knowledge/familiarity with HCAHPS scores" },

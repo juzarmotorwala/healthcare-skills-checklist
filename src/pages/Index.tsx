@@ -16,6 +16,7 @@ export default function Index() {
   })).filter(g => g.items.length > 0);
 
   const totalChecklists = checklists.length;
+  const displayedTotal = Math.floor(totalChecklists / 5) * 5;
 
   return (
     <div className="min-h-screen bg-background">
@@ -43,7 +44,7 @@ export default function Index() {
           <p className="text-muted-foreground max-w-lg mx-auto mb-8 text-sm sm:text-base leading-relaxed">
             Comprehensive Skills Checklists For Healthcare Professionals.
             <br />
-            Self-Assess Your Competencies Across {totalChecklists} Clinical Specialties.
+            Self-Assess Your Competencies Across {displayedTotal}+ Clinical Specialties.
           </p>
 
           {/* Search */}
