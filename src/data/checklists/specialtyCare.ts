@@ -166,7 +166,7 @@ export const specialtyCareChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "psychiatric-tech", title: "Psychiatric Tech Skills Checklist", shortTitle: "Psychiatric Tech", icon: "💭", group: "Specialty Care", categories: [
+  { slug: "psychiatric-tech", title: "Psychiatric Technician / Behavioral Health Technician Skills Checklist", shortTitle: "Psych / Behavioral Health Tech", icon: "💭", group: "Specialty Care", categories: [
     { title: "General Duties", skills: [
       { name: "Admit/Orient Involuntary Clients" }, { name: "Admit/Orient Voluntary Clients" }, { name: "Advance Directives" }, { name: "Ambulatory Cuffs" }, { name: "Assessment Skills" }, { name: "Behavioral Management" }, { name: "Crisis Intervention" }, { name: "De-escalation" },
     ]},
