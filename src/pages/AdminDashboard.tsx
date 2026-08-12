@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { supabase } from "@/lib/supabaseClient";
 import { getChecklistBySlug } from "@/data/checklistData";
 import { downloadSubmissionPdf } from "@/lib/adminPdf";
+import { downloadSubmissionsExcel } from "@/lib/adminExport";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -14,7 +15,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Download, LogOut, Search, ShieldAlert, Loader2 } from "lucide-react";
+import { Download, FileSpreadsheet, LogOut, Search, ShieldAlert, Loader2 } from "lucide-react";
 
 interface SubmissionRow {
   id: string;
@@ -102,6 +103,10 @@ export default function AdminDashboard() {
     navigate("/admin/login");
   };
 
+  const handleExportExcel = () => {
+    downloadSubmissionsExcel(filtered);
+  };
+
   const handleDownload = (row: SubmissionRow) => {
     const checklist = getChecklistBySlug(row.checklist_slug);
     downloadSubmissionPdf({
@@ -165,9 +170,20 @@ export default function AdminDashboard() {
                   className="pl-9 bg-card"
                 />
               </div>
-              <p className="text-xs text-muted-foreground">
-                {rows === null ? "Loading..." : `${filtered.length} of ${rows.length} submissions`}
-              </p>
+              <div className="flex items-center gap-3">
+                <p className="text-xs text-muted-foreground">
+                  {rows === null ? "Loading..." : `${filtered.length} of ${rows.length} submissions`}
+                </p>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={handleExportExcel}
+                  disabled={!rows || filtered.length === 0}
+                >
+                  <FileSpreadsheet className="mr-2 h-3.5 w-3.5" />
+                  Export to Excel
+                </Button>
+              </div>
             </div>
 
             <div className="bg-card border rounded-lg shadow-sm overflow-hidden">
