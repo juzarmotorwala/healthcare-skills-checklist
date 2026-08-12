@@ -106,6 +106,21 @@ export const adminLeadershipChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
+  { slug: "laboratory-director", title: "Laboratory Director Skills Checklist", shortTitle: "Laboratory Director", icon: "🔬", group: "Administration & Leadership", categories: [
+    { title: "Operations Leadership", skills: [
+      { name: "Multi-department lab oversight (chemistry, hematology, micro, blood bank)" }, { name: "Staffing and scheduling management" }, { name: "Budget and capital equipment planning" }, { name: "Vendor/contract management" },
+    ]},
+    { title: "Quality & Compliance", skills: [
+      { name: "CAP/CLIA accreditation oversight" }, { name: "Quality assurance program management" }, { name: "Proficiency testing oversight" }, { name: "Regulatory survey preparedness" },
+    ]},
+    { title: "Technical Oversight", skills: [
+      { name: "Test menu and method validation" }, { name: "Instrument/technology evaluation" }, { name: "Result turnaround time management" },
+    ]},
+    { title: "Staff Development", skills: [
+      { name: "Staff competency assessment" }, { name: "Continuing education program oversight" }, { name: "Performance management" },
+    ]},
+  ]},
+
   { slug: "credentialing-specialist", title: "Credentialing Specialist Skills Checklist", shortTitle: "Credentialing Specialist", icon: "📋", group: "Administration & Leadership", categories: [
     { title: "Credentialing & Privileging", skills: [
       { name: "Primary source verification" }, { name: "Provider application processing" }, { name: "Privileging coordination" }, { name: "Re-credentialing cycle management" }, { name: "NPDB/OIG sanction checks" },

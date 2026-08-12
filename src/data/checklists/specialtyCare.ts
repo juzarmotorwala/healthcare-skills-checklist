@@ -79,6 +79,24 @@ export const specialtyCareChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
+  { slug: "rn-neuro", title: "Registered Nurse – Neuroscience/Stroke Unit Skills Checklist", shortTitle: "RN – Neuro/Stroke", icon: "🧠", group: "Specialty Care", categories: [
+    { title: "Neurological Assessment", skills: [
+      { name: "NIH Stroke Scale (NIHSS)" }, { name: "Glasgow Coma Scale" }, { name: "Frequent neuro checks" }, { name: "Pupillary assessment" }, { name: "Cranial nerve assessment" },
+    ]},
+    { title: "Stroke Care", skills: [
+      { name: "tPA/thrombolytic administration" }, { name: "Post-thrombectomy monitoring" }, { name: "Stroke protocol/code stroke activation" }, { name: "Dysphagia/swallow screening" }, { name: "Blood pressure management post-stroke" },
+    ]},
+    { title: "Neurosurgical Care", skills: [
+      { name: "Post-craniotomy care" }, { name: "External ventricular drain (EVD) management" }, { name: "ICP monitoring basics" }, { name: "Spinal surgery post-op care" },
+    ]},
+    { title: "Seizure & Movement Disorders", skills: [
+      { name: "Seizure precautions and management" }, { name: "Status epilepticus response" }, { name: "Parkinson's disease management" }, { name: "Multiple sclerosis care" },
+    ]},
+    { title: "Patient Safety & Discharge", skills: [
+      { name: "Fall risk precautions" }, { name: "Aspiration precautions" }, { name: "Family education on discharge/rehab planning" },
+    ]},
+  ]},
+
   { slug: "dialysis-tech", title: "Dialysis Technician Skills Checklist", shortTitle: "Dialysis Technician", icon: "🩸", group: "Specialty Care", categories: [
     { title: "Hemodialysis Setup", skills: [
       { name: "Machine setup and priming" }, { name: "Dialyzer/bloodline assembly" }, { name: "Water treatment system checks" }, { name: "Dialysate preparation and testing" },

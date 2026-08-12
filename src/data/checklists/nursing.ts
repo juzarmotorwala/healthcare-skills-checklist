@@ -73,6 +73,21 @@ export const nursingChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
+  { slug: "correctional-nursing", title: "Correctional Nursing (RN/LPN) Skills Checklist", shortTitle: "Correctional Nursing", icon: "🔐", group: "Nursing", categories: [
+    { title: "Facility & Security Protocols", skills: [
+      { name: "Security clearance and facility protocols" }, { name: "Contraband awareness" }, { name: "Inmate movement/escort coordination" }, { name: "Emergency lockdown procedures" },
+    ]},
+    { title: "Intake & Assessment", skills: [
+      { name: "Intake health screening" }, { name: "Mental health/suicide risk screening" }, { name: "Withdrawal/detox assessment" }, { name: "Chronic disease intake assessment" },
+    ]},
+    { title: "Clinical Care", skills: [
+      { name: "Medication pass (directly observed therapy)" }, { name: "Sick call triage" }, { name: "Chronic care clinic management (diabetes, hypertension)" }, { name: "Infectious disease management (TB, HIV, Hepatitis)" },
+    ]},
+    { title: "Documentation & Legal", skills: [
+      { name: "Correctional-specific EMR documentation" }, { name: "Use of force medical clearance" }, { name: "Grievance response documentation" }, { name: "HIPAA compliance within correctional setting" },
+    ]},
+  ]},
+
   { slug: "home-health-aide", title: "Home Health Aide Skills Checklist", shortTitle: "Home Health Aide", icon: "🏡", group: "Nursing", categories: [
     { title: "Personal Care", skills: [
       { name: "Bathing/showering assistance" }, { name: "Grooming and dressing assistance" }, { name: "Oral hygiene assistance" }, { name: "Toileting/incontinence care" }, { name: "Feeding assistance" }, { name: "Mobility/transfer assistance" },
