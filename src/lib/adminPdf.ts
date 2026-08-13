@@ -1,6 +1,5 @@
 import { jsPDF } from "jspdf";
 import { ChecklistCategory } from "@/data/checklistData";
-import { MONOGRAM_BASE64, WORDMARK_BASE64, WORDMARK_ASPECT } from "@/lib/brandAssets";
 
 const proficiencyLabels = ["No Experience", "Need Training", "With Supervision", "Independent"];
 
@@ -11,8 +10,6 @@ export interface SubmissionForPdf {
   candidatePhone: string;
   candidateCity: string;
   candidateState: string;
-  candidateLastFourSSN: string;
-  candidateDob: string;
   categories: ChecklistCategory[];
   ratings: Record<string, number | null>;
   // ISO timestamp (or any Date-parseable string) of the original submission —
@@ -37,17 +34,11 @@ export function downloadSubmissionPdf(sub: SubmissionForPdf) {
     }
   };
 
-  const logoBoxHeight = 20;
-  try {
-    doc.addImage(`data:image/png;base64,${MONOGRAM_BASE64}`, "PNG", margin, y, logoBoxHeight, logoBoxHeight);
-    const wordmarkHeight = 11;
-    const wordmarkWidth = wordmarkHeight * WORDMARK_ASPECT;
-    const wordmarkY = y + (logoBoxHeight - wordmarkHeight) / 2;
-    doc.addImage(`data:image/png;base64,${WORDMARK_BASE64}`, "PNG", margin + logoBoxHeight + 4, wordmarkY, wordmarkWidth, wordmarkHeight);
-  } catch (_e) {
-    // logo embed is best-effort; continue without it if it fails
-  }
-  y += logoBoxHeight + 8;
+  doc.setFontSize(9);
+  doc.setFont("helvetica", "bold");
+  doc.setTextColor(30, 60, 90);
+  doc.text("Healthcare Skills Checklist", margin, y);
+  y += 10;
 
   doc.setFontSize(16);
   doc.setFont("helvetica", "bold");
@@ -63,7 +54,7 @@ export function downloadSubmissionPdf(sub: SubmissionForPdf) {
 
   doc.setDrawColor(200, 200, 200);
   doc.setFillColor(248, 250, 252);
-  doc.roundedRect(margin, y, contentWidth, 35, 2, 2, "FD");
+  doc.roundedRect(margin, y, contentWidth, 28, 2, 2, "FD");
   doc.setTextColor(60, 60, 60);
   doc.setFontSize(10);
   doc.setFont("helvetica", "bold");
@@ -76,9 +67,7 @@ export function downloadSubmissionPdf(sub: SubmissionForPdf) {
   doc.text(`Email: ${sub.candidateEmail}`, col2, y + 13);
   doc.text(`Phone: ${sub.candidatePhone}`, col1, y + 20);
   doc.text(`Location: ${sub.candidateCity}, ${sub.candidateState}`, col2, y + 20);
-  doc.text(`Last 4 SSN: ••${sub.candidateLastFourSSN}`, col1, y + 27);
-  doc.text(`DOB: ${sub.candidateDob}`, col2, y + 27);
-  y += 41;
+  y += 34;
 
   doc.setFontSize(8);
   doc.setTextColor(100, 100, 100);
@@ -147,7 +136,7 @@ export function downloadSubmissionPdf(sub: SubmissionForPdf) {
   doc.setFont("helvetica", "italic");
   doc.setTextColor(80, 80, 80);
   const attestLine1 = doc.splitTextToSize(
-    `Electronically submitted by ${sub.candidateName} on ${submittedAt} via the BrothersTech Skills Checklist portal.`,
+    `Electronically submitted by ${sub.candidateName} on ${submittedAt} via healthcareskillschecklist.com.`,
     contentWidth - 8,
   );
   doc.text(attestLine1, margin + 4, y + 6);

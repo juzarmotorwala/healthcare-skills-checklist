@@ -37,13 +37,12 @@ export default function AdminLogin() {
     <div className="min-h-screen flex items-center justify-center bg-background px-4">
       <div className="w-full max-w-sm bg-card border rounded-xl shadow-sm p-6">
         <div className="flex flex-col items-center text-center mb-6">
-          <img src="/brand/monogram.png" alt="BrothersTech" className="h-12 w-12 mb-3" />
+          <ShieldCheck className="h-10 w-10 text-primary mb-3" />
           <h1 className="font-serif text-xl text-foreground flex items-center gap-2">
-            <ShieldCheck className="h-5 w-5 text-primary" />
             Admin Login
           </h1>
           <p className="text-xs text-muted-foreground mt-1">
-            BrothersTech Skills Checklist
+            Healthcare Skills Checklist
           </p>
         </div>
 
@@ -84,7 +83,7 @@ export default function AdminLogin() {
         </form>
 
         <p className="text-xs text-muted-foreground text-center mt-5">
-          Access is restricted to @brotherstechinc.com accounts invited by an admin.
+          Access is restricted to accounts invited by an admin.
         </p>
       </div>
     </div>

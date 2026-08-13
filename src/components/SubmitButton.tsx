@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Send, Loader2, CheckCircle2 } from "lucide-react";
+import { Send, Loader2, CheckCircle2, Download } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { CandidateInfo } from "./CandidateInfoForm";
 import { ChecklistCategory } from "@/data/checklistData";
@@ -17,6 +17,26 @@ interface SubmitButtonProps {
   checklistTitle: string;
   categories: ChecklistCategory[];
   ratings: ProficiencyRatings;
+  consent: boolean;
+  website: string;
+}
+
+function downloadBase64Pdf(base64: string, fileName: string) {
+  const byteChars = atob(base64);
+  const byteNumbers = new Array(byteChars.length);
+  for (let i = 0; i < byteChars.length; i++) {
+    byteNumbers[i] = byteChars.charCodeAt(i);
+  }
+  const byteArray = new Uint8Array(byteNumbers);
+  const blob = new Blob([byteArray], { type: "application/pdf" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = fileName;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
 }
 
 export default function SubmitButton({
@@ -26,9 +46,12 @@ export default function SubmitButton({
   checklistTitle,
   categories,
   ratings,
+  consent,
+  website,
 }: SubmitButtonProps) {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [pdfData, setPdfData] = useState<{ base64: string; fileName: string } | null>(null);
 
   const handleSubmit = async () => {
     setLoading(true);
@@ -45,6 +68,8 @@ export default function SubmitButton({
           candidate: candidateInfo,
           categories,
           ratings,
+          consent,
+          website,
         }),
       });
 
@@ -55,9 +80,17 @@ export default function SubmitButton({
       }
 
       setSubmitted(true);
+      if (data.pdfBase64 && data.fileName) {
+        setPdfData({ base64: data.pdfBase64, fileName: data.fileName });
+        downloadBase64Pdf(data.pdfBase64, data.fileName);
+      }
+
       toast({
         title: "Submitted!",
-        description: `A copy has been emailed to ${candidateInfo.email}.`,
+        description:
+          data.emailSent === false
+            ? "Your PDF downloaded, but the email couldn't be sent. Please save it now."
+            : `A copy has been emailed to ${candidateInfo.email}, and your PDF has downloaded.`,
       });
     } catch (err) {
       console.error("Submission error:", err);
@@ -74,10 +107,23 @@ export default function SubmitButton({
 
   if (submitted) {
     return (
-      <Button size="lg" disabled className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-600">
-        <CheckCircle2 className="mr-2 h-4 w-4" />
-        Submitted — check your email
-      </Button>
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 w-full sm:w-auto">
+        <Button size="lg" disabled className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-600">
+          <CheckCircle2 className="mr-2 h-4 w-4" />
+          Submitted — check your email
+        </Button>
+        {pdfData && (
+          <Button
+            size="lg"
+            variant="outline"
+            onClick={() => downloadBase64Pdf(pdfData.base64, pdfData.fileName)}
+            className="w-full sm:w-auto"
+          >
+            <Download className="mr-2 h-4 w-4" />
+            Download PDF again
+          </Button>
+        )}
+      </div>
     );
   }
 

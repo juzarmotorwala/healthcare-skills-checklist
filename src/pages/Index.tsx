@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { checklists, specialtyGroups, getChecklistsByGroup } from "@/data/checklistData";
-import { Search, ArrowRight } from "lucide-react";
+import { Search, ArrowRight, ClipboardCheck, ListChecks, FileDown, Users } from "lucide-react";
 import { Input } from "@/components/ui/input";
 
 export default function Index() {
@@ -24,27 +24,22 @@ export default function Index() {
       <header className="relative overflow-hidden border-b">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
         <div className="relative max-w-6xl mx-auto px-4 py-16 sm:py-24 text-center">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <img
-              src="/brand/monogram.png"
-              alt="BrothersTech"
-              className="h-12 w-12"
-            />
-            <img
-              src="/brand/wordmark.png"
-              alt="Brotherstech"
-              className="h-7 sm:h-8 w-auto"
-            />
+          <div className="flex items-center justify-center gap-2.5 mb-6">
+            <ClipboardCheck className="h-9 w-9 text-primary" />
+            <span className="text-lg sm:text-xl font-serif text-foreground">
+              Healthcare Skills Checklist
+            </span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-serif text-foreground mb-4 tracking-tight">
-            Healthcare Skills
+            Your healthcare skills,
             <br />
-            <span className="text-primary">Competency Portal</span>
+            <span className="text-primary">documented once.</span>
           </h1>
+          <p className="text-muted-foreground max-w-lg mx-auto mb-2 text-sm sm:text-base leading-relaxed">
+            Free, self-guided skills checklists across {displayedTotal}+ clinical specialties.
+          </p>
           <p className="text-muted-foreground max-w-lg mx-auto mb-8 text-sm sm:text-base leading-relaxed">
-            Comprehensive Skills Checklists For Healthcare Professionals.
-            <br />
-            Self-Assess Your Competencies Across {displayedTotal}+ Clinical Specialties.
+            Rate your experience, download a clean PDF, and bring it to every application. No account needed.
           </p>
 
           {/* Search */}
@@ -59,6 +54,41 @@ export default function Index() {
           </div>
         </div>
       </header>
+
+      {/* How it works */}
+      <section className="border-b bg-card/40">
+        <div className="max-w-6xl mx-auto px-4 py-10">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+            <div className="space-y-2">
+              <div className="mx-auto h-9 w-9 rounded-full bg-primary/10 flex items-center justify-center">
+                <ListChecks className="h-4.5 w-4.5 text-primary" />
+              </div>
+              <p className="text-sm font-medium text-foreground">1. Pick your specialty</p>
+              <p className="text-xs text-muted-foreground max-w-[220px] mx-auto">
+                Choose from checklists built for your role — ICU nursing, radiology, physical therapy, and more.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <div className="mx-auto h-9 w-9 rounded-full bg-primary/10 flex items-center justify-center">
+                <ClipboardCheck className="h-4.5 w-4.5 text-primary" />
+              </div>
+              <p className="text-sm font-medium text-foreground">2. Rate your skills</p>
+              <p className="text-xs text-muted-foreground max-w-[220px] mx-auto">
+                Walk through real, job-specific skills and rate your comfort level with each one.
+              </p>
+            </div>
+            <div className="space-y-2">
+              <div className="mx-auto h-9 w-9 rounded-full bg-primary/10 flex items-center justify-center">
+                <FileDown className="h-4.5 w-4.5 text-primary" />
+              </div>
+              <p className="text-sm font-medium text-foreground">3. Get your PDF</p>
+              <p className="text-xs text-muted-foreground max-w-[220px] mx-auto">
+                Download a polished summary, and we'll email you a copy too — ready for any application.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Directory */}
       <main className="max-w-6xl mx-auto px-4 py-12">
@@ -102,12 +132,32 @@ export default function Index() {
         )}
       </main>
 
+      {/* For recruiters */}
+      <section className="border-t bg-card/40">
+        <div className="max-w-4xl mx-auto px-4 py-10 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+          <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+            <Users className="h-5 w-5 text-primary" />
+          </div>
+          <div>
+            <p className="text-sm font-medium text-foreground">For recruiters: speed up your intake</p>
+            <p className="text-xs text-muted-foreground mt-1">
+              Share a checklist link with candidates before your first call. They arrive with a documented
+              skills profile, so you spend less time on paperwork.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
-      <footer className="border-t bg-card/50 mt-12">
-        <div className="max-w-6xl mx-auto px-4 py-8 text-center">
+      <footer className="border-t bg-card/50">
+        <div className="max-w-6xl mx-auto px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
           <p className="text-xs text-muted-foreground">
-            Healthcare Skills Competency Portal — BrothersTech Inc. All Rights Reserved {new Date().getFullYear()}.
+            © {new Date().getFullYear()} Healthcare Skills Checklist. All rights reserved.
           </p>
+          <div className="flex gap-4 text-xs text-muted-foreground">
+            <Link to="/privacy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-foreground transition-colors">Terms of Use</Link>
+          </div>
         </div>
       </footer>
     </div>

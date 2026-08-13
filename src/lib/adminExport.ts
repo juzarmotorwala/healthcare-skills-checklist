@@ -11,8 +11,6 @@ export interface SubmissionForExport {
   candidate_phone: string;
   candidate_city: string;
   candidate_state: string;
-  candidate_last4_ssn: string;
-  candidate_dob: string;
   ratings: Record<string, number | null>;
   total_skills: number;
   rated_skills: number;
@@ -30,8 +28,6 @@ export function downloadSubmissionsExcel(rows: SubmissionForExport[], fileNamePr
     "Phone": row.candidate_phone,
     "City": row.candidate_city,
     "State": row.candidate_state,
-    "Last 4 SSN": row.candidate_last4_ssn,
-    "DOB": row.candidate_dob,
     "Checklist": row.checklist_title,
     "Rated": row.rated_skills,
     "Total Skills": row.total_skills,
@@ -65,7 +61,7 @@ export function downloadSubmissionsExcel(rows: SubmissionForExport[], fileNamePr
   const summarySheet = XLSX.utils.json_to_sheet(summarySheetData);
   summarySheet["!cols"] = [
     { wch: 22 }, { wch: 26 }, { wch: 14 }, { wch: 16 }, { wch: 8 },
-    { wch: 12 }, { wch: 12 }, { wch: 30 }, { wch: 8 }, { wch: 12 },
+    { wch: 30 }, { wch: 8 }, { wch: 12 },
     { wch: 10 }, { wch: 20 },
   ];
   XLSX.utils.book_append_sheet(workbook, summarySheet, "Submissions");

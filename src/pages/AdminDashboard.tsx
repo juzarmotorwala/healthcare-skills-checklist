@@ -15,7 +15,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Download, FileSpreadsheet, LogOut, Search, ShieldAlert, Loader2 } from "lucide-react";
+import { Download, FileSpreadsheet, LogOut, Search, ShieldAlert, Loader2, ClipboardCheck } from "lucide-react";
 
 interface SubmissionRow {
   id: string;
@@ -26,8 +26,6 @@ interface SubmissionRow {
   candidate_phone: string;
   candidate_city: string;
   candidate_state: string;
-  candidate_last4_ssn: string;
-  candidate_dob: string;
   ratings: Record<string, number | null>;
   total_skills: number;
   rated_skills: number;
@@ -77,7 +75,7 @@ export default function AdminDashboard() {
         if (error) {
           setLoadError(
             error.message.includes("permission")
-              ? "Your account doesn't have access to view submissions. Ask an admin to confirm your email is on the @brotherstechinc.com domain."
+              ? "Your account doesn't have access to view submissions. Ask an admin to grant your account access."
               : error.message
           );
           return;
@@ -116,8 +114,6 @@ export default function AdminDashboard() {
       candidatePhone: row.candidate_phone,
       candidateCity: row.candidate_city,
       candidateState: row.candidate_state,
-      candidateLastFourSSN: row.candidate_last4_ssn,
-      candidateDob: row.candidate_dob,
       categories: checklist?.categories ?? [],
       ratings: row.ratings,
       submittedAt: row.created_at,
@@ -137,7 +133,7 @@ export default function AdminDashboard() {
       <header className="border-b bg-card/80 backdrop-blur-sm sticky top-0 z-10">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
           <div className="flex items-center gap-3">
-            <img src="/brand/monogram.png" alt="BrothersTech" className="h-7 w-7" />
+            <ClipboardCheck className="h-6 w-6 text-primary" />
             <div>
               <h1 className="font-serif text-lg text-foreground leading-tight">
                 Submissions
