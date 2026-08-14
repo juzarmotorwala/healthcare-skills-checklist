@@ -24,15 +24,12 @@ export default function Index() {
       <header className="relative overflow-hidden border-b">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
         <div className="relative max-w-6xl mx-auto px-4 py-16 sm:py-24 text-center">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <ClipboardCheck className="h-10 w-10 sm:h-12 sm:w-12 text-primary" />
-            <h1 className="text-3xl sm:text-5xl font-serif font-bold text-foreground tracking-tight">
-              Healthcare Skills Checklist
-            </h1>
-          </div>
+          <h1 className="text-3xl sm:text-5xl font-serif font-bold text-primary tracking-tight mb-4">
+            Healthcare Skills Checklist
+          </h1>
           <p className="text-muted-foreground max-w-lg mx-auto mb-8 text-sm sm:text-base leading-relaxed">
-            Free, self-guided checklists across {displayedTotal}+ clinical specialties. Rate your
-            experience, download a clean PDF, and bring it to every application. No account needed.
+            Free, self-assessment checklists across {displayedTotal}+ clinical specialties. Rate your
+            experience and download a clean PDF.
           </p>
 
           {/* Search */}
@@ -56,16 +53,16 @@ export default function Index() {
               <div className="mx-auto h-9 w-9 rounded-full bg-primary/10 flex items-center justify-center">
                 <ListChecks className="h-4.5 w-4.5 text-primary" />
               </div>
-              <p className="text-sm font-medium text-foreground">1. Pick your specialty</p>
+              <p className="text-sm font-medium text-foreground">1. Pick Your Specialty</p>
               <p className="text-xs text-muted-foreground max-w-[220px] mx-auto">
                 Choose from checklists built for your role — ICU nursing, radiology, physical therapy, and more.
               </p>
             </div>
             <div className="space-y-2">
-              <div className="mx-auto h-9 w-9 rounded-full bg-emerald-100 flex items-center justify-center">
-                <ClipboardCheck className="h-4.5 w-4.5 text-emerald-600" />
+              <div className="mx-auto h-9 w-9 rounded-full bg-primary/10 flex items-center justify-center">
+                <ClipboardCheck className="h-4.5 w-4.5 text-primary" />
               </div>
-              <p className="text-sm font-medium text-foreground">2. Rate your skills</p>
+              <p className="text-sm font-medium text-foreground">2. Rate Your Skills</p>
               <p className="text-xs text-muted-foreground max-w-[220px] mx-auto">
                 Walk through real, job-specific skills and rate your comfort level with each one.
               </p>
@@ -74,7 +71,7 @@ export default function Index() {
               <div className="mx-auto h-9 w-9 rounded-full bg-primary/10 flex items-center justify-center">
                 <FileDown className="h-4.5 w-4.5 text-primary" />
               </div>
-              <p className="text-sm font-medium text-foreground">3. Get your PDF</p>
+              <p className="text-sm font-medium text-foreground">3. Get Your PDF</p>
               <p className="text-xs text-muted-foreground max-w-[220px] mx-auto">
                 Download a polished summary, and we'll email you a copy too — ready for any application.
               </p>

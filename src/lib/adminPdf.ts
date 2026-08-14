@@ -1,11 +1,8 @@
 import { jsPDF } from "jspdf";
 import { ChecklistCategory } from "@/data/checklistData";
+import { toTitleCase } from "@/lib/titleCase";
 
 const proficiencyLabels = ["No Experience", "Need Training", "With Supervision", "Independent"];
-
-function capitalizeFirst(s: string): string {
-  return s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
-}
 
 export interface SubmissionForPdf {
   checklistTitle: string;
@@ -38,22 +35,26 @@ export function downloadSubmissionPdf(sub: SubmissionForPdf) {
     }
   };
 
-  doc.setFontSize(10);
+  // Brand line is the dominant visual element on the page — bigger, bolder,
+  // and in brand blue — since this PDF is the primary thing candidates keep
+  // and share, and it should read as ours at a glance.
+  doc.setFontSize(20);
   doc.setFont("helvetica", "bold");
   doc.setTextColor(30, 60, 90);
   doc.text("healthcareskillschecklist.com", margin, y);
-  y += 5;
-  doc.setFontSize(7.5);
+  y += 6;
+  doc.setFontSize(8.5);
   doc.setFont("helvetica", "italic");
   doc.setTextColor(120, 120, 120);
   doc.text("Helping healthcare professionals self-assess their skills", margin, y);
-  y += 9;
+  y += 10;
 
-  doc.setFontSize(16);
+  // Checklist title is secondary content, sized down from the brand line.
+  doc.setFontSize(12);
   doc.setFont("helvetica", "bold");
-  doc.setTextColor(20, 20, 20);
+  doc.setTextColor(70, 70, 70);
   doc.text(sub.checklistTitle, margin, y);
-  y += 8;
+  y += 7;
 
   doc.setFontSize(8);
   doc.setFont("helvetica", "normal");
@@ -112,7 +113,7 @@ export function downloadSubmissionPdf(sub: SubmissionForPdf) {
       doc.setFontSize(8);
       doc.setTextColor(50, 50, 50);
 
-      const skillText = doc.splitTextToSize(capitalizeFirst(skill.name), contentWidth - 40);
+      const skillText = doc.splitTextToSize(toTitleCase(skill.name), contentWidth - 40);
       const lineHeight = skillText.length > 1 ? skillText.length * 4 : 5;
 
       if (skillText.length > 1) {

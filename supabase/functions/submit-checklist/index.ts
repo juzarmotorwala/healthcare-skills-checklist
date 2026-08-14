@@ -23,8 +23,73 @@ interface Payload {
   website?: string; // honeypot field — real users never fill this in
 }
 
-function capitalizeFirst(s: string): string {
-  return s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
+// Smart Title Case for skill names (kept in sync with src/lib/titleCase.ts —
+// this edge function is deployed standalone and cannot import from the repo).
+// Preserves real acronyms (ICU, IV, EKG, HIPAA...), fixes the handful of
+// entries that were typed in ALL CAPS as a formatting choice rather than as
+// acronyms (PULSE, SPLINTING, DOCUMENTATION...), lowercases minor connector
+// words unless first, and leaves already-mixed-case tokens (tPA, BiPAP)
+// untouched.
+const MINOR_WORDS = new Set([
+  "a", "an", "and", "as", "at", "but", "by", "for", "in", "into", "nor",
+  "of", "on", "or", "per", "the", "to", "vs", "via", "with", "from",
+]);
+
+const FORCE_TITLE_CASE_WORDS = new Set([
+  "ASSESSMENT", "RESPIRATION", "LUNG", "SOUNDS", "BLOOD", "PRESSURE",
+  "OXIMETRY", "TEMPERATURE", "PAIN", "TRAUMA", "SUCTIONING",
+  "ADMINISTRATION", "SPLINTING", "BANDAGING", "HEMORRHAGE", "CONTROL",
+  "SPINAL", "IMMOBILIZATION", "OPERATION", "OPERATIONS", "LIFTING",
+  "MOVING", "STRETCHER", "RADIO", "COMMUNICATIONS", "DOCUMENTATION",
+  "PULSE", "PATIENT",
+]);
+
+function titleCaseSegment(seg: string): string {
+  if (!seg) return seg;
+  const letters = seg.replace(/[^A-Za-z]/g, "");
+  if (letters.length === 0) return seg;
+
+  const isAllUpper = letters === letters.toUpperCase() && letters !== letters.toLowerCase();
+  const isAllLower = letters === letters.toLowerCase();
+  const isMixedCase = !isAllUpper && !isAllLower;
+
+  if (isMixedCase) return seg;
+  if (isAllUpper && !FORCE_TITLE_CASE_WORDS.has(letters.toUpperCase())) return seg;
+
+  let result = "";
+  let seenFirstLetter = false;
+  for (const ch of seg) {
+    if (/[A-Za-z]/.test(ch)) {
+      result += seenFirstLetter ? ch.toLowerCase() : ch.toUpperCase();
+      seenFirstLetter = true;
+    } else {
+      result += ch;
+    }
+  }
+  return result;
+}
+
+function titleCaseWord(word: string, isFirst: boolean): string {
+  const letters = word.replace(/[^A-Za-z]/g, "");
+  const isAllUpper = letters.length > 0 && letters === letters.toUpperCase() && letters !== letters.toLowerCase();
+
+  if (!isFirst && !isAllUpper) {
+    const stripped = word.toLowerCase().replace(/[^a-z]/g, "");
+    if (MINOR_WORDS.has(stripped)) return word.toLowerCase();
+  }
+
+  return word
+    .split(/([-/])/)
+    .map(part => (part === "-" || part === "/" ? part : titleCaseSegment(part)))
+    .join("");
+}
+
+function toTitleCase(input: string): string {
+  if (!input) return input;
+  return input
+    .split(" ")
+    .map((w, i) => titleCaseWord(w, i === 0))
+    .join(" ");
 }
 
 function uint8ToBase64(bytes: Uint8Array): string {
@@ -51,22 +116,26 @@ function buildPdf(payload: Payload): Uint8Array {
     }
   };
 
-  doc.setFontSize(10);
+  // Brand line is the dominant visual element on the page — bigger, bolder,
+  // and in brand blue — since this PDF is the primary thing candidates keep
+  // and share, and it should read as ours at a glance.
+  doc.setFontSize(20);
   doc.setFont("helvetica", "bold");
   doc.setTextColor(30, 60, 90);
   doc.text("healthcareskillschecklist.com", margin, y);
-  y += 5;
-  doc.setFontSize(7.5);
+  y += 6;
+  doc.setFontSize(8.5);
   doc.setFont("helvetica", "italic");
   doc.setTextColor(120, 120, 120);
   doc.text("Helping healthcare professionals self-assess their skills", margin, y);
-  y += 9;
+  y += 10;
 
-  doc.setFontSize(16);
+  // Checklist title is secondary content, sized down from the brand line.
+  doc.setFontSize(12);
   doc.setFont("helvetica", "bold");
-  doc.setTextColor(20, 20, 20);
+  doc.setTextColor(70, 70, 70);
   doc.text(checklistTitle, margin, y);
-  y += 8;
+  y += 7;
 
   doc.setFontSize(8);
   doc.setFont("helvetica", "normal");
@@ -125,7 +194,7 @@ function buildPdf(payload: Payload): Uint8Array {
       doc.setFontSize(8);
       doc.setTextColor(50, 50, 50);
 
-      const skillText = doc.splitTextToSize(capitalizeFirst(skill.name), contentWidth - 40);
+      const skillText = doc.splitTextToSize(toTitleCase(skill.name), contentWidth - 40);
       const lineHeight = skillText.length > 1 ? skillText.length * 4 : 5;
 
       if (skillText.length > 1) {

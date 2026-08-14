@@ -1,6 +1,7 @@
 import { useState, forwardRef, useImperativeHandle } from "react";
 import { ChecklistCategory } from "@/data/checklistData";
 import { ChevronDown, ChevronRight } from "lucide-react";
+import { toTitleCase } from "@/lib/titleCase";
 
 // Keyed by "categoryIndex:skillIndex" rather than skill name — some checklists
 // have two skills sharing the same name in different categories (or even the
@@ -42,11 +43,10 @@ const proficiencyColors = [
 
 const skillKey = (catIdx: number, skillIdx: number) => `${catIdx}:${skillIdx}`;
 
-// Skill names in the underlying data aren't consistently capitalized. Rather
-// than hand-edit hundreds of entries across every checklist file, capitalize
-// just the first character at render time so display is uniform regardless
-// of source casing.
-const capitalizeFirst = (s: string) => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s);
+// Skill names in the underlying data are not consistently capitalized. Rather
+// than hand-edit hundreds of entries across every checklist file, apply a
+// smart Title Case at render time so display is uniform regardless of
+// source casing (see src/lib/titleCase.ts for the acronym-aware rules).
 
 const ChecklistTable = forwardRef<ChecklistTableHandle, ChecklistTableProps>(
   ({ categories, onRatingChange }, ref) => {
@@ -166,7 +166,7 @@ const ChecklistTable = forwardRef<ChecklistTableHandle, ChecklistTableProps>(
                           skillIdx % 2 === 0 ? "bg-card" : "bg-muted/20"
                         } hover:bg-accent/30 transition-colors`}
                       >
-                        <span className="text-base font-medium text-foreground">{capitalizeFirst(skill.name)}</span>
+                        <span className="text-base font-medium text-foreground">{toTitleCase(skill.name)}</span>
                         <div className="flex sm:contents gap-2 mt-1.5 sm:mt-0">
                           {[1, 2, 3, 4].map(level => {
                             const isSelected = ratings[key] === level;
@@ -179,7 +179,7 @@ const ChecklistTable = forwardRef<ChecklistTableHandle, ChecklistTableProps>(
                                     ? proficiencyColors[level - 1] + " ring-2 ring-primary/30 scale-110"
                                     : "bg-muted/50 text-muted-foreground hover:bg-accent"
                                 }`}
-                                aria-label={`Rate ${capitalizeFirst(skill.name)} as ${proficiencyLabels[level - 1]}`}
+                                aria-label={`Rate ${toTitleCase(skill.name)} as ${proficiencyLabels[level - 1]}`}
                               >
                                 {level}
                               </button>
