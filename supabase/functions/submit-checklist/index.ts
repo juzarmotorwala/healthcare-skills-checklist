@@ -23,6 +23,10 @@ interface Payload {
   website?: string; // honeypot field — real users never fill this in
 }
 
+function capitalizeFirst(s: string): string {
+  return s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
+}
+
 function uint8ToBase64(bytes: Uint8Array): string {
   let binary = "";
   const chunkSize = 0x8000;
@@ -47,11 +51,16 @@ function buildPdf(payload: Payload): Uint8Array {
     }
   };
 
-  doc.setFontSize(9);
+  doc.setFontSize(10);
   doc.setFont("helvetica", "bold");
   doc.setTextColor(30, 60, 90);
-  doc.text("Healthcare Skills Checklist", margin, y);
-  y += 10;
+  doc.text("healthcareskillschecklist.com", margin, y);
+  y += 5;
+  doc.setFontSize(7.5);
+  doc.setFont("helvetica", "italic");
+  doc.setTextColor(120, 120, 120);
+  doc.text("Helping healthcare professionals self-assess their skills", margin, y);
+  y += 9;
 
   doc.setFontSize(16);
   doc.setFont("helvetica", "bold");
@@ -116,7 +125,7 @@ function buildPdf(payload: Payload): Uint8Array {
       doc.setFontSize(8);
       doc.setTextColor(50, 50, 50);
 
-      const skillText = doc.splitTextToSize(skill.name, contentWidth - 40);
+      const skillText = doc.splitTextToSize(capitalizeFirst(skill.name), contentWidth - 40);
       const lineHeight = skillText.length > 1 ? skillText.length * 4 : 5;
 
       if (skillText.length > 1) {

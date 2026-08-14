@@ -24,22 +24,15 @@ export default function Index() {
       <header className="relative overflow-hidden border-b">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
         <div className="relative max-w-6xl mx-auto px-4 py-16 sm:py-24 text-center">
-          <div className="flex items-center justify-center gap-2.5 mb-6">
-            <ClipboardCheck className="h-9 w-9 text-primary" />
-            <span className="text-lg sm:text-xl font-serif text-foreground">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <ClipboardCheck className="h-10 w-10 sm:h-12 sm:w-12 text-primary" />
+            <h1 className="text-3xl sm:text-5xl font-serif font-bold text-foreground tracking-tight">
               Healthcare Skills Checklist
-            </span>
+            </h1>
           </div>
-          <h1 className="text-3xl sm:text-5xl font-serif text-foreground mb-4 tracking-tight">
-            Your healthcare skills,
-            <br />
-            <span className="text-primary">documented once.</span>
-          </h1>
-          <p className="text-muted-foreground max-w-lg mx-auto mb-2 text-sm sm:text-base leading-relaxed">
-            Free, self-guided skills checklists across {displayedTotal}+ clinical specialties.
-          </p>
           <p className="text-muted-foreground max-w-lg mx-auto mb-8 text-sm sm:text-base leading-relaxed">
-            Rate your experience, download a clean PDF, and bring it to every application. No account needed.
+            Free, self-guided checklists across {displayedTotal}+ clinical specialties. Rate your
+            experience, download a clean PDF, and bring it to every application. No account needed.
           </p>
 
           {/* Search */}
@@ -69,8 +62,8 @@ export default function Index() {
               </p>
             </div>
             <div className="space-y-2">
-              <div className="mx-auto h-9 w-9 rounded-full bg-primary/10 flex items-center justify-center">
-                <ClipboardCheck className="h-4.5 w-4.5 text-primary" />
+              <div className="mx-auto h-9 w-9 rounded-full bg-emerald-100 flex items-center justify-center">
+                <ClipboardCheck className="h-4.5 w-4.5 text-emerald-600" />
               </div>
               <p className="text-sm font-medium text-foreground">2. Rate your skills</p>
               <p className="text-xs text-muted-foreground max-w-[220px] mx-auto">
@@ -110,18 +103,18 @@ export default function Index() {
                       <Link
                         key={item.slug}
                         to={`/checklist/${item.slug}`}
-                        className="group flex items-center gap-3 bg-card border rounded-lg px-4 py-3 hover:shadow-md hover:border-primary/30 transition-all duration-200"
+                        className="group flex items-center gap-3 bg-card border rounded-lg px-4 py-3 hover:shadow-md hover:border-emerald-400/60 transition-all duration-200"
                       >
                         <span className="text-xl flex-shrink-0">{item.icon}</span>
                         <div className="flex-1 min-w-0">
-                          <p className="text-sm font-medium text-foreground truncate group-hover:text-primary transition-colors">
+                          <p className="text-sm font-medium text-foreground truncate group-hover:text-emerald-600 transition-colors">
                             {item.shortTitle}
                           </p>
                           {!hasContent && (
                             <p className="text-xs text-muted-foreground">Coming soon</p>
                           )}
                         </div>
-                        <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all flex-shrink-0" />
+                        <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-emerald-600 group-hover:translate-x-0.5 transition-all flex-shrink-0" />
                       </Link>
                     );
                   })}

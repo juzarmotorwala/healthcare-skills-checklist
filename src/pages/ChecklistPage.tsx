@@ -143,8 +143,7 @@ export default function ChecklistPage() {
                   and{" "}
                   <Link to="/terms" target="_blank" className="underline hover:text-foreground">
                     Terms of Use
-                  </Link>{" "}
-                  and consent to be contacted about job opportunities based on my submission.
+                  </Link>.
                 </label>
               </div>
 

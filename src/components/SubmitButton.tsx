@@ -139,7 +139,7 @@ export default function SubmitButton({
       ) : (
         <Send className="mr-2 h-4 w-4" />
       )}
-      {loading ? "Submitting..." : "Submit Checklist"}
+      {loading ? "Sending..." : "Email & Download"}
     </Button>
   );
 }

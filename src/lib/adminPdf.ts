@@ -3,6 +3,10 @@ import { ChecklistCategory } from "@/data/checklistData";
 
 const proficiencyLabels = ["No Experience", "Need Training", "With Supervision", "Independent"];
 
+function capitalizeFirst(s: string): string {
+  return s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
+}
+
 export interface SubmissionForPdf {
   checklistTitle: string;
   candidateName: string;
@@ -34,11 +38,16 @@ export function downloadSubmissionPdf(sub: SubmissionForPdf) {
     }
   };
 
-  doc.setFontSize(9);
+  doc.setFontSize(10);
   doc.setFont("helvetica", "bold");
   doc.setTextColor(30, 60, 90);
-  doc.text("Healthcare Skills Checklist", margin, y);
-  y += 10;
+  doc.text("healthcareskillschecklist.com", margin, y);
+  y += 5;
+  doc.setFontSize(7.5);
+  doc.setFont("helvetica", "italic");
+  doc.setTextColor(120, 120, 120);
+  doc.text("Helping healthcare professionals self-assess their skills", margin, y);
+  y += 9;
 
   doc.setFontSize(16);
   doc.setFont("helvetica", "bold");
@@ -103,7 +112,7 @@ export function downloadSubmissionPdf(sub: SubmissionForPdf) {
       doc.setFontSize(8);
       doc.setTextColor(50, 50, 50);
 
-      const skillText = doc.splitTextToSize(skill.name, contentWidth - 40);
+      const skillText = doc.splitTextToSize(capitalizeFirst(skill.name), contentWidth - 40);
       const lineHeight = skillText.length > 1 ? skillText.length * 4 : 5;
 
       if (skillText.length > 1) {
