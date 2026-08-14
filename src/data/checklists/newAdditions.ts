@@ -179,23 +179,6 @@ export const newAdditionsChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "iv-cath-lab-rn", title: "Registered Nurse – IV / Cath Lab Skills Checklist", shortTitle: "IV Cath Lab RN", icon: "💉", group: "Diagnostic & Lab", categories: [
-    { title: "IV Therapy", skills: [
-      { name: "Peripheral IV Insertion" }, { name: "Difficult/Ultrasound-Guided IV Access" }, { name: "Central Line Access Assist" }, { name: "IV Infusion Pump Management" }, { name: "Blood Draw/Specimen Collection" },
-    ]},
-    { title: "Cath Lab Pre-Procedure Care", skills: [
-      { name: "Patient Assessment and History" }, { name: "Consent Verification" }, { name: "Time-Out Procedure" }, { name: "Pre-Procedure Medication Administration" },
-    ]},
-    { title: "Cath Lab Procedural Support", skills: [
-      { name: "Conscious Sedation Monitoring" }, { name: "Hemodynamic Monitoring" }, { name: "Circulating During Procedure" },
-    ]},
-    { title: "Post-Procedure Care", skills: [
-      { name: "Sheath/Access Site Monitoring" }, { name: "Vascular Closure Device Site Care" }, { name: "Contrast Reaction Monitoring" }, { name: "Discharge Teaching" },
-    ]},
-    { title: "Emergency Response", skills: [
-      { name: "Infiltration/Extravasation Management" }, { name: "Vascular Complication Recognition" }, { name: "Code Response" },
-    ]},
-  ]},
 
   { slug: "rn-surgical-icu", title: "Registered Nurse – Surgical ICU Skills Checklist", shortTitle: "RN – Surgical ICU", icon: "🛏️", group: "Critical Care", categories: [
     { title: "Post-Surgical Critical Care", skills: [
