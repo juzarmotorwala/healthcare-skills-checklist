@@ -30,7 +30,7 @@ export default function PrivacyPolicy() {
           <h2 className="text-xl font-serif text-foreground">Information We Collect</h2>
           <p className="text-sm leading-relaxed text-foreground">When you use this tool, we collect:</p>
           <ul className="text-sm leading-relaxed text-foreground list-disc pl-5 space-y-1">
-            <li><strong>Contact information:</strong> name, email address, phone number, city, and state.</li>
+            <li><strong>Contact information:</strong> name, email address, phone number, city, state, and zip code.</li>
             <li><strong>Skill assessment data:</strong> your self-reported ratings and responses on the checklist(s) you complete.</li>
             <li><strong>Technical information:</strong> basic data such as IP address, collected automatically for security and to prevent abuse of the tool.</li>
           </ul>

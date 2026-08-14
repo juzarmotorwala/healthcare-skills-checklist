@@ -14,6 +14,7 @@ export interface CandidateInfo {
   phone: string;
   city: string;
   state: string;
+  zipCode: string;
 }
 
 interface CandidateInfoFormProps {
@@ -32,6 +33,9 @@ export default function CandidateInfoForm({ info, onChange }: CandidateInfoFormP
   const update = (field: keyof CandidateInfo, value: string) => {
     if (field === "phone") {
       value = value.replace(/[^\d+\-() ]/g, "");
+    }
+    if (field === "zipCode") {
+      value = value.replace(/[^\d-]/g, "").slice(0, 10);
     }
     onChange({ ...info, [field]: value });
   };
@@ -102,6 +106,16 @@ export default function CandidateInfoForm({ info, onChange }: CandidateInfoFormP
               ))}
             </SelectContent>
           </Select>
+        </div>
+        <div className="space-y-1.5">
+          <Label htmlFor="zipCode">Zip Code</Label>
+          <Input
+            id="zipCode"
+            placeholder="33101"
+            inputMode="numeric"
+            value={info.zipCode}
+            onChange={(e) => update("zipCode", e.target.value)}
+          />
         </div>
       </div>
     </div>

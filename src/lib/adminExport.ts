@@ -11,6 +11,7 @@ export interface SubmissionForExport {
   candidate_phone: string;
   candidate_city: string;
   candidate_state: string;
+  candidate_zip: string | null;
   ratings: Record<string, number | null>;
   total_skills: number;
   rated_skills: number;
@@ -28,6 +29,7 @@ export function downloadSubmissionsExcel(rows: SubmissionForExport[], fileNamePr
     "Phone": row.candidate_phone,
     "City": row.candidate_city,
     "State": row.candidate_state,
+    "Zip": row.candidate_zip ?? "",
     "Checklist": row.checklist_title,
     "Rated": row.rated_skills,
     "Total Skills": row.total_skills,

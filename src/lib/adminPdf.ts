@@ -11,6 +11,7 @@ export interface SubmissionForPdf {
   candidatePhone: string;
   candidateCity: string;
   candidateState: string;
+  candidateZip?: string | null;
   categories: ChecklistCategory[];
   ratings: Record<string, number | null>;
   // ISO timestamp (or any Date-parseable string) of the original submission —
@@ -76,7 +77,10 @@ export function downloadSubmissionPdf(sub: SubmissionForPdf) {
   doc.text(`Name: ${sub.candidateName}`, col1, y + 13);
   doc.text(`Email: ${sub.candidateEmail}`, col2, y + 13);
   doc.text(`Phone: ${sub.candidatePhone}`, col1, y + 20);
-  doc.text(`Location: ${sub.candidateCity}, ${sub.candidateState}`, col2, y + 20);
+  const location = sub.candidateZip?.trim()
+    ? `${sub.candidateCity}, ${sub.candidateState} ${sub.candidateZip.trim()}`
+    : `${sub.candidateCity}, ${sub.candidateState}`;
+  doc.text(`Location: ${location}`, col2, y + 20);
   y += 34;
 
   doc.setFontSize(8);

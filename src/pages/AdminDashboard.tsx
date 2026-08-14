@@ -26,6 +26,7 @@ interface SubmissionRow {
   candidate_phone: string;
   candidate_city: string;
   candidate_state: string;
+  candidate_zip: string | null;
   ratings: Record<string, number | null>;
   total_skills: number;
   rated_skills: number;
@@ -114,6 +115,7 @@ export default function AdminDashboard() {
       candidatePhone: row.candidate_phone,
       candidateCity: row.candidate_city,
       candidateState: row.candidate_state,
+      candidateZip: row.candidate_zip,
       categories: checklist?.categories ?? [],
       ratings: row.ratings,
       submittedAt: row.created_at,

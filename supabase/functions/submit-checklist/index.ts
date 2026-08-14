@@ -12,7 +12,7 @@ const proficiencyLabels = ["No Experience", "Need Training", "With Supervision",
 
 interface Skill { name: string }
 interface Category { title: string; skills: Skill[] }
-interface Candidate { fullName: string; email: string; phone: string; city: string; state: string }
+interface Candidate { fullName: string; email: string; phone: string; city: string; state: string; zipCode?: string }
 interface Payload {
   slug: string;
   checklistTitle: string;
@@ -157,7 +157,10 @@ function buildPdf(payload: Payload): Uint8Array {
   doc.text(`Name: ${candidate.fullName}`, col1, y + 13);
   doc.text(`Email: ${candidate.email}`, col2, y + 13);
   doc.text(`Phone: ${candidate.phone}`, col1, y + 20);
-  doc.text(`Location: ${candidate.city}, ${candidate.state}`, col2, y + 20);
+  const location = candidate.zipCode?.trim()
+    ? `${candidate.city}, ${candidate.state} ${candidate.zipCode.trim()}`
+    : `${candidate.city}, ${candidate.state}`;
+  doc.text(`Location: ${location}`, col2, y + 20);
   y += 34;
 
   doc.setFontSize(8);
@@ -336,9 +339,9 @@ Deno.serve(async (req: Request) => {
 
     await sql`
       insert into public.submissions
-        (checklist_slug, checklist_title, candidate_name, candidate_email, candidate_phone, candidate_city, candidate_state, ratings, total_skills, rated_skills, email_sent, email_error, consent_given, consent_at, ip_address)
+        (checklist_slug, checklist_title, candidate_name, candidate_email, candidate_phone, candidate_city, candidate_state, candidate_zip, ratings, total_skills, rated_skills, email_sent, email_error, consent_given, consent_at, ip_address)
       values
-        (${slug}, ${checklistTitle}, ${candidate.fullName}, ${candidate.email}, ${candidate.phone}, ${candidate.city}, ${candidate.state}, ${sql.json(ratings)}, ${totalSkills}, ${ratedSkills}, ${emailOk}, ${emailError}, ${consent}, now(), ${ip})
+        (${slug}, ${checklistTitle}, ${candidate.fullName}, ${candidate.email}, ${candidate.phone}, ${candidate.city}, ${candidate.state}, ${candidate.zipCode?.trim() || null}, ${sql.json(ratings)}, ${totalSkills}, ${ratedSkills}, ${emailOk}, ${emailError}, ${consent}, now(), ${ip})
     `;
 
     await sql.end();

@@ -21,6 +21,7 @@ export default function ChecklistPage() {
     phone: "",
     city: "",
     state: "",
+    zipCode: "",
   });
 
   const [consent, setConsent] = useState(false);

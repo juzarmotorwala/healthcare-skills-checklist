@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { checklists, specialtyGroups, getChecklistsByGroup } from "@/data/checklistData";
-import { Search, ArrowRight, ClipboardCheck, ListChecks, FileDown, Users } from "lucide-react";
+import { Search, ArrowRight, ClipboardCheck, ListChecks, FileDown } from "lucide-react";
 import { Input } from "@/components/ui/input";
 
 export default function Index() {
@@ -24,19 +24,20 @@ export default function Index() {
       <header className="relative overflow-hidden border-b">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
         <div className="relative max-w-6xl mx-auto px-4 py-16 sm:py-24 text-center">
-          <h1 className="text-3xl sm:text-5xl font-serif font-bold text-primary tracking-tight mb-4">
+          <h1 className="text-3xl sm:text-5xl font-serif font-semibold text-primary tracking-normal mb-4">
             Healthcare Skills Checklist
           </h1>
           <p className="text-muted-foreground max-w-lg mx-auto mb-8 text-sm sm:text-base leading-relaxed">
-            Free, self-assessment checklists across {displayedTotal}+ clinical specialties. Rate your
-            experience and download a clean PDF.
+            Free, self-assessment checklists across {displayedTotal}+ clinical specialties.
+            <br />
+            Rate your experience and download a clean PDF.
           </p>
 
           {/* Search */}
           <div className="max-w-md mx-auto relative">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
-              placeholder="Search specialties..."
+              placeholder="Search Specialties..."
               value={search}
               onChange={e => setSearch(e.target.value)}
               className="pl-10 h-11 bg-card shadow-sm"
@@ -55,7 +56,7 @@ export default function Index() {
               </div>
               <p className="text-sm font-medium text-foreground">1. Pick Your Specialty</p>
               <p className="text-xs text-muted-foreground max-w-[220px] mx-auto">
-                Choose from checklists built for your role — ICU nursing, radiology, physical therapy, and more.
+                Choose from checklists built for your role — ICU Nursing, Radiology, Physical Therapy, and more.
               </p>
             </div>
             <div className="space-y-2">
@@ -121,22 +122,6 @@ export default function Index() {
           </div>
         )}
       </main>
-
-      {/* For recruiters */}
-      <section className="border-t bg-card/40">
-        <div className="max-w-4xl mx-auto px-4 py-10 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-          <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-            <Users className="h-5 w-5 text-primary" />
-          </div>
-          <div>
-            <p className="text-sm font-medium text-foreground">For recruiters: speed up your intake</p>
-            <p className="text-xs text-muted-foreground mt-1">
-              Share a checklist link with candidates before your first call. They arrive with a documented
-              skills profile, so you spend less time on paperwork.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="border-t bg-card/50">
