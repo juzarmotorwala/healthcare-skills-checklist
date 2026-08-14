@@ -39,6 +39,7 @@ import { specialtyCareChecklists } from "./checklists/specialtyCare";
 import { adminLeadershipChecklists } from "./checklists/adminLeadership";
 import { alliedHealthChecklists } from "./checklists/alliedHealth";
 import { newAdditionsChecklists } from "./checklists/newAdditions";
+import { reliasBatch1Checklists } from "./checklists/reliasBatch1";
 
 export const checklists: ChecklistSpec[] = [
   ...nursingChecklists,
@@ -51,6 +52,7 @@ export const checklists: ChecklistSpec[] = [
   ...adminLeadershipChecklists,
   ...alliedHealthChecklists,
   ...newAdditionsChecklists,
+  ...reliasBatch1Checklists,
 ];
 
 export function getChecklistBySlug(slug: string): ChecklistSpec | undefined {
