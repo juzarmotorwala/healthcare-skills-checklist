@@ -22,4 +22,40 @@ export const reliasBatch12Checklists: ChecklistSpec[] = [
       { name: "Inpatient Rehab and Skilled Nursing Facility" }, { name: "Outpatient and Home Health" }, { name: "School-Based and Pediatric Practice" }, { name: "Telehealth Practice" }, { name: "Psychiatric Hospital and Early Intervention" },
     ]},
   ]},
+
+  { slug: "patient-transport", title: "Patient Transport Skills Checklist", shortTitle: "Patient Transport", icon: "🛏️", group: "Allied Health", categories: [
+    { title: "Work Ethic & Job Responsibility", skills: [
+      { name: "Effective Time Management" }, { name: "Respond to Transport Requests with Confidence" }, { name: "Punctuality and Availability" },
+    ]},
+    { title: "Patient & Colleague Relationships", skills: [
+      { name: "Clear Communication with Colleagues" }, { name: "Clear Communication with Patients and Families" }, { name: "Maintain Patient Confidentiality" }, { name: "Maintain Patient Dignity" },
+    ]},
+    { title: "Transport Techniques", skills: [
+      { name: "Proper Lifting, Carrying, and Pushing Technique" }, { name: "Transport Patient via Gurney" }, { name: "Transport Patient via Wheelchair" }, { name: "Transport Equipment" }, { name: "Transport Specimens" },
+    ]},
+  ]},
+
+  { slug: "personal-care-aide-home-care", title: "Personal Care Aide – Home Care Skills Checklist", shortTitle: "Personal Care Aide – Home Care", icon: "🤲", group: "Nursing", categories: [
+    { title: "Organization, Administration & Patient Rights", skills: [
+      { name: "Follow Service/Care Plan and Chain of Command" }, { name: "Understand Job Description and Scope of Duties" }, { name: "HIPAA Compliance and Advance Directives" }, { name: "Respect Client Dignity, Privacy, and Right to Refuse Care" },
+    ]},
+    { title: "Communication & Documentation", skills: [
+      { name: "Effective Communication for Client Needs" }, { name: "Narrative and Checklist/Flowsheet Documentation" }, { name: "Report Changes in Condition and Complaints" }, { name: "Mandatory Reporting of Abuse or Emergencies" },
+    ]},
+    { title: "Personal Care & ADL Assistance", skills: [
+      { name: "Bathing (Tub, Shower, Sponge Bath)" }, { name: "Oral Hygiene and Denture Care" }, { name: "Dressing Assistance (Upper and Lower Body)" }, { name: "Nail, Hair, and Perineal Care" }, { name: "Toileting and Elimination Care (Bedpan, Foley Bag, Briefs)" },
+    ]},
+    { title: "Safe Transferring, Lifting & Mobility", skills: [
+      { name: "Gait Belt and Mechanical Lift Use" }, { name: "Reposition in Bed and Chair" }, { name: "Walker, Rollator, and Crutch Assistance" }, { name: "Range of Motion Exercises" },
+    ]},
+    { title: "Meal Preparation & Feeding", skills: [
+      { name: "Special Diets (Diabetic, Low Sodium, Pureed, Thickened Liquids)" }, { name: "Safe Positioning Before/During/After Feeding" }, { name: "Choking Hazard Prevention" }, { name: "Observe Food and Fluid Intake Tolerance" },
+    ]},
+    { title: "Infection Control & Home Safety", skills: [
+      { name: "Standard Precautions and Hand Hygiene" }, { name: "PPE Application and Removal" }, { name: "Fall Prevention and Walkway Safety" }, { name: "Sharps Safety and Disposal" }, { name: "Fire, Chemical, and Environmental Safety" },
+    ]},
+    { title: "Housekeeping & Support Duties", skills: [
+      { name: "Light Cleaning and Laundry" }, { name: "Grocery Shopping and Errands" }, { name: "Bed Fixing (Occupied and Unoccupied)" },
+    ]},
+  ]},
 ];
