@@ -53,6 +53,7 @@ import { reliasBatch11Checklists } from "./checklists/reliasBatch11";
 import { reliasBatch12Checklists } from "./checklists/reliasBatch12";
 import { reliasBatch13Checklists } from "./checklists/reliasBatch13";
 import { reliasBatch14Checklists } from "./checklists/reliasBatch14";
+import { reliasBatch15Checklists } from "./checklists/reliasBatch15";
 
 export const checklists: ChecklistSpec[] = [
   ...nursingChecklists,
@@ -79,6 +80,7 @@ export const checklists: ChecklistSpec[] = [
   ...reliasBatch12Checklists,
   ...reliasBatch13Checklists,
   ...reliasBatch14Checklists,
+  ...reliasBatch15Checklists,
 ];
 
 export function getChecklistBySlug(slug: string): ChecklistSpec | undefined {
