@@ -188,14 +188,32 @@ export const surgicalChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "surgical-first-assist", title: "Surgical First Assist Skills Checklist", shortTitle: "Surgical First Assist", icon: "🗡️", group: "Surgical", categories: [
-    { title: "Intra-Operative Assisting", skills: [
-      { name: "Tissue handling and exposure" }, { name: "Hemostasis technique" }, { name: "Suturing and wound closure" }, { name: "Retraction" }, { name: "Sponge, needle, and instrument counts" },
+    { title: "Preoperative Responsibilities", skills: [
+      { name: "Verify Surgical Site Marking" }, { name: "Sterile Field Setup" }, { name: "Positioning and Prep Assist" },
     ]},
     { title: "Surgical Specialty Exposure", skills: [
-      { name: "General surgery" }, { name: "Orthopedic surgery" }, { name: "Cardiovascular surgery" }, { name: "Neurosurgery" },
+      { name: "General Surgery" }, { name: "Orthopedic Surgery" }, { name: "Cardiovascular Surgery" }, { name: "Neurosurgery" }, { name: "Spinal Reconstruction" }, { name: "Laparoscopy" }, { name: "Robotics" },
     ]},
-    { title: "Pre/Post-Operative", skills: [
-      { name: "Sterile field setup" }, { name: "Positioning and prep assist" }, { name: "Dressing application" }, { name: "Post-op hand-off" },
+    { title: "Aseptic Technique & Sterile Field", skills: [
+      { name: "Wear Surgical Attire (Scrubs, Shoe Covers, Hair/Beard Cover, Mask, Approved Footwear)" }, { name: "Perform Surgical Hand Rub as Indicated" }, { name: "Drape the Surgical Site Using Sterile Technique" }, { name: "Verify Equipment is Working Correctly Before Use" },
+    ]},
+    { title: "Patient Positioning", skills: [
+      { name: "Sitting/Modified-Sitting (Fowler's/Semi-Fowler's) and Beach-Chair Position" }, { name: "Trendelenburg Position" }, { name: "Safe Positioning Practice for Pregnant Individuals" },
+    ]},
+    { title: "Surgical Site Prep", skills: [
+      { name: "Eye Prep" }, { name: "Ear Prep" }, { name: "Lateral Thoracic Prep" },
+    ]},
+    { title: "Surgical Techniques & Instrumentation", skills: [
+      { name: "Tissue Handling and Exposure" }, { name: "Hemostasis Technique" }, { name: "Suturing and Wound Closure" }, { name: "Retention Suture" }, { name: "Interrupted Vertical Mattress Suture" }, { name: "Retraction" }, { name: "Needle Holders" }, { name: "Sponge, Needle, and Instrument Counts" }, { name: "Irrigation and Fluid Warmers" }, { name: "Cardiac Monitoring and Pacemaker" }, { name: "Operating Microscopes" }, { name: "Converting to Open Procedure (Robotics)" }, { name: "Sharps Safety/Exposure Control Plan" },
+    ]},
+    { title: "Environmental & Instrument Management", skills: [
+      { name: "Cleaning Products (Contact Times, Correct Chemicals, PPE)" }, { name: "Sterile Processing Zones" }, { name: "Enzymatic Products" }, { name: "Sterilizer Cycle Reports" }, { name: "Ozone Sterilization" }, { name: "Surgical Attire Requirements by Suite Zone (Unrestricted/Semi-Restricted/Restricted)" }, { name: "Safety Data Sheets (SDS)" },
+    ]},
+    { title: "Emergency Preparedness & Postoperative Care", skills: [
+      { name: "Malignant Hyperthermia Response" }, { name: "Assist Surgeon in Managing Patient Care" }, { name: "Monitor for and Manage Complications" }, { name: "Dressing Application" }, { name: "Post-Op Hand-Off" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Neonate (0-1 month)" }, { name: "Infant (1-12 months)" }, { name: "Pediatric (1-12 years)" }, { name: "Adolescent (12-18 years)" }, { name: "Adult (18-65 years)" }, { name: "Geriatric (65+ years)" },
     ]},
   ]},
 ];
