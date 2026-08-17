@@ -38,17 +38,29 @@ export const alliedHealthChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "medical-assistant", title: "Medical Assistant Skills Checklist", shortTitle: "Medical Assistant", icon: "🩺", group: "Allied Health", categories: [
-    { title: "General Duties", skills: [
-      { name: "Awareness of HCAHPS" }, { name: "Administrative procedures" }, { name: "Admit/discharge patients" }, { name: "Blood glucose monitoring" }, { name: "Coordinate scheduling" }, { name: "Data entry" }, { name: "Documentation" }, { name: "EKG" }, { name: "Insurance verification" },
+    { title: "Clinical Patient Care", skills: [
+      { name: "Use glucometer" }, { name: "Administer immunizations and update records" }, { name: "Apply pulse oximeter" }, { name: "Perform pain assessment" }, { name: "Adhere to standard and transmission-based precautions with PPE" }, { name: "Perform wellness screenings (e.g., cancer, nicotine, domestic violence, suicide)" }, { name: "Perform telephone/in-person screening" }, { name: "Perform hearing screening" }, { name: "Obtain pediatric measurements/growth chart" }, { name: "Perform respiratory testing (e.g., PFTs, peak flow)" }, { name: "Apply oxygen" }, { name: "Placement/reading of PPD" }, { name: "Obtain vital signs" }, { name: "Perform vision screening" }, { name: "Obtain/record patient intake (e.g., PMH, CC, medication reconciliation)" }, { name: "Use transfer assistive devices (e.g., gait belt, walker, lift)" }, { name: "Perform basic life support (BLS)" }, { name: "Administer medications (e.g., PO, IM, SQ)" }, { name: "EKG" }, { name: "Nebulizer treatment" },
     ]},
-    { title: "Clinical Skills", skills: [
-      { name: "Vital Signs" }, { name: "Phlebotomy" }, { name: "Injections (IM, SQ, ID)" }, { name: "Specimen Collection" }, { name: "Wound Care" }, { name: "Suture/Staple Removal" }, { name: "Ear Irrigation" }, { name: "Nebulizer Treatment" },
+    { title: "Provider-Assisted Procedures", skills: [
+      { name: "Suture/staple removal" }, { name: "Discontinue IV" }, { name: "Urinary catheter insertion/removal" }, { name: "Specimen collection: swab (e.g., throat, nasopharyngeal, wound)" }, { name: "Nasogastric (NG) tube insertion/removal" }, { name: "Ear/eye irrigation" }, { name: "Specimen collection: blood" }, { name: "Cast care/splint" }, { name: "Assist provider with minor surgical procedures and treatments" }, { name: "Nasopharyngeal suctioning" }, { name: "Specimen collection: urine, stool, sputum" }, { name: "Sterilization of instruments" }, { name: "Wound care" },
     ]},
-    { title: "Patient Care", skills: [
-      { name: "Patient History" }, { name: "Patient Education" }, { name: "Medication Administration" }, { name: "Assist with Procedures" }, { name: "Sterilization of Instruments" },
+    { title: "Patient Condition Management", skills: [
+      { name: "Seizures" }, { name: "Hypertension" }, { name: "Shock" }, { name: "Diabetes, hypo/hyperglycemia" }, { name: "Bone fractures/joint sprains" }, { name: "Bleeding control" }, { name: "MI/chest pain" }, { name: "Burns" }, { name: "Respiratory distress" }, { name: "Allergic reaction/anaphylaxis" }, { name: "Head trauma" }, { name: "Stroke" }, { name: "Asthma/COPD" },
     ]},
-    { title: "Administrative", skills: [
-      { name: "Medical Records" }, { name: "Insurance/Billing" }, { name: "Referrals" }, { name: "Prior Authorizations" }, { name: "Telephone Triage" },
+    { title: "Patient Education & Communication", skills: [
+      { name: "Use and care of patient equipment (e.g., crutches, blood pressure machine)" }, { name: "Diagnostic tests/minor procedures" }, { name: "Discharge/follow-up" }, { name: "Managing conditions (e.g., hypertension, diabetes, COPD)" }, { name: "Pre-procedure preparation instructions (e.g., fasting)" }, { name: "Medications/immunizations" }, { name: "Dietary modifications/lifestyle changes" }, { name: "Adhere to delegation rights" }, { name: "Adapt communication (language, cognitive, age, visual/hearing impairment)" }, { name: "Use SBAR" }, { name: "Participate in interdisciplinary team meetings" }, { name: "Cultural diversity awareness" }, { name: "Perform handoff communication" },
+    ]},
+    { title: "Administrative Skills", skills: [
+      { name: "File/update medical records" }, { name: "Telehealth services" }, { name: "Coordinate patient transfers" }, { name: "Schedule/manage appointments" }, { name: "Electronic documentation" }, { name: "Coordination of referrals (e.g., social worker, home health, hospice)" }, { name: "Initiate patient medical record" }, { name: "ICD-10 coding" }, { name: "Data entry" }, { name: "Insurance billing/verification" }, { name: "Answering phones" }, { name: "CPT coding" }, { name: "Billing entry" }, { name: "Healthcare Common Procedure Coding System (HCPCS Level II)" }, { name: "Prior authorizations" }, { name: "Telephone triage" },
+    ]},
+    { title: "Supply Chain & Equipment", skills: [
+      { name: "Medical equipment calibration/maintenance" }, { name: "Restock medical/office supplies" }, { name: "Prepare supplies/patient room for procedures" },
+    ]},
+    { title: "Legal & Compliance", skills: [
+      { name: "Reportable patient conditions (e.g., abuse/neglect, dog bites, communicable diseases)" }, { name: "HIPAA laws and handling PHI" }, { name: "Informed consent" }, { name: "Advance directives, POA, DNR" }, { name: "Incident reports" }, { name: "Awareness of HCAHPS" },
+    ]},
+    { title: "Practice Setting Experience", skills: [
+      { name: "Utilization review/case management" }, { name: "Orthopedic practice" }, { name: "Pediatric practice" }, { name: "Rehabilitation center" }, { name: "OB/GYN practice" }, { name: "HIV/infection control" }, { name: "Health/wellness screening" }, { name: "Urgent care clinic" }, { name: "General clinic > 5 MDs practice" }, { name: "Occupational health" }, { name: "MD office < 5 MDs practice" }, { name: "Long-term care facility" }, { name: "Oncology practice" }, { name: "Hospital" }, { name: "Surgical practice" }, { name: "General internal medicine" }, { name: "Admit/discharge patients" },
     ]},
     { title: "Age Specific Competencies", skills: [
       { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
