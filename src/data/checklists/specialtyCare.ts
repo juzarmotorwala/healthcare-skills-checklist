@@ -293,23 +293,50 @@ export const specialtyCareChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "home-health", title: "Registered Nurse – Home Health Skills Checklist", shortTitle: "RN – Home Health", icon: "🏠", group: "Specialty Care", categories: [
-    { title: "Cardiovascular", skills: [
-      { name: "ACS/Post MI" }, { name: "Heart Failure" }, { name: "Post Cardiac Surgery" }, { name: "Cardiac Auscultation" }, { name: "Peripheral Pulse/Circulation Checks" },
+    { title: "Administrative & Patient Rights", skills: [
+      { name: "Applies Knowledge of CMS Home Health Conditions of Participation (CoPs)" }, { name: "Follows Organizational Policies, Procedures, and Documentation Standards" }, { name: "Adheres to the ANA Code of Ethics" }, { name: "Recognizes Organizational Structure and Chain of Command" }, { name: "Practices Within State and Federal Scope of Practice Regulations" }, { name: "Understands and Upholds the Patient Bill of Rights" }, { name: "Awareness of HHCAHPS Survey Process" }, { name: "Encourages Patient Participation in Care Decisions" }, { name: "Provides Culturally Sensitive Care" }, { name: "Supports Patient Right to Refuse Treatment or File Complaints" }, { name: "Maintains Patient Confidentiality per HIPAA" }, { name: "Understands Advance Directives Including DNR Orders" },
     ]},
-    { title: "Pulmonary", skills: [
-      { name: "COPD" }, { name: "Pneumonia" }, { name: "Asthma" }, { name: "O2 Therapy" }, { name: "Trach Care" }, { name: "Ventilator Care" },
+    { title: "Communication & Documentation", skills: [
+      { name: "Uses Telehealth and Remote Monitoring Tools" }, { name: "Uses Interpreters and Visual Aids as Needed" }, { name: "Active Listening and Therapeutic Communication" }, { name: "Explains Care and Procedures Before Interventions" }, { name: "Protects Privacy in Verbal and Electronic Communication" }, { name: "Documents Care, Assessments, and Interventions Accurately and Timely" }, { name: "Performs Clinical Record Audits" }, { name: "Transcribes and Incorporates Provider Orders" }, { name: "Recognizes and Reports Suspected Abuse or Neglect" }, { name: "Reports Changes in Condition Promptly" }, { name: "Reports Safety Concerns and Incidents" }, { name: "Care Coordination with Interdisciplinary Team" }, { name: "Identifies Community Resources (Food, Utility, Social Support)" }, { name: "Coordinates Care Transitions and Handoffs" }, { name: "Screens for Social Determinants of Health (e.g., Hunger Vital Sign, PRAPARE)" },
     ]},
-    { title: "Wound Care", skills: [
-      { name: "Wound Assessment" }, { name: "Dressing Changes" }, { name: "Wound VAC" }, { name: "Ostomy Care" }, { name: "Pressure Ulcer Prevention" },
+    { title: "OASIS & Care Planning", skills: [
+      { name: "Completes OASIS Assessments Accurately per CMS Guidance Manual" }, { name: "Knowledge of All OASIS Data Set Sections" }, { name: "Completes OASIS at Required Time Points (SOC, ROC, Follow-Up, Transfer, Discharge, Death)" }, { name: "Follows Current CMS OASIS Guidelines" }, { name: "Incorporates Telehealth/Remote Monitoring into Care Delivery" }, { name: "Completes Form CMS-485 (Home Health Plan of Care)" }, { name: "Obtains Provider Review, Approval, and Signature for Plan of Care" }, { name: "Provides Patient/Caregiver Education on Plan of Care and Medications" }, { name: "Develops Individualized Patient-Centered Plans of Care" }, { name: "Reviews Progress and Revises Plan of Care as Needed" },
     ]},
-    { title: "IV Therapy", skills: [
-      { name: "IV Insertion" }, { name: "PICC Line Care" }, { name: "IV Antibiotics" }, { name: "TPN" }, { name: "Blood Draws" },
+    { title: "Supervision & Delegation", skills: [
+      { name: "Monitors Completion and Quality of Delegated Tasks" }, { name: "Supervises LPNs/LVNs and Unlicensed Assistive Personnel" }, { name: "Participates in Training and Competency Validation" }, { name: "Develops and Updates Aide Care Plans" }, { name: "Conducts Supervisory Visits per Regulation" }, { name: "Provides Feedback and Documents Supervisory Activities" }, { name: "Delegates Tasks Based on Staff Competency and Scope of Practice" },
     ]},
-    { title: "Diabetic Care", skills: [
-      { name: "Blood Glucose Monitoring" }, { name: "Insulin Administration" }, { name: "Diabetic Teaching" }, { name: "Wound Care (Diabetic)" },
+    { title: "Patient Population & Specialty Care", skills: [
+      { name: "Care Across Adult, Geriatric, Pediatric, and Maternal-Child Populations" }, { name: "Chronic and Acute Medical Condition Management" }, { name: "Post-Surgical Care" }, { name: "Cognitive and Behavioral Health Needs" }, { name: "Functional Impairment Care" }, { name: "Palliative or End-of-Life Care" }, { name: "ADL/IADL Support (Hygiene, Feeding, Transfers, Assistive Devices)" },
     ]},
-    { title: "Documentation", skills: [
-      { name: "OASIS Assessment" }, { name: "Plan of Care" }, { name: "Medicare Documentation" }, { name: "Physician Orders" }, { name: "Discharge Planning" },
+    { title: "Cardiovascular & Respiratory Care", skills: [
+      { name: "Cardiovascular Symptom Education (Weight Gain, Edema, Chest Pain)" }, { name: "Cardiovascular Assessment (Rate/Rhythm, BP, Perfusion, Fluid Status)" }, { name: "Cardiac Device Monitoring" }, { name: "Coagulation Testing and Monitoring" }, { name: "Compression Therapy Application" }, { name: "Basic Cardiac Life Support (BCLS)" }, { name: "Oxygen Therapy and Suctioning" }, { name: "Nebulizer Treatments and Airway Clearance Techniques" }, { name: "Tracheostomy Care and Ventilator Monitoring" }, { name: "Chest Physiotherapy" }, { name: "Respiratory Assessment (Breath Sounds, Rate, SpO2, Dyspnea)" },
+    ]},
+    { title: "Neurological, GI & GU Care", skills: [
+      { name: "Neurological Monitoring and Seizure Precautions" }, { name: "Postictal Care" }, { name: "Aspiration Precautions for Stroke/Dysphagia" }, { name: "Neurological Assessment (LOC, Cognition, Motor/Sensory Function)" }, { name: "Bowel Programs and Enema Administration" }, { name: "Ostomy Care" }, { name: "Enteral Tube Feeding Management" }, { name: "GI Assessment (Bowel Function, Nausea, Bleeding, Dehydration)" }, { name: "Catheterization and Catheter Maintenance" }, { name: "Peritoneal Dialysis" }, { name: "Suprapubic and Nephrostomy Tube Care" }, { name: "Urostomy Management" }, { name: "GU Assessment (I&O, UTI Signs, Drainage Systems)" },
+    ]},
+    { title: "Reproductive, Musculoskeletal & Integumentary Care", skills: [
+      { name: "Perineal and Postpartum Care" }, { name: "Surgical Site Care Following Breast Procedures" }, { name: "Breast Care and Lactation Support" }, { name: "Active/Passive Range of Motion" }, { name: "Postoperative Incision and Wound Care" }, { name: "Fall Prevention and Mobility Education" }, { name: "Wound Cleansing, Irrigation, and Sterile Dressing Changes" }, { name: "Negative Pressure Wound Therapy" }, { name: "Surgical Drain Care" }, { name: "Pressure Injury Prevention, Staging, and Treatment" },
+    ]},
+    { title: "Endocrine & Mental/Emotional Care", skills: [
+      { name: "Endocrine Assessment (Hypo/Hyperthyroidism, Glycemic Changes)" }, { name: "Blood Glucose Monitoring (Finger-Stick and CGM)" }, { name: "Insulin Administration and Pump Management" }, { name: "Daily Foot Assessment and Education" }, { name: "Cognitive and Behavioral Assessment (Mood, Orientation, Coping)" }, { name: "Therapeutic Communication and Supportive Care" }, { name: "Education on Mood, Behavior, and Cognition Changes" },
+    ]},
+    { title: "Vital Signs, Pain, Nutrition & Infection Signs", skills: [
+      { name: "Vital Signs Measurement (Temp, RR, HR, BP, SpO2)" }, { name: "Pain Assessment Using Appropriate Scales" }, { name: "Nonpharmacologic Pain Relief Measures" }, { name: "Analgesic Medication Administration" }, { name: "Identifies Signs and Symptoms of Infection" }, { name: "Nutritional and Dietary Assessment" }, { name: "Diet and Hydration Education" }, { name: "Food-Drug Interaction Awareness" },
+    ]},
+    { title: "Equipment & Lab/Specimen Collection", skills: [
+      { name: "Use and Maintenance of Patient Care Equipment" }, { name: "Education on Safe Equipment Use, Cleaning, and Storage" }, { name: "Specimen Collection (Urine, Stool, Sputum, Blood/Venipuncture)" }, { name: "Explains Specimen Collection Procedures to Patients" },
+    ]},
+    { title: "Medication Administration", skills: [
+      { name: "Oral Medications (Solid, Liquid, Sublingual, Buccal)" }, { name: "Topical Medications (Creams, Patches, Ointments)" }, { name: "Instilled Medications (Ophthalmic, Otic, Nasal)" }, { name: "Suppository Medications (Vaginal, Rectal)" }, { name: "Inhaled Medications and Oxygen Therapy" }, { name: "Injectable Medications (SubQ, IM, Intradermal)" }, { name: "IV Site Assessment and Flushing" }, { name: "IV Medications, Fluids, and TPN" }, { name: "Peripheral IV Insertion and Maintenance" }, { name: "Central Line Management (PICC, Tunneled, Implanted Ports)" }, { name: "Medication Reconciliation" }, { name: "High-Risk Drug Monitoring (Insulin, Anticoagulants)" },
+    ]},
+    { title: "Infection Control", skills: [
+      { name: "Standard and Transmission-Based Precautions" }, { name: "Bloodborne Pathogen Safety Practices" }, { name: "Hand Hygiene Technique" }, { name: "Personal Protective Equipment (PPE) Selection and Use" }, { name: "Bag Technique and Equipment Storage" },
+    ]},
+    { title: "Home Safety", skills: [
+      { name: "Home Environment Fall Risk Assessment" }, { name: "Backup Power Plan for Medical Equipment" }, { name: "Electrical, Fire, and Chemical Hazard Assessment" }, { name: "Fire Safety Education" }, { name: "Safe Patient Handling (Gait Belts, Mechanical Lifts)" }, { name: "Body Mechanics for Transfers" }, { name: "Sharps Safety and Disposal" }, { name: "Personal and Field Safety (Aggressive Situations, Pets, Travel Safety)" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
     ]},
   ]},
 
