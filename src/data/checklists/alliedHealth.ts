@@ -47,20 +47,35 @@ export const alliedHealthChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "pharmacy-technician", title: "Pharmacy Technician Skills Checklist", shortTitle: "Pharmacy Technician", icon: "🧴", group: "Allied Health", categories: [
-    { title: "Communication", skills: [
-      { name: "Organize written and oral communication" }, { name: "Question healthcare professionals for patient information" }, { name: "Communicate appropriately with audience" }, { name: "Use good listening skills" },
+    { title: "Communication & Professionalism", skills: [
+      { name: "Organize written and oral communication" }, { name: "Question healthcare professionals for patient information" }, { name: "Communicate appropriately with audience" }, { name: "Use good listening skills" }, { name: "Effectively interact with healthcare team members (physicians, nurses, other professionals)" }, { name: "Ensure timely and accurate communication regarding medication orders and inventory needs" }, { name: "Effectively multi-task in a high-pressure, fast-paced environment" }, { name: "Adhere to shift schedules and attendance policies" }, { name: "Demonstrate strong time management and organizational skills" }, { name: "Work independently with minimal oversight" },
+    ]},
+    { title: "Sterile Compounding (IV Room)", skills: [
+      { name: "Maintain and document cleanroom environmental conditions" }, { name: "Maintain sterile compounding practices to prevent contamination" }, { name: "Restock IV room supplies as needed" }, { name: "Follow USP 797 guidelines for preparing intravenous medications" }, { name: "Label and store compounded sterile preparations properly" }, { name: "Prepare compounded medications using aseptic technique" }, { name: "Ensure final pharmacist verification before dispensing compounded sterile medications" }, { name: "Proper donning/doffing of PPE and hand hygiene protocols" }, { name: "TPN Preparation" }, { name: "Chemotherapy Preparation" },
+    ]},
+    { title: "Non-Sterile Compounding", skills: [
+      { name: "Pre-package bulk medications into unit doses" }, { name: "Ensure final pharmacist verification of all compounded medications" }, { name: "Follow USP 795 guidelines for preparing non-sterile compounds" }, { name: "Maintain a clean and orderly compounding workspace" }, { name: "Measure, mix, and label patient medications per prescription and protocol" }, { name: "Notify pharmacy buyer when compounding supplies are low" },
     ]},
     { title: "Dispensing", skills: [
-      { name: "Prescription Processing" }, { name: "Medication Counting/Pouring" }, { name: "Label Generation" }, { name: "Medication Packaging" }, { name: "Automated Dispensing Systems" }, { name: "Unit Dose Packaging" },
+      { name: "Prescription Processing" }, { name: "Medication Counting/Pouring" }, { name: "Label Generation" }, { name: "Medication Packaging" }, { name: "Automated Dispensing Systems" }, { name: "Unit Dose Packaging" }, { name: "Assist with pre-packing, barcoding, and medication labeling" },
     ]},
-    { title: "Compounding", skills: [
-      { name: "Non-Sterile Compounding" }, { name: "Sterile Compounding (IV)" }, { name: "TPN Preparation" }, { name: "Chemotherapy Preparation" }, { name: "Aseptic Technique" },
+    { title: "Order Entry & Verification", skills: [
+      { name: "Working knowledge of drug terminology, pharmacology, and calculations" }, { name: "Operate pharmacy software for medication management and order entry" }, { name: "Enter prescription orders into the system for pharmacist verification" }, { name: "Troubleshoot minor pharmacy software issues" },
+    ]},
+    { title: "Automated Dispensing System Management", skills: [
+      { name: "Deliver patient medications to nursing units and load into dispensing cabinets (e.g., Pyxis)" }, { name: "Restock automated dispensing cabinets" }, { name: "Conduct inventory audits, checking for expired medications" }, { name: "Notify pharmacist/charge nurse of discrepancies in dispensing inventory" }, { name: "Monitor and adjust par levels" },
     ]},
     { title: "Inventory Management", skills: [
-      { name: "Ordering" }, { name: "Receiving" }, { name: "Storage" }, { name: "Controlled Substance Tracking" }, { name: "Expiration Date Monitoring" }, { name: "Drug Recall Management" },
+      { name: "Ordering" }, { name: "Receiving" }, { name: "Storage" }, { name: "Controlled Substance Tracking" }, { name: "Expiration Date Monitoring" }, { name: "Drug Recall Management" }, { name: "Replace/restock crash carts and RSI kits" }, { name: "Retrieve recalled medications for quality control" }, { name: "Track medication shortages and manage backorders" }, { name: "Maintain accurate pharmacy inventory records" },
+    ]},
+    { title: "Insurance, Billing & Compliance", skills: [
+      { name: "Assist with insurance claim processing and billing inquiries" }, { name: "Ensure accurate patient medication billing and reimbursement tracking" }, { name: "Follow pharmacy laws and regulations for patient info and medication handling" }, { name: "Remain current on USP 797/800 and other regulations" }, { name: "Adhere to HIPAA guidelines for patient confidentiality" }, { name: "Maintain awareness of state and federal pharmacy regulations" },
     ]},
     { title: "Technology", skills: [
-      { name: "Automated Dispensing Machines" }, { name: "Pharmacy Information Systems" }, { name: "Robot/Carousel Systems" }, { name: "IV Workflow Systems" },
+      { name: "Automated Dispensing Machines" }, { name: "Pharmacy Information Systems" }, { name: "Robot/Carousel Systems" }, { name: "IV Workflow Systems" }, { name: "Barcode scanning and medication safety measures" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 year)" }, { name: "Toddler (1-3 years)" }, { name: "Pre-school (3-6 years)" }, { name: "School Age (6-12 years)" }, { name: "Adolescent (12-18 years)" }, { name: "Young Adult (18-30 years)" }, { name: "Mature Adult (30-60 years)" }, { name: "Elderly (>60 years)" },
     ]},
   ]},
 
