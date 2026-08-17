@@ -119,11 +119,26 @@ export const nursingChecklists: ChecklistSpec[] = [
     { title: "Household Support", skills: [
       { name: "Light housekeeping" }, { name: "Meal preparation" }, { name: "Laundry" }, { name: "Medication reminders" }, { name: "Errands/grocery assistance" },
     ]},
-    { title: "Safety & Observation", skills: [
-      { name: "Fall risk awareness" }, { name: "Vital sign observation (non-invasive)" }, { name: "Recognizing changes in condition" }, { name: "Emergency response procedures" }, { name: "Infection control/hand hygiene" },
+    { title: "Patient Rights, Confidentiality & Ethics", skills: [
+      { name: "Understands and Applies the Patient Bill of Rights" }, { name: "Maintains Privacy When Using Mobile Devices/Laptops/Tablets in Patient Homes (HIPAA)" }, { name: "Follows the Home Health Aide Plan of Care as Directed" },
     ]},
-    { title: "Documentation & Communication", skills: [
-      { name: "Visit note documentation" }, { name: "Reporting changes to supervising RN" }, { name: "Care plan adherence" }, { name: "Family communication" },
+    { title: "Communication & Collaboration", skills: [
+      { name: "Maintains Professionalism and Composure During Difficult/Emotional Interactions" }, { name: "Recognizes Cultural, Spiritual, and Personal Values Influencing Communication and Care" }, { name: "Uses Clear, Factual, and Objective Language When Reporting" }, { name: "Reporting Changes to Supervising RN" }, { name: "Family Communication" },
+    ]},
+    { title: "Patient Care by Condition", skills: [
+      { name: "Cardiovascular Support (Observe/Report Worsening Status)" }, { name: "Respiratory Support (Observe/Report Signs of Distress)" }, { name: "Gastrointestinal/Genitourinary Support (Report Changes in Stool/Output)" }, { name: "Integumentary Support (Assist with Dressings/Protective Creams)" }, { name: "Endocrine/Metabolic Support (Diabetic Foot Care)" }, { name: "Mental and Behavioral Health Support (Report Distress/Self-Harm Statements)" },
+    ]},
+    { title: "Safety & Emergency Preparedness", skills: [
+      { name: "Fall Risk Awareness and Prevention" }, { name: "Vital Sign Observation (Non-Invasive)" }, { name: "Recognizing Changes in Condition" }, { name: "Home and Environmental Safety" }, { name: "Equipment Use and Maintenance" }, { name: "Emergency Response and Basic Life Support" }, { name: "Infection Control/Hand Hygiene" },
+    ]},
+    { title: "Regulatory Compliance & Reporting", skills: [
+      { name: "Recognizing and Reporting Abuse, Neglect, and Exploitation" }, { name: "Compliance with State and Federal Home Health Aide Regulations" }, { name: "Care Plan Adherence" },
+    ]},
+    { title: "Documentation & Technology", skills: [
+      { name: "Visit Note Documentation" }, { name: "Use of Electronic Documentation Systems" }, { name: "Accessing Agency Policies and Resources" },
+    ]},
+    { title: "Professional Development", skills: [
+      { name: "Continuing Education and Skill Development" }, { name: "Supervision and Competency Evaluation Participation" }, { name: "Time and Priority Management" }, { name: "Professional Boundaries and Self-Care" },
     ]},
   ]},
 
