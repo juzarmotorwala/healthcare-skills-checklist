@@ -452,14 +452,20 @@ export const nursingChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "nurse-manager", title: "Nurse Manager Skills Checklist", shortTitle: "Nurse Manager", icon: "🗂️", group: "Nursing", categories: [
-    { title: "Unit Operations", skills: [
-      { name: "Staffing and scheduling" }, { name: "Budget management" }, { name: "Supply/resource management" }, { name: "Regulatory/survey readiness" },
+    { title: "HR Management", skills: [
+      { name: "Career and Succession Planning" }, { name: "Periodic and Annual Performance Evaluations" }, { name: "Employee Performance Improvement Plans" }, { name: "Termination" }, { name: "Controlled Substance Diversion" }, { name: "Accommodations (e.g., Disability)" }, { name: "Staff Scope of Practice (e.g., Licensure)" }, { name: "Recruitment/Hiring" }, { name: "Leave of Absences (e.g., Medical, Disability, FMLA)" }, { name: "Fitness for Duty" }, { name: "Hours/Wages (e.g., Overtime)" }, { name: "Mandated Reporting (e.g., Abuse, Disease)" }, { name: "Interviewing" },
     ]},
-    { title: "Staff Leadership", skills: [
-      { name: "Performance management" }, { name: "Conflict resolution" }, { name: "Staff recruitment and retention" }, { name: "Team building" },
+    { title: "Unit & Staff Management", skills: [
+      { name: "Staffing by (NHPPD, Acuity, Skill Mix)" }, { name: "Scheduling" }, { name: "Flexing, Floating, On-Call Policies" }, { name: "Charge RN Duties" }, { name: "Mentorship/Coaching" }, { name: "Promote Cultural Competence and Humility" }, { name: "Facilitation/Collaboration With Others (e.g., Physicians, Other Departments, Outside Agencies)" }, { name: "Conflict Resolution Strategies" }, { name: "Change Management Facilitator" }, { name: "Conduct Staff Meetings" }, { name: "Patient/Family Issues" }, { name: "Create Unit Goals Aligned With Organizational Strategic Goals" }, { name: "Staff/Patient Advocate" }, { name: "Team Building" }, { name: "Educator" }, { name: "Ethical Dilemmas" }, { name: "Promote Staff Engagement and Retention" }, { name: "Crisis Management During Emergencies" }, { name: "Utilization of Supplies/Resources" }, { name: "Development/Evaluation of Orientation Programs" }, { name: "Analyze Workflows for Efficiency" }, { name: "Regulatory Compliance (e.g., OSHA, HIPAA, CMS)" }, { name: "Promote Use of EBP and Research" }, { name: "Development of Unit Policies/Procedures" },
     ]},
-    { title: "Quality & Patient Care", skills: [
-      { name: "Quality improvement initiatives" }, { name: "Patient satisfaction/HCAHPS management" }, { name: "Incident review and follow-up" }, { name: "Interdisciplinary rounding" },
+    { title: "Fiscal Management", skills: [
+      { name: "Annual Average Daily Census (ADC)" }, { name: "Staff Skill Mix" }, { name: "Patient Acuity" }, { name: "Nursing Hours per Patient Day" }, { name: "Nurse to Patient Ratios" }, { name: "Staffing Models" }, { name: "Revenue and Expense Forecasting" }, { name: "Calculating ROA" }, { name: "Variable/Fixed Cost" }, { name: "Evaluation of Productivity" }, { name: "New Program Assessment" }, { name: "Balance Sheets" }, { name: "Reporting on Budget Variance" }, { name: "Capital Budgeting" }, { name: "Calculating ROI" }, { name: "Cost-Benefit Analysis" }, { name: "Payroll Process for Staff" }, { name: "Direct/Indirect Costs" }, { name: "Diagnosis-Related Group (DRG) Classifications" }, { name: "International Classification of Diseases (ICD)-9 & 10 Codes" }, { name: "Payer Mix (Medicare, Medicaid, Managed Care, Third-Party Providers)" },
+    ]},
+    { title: "Performance Improvement & Quality", skills: [
+      { name: "EBP Models" }, { name: "Root Cause Analysis (RCA)" }, { name: "Benchmarking" }, { name: "Failure Mode Effects Analysis (FMEA)" }, { name: "Data Analysis/Trends" }, { name: "PDCA" }, { name: "Chart Reviews (Concurrent, Retrospective)" }, { name: "Dashboard Reporting" }, { name: "QI/PI Projects" }, { name: "Patient Satisfaction" }, { name: "Errors, Events, and Incidences" }, { name: "Staff Turnover/Retention" }, { name: "Nurse-Sensitive Indicators: Structure, Process, Outcome (e.g., Falls, CAUTI, RN Workforce)" }, { name: "Staff Injuries" }, { name: "Length of Stay (LOS)" }, { name: "Core Measures" }, { name: "Staff Satisfaction" }, { name: "Continuous Readiness" }, { name: "TJC National Patient Safety Goals" }, { name: "Error Prevention Strategies" }, { name: "Promote \"Just Culture\" for Error Reporting" }, { name: "Use of EHR for Reporting, Data Analysis, and Workflow" }, { name: "Medication/ADC Reports" }, { name: "Modalities for Presentations (e.g., PowerPoint, Excel)" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
     ]},
   ]},
 
