@@ -377,14 +377,35 @@ export const diagnosticLabChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "polysomnography-tech", title: "Polysomnography Technologist Skills Checklist", shortTitle: "Polysomnography Tech", icon: "😴", group: "Diagnostic & Lab", categories: [
-    { title: "Procedures", skills: [
-      { name: "Diagnostic polysomnography (PSG)" }, { name: "CPAP/BiPAP titration study" }, { name: "Multiple sleep latency test (MSLT)" }, { name: "Home sleep apnea testing" }, { name: "Pediatric sleep studies" },
+    { title: "PSG Setup & Technical Skills", skills: [
+      { name: "Verify recording parameters (filter, sensitivity, sampling rate)" }, { name: "Complete and verify all documentation" }, { name: "Gather and analyze patient information" }, { name: "PAP mask fitting and education (CPAP, BiPAP, APAP)" }, { name: "Prepare, calibrate, and check equipment" }, { name: "Electrode and sensor placement (EEG, EOG, EMG, ECG)" }, { name: "Respiratory event recognition (paradoxical breathing, obstructive/central/mixed, Cheyne Stokes)" }, { name: "Application of electrode skin prep" }, { name: "Know acceptable impedance ranges for EEG, EOG, EMG" }, { name: "Recognize, evaluate, and minimize artifact" }, { name: "Explain PSG pre/testing/post-test procedures to patient" }, { name: "Perform pre- and post-physiologic calibrations" }, { name: "Troubleshoot equipment" }, { name: "10/20 Method (mark and measure)" },
     ]},
-    { title: "Technical Skills", skills: [
-      { name: "Electrode and sensor placement" }, { name: "Equipment calibration" }, { name: "Scoring sleep stages and events" }, { name: "Artifact troubleshooting" },
+    { title: "Ancillary Equipment", skills: [
+      { name: "Thermistor" }, { name: "Position sensor" }, { name: "Respiratory effort sensors" }, { name: "Capnography (transcutaneous/end tidal CO2)" }, { name: "Pressure transducer (PTAF, airflow)" }, { name: "PAP device" }, { name: "Snore microphone" }, { name: "Pulse oximeter" },
+    ]},
+    { title: "Scoring", skills: [
+      { name: "Pediatric/adult respiratory scoring rules" }, { name: "Scoring rhythmic movement disorder" }, { name: "REM/NREM staging rules" }, { name: "Cardiac scoring rules" }, { name: "Scoring periodic limb movements in sleep (PLMS)" }, { name: "Scoring bruxism" }, { name: "Pediatric/adult staging rules" }, { name: "Scoring REM sleep without atonia (RWA)" }, { name: "Scoring arousals" },
+    ]},
+    { title: "Data Acquisition Systems", skills: [
+      { name: "Scoring sleep stages and events" }, { name: "Start and stop a PSG recording" }, { name: "Notate therapy intervention type/settings (Initiate PAP, O2)" }, { name: "Drop notations and position changes on study" }, { name: "Document patient information within software" }, { name: "Troubleshoot PAP device connection to acquisition system" }, { name: "Identify amplifier, jackbox/headbox, and cables" }, { name: "Create a PSG report" }, { name: "Complete documentation on live and review screens" },
+    ]},
+    { title: "Infection Control & Emergency Response", skills: [
+      { name: "Standard, contact, airborne, and droplet precautions" }, { name: "Use of Material Safety Data Sheets (MSDS)" }, { name: "Electrical safety" }, { name: "Use of PPE (gloves, gown, mask, eye protection)" }, { name: "Emergency protocols" }, { name: "Fire safety" }, { name: "Cleaning, disinfecting, and sterilizing equipment" }, { name: "Emergency response (desaturation, cardiac events)" },
+    ]},
+    { title: "Titration Protocols", skills: [
+      { name: "Average volume assured pressure support (AVAPS)" }, { name: "CPAP titration" }, { name: "BiPAP and spontaneous/timed mode (BiPAP S/T)" }, { name: "Adaptive servo-ventilation (ASV)" }, { name: "Oxygen titration" }, { name: "Titration for central sleep apnea, Cheyne Stokes, CPAP-emergent central apnea" },
+    ]},
+    { title: "Study Types & Montages", skills: [
+      { name: "Diagnostic polysomnography (PSG)" }, { name: "CPAP/BiPAP titration study" }, { name: "Multiple Sleep Latency Test (MSLT)" }, { name: "Maintenance of Wakefulness Test (MWT)" }, { name: "Home sleep apnea testing" }, { name: "Actigraphy" }, { name: "Tracheostomy split-night/baseline polysomnography" }, { name: "Baseline and split-night polysomnography" }, { name: "REM Behavior Disorder (RBD) montage" }, { name: "Seizure montage" }, { name: "Titration montage (CPAP/BPAP/ASV/AVAPS/Oxygen)" },
+    ]},
+    { title: "Sleep Disorders – Recognition of Signs & Symptoms", skills: [
+      { name: "Primary and secondary insomnia" }, { name: "Sleep-related hypoventilation and hypoxemia" }, { name: "Central and obstructive sleep apnea" }, { name: "Narcolepsy and hypersomnia" }, { name: "Circadian rhythm disorders (jet lag, shift work, delayed/advanced sleep phase)" }, { name: "Sleep enuresis and sleep terrors" }, { name: "Confusional arousal and sleepwalking" }, { name: "REM sleep behavior disorder" }, { name: "Sleep-related eating disorder" }, { name: "Restless leg syndrome (RLS)" }, { name: "Periodic limb movement disorder (PLMD)" }, { name: "Sleep-related bruxism" },
     ]},
     { title: "Patient Care", skills: [
-      { name: "Patient education pre-study" }, { name: "Overnight patient monitoring" }, { name: "Emergency response (desaturation, cardiac events)" },
+      { name: "Patient education pre-study" }, { name: "Overnight patient monitoring" }, { name: "Pediatric sleep studies" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth - 1 year)" }, { name: "Toddler (1-3 years)" }, { name: "Pre-school (3-6 years)" }, { name: "School Age (6-12 years)" }, { name: "Adolescent (12-18 years)" }, { name: "Young Adult (18-30 years)" }, { name: "Mature Adult (30-60 years)" }, { name: "Elderly (>60 years)" },
     ]},
   ]},
 
