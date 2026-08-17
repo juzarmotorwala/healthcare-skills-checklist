@@ -198,19 +198,31 @@ export const diagnosticLabChecklists: ChecklistSpec[] = [
 
   { slug: "phlebotomy", title: "Phlebotomy Competency Skills Checklist", shortTitle: "Phlebotomy", icon: "💉", group: "Diagnostic & Lab", categories: [
     { title: "Preparation", skills: [
-      { name: "Introduces self to patient and explains procedure" }, { name: "Identifies patient with two unique identifiers" }, { name: "Checks testing requirements (fasting)" }, { name: "Prepares supplies and tube selection" },
+      { name: "Introduces self to patient and explains procedure" }, { name: "Identifies patient with two unique identifiers" }, { name: "Checks testing requirements (fasting)" }, { name: "Prepares supplies and tube selection" }, { name: "Gauged needle selection" },
     ]},
     { title: "Venipuncture", skills: [
-      { name: "Tourniquet application" }, { name: "Vein selection" }, { name: "Site preparation" }, { name: "Needle insertion technique" }, { name: "Vacutainer system" }, { name: "Butterfly needle" }, { name: "Syringe draw" },
+      { name: "Tourniquet application" }, { name: "Vein selection" }, { name: "Site preparation" }, { name: "Needle insertion technique" }, { name: "Vacutainer system" }, { name: "Winged set/butterfly needle" }, { name: "Syringe draw method" }, { name: "Venipuncture arm site" }, { name: "Venipuncture hand site" }, { name: "Venipuncture foot site" }, { name: "Lancet use" },
     ]},
     { title: "Capillary Puncture", skills: [
-      { name: "Finger stick" }, { name: "Heel stick (infant)" }, { name: "Micro-collection devices" },
+      { name: "Finger stick" }, { name: "Heel stick (infant)" }, { name: "Micro-collection devices" }, { name: "Capillary tube collection" }, { name: "Dermal puncture" },
+    ]},
+    { title: "Specimen Collection", skills: [
+      { name: "Blood cultures" }, { name: "Blood alcohol collection" }, { name: "Arterial blood gas" }, { name: "Bleeding times" }, { name: "Timed draws" }, { name: "STAT draws" }, { name: "Throat/nasopharyngeal swab" }, { name: "Urine collection" }, { name: "Sputum collection" }, { name: "Stool collection" }, { name: "Centrifuging" }, { name: "POC testing/waived testing" }, { name: "Vital signs" },
     ]},
     { title: "Post-Collection", skills: [
       { name: "Specimen labeling" }, { name: "Order of draw" }, { name: "Specimen handling/transport" }, { name: "Needle disposal" }, { name: "Hemostasis/bandaging" }, { name: "Documentation" },
     ]},
     { title: "Safety", skills: [
-      { name: "Standard precautions" }, { name: "Sharps disposal" }, { name: "Infection control" }, { name: "Adverse reactions management" },
+      { name: "Standard precautions" }, { name: "Transmission-based isolation precautions" }, { name: "Sharps disposal" }, { name: "Infection control" }, { name: "Adverse reactions management" }, { name: "Radiation safety" },
+    ]},
+    { title: "Special Populations", skills: [
+      { name: "Mastectomy patients" }, { name: "Burn patients" }, { name: "Dialysis patients" }, { name: "Pediatric patients" }, { name: "Cognitively impaired patients" },
+    ]},
+    { title: "Clerical & Patient Care Settings", skills: [
+      { name: "Intake of lab specimens" }, { name: "Computer entry" }, { name: "EMR/EHR" }, { name: "Pneumatic tube system" }, { name: "Answering phones" }, { name: "General laboratory experience" }, { name: "Ambulatory care (clinic, office)" }, { name: "Blood donation center" }, { name: "Nursing home" }, { name: "Hospital" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 year)" }, { name: "Toddler (1-3 years)" }, { name: "Pre-school (3-6 years)" }, { name: "School Age (6-12 years)" }, { name: "Adolescent (12-18 years)" }, { name: "Young Adult (18-30 years)" }, { name: "Mature Adult (30-60 years)" }, { name: "Elderly (>60 years)" },
     ]},
   ]},
 
