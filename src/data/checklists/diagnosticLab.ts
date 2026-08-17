@@ -242,6 +242,18 @@ export const diagnosticLabChecklists: ChecklistSpec[] = [
     { title: "Patient Care & Safety", skills: [
       { name: "Pediatric and adult patient prep" }, { name: "Seizure precautions" }, { name: "Documentation of clinical events" },
     ]},
+    { title: "Instrumentation", skills: [
+      { name: "Verifying Standard Filter Settings" }, { name: "Verifying Sensitivity Settings" }, { name: "Calibrating System Amplifiers" }, { name: "Inputting Biological Signal to All Channels" }, { name: "Correcting and Reporting Deviations Per Policy and Procedure" },
+    ]},
+    { title: "Electronics & Mathematics Principles", skills: [
+      { name: "Understanding Impedance" }, { name: "Understanding Analog to Digital Conversion" }, { name: "Understanding the Polarity of Waveforms" }, { name: "Knowing How Differential Amplifiers Work" }, { name: "Computing Voltage and Frequency of Waveforms" }, { name: "Calculating Duration of Waveforms" },
+    ]},
+    { title: "Clinical Knowledge", skills: [
+      { name: "Clinical and Non-Convulsive Seizure Patterns" }, { name: "Seizure Manifestations, Classifications, and EEG Correlates" }, { name: "Recognizing Seizure Classification, Stroke, Trauma, Encephalopathy, and Altered Mental Status" }, { name: "EEG Patterns for Levels of Consciousness" }, { name: "Normal Variants (Awake and Asleep) for Each Age Range" }, { name: "Abnormal Awake and Asleep Patterns for Each Age Range" }, { name: "Signs, Symptoms, and EEG Correlates for Adult Neurological Disorders" }, { name: "Signs, Symptoms, and EEG Correlates for Pediatric Disorders" }, { name: "Psychiatric and Psychological Disorders and EEG Correlates" }, { name: "Medication Effects on the EEG Background and Waveforms" }, { name: "Recording Electrocerebral Inactivity (Brain Death)" }, { name: "Recording Neonatal EEG" }, { name: "Recording Pediatric EEG" }, { name: "Medical Terminology and Accepted Abbreviations" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
+    ]},
   ]},
 
   { slug: "ekg-tech", title: "EKG Technician Skills Checklist", shortTitle: "EKG Tech", icon: "📈", group: "Diagnostic & Lab", categories: [
