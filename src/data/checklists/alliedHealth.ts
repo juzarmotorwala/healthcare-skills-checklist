@@ -90,19 +90,46 @@ export const alliedHealthChecklists: ChecklistSpec[] = [
 
   { slug: "pct", title: "PCT Skills Checklist", shortTitle: "PCT", icon: "🤲", group: "Allied Health", categories: [
     { title: "Patient Rights", skills: [
-      { name: "Communicates and obtains information respecting HIPAA" }, { name: "Involves patient and family in care decisions" }, { name: "Complies with Organ Donation policy" }, { name: "Meets communication needs including interpreter services" },
+      { name: "Communicates and obtains information respecting HIPAA" }, { name: "Involves patient and family in care decisions" }, { name: "Complies with Organ Donation policy" }, { name: "Meets communication needs including interpreter services" }, { name: "Patient identification using two patient identifiers" }, { name: "Maintain patient dignity and privacy at all times" },
+    ]},
+    { title: "Documentation", skills: [
+      { name: "Document work-related activities and actions, including writing text" }, { name: "Record vital signs" }, { name: "Record and calculate Intake & Output measurements" }, { name: "Utilize common medical terminology with correct spelling" }, { name: "Read and document time, calculate time intervals" }, { name: "Utilize common medical acronyms and abbreviations" }, { name: "English and Metric conversions to calculate measurements" }, { name: "Report and document incidents" }, { name: "Document using narrative, computerized, graphic, and checklist formats" },
+    ]},
+    { title: "Equipment", skills: [
+      { name: "Care and cleaning of medical equipment" }, { name: "Hospital beds, scales, and bed alarms" }, { name: "Therapeutic beds and mattresses" }, { name: "Mechanical lifts (HoverJack, HoverMatt, Hoyer)" }, { name: "Care of oxygen equipment" }, { name: "Sequential compression devices" }, { name: "Walker/crutches" }, { name: "Wound vacuums" }, { name: "Blood glucose monitor" }, { name: "Bladder scanner" }, { name: "Suction equipment set-up" }, { name: "Traction" }, { name: "Use of pneumatic tube system" },
     ]},
     { title: "Vital Signs and Weights", skills: [
-      { name: "BP, including Orthostatic" }, { name: "Pulse, Radial" }, { name: "Temperature (Oral, Rectal, Axillary, Tympanic)" }, { name: "Respirations" }, { name: "Weight (Standing, Chair, Bed)" }, { name: "Pulse Oximetry" },
+      { name: "BP, including Orthostatic" }, { name: "Pulse, Radial" }, { name: "Temperature (Oral, Rectal, Axillary, Tympanic)" }, { name: "Respirations" }, { name: "Weight (Standing, Chair, Bed)" }, { name: "Pulse Oximetry" }, { name: "Blood pressure (manual)" },
     ]},
-    { title: "Patient Care", skills: [
-      { name: "Bathing" }, { name: "Oral Care" }, { name: "Feeding" }, { name: "Ambulation" }, { name: "Positioning/Turning" }, { name: "Transfer (Bed/Chair)" }, { name: "ROM Exercises" }, { name: "Incontinence Care" },
+    { title: "Personal Care & Hygiene", skills: [
+      { name: "Bathing (complete bed bath, partial bed bath, shower, tub, sitz, whirlpool)" }, { name: "Oral care, dental care, and partials" }, { name: "Perineal care" }, { name: "Range of motion" }, { name: "Colostomy care" }, { name: "Skin care (preventing pressure areas)" }, { name: "Tracheostomy care" }, { name: "Back care/massage" }, { name: "Shaving patient (safety/electric razor)" }, { name: "Shampoo (sink, tub, or bed)" }, { name: "Catheter care" }, { name: "Nail care" }, { name: "Bedmaking (occupied, unoccupied, post-op surgical)" },
     ]},
-    { title: "Specimen Collection", skills: [
-      { name: "Urine Collection" }, { name: "Stool Collection" }, { name: "Sputum Collection" }, { name: "Blood Glucose Testing" },
+    { title: "Nutrition & Feeding", skills: [
+      { name: "Proper feeding techniques (with/without assistive devices)" }, { name: "Preparation of food and packaging" }, { name: "Correct positioning during and after feeding" }, { name: "Assist patient with menu selection" }, { name: "Aspiration precautions" }, { name: "Special dietary requirements" },
+    ]},
+    { title: "Toileting & Elimination", skills: [
+      { name: "Incontinence care" }, { name: "Clean patient and patient environment" }, { name: "Ostomy care and assistance" }, { name: "Assist patient with bedside commode" }, { name: "Maintenance and care of foley catheter" }, { name: "Assist patient with bedpan and urinal" }, { name: "Empty colostomy and foley catheter" }, { name: "Bowel/bladder training" },
+    ]},
+    { title: "Patient Care & Mobility", skills: [
+      { name: "Ambulation" }, { name: "Positioning/Turning" }, { name: "Transfer (Bed/Chair/Commode)" }, { name: "ROM Exercises" }, { name: "Assist with patient transport (wheelchair/stretcher)" }, { name: "Ambulation with assistive device (gait belt, walker)" }, { name: "Application of Ace bandage" }, { name: "Cast care" }, { name: "Application of hot/cold packs" },
+    ]},
+    { title: "Patient Admission, Transfer & Discharge", skills: [
+      { name: "Assist with hospital gown and equipment set-up" }, { name: "Notify nurse of patient arrival" }, { name: "Secure patient valuables" }, { name: "Adjust bed settings/controls" }, { name: "Patient orientation to room" }, { name: "Assist with transport and personal belongings at discharge" },
+    ]},
+    { title: "Communication & Special Care", skills: [
+      { name: "Communicate clearly using phone/patient call system or in person" }, { name: "Report changes in patient condition to nursing supervisor" }, { name: "Provide timely information to team members regarding patient care" }, { name: "Care for suicidal, combative, and confused patients" }, { name: "Care for the dying patient and patient with DNR order" }, { name: "Post-mortem care in accordance with cultural and religious considerations" }, { name: "Understanding of pain scales" },
+    ]},
+    { title: "Infection Control", skills: [
+      { name: "Personal Protective Equipment" }, { name: "Airborne Precautions" }, { name: "Contact Precautions" }, { name: "Droplet Precautions" }, { name: "Hand hygiene" }, { name: "Standard/Universal Precautions" },
+    ]},
+    { title: "Procedures & Specimen Collection", skills: [
+      { name: "Urine Collection (clean catch, foley)" }, { name: "Stool Collection" }, { name: "Sputum Collection" }, { name: "Emesis collection" }, { name: "Blood Glucose Testing (fingerstick)" }, { name: "Application of K-pads/modules" }, { name: "Drains (Jackson-Pratt, Hemo-Vac, Wound Vacs)" }, { name: "Simple dressing change" }, { name: "Properly label all specimens" }, { name: "Perform administration of enemas" }, { name: "Prep patient prior to surgery" }, { name: "Vaginal douche" }, { name: "Removal of indwelling/external foley catheter" }, { name: "Application of TED/support stockings" }, { name: "Assist nursing staff during emergencies" }, { name: "Replace telemetry leads and change batteries" }, { name: "Removal of peripheral IV needle and saline lock" }, { name: "CPR and AED" }, { name: "Preparation and use of EKG equipment" },
     ]},
     { title: "Safety", skills: [
-      { name: "Fall Prevention" }, { name: "Restraint Use" }, { name: "Infection Control" }, { name: "Hand Hygiene" }, { name: "Standard Precautions" }, { name: "Proper Body Mechanics" },
+      { name: "Fall Prevention" }, { name: "Restraint Use (vest, wrist, mitt restraints)" }, { name: "Bed and chair alarms" }, { name: "Infection Control" }, { name: "Hand Hygiene" }, { name: "Standard Precautions" }, { name: "Proper Body Mechanics" }, { name: "Suicide precautions" }, { name: "Use of prosthetic/orthotic device" }, { name: "Safe patient transfer technique" },
+    ]},
+    { title: "Clinical Settings Experience", skills: [
+      { name: "Nursery" }, { name: "Cardiac Unit" }, { name: "Home Care" }, { name: "Hospice" }, { name: "OB/GYN and Labor & Delivery" }, { name: "Central Supply" }, { name: "Nursing Home/Skilled Nursing Facility" }, { name: "Behavioral Health" }, { name: "Clinic" }, { name: "Acute Care/Hospital" }, { name: "Neuro Unit" }, { name: "Urology" }, { name: "Surgical Unit" }, { name: "Med-Surg" }, { name: "Orthopedic" }, { name: "Crisis Intervention" }, { name: "Alzheimer's" }, { name: "1:1 Patient/Private Duty" }, { name: "Geriatric" },
     ]},
     { title: "Age Specific Competencies", skills: [
       { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
