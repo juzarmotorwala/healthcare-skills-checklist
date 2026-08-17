@@ -133,15 +133,36 @@ export const adminLeadershipChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "medical-coder", title: "Medical Coder Skills Checklist", shortTitle: "Medical Coder", icon: "🧾", group: "Administration & Leadership", categories: [
-    { title: "Coding", skills: [
-      { name: "ICD-10-CM diagnosis coding" }, { name: "ICD-10-PCS/CPT procedure coding" }, { name: "HCC/risk adjustment coding" }, { name: "DRG assignment" }, { name: "Modifier application" },
+  { slug: "medical-coder", title: "Medical Coder/Biller Skills Checklist", shortTitle: "Medical Coder/Biller", icon: "🧾", group: "Administration & Leadership", categories: [
+    { title: "Documentation & Health Information Systems", skills: [
+      { name: "Utilize CAC (computer assisted coding) software" }, { name: "Analyze medical records for completeness/deficiencies" }, { name: "Identify patient encounter type" }, { name: "Request patient-specific documentation from other sources (ancillary departments, physician's office)" }, { name: "HIM (soft coding) versus Chargemaster (hard coding)" }, { name: "Retrieve medical records" }, { name: "Validate the codes assigned by CAC" }, { name: "Data sets (e.g., demographics, identifiers, etc.)" }, { name: "Compose a compliant physician query" }, { name: "Utilize HIM (Health Information Management) systems" }, { name: "Perform data abstraction for coding" }, { name: "Generate reports for data analysis" }, { name: "Navigate electronic health records (EHRs)" }, { name: "EMR chart abstraction" }, { name: "Encoder software" }, { name: "Word processing, spreadsheets, e-mail" }, { name: "Documentation by place of service (outpatient, emergency, ancillary, observation, same day surgery, clinic, inpatient, recurring/series accounts)" },
     ]},
-    { title: "Compliance & Quality", skills: [
-      { name: "Coding compliance guidelines" }, { name: "Chart audit and accuracy review" }, { name: "Denial/appeal support" }, { name: "Documentation query collaboration" },
+    { title: "Clinical Knowledge for Coding", skills: [
+      { name: "Signs and symptoms" }, { name: "Anatomy and physiology" }, { name: "Pharmacology" }, { name: "Pathophysiology" }, { name: "Medical terminology and abbreviations" }, { name: "Clinical findings" },
     ]},
-    { title: "Systems", skills: [
-      { name: "Encoder software" }, { name: "EMR chart abstraction" }, { name: "Coding productivity standards" },
+    { title: "Diagnosis & Procedure Coding", skills: [
+      { name: "ICD-10-CM diagnosis coding" }, { name: "ICD-10-PCS/CPT procedure coding" }, { name: "ICD-9-CM" }, { name: "HCPCS" }, { name: "HCC/risk adjustment coding" }, { name: "DRG assignment" }, { name: "Assign correct ambulatory payment classification (APC)" }, { name: "Modifier application" }, { name: "Reconcile NCCI edits" }, { name: "Evaluate National Correct Coding Initiative edits (NCCI)" }, { name: "Inpatient Prospective Payment System (IPPS)" }, { name: "Outpatient Prospective Payment System (OPPS)" }, { name: "Validate medical necessity using LCD/NCD" }, { name: "Evaluate and respond to claim denials" }, { name: "Re-submit denied claims to payer source" }, { name: "Submit claim forms" }, { name: "Coding specificity (third, fourth, or fifth digit)" }, { name: "V-codes and E-codes" }, { name: "Instructional notations and modifiers" },
+    ]},
+    { title: "Coding References & Guidelines", skills: [
+      { name: "AHA Coding Clinics (ICD-9-CM and HCPCS Level II)" }, { name: "AMA CPT Assistant" }, { name: "Medical dictionary and diagnostic reference values" }, { name: "Coding and reporting requirements for inpatient services" }, { name: "Coding and reporting requirements for outpatient services" }, { name: "UHDDS definitions and sequencing" }, { name: "Chart audit and accuracy review" }, { name: "Coding compliance guidelines" }, { name: "Coding productivity standards" },
+    ]},
+    { title: "Compliance & Regulatory Requirements", skills: [
+      { name: "Identify discrepancies between coded data and supporting documentation" }, { name: "Definition of fraud and abuse" }, { name: "Compliance program requirements" }, { name: "Medical necessity and coverage policies (NCD, LCD, ABN)" }, { name: "Corporate Integrity Agreement (CIA)" }, { name: "OIG Work Plans" }, { name: "HIPAA designated code sets" }, { name: "CMS 72-hour rule" }, { name: "JCAHO/Joint Commission and Medicare Conditions of Participation" }, { name: "CMS and OIG regulatory oversight" }, { name: "CMS contractors (e.g., FI, Carrier, QIO)" },
+    ]},
+    { title: "Data Quality & Revenue Cycle Management", skills: [
+      { name: "Correct Coding Initiative (CCI)" }, { name: "Payor types and documentation requirements" }, { name: "Revenue cycle components (registration to payment)" }, { name: "Benchmarking and peer results" }, { name: "Data integrity and abstracted data" }, { name: "Unbilled accounts management (e.g., DNFB)" }, { name: "Outpatient Code Editor (OCE)" }, { name: "Medicare Code Editor (MCE)" }, { name: "Case Mix Index (CMI)" },
+    ]},
+    { title: "Privacy, Confidentiality & HIPAA", skills: [
+      { name: "Maintain secure work environment" }, { name: "Utilize data security and password protection" }, { name: "Recognize/report privacy issues and violations" }, { name: "Transfer electronic data securely" }, { name: "Release of information to authorized individuals" }, { name: "Access only minimal necessary documents/information" },
+    ]},
+    { title: "Clinical Settings & Specialty Experience", skills: [
+      { name: "Physician's office" }, { name: "Inpatient hospital setting (acute care)" }, { name: "Outpatient hospital setting" }, { name: "Payor environment (insurance plans, Medicaid, Medicare)" }, { name: "Emergency department and internal medicine coding" }, { name: "Surgical specialty coding (general, orthopaedic, plastics, cardiovascular/thoracic)" }, { name: "Evaluation and management coding" }, { name: "Family practice, cardiology, dermatology, and OB/GYN coding" },
+    ]},
+    { title: "Billing, Reimbursement & Insurance", skills: [
+      { name: "Denial/appeal support" }, { name: "Documentation query collaboration" }, { name: "Collections and accounts receivable" }, { name: "Patient statements and payment plans" }, { name: "Provider credentialing" }, { name: "Claim editing tools" }, { name: "Remittance advice" }, { name: "Payer and patient refunds" }, { name: "Preauthorizations" }, { name: "Completion of CMS1500 and UB04 claim forms" }, { name: "Medicare, Medicaid, and TRICARE/CHAMPUS" }, { name: "Managed care and commercial payers" }, { name: "Worker's compensation and third-party payers" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 year)" }, { name: "Toddler (1-3 years)" }, { name: "Pre-school (3-6 years)" }, { name: "School Age (6-12 years)" }, { name: "Adolescent (12-18 years)" }, { name: "Young Adult (18-30 years)" }, { name: "Mature Adult (30-60 years)" }, { name: "Elderly (>60 years)" },
     ]},
   ]},
 
