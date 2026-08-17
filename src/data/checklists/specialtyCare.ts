@@ -173,20 +173,26 @@ export const specialtyCareChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "long-term-acute-care", title: "Registered Nurse – Long Term Acute Care Skills Checklist", shortTitle: "RN – LTAC", icon: "🏥", group: "Specialty Care", categories: [
-    { title: "Complex Medical Management", skills: [
-      { name: "Ventilator weaning management" }, { name: "Prolonged mechanical ventilation care" }, { name: "Tracheostomy management" }, { name: "Multi-organ dysfunction monitoring" },
+    { title: "Assessments", skills: [
+      { name: "Glasgow Coma Scale" }, { name: "Skin Assessment (Braden, Pressure Injury, Wound)" }, { name: "Abnormal Heart Sounds/Murmurs" }, { name: "Cranial Nerve Testing" }, { name: "Burns Assessment" }, { name: "Sepsis Assessment" }, { name: "Range of Motion/Joint Movement/Motor Function" }, { name: "Focused vs. Comprehensive Assessment" },
     ]},
-    { title: "Wound & Skin", skills: [
-      { name: "Complex wound management" }, { name: "Negative pressure wound therapy" }, { name: "Pressure injury staging and prevention" },
+    { title: "Disease/Condition Care Management", skills: [
+      { name: "Peritoneal Dialysis" }, { name: "Nursing Care of Postoperative Patients" }, { name: "ABG (Arterial Blood Gas) Interpretation" }, { name: "Organ Transplant Care (Pre/Post)" }, { name: "Nursing Care of Preoperative Patients" }, { name: "Advanced Cardiac Life Support (ACLS)" }, { name: "Total Parenteral Nutrition (TPN)" }, { name: "Prolonged Mechanical Ventilation" }, { name: "Lab Interpretation (CMP, CBC)" }, { name: "Traction - Skin/Skeletal" }, { name: "Burn Care" }, { name: "Hemodynamic Monitoring" }, { name: "Hemodialysis" }, { name: "Severe Brain Injury" }, { name: "Multi-Organ Dysfunction Monitoring" }, { name: "Tracheostomy Management" }, { name: "Ventilator Weaning Management" },
     ]},
-    { title: "Nutrition & GI", skills: [
-      { name: "Enteral feeding management" }, { name: "TPN administration" }, { name: "G-tube/J-tube care" },
+    { title: "Clinical Skills", skills: [
+      { name: "Urinary Catheterization" }, { name: "High Flow Positive Pressure O2 - CPAP/BiPAP" }, { name: "Patient-Controlled Analgesia Pumps (PCAs)" }, { name: "Suctioning (Oral-Naso-Pharynx)" }, { name: "Blood Glucose Monitoring" }, { name: "Chest Tube Management" }, { name: "Isolation Precautions" }, { name: "Central-Line Blood Draw" }, { name: "Performing 12 Lead ECGs" }, { name: "Urine Catheter Culture Collection" }, { name: "Pressure Injury, Wounds, and Wound Management" }, { name: "Nasogastric Intubation and Enteral Feedings" }, { name: "Artificial Airways and Tracheostomy Care" }, { name: "Wound Vac Therapy" }, { name: "PEG Tubes" }, { name: "High Flow O2 - Ventilators" }, { name: "Epidurals and Pain Management" }, { name: "I & O Measurement" }, { name: "Clean Catch Urine Collection" }, { name: "Incentive Spirometry" }, { name: "Healthcare-Associated Infection Prevention Protocols" }, { name: "Low Flow O2 Systems - Nasal Cannula & Masks" }, { name: "IV Initiation and Therapy" }, { name: "ECGs - Reading Rhythms" }, { name: "Negative Pressure Wound Therapy" }, { name: "Pressure Injury Staging and Prevention" }, { name: "G-Tube/J-Tube Care" }, { name: "PICC Line Care" },
     ]},
-    { title: "IV Therapy", skills: [
-      { name: "Central line care" }, { name: "PICC line care" }, { name: "IV antibiotic administration" }, { name: "Blood product administration" },
+    { title: "Medication Administration", skills: [
+      { name: "Cardiac Drips and Management" }, { name: "Heparin Administration via Central Lines" }, { name: "Safe Medication Administration and Error Reduction Protocols" }, { name: "Blood Product Administration" }, { name: "Insulin Administration" }, { name: "Intravenous Therapy via Central Lines" }, { name: "Antibiotic Administration via Central Line" }, { name: "Controlled Substance Management" }, { name: "Weight-Based Drip Calculations" }, { name: "Central Line Care" },
     ]},
-    { title: "Rehabilitation & Discharge", skills: [
-      { name: "Interdisciplinary rehab coordination" }, { name: "Long-term care planning" }, { name: "Family education for chronic complex care" }, { name: "Discharge to SNF/home coordination" },
+    { title: "Safe Care Environment - Patient Care", skills: [
+      { name: "Mandated Reporting - Abuse, Neglect, Exploitation" }, { name: "End-of-Life Care" }, { name: "Interdisciplinary Rounds" }, { name: "Patient Education, Teach-Back" }, { name: "Admissions, Transfers, and Discharge Process" }, { name: "Organ/Tissue Donation Education" }, { name: "Advanced Directives" }, { name: "Interdisciplinary Rehab Coordination" }, { name: "Long-Term Care Planning" }, { name: "Family Education for Chronic Complex Care" }, { name: "Discharge to SNF/Home Coordination" },
+    ]},
+    { title: "Safe Care Environment - Professional Nursing", skills: [
+      { name: "Medication Dispensing Systems (e.g., Pyxis, Omnicell)" }, { name: "Communication Frameworks (e.g., SBAR)" }, { name: "Charge Nurse Role" }, { name: "Barcode Scanning and Medication Administration" }, { name: "EMR Systems (e.g., EPIC, Cerner, Meditech)" }, { name: "Preceptoring New Staff" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
     ]},
   ]},
 
