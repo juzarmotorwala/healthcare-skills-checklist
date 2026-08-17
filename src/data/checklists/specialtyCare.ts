@@ -128,17 +128,29 @@ export const specialtyCareChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "dialysis-tech", title: "Dialysis Technician Skills Checklist", shortTitle: "Dialysis Technician", icon: "🩸", group: "Specialty Care", categories: [
-    { title: "Hemodialysis Setup", skills: [
-      { name: "Machine setup and priming" }, { name: "Dialyzer/bloodline assembly" }, { name: "Water treatment system checks" }, { name: "Dialysate preparation and testing" },
+    { title: "Dialysis Prescription & Machine Setup", skills: [
+      { name: "Verify Correct Cannula, Dialysate, Dialyzer, Blood Flow Rate, Dialysate Flow Rate, Treatment Time, and Ultrafiltration Goal" }, { name: "Machine Setup and Priming" }, { name: "Dialyzer/Bloodline Assembly" }, { name: "Initial Machine and Alarm Settings" }, { name: "Monitor and Document Vital Signs" },
     ]},
-    { title: "Patient Care", skills: [
-      { name: "AV fistula/graft cannulation" }, { name: "Catheter connection/disconnection (under supervision)" }, { name: "Pre/post treatment vital signs" }, { name: "Weight assessment and fluid removal calculation" }, { name: "Monitoring during treatment" },
+    { title: "Water & Dialysate Quality", skills: [
+      { name: "Water Treatment System Checks" }, { name: "Dialysate Preparation and Testing" }, { name: "Pressure Changes During Hemodialysis" }, { name: "Changes in the Quality of Water Production" }, { name: "Transmembrane Pressure (TMP) and Membrane Permeability" }, { name: "Dialysate Temperature Troubleshooting" }, { name: "Dialysate Conductivity Troubleshooting" },
+    ]},
+    { title: "Patient Assessment", skills: [
+      { name: "Pre/Post Treatment Vital Signs" }, { name: "Weight Assessment and Fluid Removal Calculation" }, { name: "Hepatitis Panel Review" }, { name: "Pain Assessment" }, { name: "Shortness of Breath" }, { name: "Cardiovascular Disease/Renal-GU Related Conditions" }, { name: "Monitoring During Treatment" },
+    ]},
+    { title: "Vascular Access Care", skills: [
+      { name: "AV Fistula/Graft Cannulation" }, { name: "Accidental Dislodgement Prevention and Response" }, { name: "Catheter Connection/Disconnection (Under Supervision)" }, { name: "Pre-Dialysis Central Venous Catheter (CVC) Care" }, { name: "Assess Access Site for Patency" }, { name: "Signs of Access Site Infection" },
     ]},
     { title: "Complications & Safety", skills: [
-      { name: "Hypotension recognition and response" }, { name: "Cramping management" }, { name: "Clotting/access issues" }, { name: "Infection control and aseptic technique" }, { name: "Emergency response protocols" },
+      { name: "Hypotension Recognition and Response" }, { name: "Cramping Management" }, { name: "Clotting/Access Issues" }, { name: "Access Site Infection Monitoring" }, { name: "Infection Control and Aseptic Technique" }, { name: "Medication Safety" }, { name: "Seizure Management" }, { name: "Emergency Response Protocols" }, { name: "AED/Defibrillator Use" },
     ]},
-    { title: "Equipment & Documentation", skills: [
-      { name: "Equipment disinfection/reprocessing" }, { name: "Treatment flow sheet documentation" }, { name: "Supply inventory management" },
+    { title: "Post-Treatment & Reuse", skills: [
+      { name: "Post Treatment Access Care, Dressing, and Bleeding Monitoring" }, { name: "Dialyzer Reuse: Rinsing, Cleaning, Performance Testing, and Disinfection" }, { name: "Equipment Disinfection/Reprocessing" },
+    ]},
+    { title: "Laboratory, Medication & Documentation", skills: [
+      { name: "Package and Send Specimens to Laboratory Facility" }, { name: "Heparin Administration" }, { name: "Treatment Flow Sheet Documentation" }, { name: "Supply Inventory Management" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Neonate (0-1 month)" }, { name: "Infant (1-12 months)" }, { name: "Pediatric (1-12 years)" }, { name: "Adolescent (12-18 years)" }, { name: "Adult (18-65 years)" }, { name: "Geriatric (65+ years)" },
     ]},
   ]},
 
