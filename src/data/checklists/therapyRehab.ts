@@ -134,26 +134,44 @@ export const therapyRehabChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "rrt", title: "Registered Respiratory Therapist Skills Checklist", shortTitle: "RRT", icon: "🫁", group: "Therapy & Rehab", categories: [
-    { title: "General Skills", skills: [
-      { name: "Care of Patient in Restraints" }, { name: "Electronic Documentation" }, { name: "Isolation Precautions" }, { name: "Medicare Documentation" }, { name: "Patient/Family Education" },
+    { title: "Patient Assessment", skills: [
+      { name: "Assess Rate and Work of Breathing" }, { name: "Integrate Individualized Interview Techniques to Determine Patient's Overall Health Status" }, { name: "Perform Palpation Techniques to Determine Patient's Cardiopulmonary Status" }, { name: "Perform Comprehensive Physical Examination on Patient" }, { name: "Assess Peak Flow Rate" }, { name: "Recognize Normal and Abnormal Results of Cardiopulmonary Monitoring" }, { name: "Collect and Evaluate Pertinent Patient Clinical Data" }, { name: "Identify Normal and Abnormal Cough, Sputum Amount, Color, and Character" }, { name: "Auscultate Breath Sounds" }, { name: "Perform Pulmonary Function Testing" },
+    ]},
+    { title: "Arterial Blood Gases & Lab Interpretation", skills: [
+      { name: "Brachial Artery" }, { name: "Perform Allen Test" }, { name: "Femoral Artery" }, { name: "Blood Sample From Arterial Line" }, { name: "Radial Artery" }, { name: "Chest X-ray" }, { name: "Basic EKG" }, { name: "Blood Chemistry" }, { name: "Arterial Blood Gases" }, { name: "12-Lead EKG" }, { name: "Perform Venous, Arterial, and Capillary Sticks for Analyzing Blood Gases" },
+    ]},
+    { title: "Procedures", skills: [
+      { name: "Chest Physiotherapy" }, { name: "Arterial Line Insertion" }, { name: "Vent Set Up and Care" }, { name: "Assist With Thoracentesis" }, { name: "Bronchoscopy" }, { name: "Care of Patient With Chest Tube" },
+    ]},
+    { title: "Equipment Selection, Assembly & Troubleshooting", skills: [
+      { name: "ET Tube" }, { name: "Troubleshooting Low Pressure Alarms" }, { name: "IMV" }, { name: "Breath Actuated Nebulizers" }, { name: "Pressure Vents" }, { name: "Trach Collar" }, { name: "Oxygen" }, { name: "SIMV" }, { name: "High Frequency Jet Ventilator" }, { name: "Nasal Cannula" }, { name: "Inverse Ratio Ventilator" }, { name: "Venti-Masks" }, { name: "Nebulizer" }, { name: "CPAP" }, { name: "Volume Vents Weaning" }, { name: "T-Piece" }, { name: "High Frequency Oscillator" }, { name: "Face Masks" }, { name: "PEEP" }, { name: "Pressure Support" }, { name: "Bag and Mask" }, { name: "Ultrasonic" }, { name: "Troubleshooting High Pressure Alarms" }, { name: "Oxygen-Related Equipment" },
     ]},
     { title: "Airway Management", skills: [
-      { name: "Intubation" }, { name: "Extubation" }, { name: "Tracheostomy Care" }, { name: "Suctioning (ET/Trach)" }, { name: "Airway Clearance Techniques" }, { name: "Bag-Valve Mask Ventilation" },
+      { name: "Oropharyngeal/Suctioning" }, { name: "Extubation" }, { name: "Initiate and Conduct Emergency Cardiopulmonary Support Including BCLS, ACLS, PALS, and NRP When Indicated" }, { name: "Incentive Spirometry" }, { name: "Nasal Airway Placement" }, { name: "Intubation" }, { name: "Sputum Specimen Collection" }, { name: "Function as an Assistant to Physician During Special Procedures" }, { name: "Extubation Assistance" }, { name: "Tracheostomy/Suctioning" }, { name: "Oral Airway Placement" }, { name: "Intubation Assistance" },
     ]},
-    { title: "Ventilator Management", skills: [
-      { name: "Conventional Ventilation" }, { name: "High Frequency Ventilation" }, { name: "Non-Invasive Ventilation (CPAP/BiPAP)" }, { name: "Ventilator Weaning" }, { name: "ABG Interpretation" }, { name: "Ventilator Graphics" },
+    { title: "Infection Control & Documentation", skills: [
+      { name: "Maintain Aseptic Technique When Applicable, Ensuring Infection Control" }, { name: "Remove Bronchopulmonary Secretions" }, { name: "Perform Quality Control (QC) Procedures for Equipment" }, { name: "Review Existing Data in the Patient Record and Document Current Information as It Relates to Current Respiratory Care Plan" },
     ]},
-    { title: "Oxygen Therapy", skills: [
-      { name: "Nasal Cannula" }, { name: "Simple Mask" }, { name: "Non-Rebreather" }, { name: "High Flow Nasal Cannula" }, { name: "Venturi Mask" }, { name: "Blow-by" },
+    { title: "Evaluation & Modification of Respiratory Care", skills: [
+      { name: "Initiate Patient Education When Indicated (e.g., MDI, Nebulizer Treatments)" }, { name: "Modify Treatment Modalities Based Upon Patient's Response to Respiratory Care" }, { name: "Maintain and Achieve Adequate Respiratory Support for the Patient" }, { name: "Recommend Modifications to Respiratory Treatments When Indicated" }, { name: "Initiate, Conduct, or Modify Respiratory Therapy Treatments/Techniques in an Emergency Setting" }, { name: "Evaluate and Monitor Patient's Objective and Subjective Responses to Respiratory Care" }, { name: "Initiate and Conduct Pulmonary Rehabilitation With Patient When Indicated" },
     ]},
-    { title: "Aerosolized Medications", skills: [
-      { name: "SVN (Small Volume Nebulizer)" }, { name: "MDI (Metered Dose Inhaler)" }, { name: "DPI (Dry Powder Inhaler)" }, { name: "Continuous Nebulization" },
+    { title: "Care of Patients With", skills: [
+      { name: "Asthma" }, { name: "Pneumothorax" }, { name: "Acute/Chronic Bronchitis" }, { name: "Tracheo-Esophageal Fistula" }, { name: "Heart Failure" }, { name: "Status Asthmaticus" }, { name: "Laryngospasm" }, { name: "Adult Respiratory Distress Syndrome (ARDS)" }, { name: "Cystic Fibrosis" }, { name: "Tension Pneumothorax" }, { name: "Myasthenia Gravis" }, { name: "Guillain Barre" }, { name: "Pulmonary Edema" }, { name: "Tuberculosis" }, { name: "Hemopneumothorax" }, { name: "Epiglottis" }, { name: "Pneumonia" }, { name: "Thoracotomy" }, { name: "Cardiac Surgery" }, { name: "Smoke Inhalation" }, { name: "Fresh Tracheostomy" }, { name: "Aspiration" }, { name: "COPD" },
     ]},
-    { title: "Diagnostics", skills: [
-      { name: "ABG Sampling" }, { name: "Pulse Oximetry" }, { name: "Capnography" }, { name: "Pulmonary Function Testing" }, { name: "Chest X-ray Interpretation" },
+    { title: "Medication Delivery Systems", skills: [
+      { name: "Metered Dose Inhalers" }, { name: "Aerosol Set Up Trach" }, { name: "IPPB" }, { name: "Aerosol Heated/Cooled" }, { name: "Aerosol Set Up Mask" }, { name: "Medihaler" },
     ]},
-    { title: "Specialty Areas", skills: [
-      { name: "Neonatal/Pediatric" }, { name: "Adult ICU" }, { name: "Emergency Department" }, { name: "Transport" }, { name: "Home Care" }, { name: "Pulmonary Rehab" },
+    { title: "Medications", skills: [
+      { name: "Sodium Bicarbonate" }, { name: "Fluticasone Oral Inhalation (Flovent®)" }, { name: "Triamcinolone Acetonide (Azmacort®)" }, { name: "Dexamethasone (Decadron®)" }, { name: "Aminophylline" }, { name: "Metaproterenol" }, { name: "Triamcinolone Nasal Spray (Nasacort®)" }, { name: "Beclomethasone Dipropionate (Vanceril®)" }, { name: "Terbutaline Sulfate" }, { name: "Ipratropium Bromide and Albuterol (Combivent®)" }, { name: "Acetylcysteine Inhalation Route (Mucomyst®)" }, { name: "Theophylline (Uniphyl®)" }, { name: "Flunisolide (Aerobid®)" }, { name: "Isoproterenol (Isuprel®)" }, { name: "Racepinephrine (Asthmanefrin®)" }, { name: "Inhaled Steroids" }, { name: "Ipratropium Bromide (Atrovent®)" }, { name: "Albuterol (Proventil®, Ventolin®)" }, { name: "Levalbuterol Oral Inhalation (Xopenex®)" }, { name: "Fluticasone Nasal Spray (Flonase®)" }, { name: "Cromolyn Sodium (Intal®)" },
+    ]},
+    { title: "Recognition of Medication Effects on Respiratory System", skills: [
+      { name: "Lidocaine (Xylocaine®)" }, { name: "Corticosteroids" }, { name: "Suxamethonium Chloride (Anectine®)" }, { name: "Dopamine (Inotropin®)" }, { name: "Theophylline (Theo-Dur®)" }, { name: "Pentamidine Isethionate (NebuPent®)" }, { name: "Diazepam (Valium®)" }, { name: "Nipride (Sodium Nitroprusside®)" }, { name: "Heliox Therapy" }, { name: "Nitric Oxide Therapy" }, { name: "Midazolam (Versed®)" }, { name: "Propofol (Diprivan®)" }, { name: "Digoxin (Cardoxin®)" }, { name: "Morphine Sulfate (Duramorph®)" }, { name: "Ketamine (Ketalar®)" }, { name: "Atropine (Atropen®)" }, { name: "Pancuronium Bromide (Pavulone®)" },
+    ]},
+    { title: "Neonatal/Pediatric Population", skills: [
+      { name: "Capillary Blood Gases" }, { name: "Respiratory Interstitial Emphysema" }, { name: "Bronchopulmonary Dysplasia (BPD)" }, { name: "Meconium Aspiration" }, { name: "Croup" }, { name: "Oxygen Delivery System" }, { name: "Transient Tachypnea of the Newborn" }, { name: "Near Drowning" }, { name: "Assist in High Risk Delivery" }, { name: "Respiratory Distress Syndrome" }, { name: "Umbilical Blood Gases" }, { name: "Respiratory Syncytial Virus" }, { name: "Epiglottitis" }, { name: "Persistent Pulmonary Hypertension" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
     ]},
   ]},
 
