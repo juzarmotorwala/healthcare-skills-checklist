@@ -284,14 +284,41 @@ export const alliedHealthChecklists: ChecklistSpec[] = [
     { title: "Clinical Assessment", skills: [
       { name: "History and physical exam" }, { name: "Differential diagnosis development" }, { name: "Diagnostic test ordering and interpretation" }, { name: "Treatment planning" },
     ]},
+    { title: "Emergencies & Trauma", skills: [
+      { name: "Overdose of sedatives, hypnotics, opiates" }, { name: "Shock" }, { name: "Open wounds" }, { name: "Minor head injuries" }, { name: "Anaphylaxis" }, { name: "Snake bites" }, { name: "Seizures" }, { name: "Animal bites" }, { name: "Cardiac arrest" }, { name: "Minor burns" }, { name: "Ingestions and poisonings" },
+    ]},
+    { title: "Respiratory & Cardiovascular Conditions", skills: [
+      { name: "COPD" }, { name: "Croup" }, { name: "Asthma" }, { name: "URI (upper respiratory infection)" }, { name: "Obstructive sleep apnea" }, { name: "Influenza" }, { name: "Tracheobronchitis" }, { name: "Bronchitis" }, { name: "Bacterial/viral pneumonia" }, { name: "Bacterial/nonbacterial sinusitis" }, { name: "Functional murmurs" }, { name: "Congenital heart disease" }, { name: "Stasis ulcer of lower extremities" }, { name: "Angina" }, { name: "Hypertension" }, { name: "Pericarditis" }, { name: "Congestive heart failure" }, { name: "Coronary artery disease" },
+    ]},
+    { title: "OB/GYN & GI Conditions", skills: [
+      { name: "Pregnancy diagnosis and referral" }, { name: "Medications in postpartum/intrapartum phases" }, { name: "Pap smears and abnormal findings" }, { name: "Mastitis" }, { name: "Bartholin's cyst/abscess" }, { name: "Nausea and vomiting with pregnancy" }, { name: "Fibrocystic breast disease" }, { name: "Birth control methods" }, { name: "Pre-natal care" }, { name: "Menopause" }, { name: "Pain relief in active phase of labor" }, { name: "Trichomonal/atrophic/candida vaginitis" }, { name: "Dysfunctional uterine bleeding" }, { name: "Dysmenorrhea" }, { name: "Rh blood factor" }, { name: "Preparation for childbirth" }, { name: "Fetal well-being" }, { name: "Colic" }, { name: "Constipation" }, { name: "Cholecystitis" }, { name: "Pyloric stenosis" }, { name: "Diarrhea (simple)" }, { name: "Acute gastroenteritis" }, { name: "Appendicitis" },
+    ]},
+    { title: "Skin, ENT & Eye Conditions", skills: [
+      { name: "Diaper dermatitis" }, { name: "Pityriasis rosea" }, { name: "Acne" }, { name: "Tinea pedis/corporis" }, { name: "Scabies" }, { name: "Contact dermatitis" }, { name: "Herpes zoster/simplex" }, { name: "Folliculitis" }, { name: "Warts" }, { name: "Malignant/basal skin carcinoma" }, { name: "Carbuncles, furuncles, impetigo" }, { name: "Serous/acute purulent otitis media" }, { name: "Oral candidiasis" }, { name: "Epistaxis" }, { name: "Allergic rhinitis" }, { name: "Pharyngitis" }, { name: "Otitis externa" }, { name: "Strabismus" }, { name: "Chalazion" }, { name: "Conjunctivitis" }, { name: "Stye" },
+    ]},
+    { title: "Musculoskeletal & Parasitic Conditions", skills: [
+      { name: "Carpal tunnel syndrome" }, { name: "Scoliosis" }, { name: "Muscular dystrophy" }, { name: "Osteoporosis" }, { name: "Juvenile diabetes" }, { name: "Osteoarthritis" }, { name: "Tendonitis" }, { name: "Bursitis" }, { name: "Gout" }, { name: "Osteomyelitis" }, { name: "Minor sprains and strains" }, { name: "Rheumatoid arthritis" }, { name: "Ascariasis" }, { name: "Pediculosis" }, { name: "Pinworms" },
+    ]},
+    { title: "Genitourinary, Nervous System & Endocrine Conditions", skills: [
+      { name: "Prostatitis" }, { name: "Herpes" }, { name: "Urinary tract infection" }, { name: "Benign prostatic hypertrophy" }, { name: "Hydrocele" }, { name: "Cystitis" }, { name: "Vulvovaginitis" }, { name: "Syphilis, chlamydia, gonococcal infections" }, { name: "Hypospadias" }, { name: "Pyelonephritis" }, { name: "Multiple sclerosis" }, { name: "Trigeminal neuralgia" }, { name: "Migraine/tension headaches" }, { name: "Bell's palsy" }, { name: "Anxiety" }, { name: "Parkinson's disease" }, { name: "TIA (transient ischemic attacks)" }, { name: "Vasovagal syncope" }, { name: "Head injury" }, { name: "Alzheimer's disease" }, { name: "Type I/II diabetes mellitus" }, { name: "Hypothyroidism" }, { name: "Addison's disease" }, { name: "Hypoglycemia" }, { name: "Graves disease" },
+    ]},
+    { title: "Hematological & Psychosocial Conditions", skills: [
+      { name: "Folic acid deficiency anemia" }, { name: "Aplastic anemia" }, { name: "Sickle cell anemia" }, { name: "Iron deficiency anemia" }, { name: "Pernicious anemia" }, { name: "Suicide risk assessment" }, { name: "Anxiety" }, { name: "Anorexia" }, { name: "Grief" }, { name: "Bulimia" }, { name: "Obesity" }, { name: "Depression" },
+    ]},
     { title: "Procedures", skills: [
-      { name: "Suturing/wound repair" }, { name: "Joint/fracture reduction assist" }, { name: "Minor surgical procedures" }, { name: "First assist in surgery" },
+      { name: "Suturing/wound repair" }, { name: "Starting IV" }, { name: "Casting and splinting" }, { name: "Cell biopsy" }, { name: "Joint/fracture reduction assist" }, { name: "Minor surgical procedures" }, { name: "First assist in surgery" },
+    ]},
+    { title: "Certifications", skills: [
+      { name: "BCLS" }, { name: "PALS" }, { name: "ACLS" }, { name: "CCRN" },
     ]},
     { title: "Prescriptive & Documentation", skills: [
       { name: "Prescriptive authority within scope" }, { name: "EMR documentation and coding" }, { name: "Care coordination with supervising physician" },
     ]},
     { title: "Specialty Exposure", skills: [
       { name: "Emergency medicine" }, { name: "Primary care" }, { name: "Surgical specialties" }, { name: "Hospitalist medicine" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth - 1 year)" }, { name: "Toddler (1-3 years)" }, { name: "Pre-school (3-6 years)" }, { name: "School Age (6-12 years)" }, { name: "Adolescent (12-18 years)" }, { name: "Young Adult (18-30 years)" }, { name: "Mature Adult (30-60 years)" }, { name: "Elderly (>60 years)" },
     ]},
   ]},
 ];
