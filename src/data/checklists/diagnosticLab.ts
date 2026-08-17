@@ -28,21 +28,36 @@ export const diagnosticLabChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
-  { slug: "medical-technologist", title: "Medical Technologist Skills Checklist", shortTitle: "Medical Technologist", icon: "🔬", group: "Diagnostic & Lab", categories: [
+  { slug: "medical-technologist", title: "Medical Technologist/Technician Skills Checklist", shortTitle: "Medical Technologist", icon: "🔬", group: "Diagnostic & Lab", categories: [
     { title: "Blood Bank", skills: [
-      { name: "Component Preparation" }, { name: "Special Blood Typing" }, { name: "Procedures" }, { name: "Patient Identification" }, { name: "Emergency Release" }, { name: "Freezing Blood" },
+      { name: "Component Preparation" }, { name: "Special Blood Typing" }, { name: "Procedures" }, { name: "Patient Identification" }, { name: "Emergency Release" }, { name: "Freezing Blood" }, { name: "Thawing procedures for FFP" }, { name: "Pooling platelets" }, { name: "Cross match (gel and tube methods)" }, { name: "Antibody identification" }, { name: "Blood irradiation" }, { name: "Cell washing" }, { name: "Massive transfusion protocol (MTP)" }, { name: "Direct/indirect Coombs" }, { name: "Receiving outside blood components" }, { name: "Pediatric aliquots and cord blood" }, { name: "Issuing blood components" }, { name: "Transfusion reaction work-up" }, { name: "Rhogam screening" }, { name: "Donor unit collection" },
     ]},
-    { title: "Chemistry", skills: [
-      { name: "Routine Chemistry" }, { name: "Special Chemistry" }, { name: "Immunoassay" }, { name: "Electrophoresis" }, { name: "Blood Gas Analysis" },
+    { title: "Chemistry/Immunoassays", skills: [
+      { name: "Routine Chemistry" }, { name: "Special Chemistry" }, { name: "Immunoassay" }, { name: "Electrophoresis" }, { name: "Blood Gas Analysis" }, { name: "Cardiac testing (CKMB, troponin)" }, { name: "Immunoelectrophoresis" }, { name: "HCG testing (serum)" }, { name: "Thin layer chromatography" }, { name: "Hormone and thyroid testing" }, { name: "Electrolytes and osmolality" }, { name: "Therapeutic drug monitoring (TDM)" }, { name: "Tumor markers" }, { name: "Reference and panic values" },
     ]},
-    { title: "Hematology", skills: [
-      { name: "CBC/Differential" }, { name: "Manual Differential" }, { name: "Body Fluid Analysis" }, { name: "Coagulation" }, { name: "Flow Cytometry" },
+    { title: "Hematology/Coagulation", skills: [
+      { name: "CBC/Differential" }, { name: "Manual Differential" }, { name: "Body Fluid Analysis" }, { name: "Coagulation" }, { name: "Flow Cytometry" }, { name: "Automated and manual reticulocyte counts" }, { name: "Platelet function assay and platelet aggregation" }, { name: "Factor assays" }, { name: "PT/PTT and D-dimer" }, { name: "CSF cell count and differential" }, { name: "Sedimentation rates" }, { name: "Scattergram interpretation" }, { name: "Fibrinogen" }, { name: "TEG (thromboelastography)" }, { name: "Body fluid crystals" },
     ]},
     { title: "Microbiology", skills: [
-      { name: "Culture Setup" }, { name: "Identification" }, { name: "Susceptibility Testing" }, { name: "Mycobacteriology" }, { name: "Parasitology" }, { name: "Virology" },
+      { name: "Culture Setup" }, { name: "Identification" }, { name: "Susceptibility Testing" }, { name: "Mycobacteriology" }, { name: "Parasitology" }, { name: "Virology" }, { name: "Acid fast stains" }, { name: "Gram stain procedures and interpretation" }, { name: "Chlamydia culture and smear" }, { name: "Malaria detection" }, { name: "Ova and parasite detection" }, { name: "India ink prep" }, { name: "C. difficile testing" }, { name: "Aerobic and anaerobic cultures" },
     ]},
     { title: "Urinalysis", skills: [
-      { name: "Physical Examination" }, { name: "Chemical Analysis" }, { name: "Microscopic Examination" }, { name: "Pregnancy Testing" },
+      { name: "Physical Examination" }, { name: "Chemical Analysis" }, { name: "Microscopic Examination" }, { name: "Pregnancy Testing" }, { name: "Perform manual microscopic and automated microscopy systems" }, { name: "Crystal identification" }, { name: "Fecal occult blood" }, { name: "Read and interpret dip-stix" }, { name: "Post-vasectomy evaluation" },
+    ]},
+    { title: "Serology/Immunology", skills: [
+      { name: "CMV (cytomegalovirus)" }, { name: "MR serology" }, { name: "Rapid strep and influenza kit testing" }, { name: "TORCH studies" }, { name: "FTA-ABS (fluorescent treponemal antibody absorption test)" }, { name: "Hepatitis panel" }, { name: "Rheumatoid factor" }, { name: "RPR kit test" }, { name: "RIA (radioimmunoassay)" }, { name: "COVID test" }, { name: "Monospot kit test" }, { name: "ASO (anti-streptolysin O) titer" },
+    ]},
+    { title: "Phlebotomy", skills: [
+      { name: "Capillary stick/fingerstick" }, { name: "Blood bank specimen collection" }, { name: "Obtaining blood via syringe" }, { name: "Heel stick" }, { name: "Safety needle use" }, { name: "Arterial punctures" }, { name: "Venipuncture" }, { name: "Hazardous materials knowledge" }, { name: "Blood culture collection" },
+    ]},
+    { title: "General Laboratory & Quality", skills: [
+      { name: "Chain of custody" }, { name: "Daily QC performing and interpreting" }, { name: "Result interpretation/reporting" }, { name: "Laboratory safety" }, { name: "Specimen collection, transport, and tracking" }, { name: "Hospital and laboratory information systems (LIS)" }, { name: "Quality Management System" },
+    ]},
+    { title: "Practice Setting Experience", skills: [
+      { name: "MD office" }, { name: "Reference lab" }, { name: "Hospital" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
     ]},
   ]},
 
