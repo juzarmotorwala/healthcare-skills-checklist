@@ -257,6 +257,15 @@ export const specialtyCareChecklists: ChecklistSpec[] = [
     { title: "Medications", skills: [
       { name: "Opioid Management" }, { name: "Sublingual Medications" }, { name: "Rectal Medications" }, { name: "Continuous Infusion" }, { name: "PCA Pump" },
     ]},
+    { title: "Pathophysiology & Symptom Management by System", skills: [
+      { name: "Cardiopulmonary System (Syncope, Non-Productive Cough)" }, { name: "Endocrine System (Diabetic Ketoacidosis)" }, { name: "Neurological System (Coma, Paresthesia)" }, { name: "Gastrointestinal System (Pancreatitis, Bowel Incontinence)" }, { name: "Renal/Genitourinary System (Bladder Spasms)" }, { name: "Musculoskeletal System (Impaired Mobility)" }, { name: "Immune/Lymphatic System (Infection or Fever)" }, { name: "Mental Status (Agitation or Terminal Restlessness)" }, { name: "Recognize Signs of Impending Death" },
+    ]},
+    { title: "Education, Advocacy & Caregiver Support", skills: [
+      { name: "Identify and Address Barriers to Ability to Learn" }, { name: "Assess for Caregiver Fatigue" }, { name: "Assist Patient in Maintaining Optimal Function and Quality of Life" },
+    ]},
+    { title: "Interdisciplinary Collaboration & Professional Practice", skills: [
+      { name: "Coordinate Patient Care with Other Health Care Providers" }, { name: "Collaborate with Patient/Family/Caregiver" }, { name: "Document Using Electronic Medical Record/EHR" }, { name: "Maintain Professional Boundaries Between Patient/Family and Staff" },
+    ]},
   ]},
 
   { slug: "home-health", title: "Registered Nurse – Home Health Skills Checklist", shortTitle: "RN – Home Health", icon: "🏠", group: "Specialty Care", categories: [
