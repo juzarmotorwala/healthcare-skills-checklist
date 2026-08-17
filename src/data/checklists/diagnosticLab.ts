@@ -56,8 +56,35 @@ export const diagnosticLabChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "ct-tech", title: "CT Technologist Skills Checklist", shortTitle: "CT Tech", icon: "🖥️", group: "Diagnostic & Lab", categories: [
-    { title: "CT Technologist Skills", skills: [
-      { name: "Abdominal" }, { name: "Pancreas" }, { name: "Liver" }, { name: "Pelvis" }, { name: "Temporomandibular" }, { name: "Adrenal" }, { name: "Head/Brain" }, { name: "Chest" }, { name: "Spine (Cervical, Thoracic, Lumbar)" }, { name: "Extremities" }, { name: "CT Angiography" }, { name: "3D Reconstruction" },
+    { title: "Head, Face & Sinuses", skills: [
+      { name: "Head/Brain" }, { name: "Face/Maxillofacial" }, { name: "Sinuses" }, { name: "Orbits" }, { name: "Temporal Bones" }, { name: "Temporomandibular Joint" },
+    ]},
+    { title: "Neck & Chest", skills: [
+      { name: "Soft Tissue Neck" }, { name: "Chest" }, { name: "High-Resolution Chest" }, { name: "Chest with Contrast" },
+    ]},
+    { title: "Abdomen & Pelvis", skills: [
+      { name: "Abdomen" }, { name: "Pelvis" }, { name: "Abdomen/Pelvis Combined" }, { name: "Pancreas Protocol" }, { name: "Liver Protocol" }, { name: "Adrenal Protocol" },
+    ]},
+    { title: "Spine", skills: [
+      { name: "Cervical Spine" }, { name: "Thoracic Spine" }, { name: "Lumbar Sacral Spine" }, { name: "Trauma Spine" },
+    ]},
+    { title: "Upper Extremities", skills: [
+      { name: "Shoulder/Scapula" }, { name: "Humerus" }, { name: "Elbow" }, { name: "Forearm" }, { name: "Hand/Wrist" },
+    ]},
+    { title: "Lower Extremities", skills: [
+      { name: "Hip" }, { name: "Femur" }, { name: "Knee" }, { name: "Lower Leg" }, { name: "Foot/Ankle" },
+    ]},
+    { title: "CTA Scans", skills: [
+      { name: "CTA Carotids" }, { name: "CTA Cranials" }, { name: "CTA Thoracic Aorta" }, { name: "CTA Abdominal Aorta" }, { name: "CTA Pulmonary Arteries" }, { name: "CTA Mesenteric" }, { name: "CTA Femorals w/ w/o Runoff" },
+    ]},
+    { title: "CT-Guided Procedures", skills: [
+      { name: "CT-Guided Biopsy" }, { name: "CT-Guided Drainage" }, { name: "CT-Guided Injection/Aspiration" },
+    ]},
+    { title: "Pediatric Scans", skills: [
+      { name: "Pediatric Head" }, { name: "Pediatric Chest" }, { name: "Pediatric Abdomen/Pelvis" },
+    ]},
+    { title: "CT Angiography & 3D Reconstruction", skills: [
+      { name: "CT Angiography" }, { name: "3D Reconstruction" },
     ]},
     { title: "Contrast", skills: [
       { name: "IV Contrast Administration" }, { name: "Oral Contrast" }, { name: "Power Injector" }, { name: "Contrast Reaction Management" },
