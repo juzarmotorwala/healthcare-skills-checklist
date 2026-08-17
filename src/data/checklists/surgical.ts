@@ -125,6 +125,9 @@ export const surgicalChecklists: ChecklistSpec[] = [
     { title: "Pre/Post Procedure", skills: [
       { name: "Pre procedure phone calls" }, { name: "Patient assessment" }, { name: "Colon prep" }, { name: "IV start, med admin" }, { name: "Post procedure assessment" }, { name: "Discharge outpatients" },
     ]},
+    { title: "Infection Control & Emergency Preparedness", skills: [
+      { name: "Follow Required Infection Prevention Protocols (PPE)" }, { name: "Point of Use Cleaning of Flexible Endoscopes" }, { name: "High-Level Disinfection/Reprocessing of Endoscopes" }, { name: "Maintain Basic Life Support (BLS) Certification" }, { name: "Emergency Patient Care Response" },
+    ]},
     { title: "Age Specific", skills: [
       { name: "Newborn/neonate (birth-30 days)" }, { name: "Infant (31 days-1 year)" }, { name: "Toddler (ages 2-3 years)" }, { name: "Preschool (ages 4-5 years)" }, { name: "School age (ages 6-12 years)" }, { name: "Adolescent (ages 13-21 years)" }, { name: "Young adult (ages 22-39 years)" }, { name: "Adult (ages 40-64 years)" }, { name: "Older adult (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
     ]},
