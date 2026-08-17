@@ -42,19 +42,34 @@ export const therapyRehabChecklists: ChecklistSpec[] = [
 
   { slug: "pt-pta", title: "PT/PTA Skills Checklist", shortTitle: "PT/PTA", icon: "🦿", group: "Therapy & Rehab", categories: [
     { title: "Adult Orthopedic", skills: [
-      { name: "Neck Injuries/Surgeries" }, { name: "Back Injuries/Surgeries" }, { name: "Hip Fractures/Injuries" }, { name: "Total Hip Replacement" }, { name: "Knee Injuries" }, { name: "Total Knee Replacement" }, { name: "Shoulder Injuries/Surgeries" }, { name: "Ankle/Foot Injuries" }, { name: "Hand/Wrist Injuries" },
+      { name: "Neck Injuries/Surgeries" }, { name: "Back Injuries/Surgeries" }, { name: "Hip Fractures/Injuries" }, { name: "Total Hip Replacement" }, { name: "Knee Injuries" }, { name: "Total Knee Replacement" }, { name: "Shoulder Injuries/Surgeries" }, { name: "Ankle/Foot Injuries" }, { name: "Hand/Wrist Injuries" }, { name: "UE joint replacements" }, { name: "UE/LE fractures/dislocations" }, { name: "Arthritis" }, { name: "Spinal orthopedic conditions" }, { name: "UE/LE amputation" },
     ]},
     { title: "Adult Neurological", skills: [
-      { name: "CVA/Stroke" }, { name: "Traumatic Brain Injury" }, { name: "Spinal Cord Injury" }, { name: "Multiple Sclerosis" }, { name: "Parkinson's Disease" }, { name: "Peripheral Neuropathy" },
+      { name: "CVA/Stroke" }, { name: "Traumatic Brain Injury" }, { name: "Spinal Cord Injury" }, { name: "Multiple Sclerosis" }, { name: "Parkinson's Disease" }, { name: "Peripheral Neuropathy" }, { name: "Guillain-Barré syndrome" }, { name: "Dementia/Alzheimer's disease" }, { name: "Spinal surgery" }, { name: "Huntington's disease" }, { name: "Peripheral nerve injury" }, { name: "Complex regional pain syndrome (CRPS)" }, { name: "Amyotrophic lateral sclerosis (ALS)" },
     ]},
     { title: "Pediatric", skills: [
-      { name: "Developmental Delays" }, { name: "Cerebral Palsy" }, { name: "Down Syndrome" }, { name: "Torticollis" }, { name: "Scoliosis" },
+      { name: "Developmental Delays" }, { name: "Cerebral Palsy" }, { name: "Down Syndrome" }, { name: "Torticollis" }, { name: "Scoliosis" }, { name: "Autism" }, { name: "Spina bifida" }, { name: "Sensory processing disorders" }, { name: "Intellectual disability" }, { name: "Learning disabilities" }, { name: "Genetic conditions (Fragile X)" }, { name: "Juvenile rheumatoid arthritis" }, { name: "Congenital anomalies" },
     ]},
     { title: "Geriatric", skills: [
       { name: "Fall Prevention" }, { name: "Balance Training" }, { name: "Osteoporosis" }, { name: "Arthritis Management" }, { name: "Dementia/Cognitive Impairment" },
     ]},
-    { title: "Cardiopulmonary", skills: [
-      { name: "Cardiac Rehab" }, { name: "Pulmonary Rehab" }, { name: "Post-surgical Mobility" },
+    { title: "Cardiopulmonary & Mental Health", skills: [
+      { name: "Cardiac Rehab" }, { name: "Pulmonary Rehab" }, { name: "Post-surgical Mobility" }, { name: "Tracheostomies/ventilator dependency" }, { name: "Depression" }, { name: "Personality disorders" }, { name: "Schizophrenia" }, { name: "Bipolar disorder" }, { name: "Anxiety" }, { name: "Burns" }, { name: "Obesity/Bariatric care" }, { name: "Organ transplantation" }, { name: "Oncology" }, { name: "Chronic pain" },
+    ]},
+    { title: "Assessment", skills: [
+      { name: "Edema and circulation" }, { name: "Vital signs" }, { name: "Integumentary status" }, { name: "Cardiopulmonary status (dyspnea, activity tolerance)" }, { name: "Sensory processing (visual, tactile, vestibular)" }, { name: "Range of motion" }, { name: "Reflex integrity and muscle tone" }, { name: "Body positioning and postural control" }, { name: "Pain assessment" }, { name: "Motor planning and coordination" }, { name: "Sensation and muscle function" }, { name: "Cognitive screening (Mini-Cog, orientation)" }, { name: "Lymphedema and pelvic health monitoring" }, { name: "Work capacity and ergonomic assessment" }, { name: "Wheelchair and seating assessment" },
+    ]},
+    { title: "Interventions – Functional & Neuromuscular", skills: [
+      { name: "Gait training" }, { name: "Compensatory strategies (adaptive equipment, DME)" }, { name: "ADL training and retraining" }, { name: "Community mobility" }, { name: "Postural training" }, { name: "Work simplification and energy conservation" }, { name: "Bed mobility and transfer training" }, { name: "Sensory integration" }, { name: "Pain management" }, { name: "Manual therapy" }, { name: "Neurodevelopmental techniques (NDT)" }, { name: "Tone management" }, { name: "Postural re-education" }, { name: "Edema management" }, { name: "Sensory re-education" },
+    ]},
+    { title: "Interventions – Modalities, Equipment & Delivery", skills: [
+      { name: "TENS" }, { name: "Biofeedback" }, { name: "Hot/Cold packs" }, { name: "Electrical stimulation (NMES, FES)" }, { name: "Ultrasound" }, { name: "Aquatic therapy" }, { name: "Wheelchair skills training" }, { name: "Spinal, LE orthotics and prosthetics" }, { name: "Assistive technology selection/modification" }, { name: "Client/caregiver training on device use" }, { name: "Telehealth and remote monitoring" }, { name: "Group exercise therapy" }, { name: "Co-treatment" }, { name: "Lymphedema and pelvic health interventions" }, { name: "Ergonomic interventions" }, { name: "Burn management" },
+    ]},
+    { title: "Collaboration, Education & Documentation", skills: [
+      { name: "Pain management education" }, { name: "Home programs and carryover strategies" }, { name: "Energy conservation and joint protection techniques" }, { name: "Safety strategies and postoperative precautions" }, { name: "Caregiver training in safe mobility and body mechanics" }, { name: "ADL techniques and adaptive equipment use" }, { name: "Environmental and home modifications" }, { name: "Communicate goals and plans with interdisciplinary team" }, { name: "Advocate for clients and caregivers" }, { name: "Document interventions, outcomes, and progress toward goals" }, { name: "Compliance with payer documentation requirements (Medicare)" }, { name: "Setting-specific documentation (MDS, OASIS)" }, { name: "Supervise aides, students, and volunteers" }, { name: "Advance directives and informed consent" }, { name: "Mandatory reporting and HIPAA compliance" }, { name: "Standard precautions, infection control, and PPE use" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth - 1 year)" }, { name: "Toddler (1-3 years)" }, { name: "Pre-school (3-6 years)" }, { name: "School Age (6-12 years)" }, { name: "Adolescent (12-18 years)" }, { name: "Young Adult (18-30 years)" }, { name: "Mature Adult (30-60 years)" }, { name: "Elderly (>60 years)" },
     ]},
   ]},
 
