@@ -74,20 +74,41 @@ export const pediatricMaternalChecklists: ChecklistSpec[] = [
     { title: "Work Settings", skills: [
       { name: "Level II NICU" }, { name: "Level III NICU" }, { name: "Level IV NICU" },
     ]},
-    { title: "Respiratory", skills: [
-      { name: "Ventilator Management" }, { name: "High Frequency Ventilation" }, { name: "CPAP/Nasal Cannula" }, { name: "Surfactant Administration" }, { name: "Intubation Assistance" }, { name: "Chest Tube Management" },
-    ]},
     { title: "Cardiovascular", skills: [
-      { name: "Cardiac Monitoring" }, { name: "Umbilical Lines (UAC/UVC)" }, { name: "PICC Line Care" }, { name: "Blood Pressure Monitoring" },
+      { name: "Cardiac Monitoring" }, { name: "Umbilical Lines (UAC/UVC)" }, { name: "PICC Line Care" }, { name: "Blood Pressure Monitoring" }, { name: "Auscultation (rate, rhythm, volume)" }, { name: "Heart sounds/murmurs" }, { name: "Invasive/non-invasive blood pressure monitoring" }, { name: "Perfusion assessment" }, { name: "EKG interpretation" }, { name: "Defibrillation/cardioversion" }, { name: "Central venous pressure monitoring" }, { name: "Care of the neonate post interventional cardiac cath/cardiac surgery" }, { name: "Congenital heart disease/defects" }, { name: "Hemodynamic instability" }, { name: "Cardiac arrest/hypovolemic shock" },
+    ]},
+    { title: "Respiratory", skills: [
+      { name: "Ventilator Management" }, { name: "High Frequency Ventilation" }, { name: "CPAP/Nasal Cannula" }, { name: "Surfactant Administration" }, { name: "Intubation Assistance" }, { name: "Chest Tube Management" }, { name: "Breath sounds and work of breathing assessment" }, { name: "Endotracheal tube stabilization and suctioning" }, { name: "Nasal airway/suctioning and bulb syringe" }, { name: "Apnea monitoring" }, { name: "Weaning and extubation" }, { name: "Tracheostomy care/suctioning" }, { name: "Oxyhood and trach collar" }, { name: "Care of the neonate with BPD, RDS, meconium aspiration, or respiratory failure" }, { name: "Interpretation of chest x-rays and blood gases" },
+    ]},
+    { title: "Neurological", skills: [
+      { name: "Neurological status assessment" }, { name: "Intracranial pressure monitoring" }, { name: "Care of the neonate with seizures" }, { name: "Externalized VP shunt/reservoirs" }, { name: "Increased intracranial pressure" }, { name: "Brain death/organ procurement" }, { name: "Anticonvulsant medication administration" },
+    ]},
+    { title: "Gastrointestinal", skills: [
+      { name: "Abdominal girth and bowel sounds assessment" }, { name: "Suck/swallow and palate assessment" }, { name: "Care of the neonate with tracheoesophageal fistula (TEF)" }, { name: "Gastroschisis/omphalocele" }, { name: "Necrotizing enterocolitis (NEC)" }, { name: "Post-abdominal surgery care" }, { name: "GI bleeding and reflux precautions" }, { name: "Cleft palate care" }, { name: "Colostomy/ileostomy care" }, { name: "Inguinal hernia care" },
     ]},
     { title: "Feeding/Nutrition", skills: [
-      { name: "Gavage Feeding" }, { name: "Breast Milk Handling" }, { name: "TPN Administration" }, { name: "Oral Feeding Assessment" },
+      { name: "Gavage Feeding" }, { name: "Breast Milk Handling" }, { name: "TPN Administration" }, { name: "Oral Feeding Assessment" }, { name: "Care of gastrostomy tube" }, { name: "Placement of intestinal tubes" }, { name: "Jejunal/gastro feeding" }, { name: "Assist with breast feeding and bottle feeding" }, { name: "Hospital grade electric breast pump" },
+    ]},
+    { title: "Endocrine/Metabolic & Renal", skills: [
+      { name: "Fluid & electrolyte balance" }, { name: "Finnegan scoring" }, { name: "Hypoglycemia/hyperglycemia management" }, { name: "IDDM (infant of a diabetic mother)" }, { name: "Hypo/hyperkalemia and hypo/hypernatremia" }, { name: "Acute renal failure" }, { name: "DIC (disseminated intravascular coagulation)" }, { name: "Malformations of GU tract/kidney" }, { name: "Peritoneal dialysis" }, { name: "Phototherapy for jaundice" }, { name: "Post circumcision care" }, { name: "Collection and interpretation of urine specimens" }, { name: "Bilirubin monitoring" },
+    ]},
+    { title: "Infectious Disease & Immunizations", skills: [
+      { name: "Standard (universal) precautions and isolation techniques" }, { name: "Collect culture specimens" }, { name: "Interpretation of maternal lab results and culture reports" }, { name: "Care of the neonate with HIV-positive mother" }, { name: "Neonatal sepsis" }, { name: "Hepatitis surface antigen+ mother" }, { name: "RespiGam/Synagis prophylaxis" }, { name: "HIB, HBV, DPT, and polio immunizations" }, { name: "HBIG administration" }, { name: "Assist with lumbar puncture" },
+    ]},
+    { title: "Phlebotomy, IV Therapy & Central Lines", skills: [
+      { name: "Starting IVs and managing IV therapy" }, { name: "Drawing blood from central line" }, { name: "Hyperalimentation/TPN and intralipid administration" }, { name: "Administration of blood/blood products (packed cells, plasma, cryoprecipitate)" }, { name: "Umbilical venous and arterial line care" }, { name: "PICC, Broviac, Hickman, and Portacath care" }, { name: "Central line/catheter dressing changes" }, { name: "Heparin lock and angiocath use" },
     ]},
     { title: "Thermoregulation", skills: [
-      { name: "Isolette Care" }, { name: "Radiant Warmer" }, { name: "Kangaroo Care" }, { name: "Temperature Monitoring" },
+      { name: "Isolette Care" }, { name: "Radiant Warmer" }, { name: "Kangaroo Care" }, { name: "Temperature Monitoring (axillary, rectal, skin)" }, { name: "Weaning to open crib/bassinet" },
+    ]},
+    { title: "Pain Management", skills: [
+      { name: "Neonatal pain level assessment" }, { name: "Morphine administration and monitoring" },
     ]},
     { title: "Medications", skills: [
-      { name: "IV Medication Administration" }, { name: "Phototherapy" }, { name: "Caffeine/Theophylline" }, { name: "Prostaglandin" }, { name: "Exchange Transfusion" },
+      { name: "IV Medication Administration" }, { name: "Phototherapy" }, { name: "Caffeine/Theophylline" }, { name: "Prostaglandin" }, { name: "Exchange Transfusion" }, { name: "Epinephrine, dopamine, and dobutamine administration" }, { name: "Sodium bicarbonate administration" }, { name: "Aminophylline administration" }, { name: "Emergency and neonatal drug action/reaction recognition" }, { name: "Neonatal dosage calculation" },
+    ]},
+    { title: "Assessment & Regulatory Compliance", skills: [
+      { name: "Apgar scoring" }, { name: "Gestational age assessment (Dubowitz/Ballard)" }, { name: "Eye exam (rule out retinopathy)" }, { name: "Screen for hearing loss" }, { name: "Maternal history review" }, { name: "Bereavement/postmortem care" }, { name: "Preparation for transport/transfer" }, { name: "Adherence to Joint Commission Do Not Use abbreviations" },
     ]},
   ]},
 
