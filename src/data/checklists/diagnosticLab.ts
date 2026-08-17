@@ -329,14 +329,26 @@ export const diagnosticLabChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "nuclear-medicine-tech", title: "Nuclear Medicine Technologist Skills Checklist", shortTitle: "Nuclear Medicine Tech", icon: "☢️", group: "Diagnostic & Lab", categories: [
-    { title: "Procedures", skills: [
-      { name: "Bone scan" }, { name: "Cardiac perfusion (stress/rest) imaging" }, { name: "Thyroid uptake and scan" }, { name: "Renal scan" }, { name: "HIDA scan" }, { name: "Lung V/Q scan" },
+    { title: "Nuclear Medicine Examinations", skills: [
+      { name: "Bone scan (Tc 99m MDP/HDP)" }, { name: "Cardiac perfusion (stress/rest) imaging" }, { name: "Myocardial perfusion (Tc 99m Mibi)" }, { name: "MUGA (Ultratag Tc 99m RBC)" }, { name: "Thyroid uptake and scan (I-123)" }, { name: "Parathyroid SPECT/CT (Tc 99m Mibi)" }, { name: "Renal scan (glomerular filtration, Tc 99m DTPA)" }, { name: "HIDA scan (hepatobiliary, Tc 99m)" }, { name: "Lung V/Q scan (perfusion and aerosol)" }, { name: "Gallium infection scan (Ga 67)" }, { name: "PET/CT (F-18 FDG, Ga 68 Dotatate, Ga 68 PSMA-11, Cu 64 Dotatate)" }, { name: "I-131 ablation and whole-body scan" }, { name: "Lymphoscintigraphy (Tc 99m SC)" }, { name: "Liver/spleen study (Tc 99m SC)" }, { name: "Gastric emptying study (Tc 99m SC)" }, { name: "Meckel's diverticulum scan" }, { name: "Voiding cystogram" }, { name: "Cisternography (In-111 DTPA)" }, { name: "Indium-111 pentetreotide (OctreoScan) and labeled leukocyte studies" }, { name: "SPECT (Tl-201)" },
     ]},
     { title: "Radiopharmaceutical Handling", skills: [
-      { name: "Radiopharmaceutical preparation" }, { name: "Dose calibration" }, { name: "Radiation safety and ALARA principles" }, { name: "Waste disposal compliance" },
+      { name: "Radiopharmaceutical preparation" }, { name: "Dose calibration and constancy checks" }, { name: "Fundamental radiopharmacy (calculate, draw, and document dose)" }, { name: "Kit preparation and QC" }, { name: "Receiving, ordering, and transporting radioactive materials" }, { name: "Recording of byproduct material use" },
+    ]},
+    { title: "Radiation Safety", skills: [
+      { name: "ALARA principle" }, { name: "Well counter and uptake probe peaking and setup" }, { name: "Proper use of syringe shield/gloves/coat" }, { name: "Surveying radiation level and survey meter operation" }, { name: "Performing removable contamination wipe tests" }, { name: "Cleaning removable contamination" }, { name: "Performing radioactive spill procedures" }, { name: "Monitoring hand/clothing for contamination" }, { name: "Appropriate radioactive waste disposal" }, { name: "Covering surface area during package check-in" }, { name: "Application of knowledge of radiation exposure during pregnancy" }, { name: "Application of knowledge of occupational exposure and associated risks" }, { name: "Adherence to NRC Regulatory Guide 8.13" },
     ]},
     { title: "Equipment", skills: [
-      { name: "Gamma camera operation" }, { name: "SPECT imaging" }, { name: "Image processing and QC" },
+      { name: "Gamma camera operation" }, { name: "SPECT imaging" }, { name: "Image processing and QC" }, { name: "Camera QC (flood, bar, center of rotation)" },
+    ]},
+    { title: "General Skills & Patient Care", skills: [
+      { name: "Waste disposal compliance" }, { name: "Using aseptic technique" }, { name: "Application of universal and isolation precautions" }, { name: "Venipuncture/phlebotomy/IV skills" }, { name: "Positioning patients" }, { name: "Assessing patients to determine physical abilities to move/follow instructions" }, { name: "Providing patient/family education" }, { name: "Maintaining patient confidentiality and safety" }, { name: "Reviewing patient charts and charting on computer" }, { name: "Reviewing exams for technical accuracy" }, { name: "Coordinating with health physicist for audits and QC" },
+    ]},
+    { title: "Regulatory & Licensure", skills: [
+      { name: "Maintaining certifications" }, { name: "Performing responsibilities related to legal aspects of documentation" }, { name: "Application of knowledge of location of all license-required paperwork and licensure" }, { name: "Applying procedure for safely opening packages containing radioactive materials" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
     ]},
   ]},
 
