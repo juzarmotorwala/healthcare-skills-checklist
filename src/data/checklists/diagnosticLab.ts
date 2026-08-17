@@ -20,6 +20,12 @@ export const diagnosticLabChecklists: ChecklistSpec[] = [
     { title: "Microbiology", skills: [
       { name: "Culture and Sensitivity" }, { name: "Gram Stain" }, { name: "AFB Cultures" }, { name: "Parasitology" }, { name: "Mycology" },
     ]},
+    { title: "Immunology, Serology & Molecular Testing", skills: [
+      { name: "Tumor Marker Testing" }, { name: "Antibody Identification" }, { name: "Testing on Cord Blood" }, { name: "LE Cell Prep (Lupus Erythematosus)" }, { name: "Manual White Blood Cell Count on Body Fluid" }, { name: "Platelet Aggregation" }, { name: "Coagulation Factor Assays" }, { name: "Semen Analysis" },
+    ]},
+    { title: "Quality Control & Safety", skills: [
+      { name: "Specimen Labeling in Accordance with Laboratory Policy" }, { name: "CLIA/CAP/Joint Commission Compliance" }, { name: "Safe Handling of Biohazardous Materials" },
+    ]},
   ]},
 
   { slug: "medical-technologist", title: "Medical Technologist Skills Checklist", shortTitle: "Medical Technologist", icon: "🔬", group: "Diagnostic & Lab", categories: [
