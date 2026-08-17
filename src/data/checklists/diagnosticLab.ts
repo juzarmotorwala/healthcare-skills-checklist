@@ -443,17 +443,29 @@ export const diagnosticLabChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "medical-physicist", title: "Medical Physicist Skills Checklist", shortTitle: "Medical Physicist", icon: "⚛️", group: "Diagnostic & Lab", categories: [
-    { title: "Treatment Planning QA", skills: [
-      { name: "IMRT/VMAT plan verification" }, { name: "Patient-specific QA measurements" }, { name: "Monitor unit independent calculation" }, { name: "Brachytherapy plan review" },
+    { title: "Dosimetry & Treatment Planning", skills: [
+      { name: "Review of patient calculations" }, { name: "Knowledge of dosimetry systems" }, { name: "Special dosimetry calculations" }, { name: "Hand calculations of monitor unit settings" }, { name: "IMRT/VMAT plan verification" }, { name: "Patient-specific QA measurements" }, { name: "Monitor unit independent calculation" }, { name: "Ion chamber measurements" }, { name: "Diode/TLD dosimetry" },
     ]},
-    { title: "Equipment Calibration", skills: [
-      { name: "Linear accelerator output calibration" }, { name: "CT/simulator QA" }, { name: "Imaging equipment QA (mammography, MRI, nuclear medicine)" }, { name: "Annual/monthly machine QA per AAPM protocols" },
+    { title: "Treatment Devices", skills: [
+      { name: "Localization, design, and fabrication (simple)" }, { name: "Localization, design, and fabrication (intermediate)" }, { name: "Localization, design, and fabrication (complex)" },
+    ]},
+    { title: "Brachytherapy", skills: [
+      { name: "Simple isodose calculations" }, { name: "Intermediate isodose calculations" }, { name: "Complex isodose calculations" }, { name: "Brachytherapy plan review" }, { name: "Seed, needle, or capsule inventory" }, { name: "Initial assurance of isotope implants" }, { name: "Continuing quality assurance" },
+    ]},
+    { title: "Equipment Calibration & QA", skills: [
+      { name: "Linear accelerator output calibration" }, { name: "CT/simulator QA" }, { name: "Imaging equipment QA (mammography, MRI, nuclear medicine)" }, { name: "Annual/monthly machine QA per AAPM protocols" }, { name: "Daily accelerator checks" }, { name: "Annual full calibrations" }, { name: "Monitor standards for compliance (AAPM and RPC)" }, { name: "Other radiotherapy ancillary equipment QA tests" },
     ]},
     { title: "Radiation Safety", skills: [
-      { name: "Shielding design and survey" }, { name: "Radiation dose monitoring/ALARA program" }, { name: "Incident investigation" },
+      { name: "Shielding design and survey" }, { name: "Radiation dose monitoring/ALARA program" }, { name: "Incident investigation" }, { name: "Radiation safety procedures" }, { name: "Radiation measuring instrument calibration (NBS)" },
     ]},
     { title: "Regulatory Compliance", skills: [
       { name: "State/NRC licensing compliance" }, { name: "Joint Commission radiation oncology standards" }, { name: "Documentation and reporting" },
+    ]},
+    { title: "Equipment & Systems", skills: [
+      { name: "Linear accelerator (e.g., Varian 2100EX w/ IMRT, Trilogy)" }, { name: "CT simulator" }, { name: "Treatment planning system (e.g., Pinnacle, Eclipse)" }, { name: "Water phantom scanning system" }, { name: "Ultrasound localization system" }, { name: "Record and verify system (e.g., IMPAC/Access)" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth - 1 year)" }, { name: "Toddler (1-3 years)" }, { name: "Pre-school (3-6 years)" }, { name: "School Age (6-12 years)" }, { name: "Adolescent (12-18 years)" }, { name: "Young Adult (18-30 years)" }, { name: "Mature Adult (30-60 years)" }, { name: "Elderly (>60 years)" },
     ]},
   ]},
 
