@@ -61,6 +61,27 @@ export const nursingChecklists: ChecklistSpec[] = [
     ]},
   ]},
 
+  { slug: "lpn-snf-ltc", title: "LPN – Skilled Nursing Facility/Long-Term Care Skills Checklist", shortTitle: "LPN – SNF/LTC", icon: "🏥", group: "Nursing", categories: [
+    { title: "Administration, Role & Resident Rights", skills: [
+      { name: "Familiar with State and Federal Survey Processes" }, { name: "Promote Resident Safety (Fall/Bleeding Precautions)" }, { name: "Uphold Resident Dignity and Privacy at All Times" },
+    ]},
+    { title: "Communication & Documentation", skills: [
+      { name: "Communicate Clearly and Effectively with Others" }, { name: "Use Electronic Documentation Methods Appropriately" }, { name: "Document Care per State/Federal Regulations" }, { name: "Understand Mandatory Reporting Requirements" }, { name: "Facilitate Communication Within the Healthcare Team" },
+    ]},
+    { title: "Clinical Assessment by System", skills: [
+      { name: "Provide Paralysis Care" }, { name: "Understand Special Diet Needs" }, { name: "Recognize Shortness of Breath" }, { name: "Auscultate Lung Sounds" }, { name: "Evaluate Metabolic/Endocrine System" }, { name: "Maintain Shunts and Fistulas (Genitourinary)" }, { name: "Provide Care for Total Knee Replacement (Musculoskeletal)" }, { name: "Perform Sterile Wound Care (Integumentary)" }, { name: "Obtain Blood Pressure (Manual/Automatic)" }, { name: "Obtain Heart Rate" }, { name: "Identify Signs and Symptoms of Infection (e.g., Swelling)" }, { name: "Identify Dietary Restrictions" },
+    ]},
+    { title: "Medication Administration", skills: [
+      { name: "Identify Signs/Symptoms of Adverse or Allergic Reactions" }, { name: "Oral Medication (Liquids)" }, { name: "Topical Medication (Powders)" }, { name: "Drops Medication (Ophthalmic)" }, { name: "Suppositories (Vaginal)" }, { name: "Aerosol/Powdered Medication (Oxygen)" }, { name: "Injections (Subcutaneous)" }, { name: "IV Flush (If Within State's Scope of Practice)" }, { name: "Assistive Devices (Wheelchair, Walker, Cane, Mechanical Lifts)" }, { name: "Obtain Urine Culture (Laboratory Collection)" },
+    ]},
+    { title: "Infection Control & Safety", skills: [
+      { name: "Apply and Remove Gowns/Aprons (Standard Precautions)" }, { name: "Use of Hand Sanitizer" }, { name: "Identify Potential Sharps (Syringes, Razors, Staples, Lancets)" }, { name: "Awareness of Inclement Weather/Disaster Response" }, { name: "Perform Post-Mortem Care" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Neonate (0-1 month)" }, { name: "Infant (1-12 months)" }, { name: "Pediatric (1-12 years)" }, { name: "Adolescent (12-18 years)" }, { name: "Adult (18-65 years)" }, { name: "Geriatric (65+ years)" },
+    ]},
+  ]},
+
   { slug: "cna", title: "Certified Nursing Assistant Skills Checklist", shortTitle: "CNA", icon: "🤲", group: "Nursing", categories: [
     { title: "Patient Rights", skills: [
       { name: "Communicates and obtains information while respecting HIPAA" }, { name: "Involves the patient and family in care decisions including Advance Directives" }, { name: "Complies with Organ Donation policy" }, { name: "Meets communication needs including interpreter services" }, { name: "Provides accurate information to patient and families" },
