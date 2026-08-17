@@ -27,22 +27,61 @@ export const pediatricMaternalChecklists: ChecklistSpec[] = [
 
   { slug: "pediatric-er", title: "Registered Nurse – Pediatric ER Skills Checklist", shortTitle: "RN – Pediatric ER", icon: "🧒", group: "Pediatric & Maternal", categories: [
     { title: "Cardiovascular", skills: [
-      { name: "Cardiac Anomalies" }, { name: "CHF/Pulmonary Edema" }, { name: "Cardiogenic Shock" }, { name: "Cardioversion" }, { name: "Heart Sounds" },
+      { name: "Cardiac Anomalies" }, { name: "CHF/Pulmonary Edema" }, { name: "Cardiogenic Shock" }, { name: "Cardioversion" }, { name: "Heart Sounds (normal and abnormal)" }, { name: "Pulses/circulation via palpation and doppler" }, { name: "Rhythm interpretation and 12-lead ECG" }, { name: "Aortic aneurysm and dissection" }, { name: "Myocardial infarction and pericarditis" }, { name: "Cardiac arrest" }, { name: "Kawasaki disease" }, { name: "Congenital heart disease and defects" }, { name: "Blunt and penetrating cardiac trauma" }, { name: "Dysrhythmias" }, { name: "Defibrillation, pacing, and central/arterial line insertion" }, { name: "Pericardiocentesis" },
     ]},
     { title: "Pulmonary", skills: [
-      { name: "Asthma" }, { name: "Bronchiolitis" }, { name: "Croup" }, { name: "Pneumonia" }, { name: "Respiratory Distress" }, { name: "Foreign Body Aspiration" }, { name: "Epiglottitis" },
+      { name: "Asthma" }, { name: "Bronchiolitis" }, { name: "Croup" }, { name: "Pneumonia" }, { name: "Respiratory Distress" }, { name: "Foreign Body Aspiration" }, { name: "Epiglottitis" }, { name: "Malacia, stenosis, and cystic fibrosis" }, { name: "Respiratory failure and status asthmaticus" }, { name: "RSV and near drowning" }, { name: "Pneumothorax/hemothorax" }, { name: "Application of CPAP/BiPAP" }, { name: "Capnography and oximetry" }, { name: "Rapid sequence intubation assist" }, { name: "Ventilator care and troubleshooting" }, { name: "Chest tube insertion assist" }, { name: "Obtaining arterial blood gas" },
     ]},
-    { title: "Trauma", skills: [
-      { name: "Head Injury" }, { name: "Fractures" }, { name: "Burns" }, { name: "Lacerations" }, { name: "Abuse Assessment" }, { name: "Near Drowning" },
+    { title: "Gastroenterology", skills: [
+      { name: "Proper NG tube placement" }, { name: "Bowel sounds and nutritional status" }, { name: "Pyloric stenosis" }, { name: "Inflammatory bowel disease" }, { name: "Fluid-electrolyte imbalance" }, { name: "GI bleed" }, { name: "GERD" }, { name: "Volvulus and intussusception" }, { name: "Appendicitis" }, { name: "Foreign body and abdominal trauma" }, { name: "Failure to thrive" }, { name: "NG tube insertion, maintenance, and removal" }, { name: "Saline lavage" },
+    ]},
+    { title: "Endocrine", skills: [
+      { name: "S/S diabetic ketoacidosis (DKA)" }, { name: "S/S hypoglycemia/hyperglycemia" }, { name: "Diabetes mellitus management" }, { name: "Use of insulin pen and sliding scale" }, { name: "Fingerstick blood glucose" },
     ]},
     { title: "Neurological", skills: [
-      { name: "Seizure Disorders" }, { name: "Meningitis" }, { name: "Febrile Seizures" },
+      { name: "Seizure Disorders" }, { name: "Meningitis" }, { name: "Febrile Seizures" }, { name: "Cranial nerve assessment" }, { name: "NIH Stroke Scale (NIHSS)" }, { name: "Glasgow Coma Scale (GCS)" }, { name: "Status epilepticus" }, { name: "Spinal cord dysfunction/injury" }, { name: "Cerebrovascular accident (CVA)" }, { name: "VP shunt/shunt dysfunction and hydrocephalus" }, { name: "Increased intracranial pressure" }, { name: "Traumatic brain injury (TBI)" }, { name: "Arteriovenous malformation" }, { name: "Spinal precautions and lumbar puncture assist" },
     ]},
-    { title: "Medications", skills: [
-      { name: "Weight-based dosing" }, { name: "IV medication administration" }, { name: "Emergency medications" }, { name: "Conscious sedation" },
+    { title: "Orthopedics", skills: [
+      { name: "Cast/splint circulation checks" }, { name: "Gait and range of motion assessment" }, { name: "Fracture/dislocation reductions" }, { name: "Placement of fiberglass splint and cast" }, { name: "Knee immobilizer, ankle brace/splint, wrist splint" }, { name: "Pinned fractures" }, { name: "Pelvic sheeting/pelvic binder" },
+    ]},
+    { title: "Renal/Genitourinary", skills: [
+      { name: "Fluid status and AV fistula/shunt assessment" }, { name: "Testicular torsion" }, { name: "Insertion and care of male/female foley catheter" }, { name: "Urine specimen collection" }, { name: "Pyelonephritis and urinary tract infection (UTI)" }, { name: "Sexually transmitted infections (STIs)" }, { name: "Acute renal failure/acute kidney injury" }, { name: "Vaginal bleeding" }, { name: "Renal calculi" },
+    ]},
+    { title: "Maxillofacial/Ocular", skills: [
+      { name: "Maxillofacial injuries and eye injuries" }, { name: "Visual acuity assessment" }, { name: "Morgan lens and eye irrigation" }, { name: "Ear irrigation and nasal packing" }, { name: "Application of eye patch" }, { name: "Removal of contact lens" }, { name: "Set up fluorescent/Woods lamp exam" },
+    ]},
+    { title: "Trauma & Shock", skills: [
+      { name: "Head Injury" }, { name: "Fractures" }, { name: "Burns" }, { name: "Lacerations" }, { name: "Abuse Assessment" }, { name: "Near Drowning" }, { name: "Trauma score and poison index" }, { name: "Triage" }, { name: "Bites (venomous snake, spider, animal, human)" }, { name: "Dehydration and hair tourniquet" }, { name: "Hazardous material exposure" }, { name: "Burns (first, second, third degree; rule of nines)" }, { name: "Septic, anaphylactic, hypovolemic, neurogenic, and cardiogenic shock" }, { name: "Gunshot/stab wound and traumatic amputation" }, { name: "Heat exhaustion/stroke and hypothermia" }, { name: "Electrocution" }, { name: "Application of tourniquet/MAST suit" }, { name: "Ground and air transport of trauma patient" },
+    ]},
+    { title: "Infectious Diseases", skills: [
+      { name: "COVID-19, RSV, and influenza" }, { name: "Pertussis and tuberculosis" }, { name: "Meningitis" }, { name: "HIV/AIDS" }, { name: "VRE and MRSA" }, { name: "Hepatitis" }, { name: "Varicella (chicken pox)" }, { name: "Systemic inflammatory response syndrome (SIRS)" }, { name: "PAPR, N-95, and isolation precautions" },
+    ]},
+    { title: "Wound Management/Surgery", skills: [
+      { name: "Wound staging, characteristics, and location" }, { name: "Staple removal and application" }, { name: "Suture assist, removal, and tray set-up" }, { name: "Application of Steri-Strips" },
+    ]},
+    { title: "Pain Management", skills: [
+      { name: "Therapeutic response to pain medications" }, { name: "Pain level/tolerance assessment" }, { name: "Non-pharmacological comfort measures" }, { name: "IV conscious sedation" }, { name: "Narcotic analgesia" },
+    ]},
+    { title: "Obstetrics/Gynecology", skills: [
+      { name: "Placenta previa and abruptio placenta" }, { name: "Preeclampsia/eclampsia" }, { name: "Ectopic pregnancy" }, { name: "Ovarian cysts and torsion" }, { name: "Precipitous delivery" }, { name: "Spontaneous abortion" }, { name: "DIC" }, { name: "Pelvic tray set up and pelvic exam assist" }, { name: "Obtaining consent to treat" }, { name: "Recognition and reporting of suspected child abuse/neglect" },
+    ]},
+    { title: "Phlebotomy/IV Therapy/Invasive Procedures", skills: [
+      { name: "Groshong, PICC, Broviac/Hickman, Portacath" }, { name: "Syringe pumps and peripheral line/dressing" }, { name: "Angiography prep" }, { name: "Pericardiocentesis assist" }, { name: "IO insertion" }, { name: "Starting IVs" }, { name: "Administration of blood/blood products" }, { name: "Drawing venous blood" }, { name: "Interpretation of CBC, ABG, and chemistry results" },
+    ]},
+    { title: "Patient Advocacy & Education", skills: [
+      { name: "Spiritual and cultural considerations for pediatric patients" }, { name: "Care for end-of-life decisions and withdrawal of life support" }, { name: "Effective coping skills in caring for pediatric patients" }, { name: "Legal procedures regarding organ donation notification" }, { name: "Education to patient/parents on medications and disease process" }, { name: "Education on follow-up care" }, { name: "Education on preparation for invasive procedures" },
+    ]},
+    { title: "ED Pharmacology", skills: [
+      { name: "Weight-based dosing" }, { name: "IV medication administration" }, { name: "Emergency medications" }, { name: "Conscious sedation" }, { name: "Ketamine, adenosine, ibuprofen, acetaminophen" }, { name: "Epinephrine, atropine, amiodarone, dopamine" }, { name: "Sodium bicarbonate, dextrose, insulin" }, { name: "Fentanyl, morphine, hydromorphone" }, { name: "Succinylcholine, vecuronium, rocuronium" }, { name: "Rights of medication administration" }, { name: "IV pump delivery verification" }, { name: "Dosage calculations and metric conversions" }, { name: "IV drip rate calculations" }, { name: "Assess therapeutic response and expected outcomes" },
+    ]},
+    { title: "Professional Practice", skills: [
+      { name: "Utilize EMR for accurate documentation" }, { name: "Maintain privacy and dignity for each patient" }, { name: "Perform within RN scope of practice" }, { name: "Maintain nursing competencies/certifications" }, { name: "Collaborate with interdisciplinary teams" }, { name: "Maintain patient confidentiality per HIPAA" }, { name: "Comply with Joint Commission, CMS, and regulatory guidelines" }, { name: "Communicate using age and culturally appropriate methods" },
     ]},
     { title: "Triage", skills: [
       { name: "Pediatric Triage (ESI)" }, { name: "Telephone Triage" }, { name: "Disaster Triage" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 year)" }, { name: "Toddler (1-3 years)" }, { name: "Pre-school (3-6 years)" }, { name: "School Age (6-12 years)" }, { name: "Adolescent (12-18 years)" }, { name: "Young Adult (18-30 years)" }, { name: "Mature Adult (30-60 years)" }, { name: "Elderly (>60 years)" },
     ]},
   ]},
 
