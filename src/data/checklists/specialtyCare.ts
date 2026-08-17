@@ -1,36 +1,54 @@
 import { ChecklistSpec } from "../checklistData";
 
 export const specialtyCareChecklists: ChecklistSpec[] = [
-  { slug: "medsurg", title: "Registered Nurse – Med/Surg Skills Checklist", shortTitle: "RN – Med/Surg", icon: "🩻", group: "Specialty Care", categories: [
+  { slug: "medsurg", title: "Registered Nurse – Med/Surg-Telemetry Skills Checklist", shortTitle: "RN – Med/Surg-Telemetry", icon: "🩻", group: "Specialty Care", categories: [
+    { title: "Nursing Skills & Patient Safety", skills: [
+      { name: "Prioritize nursing interventions/activities" }, { name: "Formulate nursing diagnoses" }, { name: "Perform patient admission, transfer, and discharge" }, { name: "Perform patient handoff/report to other healthcare personnel" }, { name: "Receive, translate, and verify written and verbal orders" }, { name: "Use two patient identifiers when providing care" }, { name: "Obtain and confirm patient's medications" }, { name: "Initiate, maintain, and revise plan of care" }, { name: "Implement, assess, and document patient restraints" }, { name: "Implement suicide, fall, and aspiration precautions" }, { name: "Perform post mortem care" }, { name: "Fall Risk Assessment" }, { name: "Pressure Injury Risk Assessment (Braden)" }, { name: "Medication Reconciliation" }, { name: "Discharge Planning/Teaching" }, { name: "Perform referrals to appropriate resources (case manager, social worker, home health, wound care, hospice, community)" },
+    ]},
     { title: "Cardiac", skills: [
-      { name: "Angina" }, { name: "Post Acute MI" }, { name: "Congestive Heart Failure" }, { name: "Post Cardiac Cath" }, { name: "Post Cardiac Surgery" }, { name: "Dysrhythmia Recognition" }, { name: "Pacemaker Care" },
+      { name: "Angina" }, { name: "Post Acute MI" }, { name: "Congestive Heart Failure" }, { name: "Post Cardiac Cath" }, { name: "Post Cardiac Surgery" }, { name: "Dysrhythmia Recognition" }, { name: "Pacemaker Care" }, { name: "Cardiac arrest response" }, { name: "Myocarditis/Pericarditis" }, { name: "Valve disorders" }, { name: "Cardiomyopathy" }, { name: "Atherosclerosis" }, { name: "Post angioplasty/carotid endarterectomy care" }, { name: "Auscultate heart sounds (rate, rhythm, normal/abnormal tones)" }, { name: "Pulses/circulation checks" }, { name: "S/S DVT/thrombophlebitis" }, { name: "Assist with central line placement/removal" }, { name: "Apply compression stockings/sequential compression devices" },
+    ]},
+    { title: "Telemetry & Cardiac Rhythm Monitoring", skills: [
+      { name: "Obtain 12-lead ECG" }, { name: "Apply portable ECG monitor" }, { name: "Verify correct placement of leads" }, { name: "Recognize characteristics of ECG (P wave, PR interval, QRS complex, T wave)" }, { name: "Troubleshoot ECG monitor" }, { name: "Interpret sinus tachycardia/bradycardia" }, { name: "Interpret atrial fibrillation/flutter" }, { name: "Interpret ventricular tachycardia/fibrillation" }, { name: "Interpret premature atrial/ventricular contractions" }, { name: "Interpret asystole and paced rhythms" },
     ]},
     { title: "Pulmonary", skills: [
-      { name: "Pneumonia" }, { name: "COPD" }, { name: "Asthma" }, { name: "Chest Tube Management" }, { name: "Trach Care" }, { name: "O2 Therapy" }, { name: "Pulse Oximetry" },
+      { name: "Pneumonia" }, { name: "COPD" }, { name: "Asthma" }, { name: "Chest Tube Management" }, { name: "Trach Care" }, { name: "O2 Therapy" }, { name: "Pulse Oximetry" }, { name: "Bronchoscopy/thoracotomy/lobectomy care" }, { name: "Tuberculosis precautions" }, { name: "Pleural effusion/pneumothorax" }, { name: "Auscultate breath sounds/identify adventitious sounds" }, { name: "Assess respiratory effort, rate, and hypoxia signs" }, { name: "Assist with chest tube insertion/removal" }, { name: "Assist with thoracentesis" }, { name: "Perform chest physiotherapy and oral/tracheal suctioning" }, { name: "Instruct/assess incentive spirometer use" }, { name: "Assist with intubation" }, { name: "Titrate oxygen delivery devices based on patient needs" },
     ]},
     { title: "Neurological", skills: [
-      { name: "CVA" }, { name: "Seizure Management" }, { name: "Glasgow Coma Scale" }, { name: "Head Injury" }, { name: "Spinal Cord Injury" },
+      { name: "CVA" }, { name: "Seizure Management" }, { name: "Glasgow Coma Scale" }, { name: "Head Injury" }, { name: "Spinal Cord Injury" }, { name: "Laminectomy/post craniotomy care" }, { name: "Encephalitis/meningitis" }, { name: "Neuromuscular disease" }, { name: "Aneurysm precautions" }, { name: "Externalized VP shunts" }, { name: "TIA" }, { name: "Level of consciousness and cranial nerve assessment" }, { name: "Visual/communication deficit assessment" }, { name: "Use of hyper/hypothermia blanket" }, { name: "Implement seizure and spinal precautions" }, { name: "Assist with lumbar puncture" },
     ]},
     { title: "GI/GU", skills: [
-      { name: "GI Bleed" }, { name: "Post-op GI Surgery" }, { name: "NG Tube" }, { name: "Ostomy Care" }, { name: "Foley Catheter" }, { name: "Renal Failure" },
+      { name: "GI Bleed" }, { name: "Post-op GI Surgery" }, { name: "NG Tube" }, { name: "Ostomy Care" }, { name: "Foley Catheter" }, { name: "Renal Failure" }, { name: "ERCP" }, { name: "Ileostomy/colostomy" }, { name: "Inflammatory bowel disease/bowel obstruction" }, { name: "Hemicolectomy/small bowel resection" }, { name: "Pancreatitis/gastroenteritis" }, { name: "Liver failure/transplant/hepatitis" }, { name: "Management of jejunostomy, gastrostomy, and T-tube" }, { name: "Renal transplant/nephrectomy" }, { name: "Peritoneal dialysis/hemodialysis" }, { name: "Urinary diversion (ileal conduit, nephrostomy)" }, { name: "AV fistula/shunt assessment" }, { name: "Bladder irrigation (intermittent and continuous)" }, { name: "Perform bladder scan" },
     ]},
     { title: "Orthopedic", skills: [
-      { name: "Total Hip Replacement" }, { name: "Total Knee Replacement" }, { name: "Fracture Care" }, { name: "Traction" }, { name: "Cast Care" },
+      { name: "Total Hip Replacement" }, { name: "Total Knee Replacement" }, { name: "Fracture Care" }, { name: "Traction" }, { name: "Cast Care" }, { name: "Arthroscopic surgery" }, { name: "Pinned fractures" }, { name: "Rheumatic/arthritic disease" }, { name: "Amputation care" }, { name: "Continuous passive motion devices" }, { name: "Prosthetic device use" }, { name: "Gait and range of motion assessment" },
+    ]},
+    { title: "Oncology", skills: [
+      { name: "Leukemia and bone marrow transplant care" }, { name: "Inpatient chemotherapy administration" }, { name: "Radiation implant precautions" }, { name: "Reverse isolation" }, { name: "Inpatient hospice care" }, { name: "Nutritional status and pain control assessment" },
     ]},
     { title: "IV Therapy", skills: [
-      { name: "IV Insertion" }, { name: "IV Medication Administration" }, { name: "Blood Product Administration" }, { name: "Central Line Care" }, { name: "TPN" },
+      { name: "IV Insertion" }, { name: "IV Medication Administration" }, { name: "Blood Product Administration" }, { name: "Central Line Care" }, { name: "TPN" }, { name: "Identify and manage IV complications (erythema, infiltration, leaking, tenderness)" }, { name: "Perform venipuncture and IV site care" }, { name: "Perform blood draw from central line" }, { name: "Assess for transfusion reactions and initiate treatment" },
     ]},
     { title: "Endocrine/Diabetic Care", skills: [
-      { name: "Blood Glucose Monitoring" }, { name: "Insulin Sliding Scale" }, { name: "Hypoglycemia/Hyperglycemia Management" }, { name: "Thyroid Disorder Management" }, { name: "Diabetic Ketoacidosis Monitoring" },
+      { name: "Blood Glucose Monitoring" }, { name: "Insulin Sliding Scale" }, { name: "Hypoglycemia/Hyperglycemia Management" }, { name: "Thyroid Disorder Management" }, { name: "Diabetic Ketoacidosis Monitoring" }, { name: "Addison's disease/Cushing's syndrome" }, { name: "Insulin shock/diabetes insipidus" }, { name: "Utilize insulin pen and insulin pump" },
+    ]},
+    { title: "Laboratory & Diagnostics", skills: [
+      { name: "Collect variety of specimens (blood, urine, sputum, stool, wound)" }, { name: "Properly label and transport specimens" }, { name: "Interpret serum chemistries and CBC" }, { name: "Interpret cardiac enzymes and coagulation studies" }, { name: "Interpret ABGs, BUN/creatinine, and thyroid panel" },
+    ]},
+    { title: "Emergency Management", skills: [
+      { name: "Perform chest compressions and CPR/BLS" }, { name: "Implement ACLS guidelines" }, { name: "Perform defibrillation and utilize AED" }, { name: "Perform manual ventilation" }, { name: "Administer IVP medications" }, { name: "Initiate rapid response team" }, { name: "Respond to a variety of codes (fire, bomb threat, infant abduction, natural disaster)" }, { name: "Identify and intervene in shock states (hypovolemic, anaphylactic, cardiogenic, septic)" }, { name: "Adhere to advance directives/DNR orders" },
     ]},
     { title: "Pain Management", skills: [
-      { name: "Pain Assessment Scales" }, { name: "PCA Pump Management" }, { name: "Multimodal Pain Management" }, { name: "Opioid Safety/Monitoring" },
+      { name: "Pain Assessment Scales" }, { name: "PCA Pump Management" }, { name: "Multimodal Pain Management" }, { name: "Opioid Safety/Monitoring" }, { name: "Utilize age-appropriate pain assessment techniques" }, { name: "Administer/monitor epidural pain pump and IV conscious sedation" }, { name: "Initiate non-pharmacologic comfort measures and reversal agents when necessary" },
     ]},
     { title: "Infection Control & Wound Care", skills: [
-      { name: "Isolation Precautions" }, { name: "Surgical Site Infection Monitoring" }, { name: "CAUTI/CLABSI Prevention" }, { name: "Wound Dressing Changes" },
+      { name: "Isolation Precautions" }, { name: "Surgical Site Infection Monitoring" }, { name: "CAUTI/CLABSI Prevention" }, { name: "Wound Dressing Changes" }, { name: "Application of hand hygiene and PPE protocols" }, { name: "Utilize aseptic/sterile technique as indicated" }, { name: "Wound dehiscence and pressure ulcer assessment" }, { name: "Set up, monitor, and maintain wound vac and surgical drains" }, { name: "Assist with wound debridement and biopsy" },
     ]},
-    { title: "Patient Safety & Discharge", skills: [
-      { name: "Fall Risk Assessment" }, { name: "Pressure Injury Risk Assessment (Braden)" }, { name: "Medication Reconciliation" }, { name: "Discharge Planning/Teaching" },
+    { title: "Patient Education & Communication", skills: [
+      { name: "Pre-op and post-op teaching" }, { name: "Disease process and treatment/procedure education" }, { name: "Medication information and discharge instructions" }, { name: "Infection control education" }, { name: "Utilize SBAR communication" }, { name: "Initiate use of interpreter when appropriate" }, { name: "Utilize chain of command to ensure patient safety" }, { name: "Communicate effectively based on patient's needs (age-specific, confused, medical status)" },
+    ]},
+    { title: "Professional Issues & Advocacy", skills: [
+      { name: "Demonstrate spiritual and cultural considerations" }, { name: "Report errors, unexpected events, or occurrences per protocols" }, { name: "Recognize and report abuse/neglect" }, { name: "Provide care for end-of-life decisions" }, { name: "Appropriately delegate using the 5 rights for delegation" }, { name: "Advance Directives and HIPAA Guidelines" }, { name: "Patient Rights and Privacy Rights" }, { name: "Participate in quality/performance improvement activities (NDNQI data, core measures)" }, { name: "Joint Commission Standards" },
     ]},
     { title: "Age Specific Competencies", skills: [
       { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
