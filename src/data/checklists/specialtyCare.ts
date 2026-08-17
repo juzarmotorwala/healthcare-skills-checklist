@@ -243,19 +243,25 @@ export const specialtyCareChecklists: ChecklistSpec[] = [
 
   { slug: "psychiatric-tech", title: "Psychiatric Technician / Behavioral Health Technician Skills Checklist", shortTitle: "Psych / Behavioral Health Tech", icon: "💭", group: "Specialty Care", categories: [
     { title: "General Duties", skills: [
-      { name: "Admit/Orient Involuntary Clients" }, { name: "Admit/Orient Voluntary Clients" }, { name: "Advance Directives" }, { name: "Ambulatory Cuffs" }, { name: "Assessment Skills" }, { name: "Behavioral Management" }, { name: "Crisis Intervention" }, { name: "De-escalation" },
+      { name: "Admit/Orient Involuntary Clients" }, { name: "Admit/Orient Voluntary Clients" }, { name: "Advance Directives" }, { name: "Ambulatory Cuffs" }, { name: "Assessment Skills" }, { name: "Behavioral Management" }, { name: "Crisis Intervention" }, { name: "De-escalation" }, { name: "Admission search" }, { name: "Active participation in multi-disciplinary staffing" }, { name: "Multi-disciplinary treatment team participation" }, { name: "Psychiatric emergency response team" }, { name: "Psychiatric home health" },
     ]},
-    { title: "Safety", skills: [
-      { name: "Suicide Precautions" }, { name: "Elopement Precautions" }, { name: "Restraint Application" }, { name: "Seclusion" }, { name: "Contraband Search" }, { name: "Environmental Safety Checks" },
+    { title: "Monitoring & Safety", skills: [
+      { name: "Suicide Precautions" }, { name: "Suicide risk monitoring" }, { name: "Elopement Precautions" }, { name: "Restraint Application" }, { name: "Restraints, application and assessment" }, { name: "Seclusion" }, { name: "Seclusion and restraints" }, { name: "Contraband Search" }, { name: "Environmental Safety Checks" }, { name: "Isolation room monitoring" }, { name: "Neurological vital signs" }, { name: "Rapid tranquilization" }, { name: "Management of assaultive behavior" },
     ]},
     { title: "Patient Care", skills: [
-      { name: "Vital Signs" }, { name: "Medication Administration" }, { name: "Blood Glucose Monitoring" }, { name: "Specimen Collection" }, { name: "ADL Assistance" },
+      { name: "Vital Signs" }, { name: "Medication Administration" }, { name: "Blood Glucose Monitoring" }, { name: "Specimen Collection" }, { name: "ADL Assistance" }, { name: "CPR/Basic Life Support" }, { name: "Management of drug/alcohol detox symptoms" }, { name: "Electroconvulsive therapy" },
+    ]},
+    { title: "Care of the Patient With", skills: [
+      { name: "Alcohol dependency" }, { name: "Drug dependency" }, { name: "Hallucinations" }, { name: "Manic behavior" }, { name: "Med-psych patient" }, { name: "Organic disorder" }, { name: "Seizure disorder" }, { name: "Suicidal behavior" },
     ]},
     { title: "Therapeutic Activities", skills: [
-      { name: "Group Activities" }, { name: "Recreational Therapy" }, { name: "Therapeutic Communication" }, { name: "Milieu Management" },
+      { name: "Group Activities" }, { name: "Group therapy leader" }, { name: "Recreational Therapy" }, { name: "Therapeutic Communication" }, { name: "Therapeutic communication skills" }, { name: "Milieu Management" }, { name: "Patient teaching" },
     ]},
     { title: "Documentation", skills: [
-      { name: "Patient Observation" }, { name: "Incident Reporting" }, { name: "Flow Sheets" }, { name: "Behavioral Charting" },
+      { name: "Patient Observation" }, { name: "Incident Reporting" }, { name: "Flow Sheets" }, { name: "Behavioral Charting" }, { name: "Behavioristic charting" }, { name: "Treatment/goal oriented charting" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth - 1 year)" }, { name: "Toddler (1-3 years)" }, { name: "Pre-school (3-6 years)" }, { name: "School Age (6-12 years)" }, { name: "Adolescent (12-18 years)" }, { name: "Young Adult (18-30 years)" }, { name: "Mature Adult (30-60 years)" }, { name: "Elderly (>60 years)" },
     ]},
   ]},
 
