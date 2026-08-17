@@ -161,17 +161,29 @@ export const alliedHealthChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "orthopedic-tech", title: "Orthopedic Technician Skills Checklist", shortTitle: "Orthopedic Tech", icon: "🦴", group: "Allied Health", categories: [
-    { title: "Casting & Splinting", skills: [
-      { name: "Fiberglass/plaster cast application" }, { name: "Cast removal" }, { name: "Splint application (short/long arm/leg)" }, { name: "Cast padding and windowing" },
+    { title: "Cast Application (Fiberglass/Synthetic)", skills: [
+      { name: "Short arm cast (neutral position, flexion with ulnar deviation, pronation/supination)" }, { name: "Long arm cast (thumb spica, navicular thumb spica, posterior with side walls)" }, { name: "Short leg cast (walking, non-weight bearing, in equinus)" }, { name: "Long leg cast (walker, non-weight bearing with molding for widened mortise)" }, { name: "P.T.B. (patellar tendon bearing) cast with correct molding" }, { name: "Gauntlet cast with outrigger and molding" }, { name: "Cylinder cast" }, { name: "Toe plates applied to short and long leg casts" },
     ]},
-    { title: "Traction & Fixation", skills: [
-      { name: "Skin traction setup" }, { name: "Skeletal traction assist" }, { name: "External fixator pin site care" }, { name: "Brace fitting and adjustment" },
+    { title: "Cast Removal & Modification", skills: [
+      { name: "Cast saw operation" }, { name: "Remove and replace cast blades" }, { name: "Trim casts" }, { name: "Window casts" }, { name: "Univalve casts" }, { name: "Wedging" }, { name: "Remove casts" }, { name: "Make alterations to casts to alleviate pressure points" }, { name: "Making various casts and molds" }, { name: "Preparing plaster of Paris mix" },
     ]},
-    { title: "Patient Care", skills: [
-      { name: "Fracture reduction assist" }, { name: "Neurovascular assessment" }, { name: "Crutch/walker fitting and training" }, { name: "Patient education on cast/brace care" },
+    { title: "Splinting", skills: [
+      { name: "Gutter splint (lateral and medial)" }, { name: "Sugar tong splint (short arm, double long arm)" }, { name: "Short arm volar splint" }, { name: "Short leg posterior splint" }, { name: "Short leg sugar tong splint" }, { name: "Long arm posterior splint with side walls" }, { name: "Thumb spica splint" }, { name: "Hand muff splint" }, { name: "Foot muff splint" },
     ]},
-    { title: "Equipment", skills: [
-      { name: "Cast saw operation" }, { name: "Sterile instrument handling" }, { name: "Supply and equipment inventory" },
+    { title: "Braces & Immobilizers", skills: [
+      { name: "Slings" }, { name: "Cervical collar (soft and hard)" }, { name: "Ace bandage application" }, { name: "Velcro knee brace" }, { name: "Hinged knee brace" }, { name: "Shoulder immobilizer" }, { name: "Wrist brace" }, { name: "Application of Minerva/Halo jacket" },
+    ]},
+    { title: "Traction", skills: [
+      { name: "Overhead bed frame setup" }, { name: "Balanced suspension traction" }, { name: "Split Russell's traction" }, { name: "Buck's traction" }, { name: "Bryant's traction" }, { name: "Cervical traction" }, { name: "Assist MD with fracture reduction" },
+    ]},
+    { title: "Physical Therapy & Patient Mobility", skills: [
+      { name: "Crutch and cane fitting" }, { name: "Crutch and cane instruction" }, { name: "Gait training" }, { name: "Range of motion exercises" }, { name: "Crutch/walker fitting and training" }, { name: "Patient education on cast/brace care" },
+    ]},
+    { title: "Miscellaneous Procedures", skills: [
+      { name: "Assist with stump revisions" }, { name: "Sterile dressing techniques" }, { name: "Assist with pin insertions" }, { name: "Assist with debridements" }, { name: "Removal of orthopedic devices" }, { name: "Removal of sutures" }, { name: "Assist with skin grafts" }, { name: "External fixator pin site care" }, { name: "Assisting with research projects" }, { name: "Neurovascular assessment" }, { name: "Sterile instrument handling" }, { name: "Supply and equipment inventory" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
     ]},
   ]},
 
