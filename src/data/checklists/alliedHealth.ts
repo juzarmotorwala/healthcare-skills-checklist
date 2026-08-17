@@ -126,13 +126,25 @@ export const alliedHealthChecklists: ChecklistSpec[] = [
       { name: "Nutrition-focused physical exam" }, { name: "Anthropometric measurements" }, { name: "Nutritional risk screening" }, { name: "Calorie/protein needs calculation" }, { name: "Diet history and intake analysis" },
     ]},
     { title: "Medical Nutrition Therapy", skills: [
-      { name: "Diabetes management" }, { name: "Renal diet management" }, { name: "Enteral nutrition planning" }, { name: "Parenteral nutrition (TPN) planning" }, { name: "Oncology nutrition support" }, { name: "Bariatric nutrition counseling" },
+      { name: "Diabetes management" }, { name: "Renal diet management" }, { name: "Enteral nutrition planning" }, { name: "Parenteral nutrition (TPN) planning" }, { name: "Oncology nutrition support" }, { name: "Bariatric nutrition counseling" }, { name: "Food and Drug Interactions" }, { name: "Wound/Bedsore Nutrition Management" }, { name: "Burn Patient Nutrition Support" }, { name: "GI Dysfunction Diet Management" }, { name: "Immune Disorder Nutrition Support" }, { name: "Pregnancy and Nutrition" }, { name: "Osteoporosis Nutrition Management" },
     ]},
     { title: "Specialized Diets", skills: [
       { name: "Cardiac/low-sodium diets" }, { name: "Pediatric nutrition" }, { name: "Food allergy/intolerance management" }, { name: "Texture-modified/dysphagia diets" },
     ]},
     { title: "Documentation & Compliance", skills: [
       { name: "EMR charting/nutrition notes" }, { name: "Interdisciplinary care plan participation" }, { name: "Regulatory/Joint Commission nutrition standards" }, { name: "Patient and family education" },
+    ]},
+    { title: "Care Settings", skills: [
+      { name: "Hospital" }, { name: "Nursing Home/Long-Term Care Facility" }, { name: "Outpatient Setting" }, { name: "Rehab Facility" }, { name: "Adult Day Care" }, { name: "Sports Medicine Clinic" }, { name: "School System" }, { name: "Women/Infant/Children (WIC)" }, { name: "Private Practice" },
+    ]},
+    { title: "Care Planning & Facility Management", skills: [
+      { name: "Develop Individualized Plan of Care" }, { name: "Implement Specific Plans of Care" }, { name: "High Nutritional Risk Patient Management" }, { name: "Hyperalimentation" }, { name: "Oral Feeding Management" }, { name: "Computerized Food Service Management System" }, { name: "Compliance with Food Protection Program" }, { name: "Facility Budgets for Food and Supplies" }, { name: "Coordination with Area Agencies on Aging (AAA)" }, { name: "Adherence to Dietary Guidelines" },
+    ]},
+    { title: "Education & Research", skills: [
+      { name: "Precepting Dietetic Interns/Students" }, { name: "Participating in In-Service Staff Education" }, { name: "Conducting Nutrition-Related Quality Improvement Projects" }, { name: "Staying Current with Evidence-Based Nutrition Research" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
     ]},
   ]},
 
