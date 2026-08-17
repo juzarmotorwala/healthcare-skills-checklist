@@ -242,14 +242,32 @@ export const criticalCareChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "paramedic", title: "Paramedic Skills Checklist", shortTitle: "Paramedic", icon: "🚨", group: "Critical Care", categories: [
-    { title: "Advanced Life Support", skills: [
-      { name: "Advanced airway management (intubation, supraglottic)" }, { name: "IV/IO access" }, { name: "Cardiac rhythm interpretation" }, { name: "Defibrillation/cardioversion" }, { name: "Advanced pharmacology administration" },
+    { title: "Airway Management & Intubation", skills: [
+      { name: "Advanced airway management (intubation, supraglottic)" }, { name: "Oral/nasal airway insertion" }, { name: "Head tilt/chin lift and modified jaw thrust (trauma)" }, { name: "BVM (bag valve mask) ventilation" }, { name: "Non-rebreather, partial rebreather, and simple face mask" }, { name: "Nasal cannula and Venturi mask" }, { name: "Demand valve-O2 powered" }, { name: "Orotracheal and nasotracheal intubation" }, { name: "Cricoid pressure" }, { name: "Needle cricothyroidotomy" }, { name: "End tidal CO2 monitoring" },
     ]},
-    { title: "Emergency Response", skills: [
-      { name: "Trauma assessment and management" }, { name: "Mass casualty triage" }, { name: "Field extrication assist" }, { name: "Hazmat/scene safety awareness" },
+    { title: "Cardiac Rhythms & Defibrillation", skills: [
+      { name: "Cardiac rhythm interpretation" }, { name: "Defibrillation/cardioversion" }, { name: "Asystole and PEA (pulseless electrical activity)" }, { name: "2nd and 3rd degree heart block" }, { name: "Junctional escape rhythm" }, { name: "Ventricular fibrillation and ventricular tachycardia" }, { name: "Atrial fibrillation and atrial flutter" },
+    ]},
+    { title: "Medications", skills: [
+      { name: "Advanced pharmacology administration" }, { name: "Epinephrine and Epi-Pen" }, { name: "Amiodarone and lidocaine" }, { name: "Adenosine, diltiazem, and verapamil" }, { name: "Sodium bicarbonate and calcium chloride" }, { name: "Aspirin and nitroglycerin" }, { name: "Narcan and activated charcoal" }, { name: "Oral glucose and Dextrose 50%" }, { name: "Furosemide, vasopressin, and dobutamine" }, { name: "Diazepam and magnesium sulfate" }, { name: "Normal saline administration" },
+    ]},
+    { title: "Medication Administration & IV Therapy", skills: [
+      { name: "IV/IO access" }, { name: "Peripheral IV access" }, { name: "Internal/external jugular access" }, { name: "Intraosseous access" }, { name: "Subclavian access (continuous drips, IV push, piggyback)" }, { name: "Oral, sublingual, and rectal administration" }, { name: "Intramuscular and subcutaneous administration" }, { name: "Endotracheal and nasogastric administration" }, { name: "Nebulizer/aerosol administration" },
+    ]},
+    { title: "Care of Patients With", skills: [
+      { name: "Trauma assessment and management" }, { name: "AMI (acute myocardial infarction) and unstable angina" }, { name: "CHF (congestive heart failure) and pulmonary edema" }, { name: "CVA (cerebral vascular accident)" }, { name: "Cardiac arrest" }, { name: "Asthma and COPD" }, { name: "Tension pneumothorax and needle decompression" }, { name: "Sucking chest wound and open chest wounds" }, { name: "Hypo/hyperglycemia" }, { name: "Seizure" }, { name: "Sepsis" }, { name: "GI bleed and esophageal bleeding" }, { name: "Acute abdomen" }, { name: "Gastroenteritis" }, { name: "Hypertension and hypovolemic shock" }, { name: "Closed and open fractures" }, { name: "MVC (motor vehicle collision) trauma" }, { name: "Burns and inhalation injuries" }, { name: "Gunshot wounds and stabbings" }, { name: "Amputations and lung contusions" }, { name: "Aneurysms" }, { name: "Eye injuries" }, { name: "Croup and epiglottitis" }, { name: "Overdose" }, { name: "Impending delivery" }, { name: "Eclampsia/pre-eclampsia and placenta previa" },
+    ]},
+    { title: "Emergency Equipment", skills: [
+      { name: "Pulse oximeter" }, { name: "12 lead EKG" }, { name: "Defibrillator (manual) and AED" }, { name: "Infusion pumps and ventilators" }, { name: "BP cuffs" }, { name: "Accucheck (blood glucose monitoring)" }, { name: "Stretchers" },
+    ]},
+    { title: "Immobilization & Extrication", skills: [
+      { name: "Field extrication assist" }, { name: "Traction splint" }, { name: "Leg/arm splints" }, { name: "Cervical collar (soft/rigid)" }, { name: "Head blocks and straps" }, { name: "Long board/short board" }, { name: "KED (Kendrick extrication device)" }, { name: "Hazmat/scene safety awareness" }, { name: "Mass casualty triage" }, { name: "Vehicle extrication tools (wrecking bar, bolt cutters, hacksaw, trauma shears)" },
     ]},
     { title: "Transport & Documentation", skills: [
       { name: "Patient transport protocols" }, { name: "Inter-facility transport" }, { name: "ePCR documentation" }, { name: "Radio/hospital communication" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
     ]},
   ]},
 ];
