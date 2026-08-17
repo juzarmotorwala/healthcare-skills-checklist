@@ -200,8 +200,23 @@ export const criticalCareChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "emt", title: "Emergency Medical Technician Skills Checklist", shortTitle: "EMT", icon: "🚑", group: "Critical Care", categories: [
-    { title: "Skills", skills: [
-      { name: "Vital Sign - PULSE" }, { name: "Vital Sign - RESPIRATION" }, { name: "Vital Sign - LUNG SOUNDS" }, { name: "Vital Sign - BLOOD PRESSURE" }, { name: "Vital Sign - PULSE OXIMETRY" }, { name: "Vital Sign - TEMPERATURE" }, { name: "Vital Sign - PAIN ASSESSMENT" }, { name: "PATIENT ASSESSMENT" }, { name: "TRAUMA ASSESSMENT" }, { name: "Airway Management - SUCTIONING" }, { name: "Airway Management - NPA" }, { name: "Airway Management - OPA" }, { name: "Airway Management - BVM (Adult)" }, { name: "Airway Management - BVM (Peds)" }, { name: "Airway Management - O2 ADMINISTRATION" }, { name: "SPLINTING" }, { name: "BANDAGING/HEMORRHAGE CONTROL" }, { name: "SPINAL IMMOBILIZATION" }, { name: "CPR - Adult" }, { name: "CPR - Pediatric" }, { name: "CPR - Infant" }, { name: "AED OPERATION" }, { name: "PATIENT LIFTING/MOVING" }, { name: "STRETCHER OPERATIONS" }, { name: "RADIO COMMUNICATIONS" }, { name: "DOCUMENTATION" },
+    { title: "Vital Signs & Assessment", skills: [
+      { name: "Vital Sign - Pulse" }, { name: "Vital Sign - Respiration" }, { name: "Vital Sign - Lung Sounds" }, { name: "Vital Sign - Blood Pressure" }, { name: "Vital Sign - Pulse Oximetry" }, { name: "Vital Sign - Temperature" }, { name: "Vital Sign - Pain Assessment" }, { name: "Patient Assessment" }, { name: "Trauma Assessment" }, { name: "Blood Glucose Monitoring" },
+    ]},
+    { title: "Airway/Oxygenation", skills: [
+      { name: "Suctioning" }, { name: "Nasopharyngeal Airway (NPA)" }, { name: "Oropharyngeal Airway (OPA)" }, { name: "BVM (Bag-Valve-Mask) - Adult" }, { name: "BVM (Bag-Valve-Mask) - Pediatric" }, { name: "O2 Administration" }, { name: "Oxygen Therapies/Humidifiers" }, { name: "Esophageal/Tracheal Airway" },
+    ]},
+    { title: "Immobilization", skills: [
+      { name: "Splinting" }, { name: "Vacuum Splinting" }, { name: "Bandaging/Hemorrhage Control" }, { name: "Spinal Immobilization" }, { name: "Long Board Immobilization" },
+    ]},
+    { title: "Cardiovascular/Circulation", skills: [
+      { name: "CPR - Adult" }, { name: "CPR - Pediatric" }, { name: "CPR - Infant" }, { name: "AED Operation" }, { name: "Cardioversion" }, { name: "Tourniquet/Bleeding Control" },
+    ]},
+    { title: "Miscellaneous Procedures", skills: [
+      { name: "Intramuscular Injections" }, { name: "Patient Lifting/Moving" }, { name: "Stretcher Operations" }, { name: "Radio Communications" }, { name: "Documentation" }, { name: "Long Term Care Facility Experience" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Neonate (0-1 month)" }, { name: "Infant (1-12 months)" }, { name: "Pediatric (1-12 years)" }, { name: "Adolescent (12-18 years)" }, { name: "Adult (18-65 years)" }, { name: "Geriatric (65+ years)" },
     ]},
   ]},
 
