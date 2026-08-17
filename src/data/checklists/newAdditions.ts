@@ -150,20 +150,50 @@ export const newAdditionsChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "cath-lab-rn", title: "Registered Nurse – Cath Lab Skills Checklist", shortTitle: "Cath Lab RN", icon: "🫀", group: "Diagnostic & Lab", categories: [
-    { title: "Pre-Procedure Care", skills: [
-      { name: "Patient Assessment and History" }, { name: "Consent Verification" }, { name: "Time-Out Procedure" }, { name: "IV Access Placement" }, { name: "Pre-Procedure Medication Administration" },
+    { title: "Patient-Centered Care", skills: [
+      { name: "Verify Orders and Patient Consent" }, { name: "Administer Medications" }, { name: "Perform and Document Pre-Procedure Assessment" }, { name: "Post-Procedure Transport and Handoff" }, { name: "Monitor for and Respond to Complications" }, { name: "Lung Sounds" }, { name: "Chest Pain" }, { name: "12-Lead ECG Lead Placement and Interpretation" }, { name: "Peripheral Pulse Checks" }, { name: "Doppler Use" }, { name: "Abnormal Heart Sounds and Murmur" }, { name: "Neurological Assessment (e.g., Glasgow Coma Scale)" }, { name: "Clear Explanation of Procedures and Answering Patient/Family Questions" }, { name: "Pre- and Post-Procedure Patient Teaching (e.g., Activity Restrictions, Site Care)" }, { name: "Reinforcing Instructions for Medication and Follow-Up Care" }, { name: "Emotional Support for Patients Experiencing Anxiety or Fear" },
     ]},
-    { title: "Procedural Support", skills: [
-      { name: "Conscious Sedation Monitoring" }, { name: "Hemodynamic Monitoring" }, { name: "Circulating During Procedure" }, { name: "Emergency Medication Administration" },
+    { title: "General Skills", skills: [
+      { name: "Assist With Medication and Contrast Setup" }, { name: "Check and Maintain Equipment Readiness" }, { name: "Prepare and Calibrate Monitoring Equipment" }, { name: "Restock and Clean Supplies Post-Procedure" }, { name: "Report Abnormal Findings, Equipment Malfunctions, and Supply Issues Promptly" }, { name: "Participate in Pre-Procedure Briefings and Post-Procedure Debriefings" }, { name: "Chart Medication Administration and Effects" }, { name: "Collaborate With the Multidisciplinary Team to Coordinate Patient Care" }, { name: "Provide Handoff Communication Using a Standardized Format (e.g., SBAR)" }, { name: "Document All Care Provided, Including Assessments, Interventions, and Patient Responses" }, { name: "Communicate Patient Status and Procedural Updates to Team Members" }, { name: "Participate in Peer Review and Performance Evaluations" }, { name: "Attend Continuing Education Related to Cardiac Catheter Lab Practices" }, { name: "Engage in Evidence-Based Practice and Quality Improvement Initiatives" }, { name: "Provide Orientation or Mentoring for New Staff" }, { name: "Maintain Certifications Required for Catheter Lab Practice" },
     ]},
-    { title: "Post-Procedure Care", skills: [
-      { name: "Sheath/Access Site Monitoring" }, { name: "Vascular Closure Device Site Care" }, { name: "Post-Procedure Recovery Monitoring" }, { name: "Discharge Teaching" },
+    { title: "Airway & Respiratory Management", skills: [
+      { name: "Patient Positioning for Optimal Respiratory Support" }, { name: "Recognition and Response to Respiratory Distress" }, { name: "Assisting With Ventilator Management and Basic Troubleshooting" }, { name: "Airway Management Including Oral and Nasal Suctioning" }, { name: "Oximetry and Capnography Monitoring" }, { name: "Use of Oral and Nasopharyngeal Airways" }, { name: "Oxygen Delivery Systems and Titration Based on Patient Condition" }, { name: "Aspiration Precautions" },
     ]},
-    { title: "Medications", skills: [
-      { name: "Anticoagulants (Heparin, Bivalirudin)" }, { name: "Antiplatelet Agents" }, { name: "Contrast Reaction Management" }, { name: "Vasoactive Medications" },
+    { title: "Sedation, Pain & Hemodynamic Monitoring", skills: [
+      { name: "Recognition and Management of Sedation-Related Complications" }, { name: "Monitoring and Management of Moderate Sedation" }, { name: "Sedation Scale Assessment (e.g., RASS, Pasero)" }, { name: "Pain Assessment and Analgesic Administration" }, { name: "Internal Cardioverter Defibrillator Management" }, { name: "Monitoring and Support of Hemodynamically Unstable Patients" }, { name: "Continuous Cardiac Rhythm and Vital Sign Monitoring" }, { name: "Initiation of Emergency Protocols for Cardiac or Hemodynamic Compromise" }, { name: "Pulmonary Embolism Monitoring" }, { name: "Interpretation of ECG Changes Related to Ischemia and Arrhythmias" }, { name: "Blood Pressure Monitoring (e.g., Manual, Automatic, Invasive)" },
     ]},
-    { title: "Emergency Response", skills: [
-      { name: "Vascular Complication Recognition" }, { name: "Cardiac Tamponade Recognition" }, { name: "Code Response in Cath Lab" }, { name: "Emergent Transfer to OR Coordination" },
+    { title: "Hemodynamic Values", skills: [
+      { name: "Systemic Vascular Resistance (SVR)" }, { name: "Cardiac Index" }, { name: "Pulmonary Capillary Wedge Pressure (PCWP)" }, { name: "Pulmonary Vascular Resistance (PVR)" }, { name: "A-Line Waveform Interpretation" }, { name: "Mean Arterial Pressure (MAP)" }, { name: "Mixed Venous Oxygen Saturation (SVO2)" }, { name: "Central Venous Pressure (CVP)" }, { name: "Cardiac Output" },
+    ]},
+    { title: "Emergency Preparedness & Response", skills: [
+      { name: "Effective Communication During Rapid Response Events" }, { name: "Recognition and Immediate Response to Allergic Reactions or Contrast Dye Reactions" }, { name: "Participation in Emergency Interventions (e.g., Code Response)" }, { name: "Coordination of Care During Acute Patient Decompensation" }, { name: "Familiarity With Emergency Equipment and Crash Cart Setup" }, { name: "Vascular Complication Recognition" }, { name: "Cardiac Tamponade Recognition" }, { name: "Emergent Transfer to OR Coordination" },
+    ]},
+    { title: "Quality Assurance, Infection Control & Radiation Safety", skills: [
+      { name: "Dispose of Sharps and Biohazard Materials Properly" }, { name: "Maintain a Sterile Field and Use Aseptic Technique During Procedures" }, { name: "Follow Infection Control Policies, Including Proper Hand Hygiene and PPE Use" }, { name: "Ensure Equipment Is Cleaned, Disinfected, and Sterilized Appropriately" }, { name: "Participate in Safety Drills and Continuous Quality Improvement Efforts" }, { name: "Perform Safety Checks and Time-Outs According to Protocol" }, { name: "Understand Radiation Risks and Safety Guidelines in the Catheter Lab Environment" }, { name: "Use and Check Dosimeter Badges Consistently" }, { name: "Follow ALARA (As Low As Reasonably Achievable) Principles for Radiation Exposure" }, { name: "Use Time, Distance, and Shielding Strategies to Reduce Personal Exposure" }, { name: "Assist in Minimizing Patient Exposure by Using Appropriate Shielding and Equipment Settings" }, { name: "Wear and Maintain Protective Gear (e.g., Lead Apron, Thyroid Shield, Lead Glasses)" },
+    ]},
+    { title: "Procedures / Scrub", skills: [
+      { name: "Femoral Artery Sheath Removal" }, { name: "Cardioversion" }, { name: "Intra-Aortic Balloon Pump" }, { name: "Pericardiocentesis" }, { name: "Peripheral Vascular Diagnostic Imaging" }, { name: "Intubation" }, { name: "Swan-Ganz/PA Catheter Insertion" }, { name: "Rotational Atherectomy" }, { name: "Arterial Line Insertion" }, { name: "Left Heart Catheterization" }, { name: "Central Line Insertion" }, { name: "Impella Insertion and Management" }, { name: "Peripheral Vascular Intervention" }, { name: "Blood Sampling During Catheterization" }, { name: "Laser Atherectomy" }, { name: "Blood Pressure Measurement Intraoperatively" }, { name: "Right Heart Catheterization" }, { name: "Open Chest Emergency" }, { name: "Emergency Tracheostomy" }, { name: "Orbital Atherectomy" },
+    ]},
+    { title: "Access Site Management", skills: [
+      { name: "Compression Techniques and Use of Vascular Closure Devices and Hemostatic Devices" }, { name: "Management of Vascular Access Devices (e.g., Arterial Sheaths, Central Lines)" }, { name: "Safe Patient Positioning to Protect Vascular Access" }, { name: "Site Assessment for Bleeding, Hematoma, or Infection" }, { name: "Allen's Test" }, { name: "Renal Protection Strategies (e.g., Contrast Monitoring, Hydration)" }, { name: "Patient Ambulation Protocol After Sheath Removal" }, { name: "Site Care Education for Patients Post-Discharge" }, { name: "Documentation of Pulses and Access Integrity" },
+    ]},
+    { title: "Medications – Vasopressors, Inotropes & Cardiac Support", skills: [
+      { name: "Phenylephrine (Neo-Synephrine®)" }, { name: "Vasopressin (Pitressin®)" }, { name: "Dopamine (Intropin®)" }, { name: "Epinephrine (Adrenalin®)" }, { name: "Milrinone (Primacor®)" }, { name: "Norepinephrine (Levophed®)" }, { name: "Isoproterenol (Isuprel®)" }, { name: "Dobutamine (Dobutrex®)" },
+    ]},
+    { title: "Medications – Antiarrhythmics & Cardiac Medications", skills: [
+      { name: "Diltiazem (Cardizem®)" }, { name: "Metoprolol (Lopressor®)" }, { name: "Atropine (AtroPen®)" }, { name: "Nicardipine (Cardene®)" }, { name: "Amiodarone (Cordarone®)" }, { name: "Procainamide (Pronestyl®)" }, { name: "Verapamil (Calan®, Isoptin®, Verelan®)" }, { name: "Propranolol (Inderal®)" }, { name: "Adenosine (Adenocard®)" }, { name: "Lidocaine (Xylocaine®)" }, { name: "Digoxin (Lanoxin®)" }, { name: "Esmolol (Brevibloc®)" },
+    ]},
+    { title: "Medications – Anticoagulants, Antiplatelets & Thrombolytics", skills: [
+      { name: "Bivalirudin (Angiomax®)" }, { name: "Warfarin (Coumadin®)" }, { name: "Unfractionated Heparin" }, { name: "Ticagrelor (Brilinta®)" }, { name: "Streptokinase" }, { name: "Clopidogrel (Plavix®)" }, { name: "Tenecteplase (TNKase®)" }, { name: "Tirofiban (Aggrastat®)" }, { name: "Aspirin" }, { name: "Eptifibatide (Integrilin®)" }, { name: "Alteplase (Activase®)" }, { name: "Enoxaparin (Lovenox®)" }, { name: "Prasugrel (Effient®)" },
+    ]},
+    { title: "Medications – Sedation, Anesthesia & Paralytics", skills: [
+      { name: "Fentanyl (Actiq®)" }, { name: "Propofol (Diprivan®)" }, { name: "Rocuronium (Zemuron®)" }, { name: "Midazolam (Versed®)" }, { name: "Lorazepam (Ativan®)" }, { name: "Morphine (MS Contin®)" }, { name: "Etomidate (Amidate®)" }, { name: "Diazepam (Valium®)" }, { name: "Succinylcholine (Anectine®)" }, { name: "Ketamine (Ketalar®)" }, { name: "Vecuronium (Norcuron®)" },
+    ]},
+    { title: "Medications – Antihypertensives, Vasodilators & Miscellaneous", skills: [
+      { name: "Nitroglycerin (Tridil®)" }, { name: "Hydralazine" }, { name: "Labetalol (Trandate®)" }, { name: "Captopril (Capoten®)" }, { name: "Nitroprusside (Nipride®)" }, { name: "Dexamethasone (Decadron®)" }, { name: "Albuterol (Accuneb®, ProAir® HFA)" }, { name: "Methylprednisolone (Solu-Medrol®)" }, { name: "Diphenhydramine (Benadryl®)" }, { name: "Fosphenytoin (Cerebyx®)" }, { name: "Phenobarbital (Luminal®)" }, { name: "Phenytoin (Dilantin®)" }, { name: "Carbamazepine (Tegretol®)" }, { name: "Potassium Chloride" }, { name: "Sodium Bicarbonate" }, { name: "Calcium Gluconate" }, { name: "Sodium Polystyrene Sulfonate (Kayexalate®)" }, { name: "Magnesium Sulfate" }, { name: "Ondansetron (Zofran®)" }, { name: "Promethazine (Phenergan®)" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
     ]},
   ]},
 
