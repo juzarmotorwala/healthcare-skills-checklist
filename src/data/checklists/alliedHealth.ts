@@ -164,6 +164,15 @@ export const alliedHealthChecklists: ChecklistSpec[] = [
     { title: "Patient Care & Scheduling", skills: [
       { name: "Patient chart preparation" }, { name: "Appointment scheduling" }, { name: "Patient education on oral hygiene" },
     ]},
+    { title: "Chairside Assisting by Specialty", skills: [
+      { name: "Oral Surgery (Including Dental Implants)" }, { name: "Prosthodontics" }, { name: "General Dentistry" }, { name: "Orthodontics" }, { name: "Pedodontics" }, { name: "Endodontics" }, { name: "Periodontics" },
+    ]},
+    { title: "Practice Management & Computer Skills", skills: [
+      { name: "Demonstrate Knowledge of Dental Software Programs" }, { name: "Enter Clinical Notes Upon Completed Patient Case" }, { name: "Enter Treatment That Was Performed" }, { name: "Chart Existing and Dental Work Needed" }, { name: "Enter and Update Patient Medical History" }, { name: "Take Panorex X-Rays" }, { name: "Take 3D Scan" }, { name: "Take Digital X-Rays" }, { name: "Take Inventory of Supplies Needed" }, { name: "Order Supplies from Vendors" }, { name: "Stock Operatories with Supplies as Needed" }, { name: "Maintain Equipment in Operatories and Lab" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
+    ]},
   ]},
 
   { slug: "physician-assistant", title: "Physician Assistant Skills Checklist", shortTitle: "Physician Assistant", icon: "🩹", group: "Allied Health", categories: [
