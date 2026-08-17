@@ -75,10 +75,22 @@ export const diagnosticLabChecklists: ChecklistSpec[] = [
       { name: "Angiography" }, { name: "Angioplasty/Stent" }, { name: "Embolization" }, { name: "IVC Filter Placement" }, { name: "Thrombolysis" }, { name: "PICC Line Placement" }, { name: "Port Placement" },
     ]},
     { title: "Non-Vascular Procedures", skills: [
-      { name: "Biopsy (CT/US guided)" }, { name: "Drainage/Abscess" }, { name: "Nephrostomy" }, { name: "Biliary Drainage" }, { name: "Gastrostomy/Jejunostomy" },
+      { name: "Gastrostomy Tubes" }, { name: "Gastrojejunostomy Tubes" }, { name: "Jejunostomy Tubes" }, { name: "Nephrostomy Tubes" }, { name: "Nephroureteral Stents" }, { name: "Ureteral Stents" }, { name: "Suprapubic Catheter Placement" }, { name: "Biliary Tubes" }, { name: "Cholecystostomy Tubes" }, { name: "Abscess Drains" }, { name: "Core Biopsies" }, { name: "Fine Needle Aspiration Biopsies" }, { name: "Bone Biopsies" }, { name: "Lymphangiography" }, { name: "Percutaneous RF Ablations" }, { name: "Percutaneous Cryo Ablations" }, { name: "Kyphoplasty" },
     ]},
     { title: "Conscious Sedation", skills: [
       { name: "Fentanyl" }, { name: "Versed" }, { name: "Propofol" }, { name: "Reversal Agents" }, { name: "Patient Monitoring" },
+    ]},
+    { title: "Transarterial Procedures", skills: [
+      { name: "Balloon Angioplasty" }, { name: "Chemoembolization of a Tumor" }, { name: "GI Bleed Embolization" }, { name: "Splenic Artery Embolization" }, { name: "Arterial Aspiration Thrombectomy" },
+    ]},
+    { title: "Venous Procedures", skills: [
+      { name: "Non-Tunneled CVC" }, { name: "Tunneled CVC" }, { name: "PICC Line Placement" }, { name: "Port-a-Cath Placement" }, { name: "Port-a-Cath Removal" }, { name: "IVC Filter Placement" }, { name: "IVC Filter Removal" }, { name: "DVT Thrombectomy" }, { name: "DVT Thrombolysis" }, { name: "PE Thrombectomy" }, { name: "PE Thrombolysis" }, { name: "Dialysis Fistula Declot" }, { name: "Dialysis Fistula Angioplasty" }, { name: "Transjugular Liver Biopsy (TJLB)" }, { name: "Transvenous Intrahepatic Portosystemic Shunt (TIPS)" }, { name: "Portal Vein Embolization" }, { name: "Balloon Occluded Retrograde Transvenous Obliteration (BRTO)" }, { name: "Arteriovenous Malformation Sclerotherapy" },
+    ]},
+    { title: "Neurovascular Procedures", skills: [
+      { name: "Neurovascular Embolization" }, { name: "Neurovascular Thrombectomy" }, { name: "Neurovascular Stenting" }, { name: "Neurovascular Balloon Angioplasty" }, { name: "Carotid Stenting" },
+    ]},
+    { title: "Special Equipment & Supplies", skills: [
+      { name: "IVUS (Intravascular Ultrasound)" }, { name: "ICE (Intracardiac Echocardiography)" }, { name: "Pushable Coils (e.g., Nester, Hilal)" }, { name: "Semi-Detachable Coils (e.g., Interlocks)" }, { name: "Fully Detachable Coils (e.g., Ruby, Azur)" }, { name: "Vascular Plugs (e.g., Amplatzer, MVP)" }, { name: "Embolic Beads (e.g., Embosphers, Hydropearls)" }, { name: "Obsidio Embolic" }, { name: "Angiojet Thrombectomy Device" }, { name: "Penumbra Aspiration Device" }, { name: "Inari Aspiration Device" }, { name: "EKOS Device" }, { name: "Shockwave Device" }, { name: "Spyglass Device" }, { name: "Galil/Boston Scientific Cryo Ablation Device" }, { name: "Neuwave RF Ablation Device" },
     ]},
     { title: "Age Specific Competencies", skills: [
       { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
