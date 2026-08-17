@@ -413,8 +413,17 @@ export const diagnosticLabChecklists: ChecklistSpec[] = [
     { title: "Specimen Processing", skills: [
       { name: "Tissue grossing assist" }, { name: "Tissue processing/embedding" }, { name: "Microtomy/sectioning" }, { name: "Special stains (H&E, IHC)" }, { name: "Frozen section preparation" },
     ]},
-    { title: "Laboratory Technique", skills: [
-      { name: "Equipment operation (microtome, embedding center)" }, { name: "Quality control and slide review" }, { name: "LIS documentation" },
+    { title: "Equipment Operation & Quality Control", skills: [
+      { name: "Operate and Maintain Tissue Processor" }, { name: "Operate and Maintain Automatic Coverslipper" }, { name: "Operate and Maintain IHC Stainer" }, { name: "Operate, Clean, and Maintain Microscopes" }, { name: "Operate and Maintain Microtomes" }, { name: "Operate and Maintain Slide Stainer" }, { name: "Operate and Maintain Cryostat" }, { name: "Conduct Validations of New Equipment" }, { name: "Calibrate Pipettors at Least Annually" }, { name: "Check Refrigerators and Freezers Daily for Proper Operation" }, { name: "Document Corrective Actions for Out-of-Range Refrigerator/Freezer Temperatures" },
+    ]},
+    { title: "Staining Processed Tissue", skills: [
+      { name: "Select Stain Based on Substance Reactivity" }, { name: "Recognize Substances in Tissues via Color Reaction" }, { name: "Perform Positive Controls on Stains" }, { name: "Select Mounting Media" }, { name: "Place Coverslip on Slide After Staining" },
+    ]},
+    { title: "Safety Practices", skills: [
+      { name: "Wear PPE in Accordance with Infection Prevention Policies" }, { name: "Know Location and How to Access Safety Data Sheets" }, { name: "Safely Dilute Acids" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
     ]},
     { title: "Compliance", skills: [
       { name: "CAP/CLIA regulatory compliance" }, { name: "Specimen chain of custody" },
