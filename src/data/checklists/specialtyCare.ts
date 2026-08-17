@@ -80,14 +80,32 @@ export const specialtyCareChecklists: ChecklistSpec[] = [
     { title: "Renal/Genitourinary", skills: [
       { name: "Assessment of Renal/GU System" }, { name: "Insertion of Foley" }, { name: "Nephrostomy Tube Care" }, { name: "AV Fistula/AV Graft" }, { name: "Tunneled/Non-Tunneled Catheter" },
     ]},
-    { title: "Hemodialysis Skills", skills: [
-      { name: "Machine Setup/Priming" }, { name: "Fistula/Graft Cannulation" }, { name: "Catheter Access" }, { name: "Heparin Administration" }, { name: "Fluid Removal Calculation" },
+    { title: "Care of the Patient With", skills: [
+      { name: "Hemodialysis" }, { name: "Nephrectomy" }, { name: "TURP" }, { name: "Chronic Renal Failure" }, { name: "AV Fistula/AV Graft" }, { name: "Acute Renal Failure" }, { name: "Peritoneal Dialysis" }, { name: "Ileal Conduit" }, { name: "Tunneled/Non-Tunneled Catheter" }, { name: "Nephrostomy Tube" }, { name: "Supra-Pubic Catheter" },
+    ]},
+    { title: "Hemodialysis Experience", skills: [
+      { name: "Predialysis Nursing Assessment" }, { name: "Teaching the Dialysis Patient and Family" }, { name: "Acute/Inpatient Dialysis" }, { name: "Chronic/Outpatient Dialysis" }, { name: "Dialysis Home Care" }, { name: "Pediatric Dialysis" },
+    ]},
+    { title: "Set Up/Initiate Dialysis Treatment", skills: [
+      { name: "Collect Blood Specimens" }, { name: "Bicarbonate Dialysate" }, { name: "Checks for Machine/Alarm Settings" }, { name: "Fistula Gortex/Bovine Graft" }, { name: "Prep Vascular Access" }, { name: "Anticoagulation" }, { name: "Conductivity Testing" }, { name: "Priming Dialyzer" }, { name: "Dialysis" },
+    ]},
+    { title: "Assess Patient and Equipment During Dialysis", skills: [
+      { name: "Conductivity" }, { name: "Blood Flow Rate" }, { name: "Vascular Access Function" }, { name: "Administration of Blood and Blood Products" }, { name: "Systems Assessment of Patient" }, { name: "Administration of Mannitol" }, { name: "Subjective Response to Treatment" }, { name: "Sequential Ultrafiltration/PUF" }, { name: "Ultrafiltration Calculation" }, { name: "Arterial and Venous Pressures" }, { name: "Volume Status" }, { name: "Operation of Myron L. Meter" }, { name: "Documentation of Dialysis Treatment" }, { name: "Management of Anticoagulation" },
+    ]},
+    { title: "Management of the Patient With", skills: [
+      { name: "Anemia" }, { name: "Hypotension" }, { name: "Muscle Cramps" }, { name: "Pyrogenic Reaction" }, { name: "Hemolysis" }, { name: "Fluid Overload" }, { name: "Chest Pain" }, { name: "Hyperkalemia" }, { name: "Clotted Access/Poor Blood Flow Rate From Catheter" }, { name: "Air Embolus" }, { name: "Chest Trauma" }, { name: "Cardiopulmonary Arrest" }, { name: "Pericarditis" }, { name: "Neuropathy" }, { name: "Filter Blood Leak" }, { name: "Hypertension" }, { name: "Seizures" },
+    ]},
+    { title: "Machine Alarm Troubleshooting Procedures", skills: [
+      { name: "Ultrafiltration Alarm" }, { name: "Blood Leak Alarm" }, { name: "Power Failure Alarm" }, { name: "Arterial Pressure Alarm" }, { name: "Blood Pump Alarm" }, { name: "High Temperature Alarm" }, { name: "Air/Foam Detector Alarm" }, { name: "Venous Pressure Alarm" }, { name: "Conductivity Alarm" },
+    ]},
+    { title: "Discontinue Dialysis", skills: [
+      { name: "Dialysis Catheter" }, { name: "Return of Blood" }, { name: "Equipment Clean Up" }, { name: "Sterilization Procedures" }, { name: "Post Treatment Access Care" }, { name: "Fistula/Vein Graft" },
     ]},
     { title: "Peritoneal Dialysis", skills: [
       { name: "CAPD" }, { name: "CCPD/APD" }, { name: "Catheter Care" }, { name: "Exit Site Assessment" },
     ]},
-    { title: "Emergency Management", skills: [
-      { name: "Hypotension" }, { name: "Cardiac Arrest" }, { name: "Air Embolism" }, { name: "Hemorrhage" }, { name: "Dialyzer Reaction" },
+    { title: "Age Specific Competencies", skills: [
+      { name: "Neonate (0-1 month)" }, { name: "Infant (1-12 months)" }, { name: "Pediatric (1-12 years)" }, { name: "Adolescent (12-18 years)" }, { name: "Adult (18-65 years)" }, { name: "Geriatric (65+ years)" },
     ]},
   ]},
 
