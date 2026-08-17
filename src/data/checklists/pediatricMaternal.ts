@@ -221,17 +221,44 @@ export const pediatricMaternalChecklists: ChecklistSpec[] = [
     { title: "Work Settings", skills: [
       { name: "Couplet Care" }, { name: "Antepartum" }, { name: "Postpartum" }, { name: "Newborn Nursery" }, { name: "LDRP" },
     ]},
-    { title: "Post Partum", skills: [
-      { name: "Vaginal Delivery Care" }, { name: "C-Section Care" }, { name: "Fundal Assessment" }, { name: "Lochia Assessment" }, { name: "Perineal Assessment" }, { name: "Postpartum Hemorrhage" }, { name: "Magnesium Sulfate Administration" },
+    { title: "Provision of Care", skills: [
+      { name: "Provide customer-centered care respecting culture, religious, and personal values and needs in a timely manner" }, { name: "Provide support in family adaptation situations (adoption, adolescent mother, infant loss, domestic violence, other complex social/emotional considerations)" }, { name: "Assess and manage pain, pharmacologic and non-pharmacologic comfort measures" }, { name: "Provide care to at-risk patients (falls, bleeding, seizures, infection, psychological risk factors)" }, { name: "Assess and document mother-infant interaction, bonding, and areas of concern" }, { name: "Understand physiologic mechanisms of newborn heat loss (conduction, convection, evaporation, insensible water loss, radiation)" }, { name: "Maintain infant temperature through warmers and swaddling" },
     ]},
-    { title: "Newborn Care", skills: [
-      { name: "Newborn Assessment" }, { name: "APGAR Scoring" }, { name: "Thermoregulation" }, { name: "Glucose Monitoring" }, { name: "Jaundice Assessment" }, { name: "Phototherapy" }, { name: "Circumcision Care" },
+    { title: "Procedural Care & Equipment", skills: [
+      { name: "IV Conscious Sedation" }, { name: "D&C" }, { name: "PICC Line Placement" }, { name: "Epidural Management/Removal" }, { name: "Circumcision" }, { name: "Phototherapy" }, { name: "Infant Warmers" }, { name: "Breast Pumps" }, { name: "Medication Pumps" }, { name: "Sequential Compression Devices" }, { name: "Apnea/Cardiac Monitors" }, { name: "Resuscitation Carts" }, { name: "Suction Catheters and Equipment" }, { name: "Oxygen Delivery Systems" },
     ]},
-    { title: "Breastfeeding", skills: [
-      { name: "Latch Assessment" }, { name: "Breast Pump Use" }, { name: "Milk Storage Education" }, { name: "Formula Preparation" }, { name: "Nipple Care" },
+    { title: "Mother Baby Pharmacology", skills: [
+      { name: "Vaccines, including d-TAP, Hep B, Rubella" }, { name: "Vitamin K" }, { name: "Narcotic Analgesics" }, { name: "Oxytocin" }, { name: "PCA Delivery" }, { name: "Glucose" }, { name: "Magnesium Sulfate" }, { name: "Rhogam" }, { name: "Antibiotics, including Erythromycin Ointment" },
     ]},
-    { title: "Discharge", skills: [
-      { name: "Discharge Teaching" }, { name: "Car Seat Safety" }, { name: "Follow-up Appointments" }, { name: "Newborn Screening" }, { name: "Birth Certificate" },
+    { title: "Maternal Assessment", skills: [
+      { name: "Bleeding/Lochia Assessment (presence, amount, color, odor)" }, { name: "Episiotomy/Laceration" }, { name: "Parental and Infant Interaction" }, { name: "Depression" }, { name: "Incision Site" }, { name: "DTR" }, { name: "Breast Care/Lactation" }, { name: "Fundal Height" }, { name: "Cardiovascular System" }, { name: "Location, Position, and Firmness of Uterus" }, { name: "Perineum (Hematoma/Hemorrhoids)" }, { name: "Headache, Dizziness, and Blurred Vision" }, { name: "Edema" }, { name: "Neurological Assessment" }, { name: "Venous Thromboembolism Risk Prevention" }, { name: "Interpret Chemistry Lab Results" }, { name: "Interpret Coagulation Studies" },
+    ]},
+    { title: "Lactation & Breastfeeding Support", skills: [
+      { name: "Positioning/Latch" }, { name: "Suck/Swallow Sequence" }, { name: "Feeding Cues" }, { name: "Maternal Nutritional Needs" }, { name: "Comprehensive Breast and Nipple Assessment" }, { name: "Breast Pump Use" }, { name: "Milk Storage Education" }, { name: "Formula Preparation" }, { name: "Nipple Care" },
+    ]},
+    { title: "Maternal Clinical Skills", skills: [
+      { name: "Urine Catheter Placement (Foley and Straight)" }, { name: "End-of-Life/Post-Mortem Care for Mother/Infant" }, { name: "Peri-Care" }, { name: "Wound Care" }, { name: "Nasogastric Tube Placement" }, { name: "Dressing Changes" }, { name: "Peripheral IV Placement" }, { name: "Collection/Labeling of Specimens (blood, sputum, urine, stool, wound)" },
+    ]},
+    { title: "Maternal Abnormalities & GYN Care", skills: [
+      { name: "DIC" }, { name: "Gestational Diabetes" }, { name: "Retained Placenta" }, { name: "Preeclampsia/Eclampsia" }, { name: "Infectious Diseases" }, { name: "Abnormal Labs, Glucose, Input/Output, Vital Signs, and Oxygen Saturation" }, { name: "Amniotic Fluid Disorders" }, { name: "Maternal Hemorrhage" }, { name: "HELLP Syndrome" }, { name: "Pelvic Support Procedures" }, { name: "A&P Repair" }, { name: "Pelvic Inflammatory Disease" }, { name: "Hysterectomy" }, { name: "Recognize Abuse/Neglect in Mother/Newborn" }, { name: "Recognize Drug and Alcohol Dependence/Withdrawal in Mother/Newborn" },
+    ]},
+    { title: "Newborn Assessment", skills: [
+      { name: "Ballard Scale" }, { name: "Motor Skills" }, { name: "Deep Tendon Reflexes (DTR)" }, { name: "Temperature" }, { name: "Feeding/Nutrition" }, { name: "Genitourinary" }, { name: "Color" }, { name: "Cardiovascular (Heart Sounds/Apical)" }, { name: "Umbilical Care" }, { name: "Respiratory (Lung Sounds/Respiratory Effort)" }, { name: "APGAR Scores" }, { name: "Pain Cues" }, { name: "Integumentary" }, { name: "Cord Gases" }, { name: "Safe Sleep" }, { name: "Hearing" }, { name: "Neurological" }, { name: "Gastrointestinal (Bowel Sounds)" }, { name: "Jaundice Assessment" }, { name: "Circumcision Care" },
+    ]},
+    { title: "Newborn Abnormalities", skills: [
+      { name: "Vital Signs and Metabolic Abnormalities (blood glucose, intake/output, weight, temperature, lab values, oxygen saturation)" }, { name: "Respiratory and Feeding Complications (meconium aspiration, respiratory distress, abnormal sleep/feeding patterns, drug/alcohol withdrawal)" }, { name: "Common Neonatal Conditions (jaundice, erythema toxicum, congenital dermal melanocytosis, conjunctivitis, abnormal color)" }, { name: "Congenital and Genetic Conditions (chromosomal disorders, genetic disorders)" }, { name: "Infectious and Immune Disorders (chorioamnionitis, GBS, maternal STI transmission, Rh disease/ABO incompatibility)" }, { name: "Prematurity and Growth-Related Concerns" },
+    ]},
+    { title: "Mother Baby Education", skills: [
+      { name: "Deliver Education via Verbal, Written, and Multimedia Modalities" }, { name: "Utilize Translation Services" }, { name: "Teach-Back Method" }, { name: "Newborn Care Education (cord care, diaper care, hygiene, jaundice, safe sleep, circumcision care)" }, { name: "Feeding Education (breastfeeding, bottle-feeding, techniques, equipment)" }, { name: "Discharge Teaching" }, { name: "Car Seat Safety" }, { name: "Apnea Monitoring and Infant CPR Education" }, { name: "Maternal Care Education (contraceptive counseling, post-cesarean recovery, breast care, nutrition, mental health)" }, { name: "Follow-Up Appointments" }, { name: "Newborn Screening" },
+    ]},
+    { title: "Professional Practice & Patient Advocacy", skills: [
+      { name: "Collaborate with Social Services, Chaplains, Interpreters, and Other Healthcare Professionals in a Culturally Respectful Way" }, { name: "Independently Make Decisions, Problem Solve, and Use Critical Thinking" }, { name: "Implement Conflict Resolution Techniques to De-Escalate Stressful Situations" }, { name: "Communicate Findings to Physicians/Providers/Caregivers" }, { name: "Evaluate Outcomes Based on Analysis of Assessment Data" }, { name: "Birth Certificate" },
+    ]},
+    { title: "Emergency Response, Safety & Legal", skills: [
+      { name: "Violent Adult Response" }, { name: "Adult CPR/Code Blue" }, { name: "Neonatal Resuscitation/NICU Response Team" }, { name: "Infant Abduction Response" }, { name: "Reportable Events (impairment, diversion, fraud, safe harbor)" }, { name: "Completion of Incident or Variance Reports" }, { name: "QA/QI Initiatives" }, { name: "Delegation" }, { name: "Follow HIPAA Guidelines" }, { name: "Obtain Informed Consent" }, { name: "Refer to Local Health Department" }, { name: "Refer to Subsidized Providers" }, { name: "Refer to Durable Medical Equipment/Companies" }, { name: "Refer to Social Services and Home Healthcare Providers" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
     ]},
   ]},
 ];
