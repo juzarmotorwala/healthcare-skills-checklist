@@ -108,7 +108,19 @@ export const pediatricMaternalChecklists: ChecklistSpec[] = [
       { name: "APGAR Scoring" }, { name: "Newborn Resuscitation" }, { name: "Thermoregulation" }, { name: "Glucose Monitoring" }, { name: "Circumcision Care" },
     ]},
     { title: "Medications", skills: [
-      { name: "Oxytocin" }, { name: "Magnesium Sulfate" }, { name: "Terbutaline" }, { name: "Misoprostol" }, { name: "RhoGAM" },
+      { name: "Oxytocin" }, { name: "Magnesium Sulfate" }, { name: "Terbutaline" }, { name: "Misoprostol" }, { name: "RhoGAM (Evaluate Indication/Effectiveness)" }, { name: "Prostin Gel (Preterm Labor Management)" }, { name: "Opioid Conversion Chart/Controlled Substance Procedures" },
+    ]},
+    { title: "Maternal Risk Assessment & Diagnostics", skills: [
+      { name: "Perform Initial Risk Assessment" }, { name: "Recognize Signs of Drug/Alcohol Dependence" }, { name: "Implement High Fall Risk Interventions" }, { name: "Assess and Care for Common Acute Illnesses (e.g., Influenza)" }, { name: "Patient/Family Education" }, { name: "Suicide Risk Screening" }, { name: "Perform/Evaluate Electrocardiogram" }, { name: "Communicate Results of Ultrasound Studies" }, { name: "Palpating for Uterine Contractions" },
+    ]},
+    { title: "Labor & Delivery Procedures & Equipment", skills: [
+      { name: "Insertion of Peripheral IV Catheter" }, { name: "Application of Intrauterine Pressure Catheter" }, { name: "Operate/Troubleshoot Infant Warmers" }, { name: "Basic Life Support/Manual Ventilation" }, { name: "Blood Product Administration Protocol" }, { name: "Identify Patient's Current Stage of Labor" }, { name: "Instrument and Towel Counts" }, { name: "Electronic Fetal Monitoring Device" }, { name: "HIPAA Adherence in L&D Setting" }, { name: "Cord Blood Collection, Handling, and Labeling" },
+    ]},
+    { title: "Obstetric Emergencies", skills: [
+      { name: "OB Hemorrhage Protocol" }, { name: "Recognize Prolapsed Cord" }, { name: "Recognize Placenta Previa" }, { name: "Perform Emergency Delivery Without Physician Present" },
+    ]},
+    { title: "Professional & Ethical Practice", skills: [
+      { name: "Adherence to Emergency Response Plans (e.g., Inclement Weather)" }, { name: "Data Collection for Performance Improvement Program" }, { name: "Follow Supervision and Delegation Guidelines" }, { name: "Facility Procedures for Specialty Circumstances (e.g., Adoption)" },
     ]},
   ]},
 
