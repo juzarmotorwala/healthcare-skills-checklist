@@ -2,23 +2,41 @@ import { ChecklistSpec } from "../checklistData";
 
 export const therapyRehabChecklists: ChecklistSpec[] = [
   { slug: "pt-self", title: "Physical Therapy Self-Assessment Skills Checklist", shortTitle: "PT Self-Assessment", icon: "🏃", group: "Therapy & Rehab", categories: [
-    { title: "Work Settings", skills: [
-      { name: "Adult/adult ICU" }, { name: "Children's hospital" }, { name: "General acute care" }, { name: "Home health care" }, { name: "Outpatient neuro" }, { name: "Outpatient ortho" }, { name: "Inpatient rehab" }, { name: "Skilled nursing facility" }, { name: "Pediatric" }, { name: "School system" },
+    { title: "Practice Settings", skills: [
+      { name: "Adult/adult ICU" }, { name: "Children's hospital" }, { name: "General acute care" }, { name: "Home health care" }, { name: "Outpatient neuro" }, { name: "Outpatient ortho" }, { name: "Inpatient rehab facility (IRF)" }, { name: "Skilled nursing facility" }, { name: "Pediatric outpatient clinic" }, { name: "School-based practice" }, { name: "Hospice and palliative care" }, { name: "Psychiatric hospital" }, { name: "Community-based practice setting" }, { name: "Telehealth practice" }, { name: "Hospital-based rehab unit" }, { name: "Pulmonary rehabilitation" }, { name: "Vocational rehab center" }, { name: "Early intervention" }, { name: "Workplace health and rehabilitation" }, { name: "Primary care clinic" }, { name: "Emerging practice area (health, wellness, and prevention)" }, { name: "Cardiac rehabilitation" }, { name: "Home health" },
     ]},
-    { title: "Orthopedic", skills: [
-      { name: "Total Hip Replacement" }, { name: "Total Knee Replacement" }, { name: "Spinal Surgery" }, { name: "Fracture Management" }, { name: "Rotator Cuff Repair" }, { name: "ACL Reconstruction" }, { name: "Carpal Tunnel Release" }, { name: "Joint Mobilization" }, { name: "Manual Therapy" },
+    { title: "Patient Populations – Orthopedic", skills: [
+      { name: "Total Hip Replacement" }, { name: "Total Knee Replacement" }, { name: "Spinal orthopedic conditions" }, { name: "Fracture Management" }, { name: "Rotator Cuff Repair" }, { name: "ACL Reconstruction" }, { name: "Carpal Tunnel Release" }, { name: "UE/LE amputation" }, { name: "UE/LE orthopedic conditions" }, { name: "UE/LE surgery" }, { name: "Musculoskeletal pain" }, { name: "Arthritis" },
     ]},
-    { title: "Neurological", skills: [
-      { name: "CVA/Stroke" }, { name: "Traumatic Brain Injury" }, { name: "Spinal Cord Injury" }, { name: "Multiple Sclerosis" }, { name: "Parkinson's Disease" }, { name: "Guillain-Barré" },
+    { title: "Patient Populations – Neurologic", skills: [
+      { name: "CVA/Stroke" }, { name: "Traumatic Brain Injury" }, { name: "Spinal Cord Injury" }, { name: "Multiple Sclerosis" }, { name: "Parkinson's Disease" }, { name: "Guillain-Barré syndrome" }, { name: "Radiculopathy" }, { name: "Neuropathy" }, { name: "Huntington's disease" }, { name: "Peripheral nerve injury" }, { name: "Complex regional pain syndrome (CRPS)" }, { name: "Dementia/Alzheimer's disease" }, { name: "Epilepsy/Seizure disorders" }, { name: "Spinal surgery" }, { name: "Amyotrophic lateral sclerosis (ALS)" },
     ]},
-    { title: "Cardiopulmonary", skills: [
-      { name: "Cardiac Rehabilitation" }, { name: "Pulmonary Rehabilitation" }, { name: "Post-surgical Mobility" }, { name: "Airway Clearance Techniques" },
+    { title: "Patient Populations – Cardiopulmonary & Mental Health", skills: [
+      { name: "Cardiac Rehabilitation" }, { name: "Pulmonary Rehabilitation" }, { name: "Post-surgical Mobility" }, { name: "Airway Clearance Techniques" }, { name: "Cardiovascular conditions/surgery" }, { name: "Tracheostomies/ventilator dependency" }, { name: "Anxiety" }, { name: "Bipolar disorder" }, { name: "Depression" }, { name: "Schizophrenia" }, { name: "Personality disorders" },
     ]},
-    { title: "Modalities", skills: [
-      { name: "Ultrasound" }, { name: "Electrical Stimulation" }, { name: "TENS" }, { name: "Iontophoresis" }, { name: "Hot/Cold Packs" }, { name: "Traction" }, { name: "Whirlpool" },
+    { title: "Patient Populations – Pediatric & Other", skills: [
+      { name: "Musculoskeletal disorders (torticollis, scoliosis)" }, { name: "Congenital anomalies" }, { name: "Genetic conditions (Down syndrome, Fragile X)" }, { name: "Juvenile rheumatoid arthritis" }, { name: "Cerebral palsy" }, { name: "Autism" }, { name: "Sensory processing disorders" }, { name: "Spina bifida" }, { name: "Behavioral disorders" }, { name: "Intellectual disability" }, { name: "Lymphedema" }, { name: "Chronic pain" }, { name: "Obesity/Bariatric care" }, { name: "Burns" }, { name: "Oncology" }, { name: "Organ transplantation" },
     ]},
-    { title: "Functional Activities", skills: [
-      { name: "Gait Training" }, { name: "Transfer Training" }, { name: "Wheelchair Training" }, { name: "Stair Training" }, { name: "Balance Training" }, { name: "Fall Prevention" },
+    { title: "Evaluation & Assessment", skills: [
+      { name: "Vital signs, edema, and circulation" }, { name: "Integumentary status" }, { name: "Cardiopulmonary status (dyspnea, activity tolerance)" }, { name: "Medical record review" }, { name: "Cognitive screening (MoCA, SLUMS)" }, { name: "Reflexes, muscle function, and range of motion" }, { name: "Posture and sensation" }, { name: "Muscle tone and cranial nerve integrity" }, { name: "Coordination and sensory processing" }, { name: "Bed mobility and transfers" }, { name: "Gait and balance assessment" }, { name: "Lymphedema and pediatric assessment" }, { name: "Ergonomic and work capacity evaluation" }, { name: "Wheelchair and seating assessment" }, { name: "Pelvic health assessment" }, { name: "Functional capacity evaluation" }, { name: "Develop functional goals and plan for reassessment" }, { name: "Document evaluation findings and plans of care" }, { name: "Develop plan for discharge and transitional services" },
+    ]},
+    { title: "Interventions – Functional & Neuromuscular", skills: [
+      { name: "Gait Training" }, { name: "Transfer Training" }, { name: "Wheelchair Training" }, { name: "Stair Training" }, { name: "Balance Training" }, { name: "Fall Prevention" }, { name: "Return to sport training" }, { name: "Work simplification and energy conservation" }, { name: "Compensatory strategies (adaptive equipment)" }, { name: "Therapeutic exercise" }, { name: "Proprioceptive neuromuscular facilitation (PNF)" }, { name: "Tone management" }, { name: "Postural re-education" }, { name: "Sensory re-education/integration" }, { name: "Neurodevelopmental techniques (NDT)" }, { name: "Edema management" },
+    ]},
+    { title: "Interventions – Manual & Modalities", skills: [
+      { name: "Joint Mobilization" }, { name: "Manual Therapy" }, { name: "Passive Range of Motion" }, { name: "Instrument-assisted soft tissue mobilization" }, { name: "Joint manipulation (state dependent)" }, { name: "Ultrasound" }, { name: "Electrical Stimulation (NMES, FES)" }, { name: "TENS" }, { name: "Iontophoresis" }, { name: "Hot/Cold Packs" }, { name: "Traction" }, { name: "Whirlpool" }, { name: "Dry needling (setting/state dependent)" }, { name: "Compressive therapies (bandaging, compression garments)" }, { name: "Aquatic therapy" }, { name: "Biofeedback" }, { name: "Taping" }, { name: "Paraffin bath" },
+    ]},
+    { title: "Interventions – Wound Care, Orthotic/Prosthetic & Assistive Tech", skills: [
+      { name: "Wound staging/classification and debridement" }, { name: "Dressings" }, { name: "Lumbosacral and cervical orthoses" }, { name: "Pre-fabricated splints and orthoses" }, { name: "LE prostheses and orthoses" }, { name: "Client/caregiver training on device use" }, { name: "Wheelchair skills training" }, { name: "Selection/modification of assistive technology" }, { name: "DME and wheelchair ordering" }, { name: "Burn management" }, { name: "Work hardening" }, { name: "Ergonomic interventions" }, { name: "Lymphedema management" }, { name: "Pelvic health interventions" },
+    ]},
+    { title: "Collaboration & Education", skills: [
+      { name: "Energy conservation and joint protection techniques" }, { name: "Splint/orthotic wear and care" }, { name: "ADL techniques and adaptive equipment use" }, { name: "Caregiver training in safe mobility and body mechanics" }, { name: "Environmental and home modifications" }, { name: "Pain management education" }, { name: "Home exercise programs" }, { name: "Safety strategies and postoperative precautions" }, { name: "Participate in strategies to reduce/eliminate restraint use" }, { name: "Communicate goals and care plans with interdisciplinary team" }, { name: "Advocate for clients and caregivers" }, { name: "Support health equity and social determinants of health" },
+    ]},
+    { title: "Regulatory & Professional Responsibilities", skills: [
+      { name: "Document interventions and outcomes" }, { name: "Compliance with payer documentation requirements (Medicare)" }, { name: "Support medical necessity and skilled services" }, { name: "Setting-specific documentation (MDS, OASIS)" }, { name: "DME justification and documentation" }, { name: "Supervise assistants, aides, students, and volunteers" }, { name: "Advance directives and informed consent" }, { name: "Maintain client confidentiality (HIPAA)" }, { name: "Mandatory reporting guidelines" }, { name: "Standard precautions and infection control" }, { name: "Use of PPE and facility safety protocols" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth - 1 year)" }, { name: "Toddler (1-3 years)" }, { name: "Pre-school (3-6 years)" }, { name: "School Age (6-12 years)" }, { name: "Adolescent (12-18 years)" }, { name: "Young Adult (18-30 years)" }, { name: "Mature Adult (30-60 years)" }, { name: "Elderly (>60 years)" },
     ]},
   ]},
 
