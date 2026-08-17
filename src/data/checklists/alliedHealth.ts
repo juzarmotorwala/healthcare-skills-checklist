@@ -2,20 +2,47 @@ import { ChecklistSpec } from "../checklistData";
 
 export const alliedHealthChecklists: ChecklistSpec[] = [
   { slug: "pharmacist", title: "Pharmacist Skills Checklist", shortTitle: "Pharmacist", icon: "💊", group: "Allied Health", categories: [
+    { title: "Education & Certification", skills: [
+      { name: "Bachelor of Pharmacy (B Pharm/BS Pharm)" }, { name: "Doctor of Pharmacy (PharmD)" }, { name: "Pharmacy Residency (PGY-1/PGY-2)" }, { name: "Pharmacy Fellowship" }, { name: "Board Certification (BCPS, BCCCP, BCOP, BCPPS, BCACP, BCIDP, BCCP, BCPP, BCEMP, BCNP, BCTXP, BCSCP, BCNSP, BCGP)" }, { name: "Basic Life Support (BLS)" }, { name: "ACLS/PALS Certification" }, { name: "Immunization Delivery Certification" },
+    ]},
     { title: "Practice Settings/Experience", skills: [
-      { name: "Academia" }, { name: "Ambulatory Care" }, { name: "Clinic" }, { name: "Compounding" }, { name: "Consulting" }, { name: "Correctional Facility" }, { name: "Government/VA" }, { name: "Home Infusion" }, { name: "Hospital Inpatient" }, { name: "Hospital Outpatient" }, { name: "Long Term Care" }, { name: "Managed Care" }, { name: "Nuclear Pharmacy" }, { name: "Oncology" }, { name: "Pediatric" }, { name: "Psychiatric" }, { name: "Retail/Community" },
+      { name: "Academia" }, { name: "Ambulatory Care" }, { name: "Clinic" }, { name: "Compounding" }, { name: "Consulting" }, { name: "Correctional Facility" }, { name: "Government/VA" }, { name: "Home Infusion" }, { name: "Hospital Inpatient" }, { name: "Hospital Outpatient" }, { name: "Long Term Care" }, { name: "Managed Care Organization" }, { name: "Nuclear Pharmacy" }, { name: "Oncology" }, { name: "Pediatric" }, { name: "Psychiatric" }, { name: "Retail/Community" }, { name: "Centralized/Decentralized Pharmacy" }, { name: "Hospice" }, { name: "Mail Order" }, { name: "Poison Control" }, { name: "Pharmacy Benefit Management" }, { name: "Pharmaceutical Industry" }, { name: "Research" }, { name: "Veterinary" },
+    ]},
+    { title: "Inpatient Hospital Settings", skills: [
+      { name: "Medical-Surgical Unit" }, { name: "Intensive Care Unit" }, { name: "Operating Room" }, { name: "Critical Care" }, { name: "Behavioral Health Unit" }, { name: "Transplantation Unit" }, { name: "Acute Care" },
     ]},
     { title: "Clinical Skills", skills: [
-      { name: "Medication Therapy Management" }, { name: "Drug Information" }, { name: "Pharmacokinetics" }, { name: "IV Admixture/Compounding" }, { name: "TPN Compounding" }, { name: "Chemotherapy Preparation" }, { name: "Anticoagulation Management" }, { name: "Pain Management" },
+      { name: "Medication Therapy Management" }, { name: "Drug Information" }, { name: "Pharmacokinetics" }, { name: "IV Admixture/Compounding" }, { name: "TPN Compounding" }, { name: "Chemotherapy Preparation" }, { name: "Anticoagulation Management" }, { name: "Pain Management" }, { name: "Antimicrobial Stewardship" }, { name: "Medication Error Reporting" }, { name: "Patient Counseling/Direct Patient Care" }, { name: "Drug/Drug Interactions Review and Management" }, { name: "Therapeutic Drug Monitoring" }, { name: "Pharmacogenomics" }, { name: "Medication Reconciliation" }, { name: "Aseptic Technique" }, { name: "Code Blue (CPR) Management" }, { name: "Discharge Planning" }, { name: "Clinical Consultation/Drug Information" }, { name: "Adverse Drug Reaction Monitoring" }, { name: "Interdisciplinary Rounding" }, { name: "Transition of Care" }, { name: "Drug Utilization/Drug Dosing Review" },
+    ]},
+    { title: "Special Patient Populations", skills: [
+      { name: "Geriatric" }, { name: "Patients with Hepatic Impairment" }, { name: "Oncology" }, { name: "Pediatric" }, { name: "Pregnant Patients" }, { name: "Patients with Renal Impairment" }, { name: "Transplant" },
+    ]},
+    { title: "Disease States", skills: [
+      { name: "Sepsis/Septic Shock" }, { name: "Dermatology (SJS/TEN, cellulitis)" }, { name: "Vascular (DVT, PE)" }, { name: "Pain Management" }, { name: "Gastrointestinal" }, { name: "Psychiatric" }, { name: "Diabetes (DKA)" }, { name: "Renal Disorders (UTIs, AKIs)" }, { name: "Toxicology (drug overdose, venomous bites/stings)" }, { name: "Cardiology (MI, Heart Failure, Afib)" }, { name: "Hepatic Disorders" }, { name: "Respiratory (Asthma, COPD, RSV, COVID-19, Pneumonia, Influenza)" }, { name: "Dyslipidemia" }, { name: "Neurology (Seizure Disorder, Stroke)" }, { name: "Infectious Diseases" }, { name: "Hypertension" }, { name: "Immunology (anaphylaxis)" },
+    ]},
+    { title: "Therapeutics", skills: [
+      { name: "Intravenous (IV) Fluids" }, { name: "Antiemetics" }, { name: "Opioids/Analgesics" }, { name: "Antihypertensives and Diuretics" }, { name: "Gastrointestinal Medications (GI Cocktail, PPIs, H2RAs)" }, { name: "Glucocorticoids" }, { name: "Inotropes and Vasopressors" }, { name: "Chemotherapy" }, { name: "Electrolyte Solutions" }, { name: "Antibiotics" }, { name: "Antiarrhythmics" }, { name: "Immunosuppressants" }, { name: "Anticonvulsants" }, { name: "Total Parenteral Nutrition (TPN)" }, { name: "Diabetes Management Agents (insulin)" }, { name: "Antithrombotic (Antiplatelets, Anticoagulants, Fibrinolytics)" }, { name: "Bronchodilators" }, { name: "Lipid Lowering Agents" }, { name: "Antipsychotics" },
+    ]},
+    { title: "Calculations", skills: [
+      { name: "Opioid Morphine Milligram Equivalents (MME)" }, { name: "Temperature Conversions" }, { name: "Aminoglycoside Dosing" }, { name: "Absolute Neutrophil Count (ANC)" }, { name: "Ideal Body Weight" }, { name: "CHADS2-VASc Score" }, { name: "Pharmacokinetic (Clearance, Half-life, Vd)" }, { name: "Anion Gap" }, { name: "Warfarin Dosing" }, { name: "Creatinine Clearance: Cockcroft-Gault Equation" }, { name: "Body Surface Area (BSA)" }, { name: "Digoxin Dosing and Steady State" }, { name: "Adjusted Body Weight" }, { name: "Opioid Analgesic Conversion" }, { name: "Vancomycin Dosing (AUC and Trough)" }, { name: "Creatinine Clearance: MDRD" }, { name: "Heparin Dosing and Indications" }, { name: "CHADS2 Score" }, { name: "Pediatric Dosing (Young's Rule, Clark's Rule, Fried's Rule)" }, { name: "Osmolarity" },
+    ]},
+    { title: "IV Fluid/Electrolyte Skills", skills: [
+      { name: "Calculate % weight in volume / weight in weight / volume in volume" }, { name: "Milliequivalent (mEq) Calculations and mg/mEq Conversion" }, { name: "IV Drip Rate Calculations" }, { name: "Compounding Calculations for sterile preparations" }, { name: "IV Diluent-Medication Compatibility" }, { name: "Concentration and Dilution Calculations, Mixing Ratios" }, { name: "TPN Composition and Infusion Rate Calculations" }, { name: "Reconstitution Calculations" }, { name: "IV Preparation" }, { name: "Millimoles vs Milligrams Conversions" },
+    ]},
+    { title: "Therapeutic Knowledge & Clinical Judgment", skills: [
+      { name: "Identify appropriate medications, doses, dose intervals" }, { name: "Identify required monitoring" }, { name: "Monitor therapeutic drug levels (e.g., digoxin)" }, { name: "Assess antibiotic appropriateness via sensitivity/antibiogram" }, { name: "Identify medications for surgical prophylaxis" }, { name: "Dose adjustments for hepatic/renal impairment" }, { name: "Identify gaps in therapy" }, { name: "Weight- and age-based dose adjustments" }, { name: "Pediatric dosing based on age, weight, BSA" }, { name: "Medications via feeding tubes (GT, NG, GB, JT, NJ)" }, { name: "Infection coverage appropriateness (MRSA, Pseudomonas, VRE)" }, { name: "Contraindicated medications" }, { name: "Review pertinent lab values" }, { name: "Evidence-based guideline application" }, { name: "Monitor lab values for dosing appropriateness (INR)" }, { name: "Identify incorrect medication infusion rates" }, { name: "Anticoagulant switching" }, { name: "Identify adverse drug events" }, { name: "Medications that can be crushed for oral administration" }, { name: "Identify empiric antibiotics based on indication" }, { name: "Interpret lab values/identify abnormal ranges" }, { name: "Identify duplicative therapy" }, { name: "Sepsis criteria" }, { name: "IV to PO conversions" }, { name: "Identify incorrect drug dosing or frequency" },
     ]},
     { title: "Dispensing", skills: [
       { name: "Prescription Processing" }, { name: "Medication Verification" }, { name: "Patient Counseling" }, { name: "Drug Utilization Review" }, { name: "Controlled Substance Management" },
     ]},
     { title: "Technology", skills: [
-      { name: "Automated Dispensing (Pyxis, Omnicell)" }, { name: "IV Workflow Systems" }, { name: "Electronic Health Record" }, { name: "CPOE" }, { name: "Barcode Verification" },
+      { name: "Automated Dispensing (Pyxis, Omnicell)" }, { name: "IV Workflow Systems" }, { name: "Electronic Health Record" }, { name: "CPOE" }, { name: "Barcode Verification" }, { name: "Informatics" },
     ]},
     { title: "Regulatory", skills: [
-      { name: "Joint Commission Standards" }, { name: "State Board of Pharmacy" }, { name: "DEA Regulations" }, { name: "USP 797/800 Compliance" }, { name: "Medication Error Reporting" },
+      { name: "Joint Commission Standards" }, { name: "State Board of Pharmacy" }, { name: "DEA Regulations" }, { name: "USP 797/800 Compliance" }, { name: "Medication Error Reporting" }, { name: "Pharmacy and Therapeutics Committee" }, { name: "Drug Protocol/Guideline Development and Management" }, { name: "Inventory Management" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth - 1 year)" }, { name: "Toddler (1-3 years)" }, { name: "Pre-school (3-6 years)" }, { name: "School Age (6-12 years)" }, { name: "Adolescent (12-18 years)" }, { name: "Young Adult (18-30 years)" }, { name: "Mature Adult (30-60 years)" }, { name: "Elderly (>60 years)" },
     ]},
   ]},
 
