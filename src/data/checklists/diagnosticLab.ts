@@ -302,14 +302,29 @@ export const diagnosticLabChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "mri-tech", title: "MRI Technologist Skills Checklist", shortTitle: "MRI Tech", icon: "🧲", group: "Diagnostic & Lab", categories: [
-    { title: "Procedures", skills: [
-      { name: "Brain/spine MRI" }, { name: "Musculoskeletal MRI" }, { name: "Abdominal/pelvic MRI" }, { name: "Cardiac MRI" }, { name: "MR angiography" }, { name: "Contrast-enhanced studies" },
+    { title: "Head, Neck & Spine Imaging", skills: [
+      { name: "Brain/spine MRI" }, { name: "Pituitary" }, { name: "IAC (internal auditory canal)" }, { name: "MRA head and MRV head" }, { name: "Spectroscopy" }, { name: "Cranial nerves (non-IAC)" }, { name: "Head trauma" }, { name: "MRA neck/carotid arteries" }, { name: "Soft tissue neck" }, { name: "Functional MRI" }, { name: "Orbit" }, { name: "Brain perfusion" }, { name: "Lumbar, cervical, and thoracic spine" }, { name: "Sacrum/coccyx" },
+    ]},
+    { title: "Thorax, Abdomen & Pelvis Imaging", skills: [
+      { name: "Abdominal/pelvic MRI" }, { name: "Cardiac MRI" }, { name: "Brachial plexus" }, { name: "Breast" }, { name: "Chest (non-cardiac)" }, { name: "Enterography" }, { name: "Liver and pancreas" }, { name: "Kidneys" }, { name: "Appendix" }, { name: "MRCP" }, { name: "Soft tissue pelvis (bladder, rectum, anus)" }, { name: "Male anatomy (prostate, testes)" }, { name: "Female anatomy (uterus/cervix, ovaries, vagina)" },
+    ]},
+    { title: "Musculoskeletal Imaging", skills: [
+      { name: "Musculoskeletal MRI" }, { name: "Knee" }, { name: "SC joints" }, { name: "Arthrography" }, { name: "Elbow" }, { name: "Bony pelvis" }, { name: "Wrist" }, { name: "Hand, fingers, and thumb" }, { name: "Ankle and foot" }, { name: "Shoulder" }, { name: "Hip" }, { name: "Long bones (humerus, forearm, femur, lower leg)" }, { name: "Temporomandibular joint" }, { name: "SI joints" }, { name: "MPR acquisitions" }, { name: "Post process 3D imaging" },
+    ]},
+    { title: "Imaging Techniques & Pulse Sequences", skills: [
+      { name: "MR angiography" }, { name: "Contrast-enhanced studies" }, { name: "Turbo spin echo imaging" }, { name: "Multiplanar reconstruction" }, { name: "Diffusion images" }, { name: "T-1 and T-2 weighted images" }, { name: "Proton density weighted images" }, { name: "MIP reconstruction" }, { name: "Fat saturation and non-fat saturation" }, { name: "Gradient echo and spin-echo imaging" }, { name: "STIR and FLAIR imaging" }, { name: "Metal reduction imaging" }, { name: "Subtraction reformat" }, { name: "Cine/CSF flow imaging" },
     ]},
     { title: "Safety & Equipment", skills: [
-      { name: "MRI safety screening (implants, ferrous objects)" }, { name: "Contrast administration" }, { name: "Coil selection and setup" }, { name: "Sequence protocol selection" }, { name: "Emergency response in magnet room" },
+      { name: "MRI safety screening (implants, ferrous objects)" }, { name: "Contrast administration" }, { name: "Coil selection and setup" }, { name: "Sequence protocol selection" }, { name: "Emergency response in magnet room" }, { name: "Transmit/receive coil and surface coils" }, { name: "Inherent body coil" }, { name: "Open and closed bore systems" },
     ]},
     { title: "Patient Care", skills: [
-      { name: "Claustrophobia management" }, { name: "Pediatric sedation coordination" }, { name: "Patient positioning" },
+      { name: "Claustrophobia management" }, { name: "Pediatric sedation coordination" }, { name: "Patient positioning" }, { name: "Starting IVs" }, { name: "Choosing appropriate contrast and correct dosage calculation" },
+    ]},
+    { title: "Practice Setting Experience", skills: [
+      { name: "Management experience" }, { name: "Physician's office" }, { name: "Mobile route" }, { name: "Teaching/educational" }, { name: "Hospital" }, { name: "Clinic" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
     ]},
   ]},
 
