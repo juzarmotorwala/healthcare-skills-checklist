@@ -65,14 +65,44 @@ export const diagnosticLabChecklists: ChecklistSpec[] = [
     { title: "Setting", skills: [
       { name: "Adult Inpatient" }, { name: "ER/Trauma" }, { name: "Adult Outpatient" }, { name: "Pediatric Inpatient" }, { name: "Pediatric Outpatient" },
     ]},
-    { title: "Procedures", skills: [
-      { name: "Chest X-ray" }, { name: "Abdominal X-ray" }, { name: "Extremity X-ray" }, { name: "Spine X-ray" }, { name: "Skull X-ray" }, { name: "Portable/Mobile X-ray" }, { name: "Fluoroscopy" }, { name: "OR/C-Arm" },
+    { title: "Equipment Operation & Quality Control", skills: [
+      { name: "C-Arm" }, { name: "Fluoroscopy" }, { name: "Fixed X-Ray Machine" }, { name: "Portable X-Ray Machine" }, { name: "Plate Size" }, { name: "Contamination" }, { name: "Troubleshooting Errors/Breakdowns" }, { name: "Start Up and Shut Down Procedures" }, { name: "Charging" }, { name: "Cleaning" }, { name: "Improper Temperature" }, { name: "Grid Holders" }, { name: "Filters" }, { name: "Pig-O-Stat" }, { name: "Positioning Devices" }, { name: "Image Receptors" }, { name: "Stationary Grids" }, { name: "CR (Computed Radiography)" }, { name: "DR (Digital Radiography)" }, { name: "Quality Control" },
     ]},
-    { title: "Patient Care", skills: [
-      { name: "Patient Positioning" }, { name: "Contrast Administration" }, { name: "IV Access" }, { name: "Radiation Safety" }, { name: "Patient Assessment" },
+    { title: "Imaging Principles & Terminology", skills: [
+      { name: "Projection (AP, PA, Lateral, LPO, RPO, RAO, LAO, Tangential, Axial)" }, { name: "Common Acronyms (NPO, DNR, ALARA, GFR, BUN, AEC, kVp, mAs)" }, { name: "Central Ray" }, { name: "Positioning and Planes" }, { name: "Film Screen Speed" }, { name: "Contrast/Gray Scale" }, { name: "Distance" }, { name: "Identification Markers" }, { name: "Grid" }, { name: "mA Control" }, { name: "Filtration" }, { name: "Distortion" }, { name: "Timer" }, { name: "Anatomical Markers" }, { name: "Beam Restriction" }, { name: "Brightness/Density" }, { name: "kVp" }, { name: "Anode Heel Effect" }, { name: "Image Artifacts" }, { name: "Evaluate and Communicate Radiologic Findings to Radiologists" },
     ]},
-    { title: "Equipment", skills: [
-      { name: "CR (Computed Radiography)" }, { name: "DR (Digital Radiography)" }, { name: "PACS" }, { name: "Quality Control" },
+    { title: "Film & Digital Processing", skills: [
+      { name: "Processing Solutions" }, { name: "Film Storage" }, { name: "Chemicals" }, { name: "Edge Enhancement" }, { name: "Ghost Imaging" }, { name: "Readout Problems" }, { name: "Masking" }, { name: "Noise Suppression" }, { name: "Erasure" }, { name: "Contrast Enhancement" }, { name: "Dead Pixels" }, { name: "Gray-Scale Rendition" }, { name: "PACS" },
+    ]},
+    { title: "Imaging Procedures", skills: [
+      { name: "Chest X-ray" }, { name: "Abdominal X-ray" }, { name: "Extremity X-ray" }, { name: "Spine X-ray" }, { name: "Skull X-ray" }, { name: "Portable/Mobile X-ray" }, { name: "OR/C-Arm" }, { name: "Surgery (C-Arm/Portable)" }, { name: "Swallowing Studies" }, { name: "Barium Enema" }, { name: "IVP" }, { name: "Trauma Cases" }, { name: "GI Tract (Upper and Lower)" }, { name: "Myelogram" }, { name: "Maintain Appropriate Documentation" }, { name: "Assist Physician/Nurse During Procedures" }, { name: "Prioritization: Codes, Routine, Stats, Trauma" },
+    ]},
+    { title: "Anatomy, Physiology & Abnormal Findings", skills: [
+      { name: "Spine (Cervical, Thoracic, Lumbar, Pelvis)" }, { name: "Biliary System" }, { name: "GI System" }, { name: "Upper Extremities" }, { name: "Lower Extremities" }, { name: "Chest/Thorax" }, { name: "Cardiovascular System" }, { name: "Head (Facial, Nasal, Orbital Bones; Mandible)" }, { name: "Reproductive Systems" }, { name: "Abdomen" }, { name: "Urinary System" }, { name: "Gallstones" }, { name: "Pneumothorax" }, { name: "Skeletal Fractures" }, { name: "Obstructions (Small Bowel and Colon)" }, { name: "Renal Stones" },
+    ]},
+    { title: "Contraindications & Contrast Media", skills: [
+      { name: "Allergic Reactions" }, { name: "Abnormal Lab Results" }, { name: "Medication Interactions" }, { name: "Barium" }, { name: "Storage" }, { name: "Non-Ionic" }, { name: "Administration" }, { name: "Water Soluble" }, { name: "Iodinated" }, { name: "Ionic" }, { name: "Reactions" },
+    ]},
+    { title: "Patient Preparation & IV Access", skills: [
+      { name: "Diagnosis" }, { name: "Required Lab Results (BUN, Creatinine, GFR, etc.)" }, { name: "Patient Identification" }, { name: "Obtain/Assess Vital Signs" }, { name: "Pregnancy Status" }, { name: "Obtain/Verify Consent" }, { name: "Implantable Devices" }, { name: "NPO Status" }, { name: "History & Physical" }, { name: "Bleeding" }, { name: "Start Peripheral IV" }, { name: "Extravasation" }, { name: "Infiltration" }, { name: "Flushing" }, { name: "IV Access" },
+    ]},
+    { title: "Patient Care & Equipment Management", skills: [
+      { name: "Nasogastric Tube" }, { name: "Chest Tube" }, { name: "Oxygen Tank" }, { name: "Urinary Catheter" }, { name: "Tracheostomy Tube" }, { name: "Infusion Pump" }, { name: "Maintain Safe and Comfortable Care" }, { name: "Perform Basic Life Support/CPR" }, { name: "Patient Positioning" }, { name: "Patient Assessment" },
+    ]},
+    { title: "Infection Control & Body Mechanics", skills: [
+      { name: "Isolation Precautions" }, { name: "Standard Precautions" }, { name: "Hand Hygiene" }, { name: "Disposal of Contaminated Materials" }, { name: "Sterile Technique" }, { name: "PPE" }, { name: "Patient Positioning for X-rays/Procedures" }, { name: "Transport" }, { name: "Transfers" },
+    ]},
+    { title: "Medical Emergencies & Special Populations", skills: [
+      { name: "Physical Injury" }, { name: "Seizures" }, { name: "Allergic Reactions (Latex, Contrast Media)" }, { name: "Diabetic Reactions" }, { name: "Cardiac or Respiratory Arrest" }, { name: "Special-Needs" }, { name: "Pediatrics" }, { name: "Geriatrics" },
+    ]},
+    { title: "Professional Practice", skills: [
+      { name: "Follow State, Federal and Hospital Policies and Protocols" }, { name: "Maintain and Follow Medical Records Release Protocols" }, { name: "Establish and Maintain Effective Working Relationships" }, { name: "Maintain and Perform Within Scope of Practice" }, { name: "Report Incidents Outside of Code of Ethics" }, { name: "Maintain Continuing Education Requirements" }, { name: "Maintain Chain of Command" }, { name: "HIPAA" }, { name: "Advanced Directives" }, { name: "Patient Restraints" }, { name: "Informed Consent" }, { name: "OSHA Regulations" }, { name: "Health Care Proxy" }, { name: "Patient Rights" }, { name: "Joint Commission Standards" }, { name: "Do-Not-Resuscitate" },
+    ]},
+    { title: "Radiation Safety", skills: [
+      { name: "Proper Shielding Techniques" }, { name: "Dosimeters" }, { name: "Correct Dosages" }, { name: "Genetic Impact" }, { name: "Acute Radiation Syndrome" }, { name: "Embryonic and Fetal Risks" }, { name: "Radiosensitivity" }, { name: "Somatic Effects" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
     ]},
   ]},
 
