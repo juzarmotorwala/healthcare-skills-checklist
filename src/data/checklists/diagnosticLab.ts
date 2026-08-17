@@ -276,13 +276,13 @@ export const diagnosticLabChecklists: ChecklistSpec[] = [
 
   { slug: "mammographer", title: "Mammographer Skills Checklist", shortTitle: "Mammographer", icon: "🎗️", group: "Diagnostic & Lab", categories: [
     { title: "Procedures", skills: [
-      { name: "Screening mammography" }, { name: "Diagnostic mammography" }, { name: "Stereotactic breast biopsy assist" }, { name: "Breast ultrasound assist" }, { name: "3D tomosynthesis" },
+      { name: "Screening mammography" }, { name: "Diagnostic mammography" }, { name: "Stereotactic breast biopsy assist" }, { name: "Breast ultrasound assist" }, { name: "3D tomosynthesis" }, { name: "Breast Specimen Imaging" },
     ]},
     { title: "Technical Skills", skills: [
-      { name: "Positioning technique" }, { name: "MQSA/ACR compliance" }, { name: "Image quality/QC" }, { name: "Radiation dose management" },
+      { name: "Positioning technique" }, { name: "Medial Lateral (ML) Positioning" }, { name: "Tangential (TAN) Positioning" }, { name: "Film-Screen Mammography" }, { name: "MQSA/ACR/FDA Compliance" }, { name: "Image quality/QC" }, { name: "Radiation dose management" },
     ]},
     { title: "Patient Care", skills: [
-      { name: "Patient comfort and communication" }, { name: "Sensitivity to anxious patients" }, { name: "Documentation and BI-RADS familiarity" },
+      { name: "Patient comfort and communication" }, { name: "Sensitivity to anxious patients" }, { name: "Imaging Patients with Implants" }, { name: "Imaging Patients with Reduction History" }, { name: "Documentation and BI-RADS familiarity" },
     ]},
   ]},
 
