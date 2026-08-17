@@ -41,23 +41,44 @@ export const therapyRehabChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "ot", title: "Occupational Therapy Skills Checklist", shortTitle: "Occupational Therapy", icon: "🧩", group: "Therapy & Rehab", categories: [
-    { title: "Work Settings", skills: [
-      { name: "General acute care" }, { name: "Adult/adult ICU" }, { name: "Pediatrics/PICU" }, { name: "Children's hospital" }, { name: "Hand therapy" }, { name: "Home health care" }, { name: "Inpatient rehab" }, { name: "Outpatient" }, { name: "Skilled nursing facility" }, { name: "School system" }, { name: "Mental health" },
+    { title: "Practice Settings", skills: [
+      { name: "General acute care" }, { name: "Adult/adult ICU" }, { name: "Pediatrics/PICU" }, { name: "Children's hospital" }, { name: "Hand therapy" }, { name: "Home health care" }, { name: "Inpatient rehab facility (IRF)" }, { name: "Outpatient" }, { name: "Skilled nursing facility" }, { name: "School system/school-based practice" }, { name: "Mental health/psychiatric hospital" }, { name: "Early intervention" }, { name: "Vocational rehab center" }, { name: "Primary care clinic" }, { name: "Workplace health and rehabilitation" }, { name: "Community-based practice setting (e.g., adult day program)" }, { name: "Cardiac and pulmonary rehabilitation" }, { name: "Hospice and palliative care" }, { name: "Telehealth practice" },
     ]},
-    { title: "Adult Rehabilitation", skills: [
-      { name: "CVA/Stroke" }, { name: "Traumatic Brain Injury" }, { name: "Spinal Cord Injury" }, { name: "Hip Fracture" }, { name: "Total Joint Replacement" }, { name: "Burns" }, { name: "Cardiac Rehab" },
+    { title: "Patient Populations – Orthopedic & Neurologic", skills: [
+      { name: "LE/UE amputation" }, { name: "Traumatic hand injury" }, { name: "Total knee/hip replacements" }, { name: "Arthritis" }, { name: "UE joint replacements" }, { name: "UE/LE fractures/dislocations" }, { name: "Spinal orthopedic conditions" }, { name: "Polytrauma" }, { name: "CVA/stroke" }, { name: "Traumatic brain injury" }, { name: "Spinal cord injury" }, { name: "Peripheral nerve injury" }, { name: "Guillain-Barré syndrome" }, { name: "Parkinson's disease" }, { name: "Multiple sclerosis" }, { name: "Amyotrophic lateral sclerosis (ALS)" }, { name: "Complex regional pain syndrome (CRPS)" }, { name: "Dementia/Alzheimer's disease" }, { name: "Epilepsy/seizure disorders" },
     ]},
-    { title: "Hand Therapy", skills: [
-      { name: "Carpal Tunnel" }, { name: "Tendon Repair" }, { name: "Fracture Management" }, { name: "Splinting" }, { name: "Wound Care" }, { name: "Edema Management" },
+    { title: "Patient Populations – Cardiopulmonary, Mental Health & Pediatric", skills: [
+      { name: "Cardiovascular conditions/surgery" }, { name: "Tracheostomies and/or ventilator dependency" }, { name: "Pulmonary disease" }, { name: "Depression" }, { name: "Personality disorders" }, { name: "Schizophrenia" }, { name: "Bipolar disorder" }, { name: "Anxiety" }, { name: "Cerebral palsy" }, { name: "Autism" }, { name: "Genetic conditions (e.g., Down syndrome, Fragile X)" }, { name: "Sensory processing disorders" }, { name: "ADHD" }, { name: "Spina bifida" }, { name: "Intellectual disability" }, { name: "Juvenile rheumatoid arthritis" },
     ]},
-    { title: "Pediatric", skills: [
-      { name: "Developmental Delays" }, { name: "Cerebral Palsy" }, { name: "Sensory Processing" }, { name: "Autism Spectrum" }, { name: "Fine Motor Skills" }, { name: "Feeding/Oral Motor" },
+    { title: "Patient Populations – Other", skills: [
+      { name: "Burns" }, { name: "Obesity/bariatric care" }, { name: "Organ transplantation" }, { name: "Oncology" }, { name: "Chronic pain" }, { name: "Feeding and swallowing disorders" },
     ]},
-    { title: "ADL Training", skills: [
-      { name: "Dressing" }, { name: "Bathing" }, { name: "Grooming" }, { name: "Feeding" }, { name: "Toileting" }, { name: "Adaptive Equipment" }, { name: "Home Modification" },
+    { title: "Evaluation – Body Systems & Occupations", skills: [
+      { name: "Vital signs" }, { name: "Edema and circulation" }, { name: "Integumentary status" }, { name: "Cardiopulmonary status (e.g., dyspnea, activity tolerance)" }, { name: "Basic and instrumental ADLs" }, { name: "Functional mobility and gait assessment" }, { name: "Home safety and accessibility" }, { name: "Work capacity evaluation/job task analysis" }, { name: "Home management and routines" }, { name: "Health management (e.g., medication management)" }, { name: "Social participation and community mobility" },
     ]},
-    { title: "Cognitive Rehabilitation", skills: [
-      { name: "Memory Training" }, { name: "Attention/Concentration" }, { name: "Problem Solving" }, { name: "Safety Awareness" }, { name: "Community Reintegration" },
+    { title: "Evaluation – Motor, Sensory & Mental Functions", skills: [
+      { name: "Body positioning and postural control" }, { name: "Object manipulation and fine motor control" }, { name: "Range of motion and muscle tone" }, { name: "Muscle functions (strength, power, endurance)" }, { name: "Sensation (temperature, tactile discrimination)" }, { name: "Sensory processing (visual, tactile, vestibular)" }, { name: "Cranial nerve integrity" }, { name: "Visual perceptual skills" }, { name: "Emotional functions" }, { name: "Executive function (planning)" }, { name: "Attention and sequencing complex movement" },
+    ]},
+    { title: "Evaluation – Specialty Assessment & Plan of Care", skills: [
+      { name: "Pediatric assessment" }, { name: "Driving evaluation" }, { name: "Basic/standard wheelchair and seating assessment" }, { name: "Complex/custom seating and mobility assessment" }, { name: "Ergonomic evaluations" }, { name: "Dysphagia assessment" }, { name: "Develop occupational profiles and functional outcomes" }, { name: "Interpret assessment and screen results" }, { name: "Document evaluation findings, goals, and plans of care" }, { name: "Develop plan for discharge and transitional services" },
+    ]},
+    { title: "Interventions – Functional & ADL Training", skills: [
+      { name: "Dressing" }, { name: "Bathing" }, { name: "Grooming" }, { name: "Feeding" }, { name: "Toileting" }, { name: "Adaptive equipment" }, { name: "Home modification" }, { name: "ADL/IADL training and retraining" }, { name: "Bed mobility and transfers" }, { name: "Compensatory strategies" }, { name: "Work simplification and energy conservation" }, { name: "Feeding, eating, and swallowing interventions" }, { name: "Community mobility and sleep interventions" },
+    ]},
+    { title: "Interventions – Neuromuscular & Cognitive/Psychosocial", skills: [
+      { name: "Sensory integration" }, { name: "Edema management" }, { name: "Reflex and sensory re-education" }, { name: "Oral motor facilitation" }, { name: "Neurodevelopmental techniques (NDT)" }, { name: "Tone management" }, { name: "Manual and postural re-education therapy" }, { name: "Memory Training" }, { name: "Attention/Concentration" }, { name: "Problem Solving" }, { name: "Safety Awareness" }, { name: "Community Reintegration" }, { name: "Mental health strategies (CBT-based approaches)" }, { name: "Trauma-informed care and group therapy" }, { name: "Cognitive retraining and social skills training" },
+    ]},
+    { title: "Interventions – Modalities & Orthotic/Prosthetic Management", skills: [
+      { name: "Paraffin bath and fluidotherapy" }, { name: "TENS and electrical stimulation (NMES, FES)" }, { name: "Biofeedback" }, { name: "Ultrasound and hot/cold packs" }, { name: "Splinting" }, { name: "Static and dynamic splint fabrication" }, { name: "Pre-fabricated splints and orthotics" }, { name: "Serial/inhibitory casting" }, { name: "UE/LE prosthetics" },
+    ]},
+    { title: "Interventions – Assistive Technology & Specialized Care", skills: [
+      { name: "Wheelchair skills training" }, { name: "Selection and modification of assistive technology" }, { name: "DME and wheelchair ordering" }, { name: "Burn management" }, { name: "Ergonomic interventions" }, { name: "Driving re-education" }, { name: "Hand therapy" }, { name: "Lymphedema management" }, { name: "Swallowing therapy (dysphagia management)" }, { name: "Work hardening" }, { name: "Wound care" },
+    ]},
+    { title: "Collaboration & Client/Caregiver Education", skills: [
+      { name: "Collaborate with clients, caregivers, and interdisciplinary team" }, { name: "Advocate for clients and caregivers" }, { name: "Communicate goals and care plans with interdisciplinary team" }, { name: "Caregiver training in safe mobility and body mechanics" }, { name: "Home programs and carryover strategies" }, { name: "Environmental and home modifications" }, { name: "Health and wellness education" }, { name: "Safety strategies and postoperative precautions" }, { name: "ADL techniques and use of adaptive equipment/mobility aids" }, { name: "Energy conservation and joint protection techniques" },
+    ]},
+    { title: "Regulatory & Legal Responsibilities", skills: [
+      { name: "Completion of setting-specific documentation (MDS, OASIS)" }, { name: "Support for medical necessity and skilled services" }, { name: "Documentation and justification for DME" }, { name: "Compliance with payer-specific documentation (Medicare)" }, { name: "Supervise assistants, paraprofessionals, students, and volunteers" }, { name: "Mandatory reporting (abuse, neglect, safety concerns)" }, { name: "Maintain client confidentiality (HIPAA compliance)" }, { name: "Understand and apply advance directives and informed consent" }, { name: "Use of PPE and adherence to facility safety protocols" }, { name: "Standard precautions and infection control practices" },
     ]},
   ]},
 
