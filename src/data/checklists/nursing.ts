@@ -254,6 +254,18 @@ export const nursingChecklists: ChecklistSpec[] = [
     { title: "Musculoskeletal", skills: [
       { name: "Osteoporosis" }, { name: "Osteomyelitis" }, { name: "Rheumatoid arthritis" }, { name: "Juvenile diabetes" }, { name: "Gout" }, { name: "Minor sprains and strains" }, { name: "Osteoarthritis" }, { name: "Carpal tunnel syndrome" }, { name: "Scoliosis" }, { name: "Tendonitis" }, { name: "Bursitis" }, { name: "Muscular dystrophy" },
     ]},
+    { title: "Drug Therapy & Dispensing", skills: [
+      { name: "Knowledge of pharmacology" }, { name: "Knowledge of side effects" }, { name: "Knowledge of pharmacokinetics" }, { name: "Knowledge of drug interactions" }, { name: "Prescription writing" }, { name: "Herbal drugs" }, { name: "Over the counter (OTC)" }, { name: "Knowledge of potential adverse reactions (anaphylaxis, allergic reactions)" }, { name: "Monitoring drug therapy" }, { name: "Management of controlled substances" },
+    ]},
+    { title: "Non-Pharmacologic Interventions", skills: [
+      { name: "Obesity management" }, { name: "Exercise counseling" }, { name: "Medical nutrition therapy" }, { name: "Mental health issues (stress management, depression)" }, { name: "Cessation of substance abuse (alcohol, tobacco)" },
+    ]},
+    { title: "Professional Practice & Quality", skills: [
+      { name: "Self evaluation to improve patient care" }, { name: "Research" }, { name: "Legal and ethical issues" }, { name: "Working within scope of practice" }, { name: "Continuing education" }, { name: "Discharge planning/collaboration" }, { name: "Quality assurance" }, { name: "Confidentiality" }, { name: "Cultural awareness" }, { name: "Public health and health promotion" }, { name: "Leadership and teaching skills" },
+    ]},
+    { title: "Regulatory Programs", skills: [
+      { name: "HEDIS (Health Plan Employer Data and Information Set)" }, { name: "Medicare and Medicaid" }, { name: "DNV Accreditation" }, { name: "CLIA waiver (Clinical Laboratory Improvement Amendments)" }, { name: "DQIP (Diabetes Quality Improvement Program)" }, { name: "OSHA" }, { name: "Joint Commission on Accreditation of Healthcare Organizations" }, { name: "HIPAA" },
+    ]},
   ]},
 
   { slug: "travel-nursing", title: "Travel Nursing Skills Checklist", shortTitle: "Travel Nursing", icon: "✈️", group: "Nursing", categories: [
