@@ -410,17 +410,29 @@ export const nursingChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "rn-iv-therapy", title: "Registered Nurse IV Therapy / Infusion Skills Checklist", shortTitle: "RN IV Therapy", icon: "💧", group: "Nursing", categories: [
-    { title: "Vascular Access", skills: [
-      { name: "Peripheral IV insertion" }, { name: "Ultrasound-guided IV insertion" }, { name: "PICC line care and maintenance" }, { name: "Central line care and maintenance" }, { name: "Port access (implanted ports)" }, { name: "Midline catheter care" },
+    { title: "Peripheral Line Management", skills: [
+      { name: "Peripheral IV Insertion" }, { name: "Ultrasound-Guided IV Insertion" }, { name: "Regulate/Maintain IV Line" }, { name: "Manage Complications of Peripheral IV Line" }, { name: "Troubleshoot Slow/Occluded IV Line" }, { name: "D/C Peripheral IV Line" }, { name: "Midline Catheter Care" },
+    ]},
+    { title: "PICC Line Management", skills: [
+      { name: "Insertion of PICC Line" }, { name: "Confirmation of PICC Line Placement via X-Ray" }, { name: "Administer Medications Through PICC Line" }, { name: "Draw Blood From PICC Line" }, { name: "Maintain PICC Line" }, { name: "D/C PICC Line" },
+    ]},
+    { title: "Central Line (CVC) Management", skills: [
+      { name: "Assist Provider With CVC Placement/Insertion" }, { name: "CVC Line Confirmation via X-Ray" }, { name: "Manage CVC Infusions" }, { name: "Draw Blood From CVC Line" }, { name: "Maintain CVC Line" }, { name: "CVC Dressing Change" }, { name: "CVC Tray Set-Up" }, { name: "D/C CVC Line" }, { name: "Management of Tunneled CVC (e.g., Hickman, Broviac)" }, { name: "Management of Groshong Catheter" }, { name: "Management of Cordis IV Catheter" },
+    ]},
+    { title: "Implanted Port Management", skills: [
+      { name: "Access Implanted Ports" }, { name: "Draw Blood From Implanted Ports" }, { name: "Flushing of Implanted Ports" }, { name: "Dressing Changes for Implanted Ports" }, { name: "Deaccess Implanted Ports" },
     ]},
     { title: "Infusion Administration", skills: [
-      { name: "IV fluid administration" }, { name: "Chemotherapy/biologic infusion" }, { name: "Blood and blood product administration" }, { name: "Total parenteral nutrition (TPN)" }, { name: "Antibiotic infusion" }, { name: "Infusion pump programming and troubleshooting" },
+      { name: "IV Fluid Administration" }, { name: "Chemotherapy/Biologic Infusion" }, { name: "Administration of Blood Products" }, { name: "Total Parenteral Nutrition (TPN)" }, { name: "Antibiotic Infusion" }, { name: "Infusion Pump Programming and Troubleshooting" }, { name: "Saline/Heparin Lock Management" },
     ]},
     { title: "Complication Management", skills: [
-      { name: "Infiltration/extravasation recognition and management" }, { name: "Phlebitis assessment" }, { name: "Line occlusion troubleshooting" }, { name: "Allergic/anaphylactic reaction response" }, { name: "Air embolism prevention" },
+      { name: "Infiltration/Extravasation Recognition and Management" }, { name: "Phlebitis Assessment" }, { name: "Line Occlusion Troubleshooting" }, { name: "Line Declotting" }, { name: "Allergic/Anaphylactic Reaction Response" }, { name: "Air Embolism Prevention" }, { name: "Maintain Aseptic Technique" },
     ]},
     { title: "Documentation & Compliance", skills: [
-      { name: "Infusion Nurses Society (INS) standards" }, { name: "Site assessment documentation" }, { name: "Medication reconciliation" }, { name: "Patient education on home infusion" },
+      { name: "Infusion Nurses Society (INS) Standards" }, { name: "Site Assessment Documentation" }, { name: "Medication Reconciliation" }, { name: "Patient Education on Home Infusion" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
     ]},
   ]},
 
