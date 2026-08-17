@@ -404,8 +404,29 @@ export const specialtyCareChecklists: ChecklistSpec[] = [
     { title: "Surveillance", skills: [
       { name: "Performs targeted surveillance" }, { name: "Outbreak investigations" }, { name: "Collaboration with Infection Control Committee" }, { name: "Collaboration with Hospital Epidemiologist" }, { name: "Performance improvement projects" },
     ]},
+    { title: "Isolation Precautions", skills: [
+      { name: "Knowledge of Appropriate Handwashing (Soap and Water/Gel In-Gel Out Technique)" }, { name: "Determining Appropriate Cleaning Method (e.g., Type of Wipes)" }, { name: "Respiratory Hygiene/Cough Etiquette" }, { name: "Knowledge of Correct Disposal of Waste Products" }, { name: "Determination of Appropriate PPE for Patient Disease Process" }, { name: "Knowledge of Cleaning Patient Room/Stretcher Prior to New Patient" }, { name: "Knowledge of Correct Disposal of Blood Products" }, { name: "Use of Facepiece Respirator (e.g., N95)/PAPR" }, { name: "Activation of Negative Pressure" }, { name: "Knowledge of How to Don/Doff PPE" }, { name: "Determining Use of Gown" }, { name: "Use of 3-6 Foot Rule for Staff and Patient Family Members" },
+    ]},
+    { title: "Disease Management by Precaution Type", skills: [
+      { name: "Airborne: Herpes Simplex" }, { name: "Airborne: Rubeola (Measles)" }, { name: "Airborne: Meningitis" }, { name: "Airborne: S. Aureus (MSSA or MRSA)" }, { name: "Airborne: Ebola" }, { name: "Airborne: M. Tuberculosis" }, { name: "Airborne: Shingles" }, { name: "Airborne: Variola (Smallpox)" }, { name: "Airborne: SARS-CoV (COVID-19)" }, { name: "Airborne: Vaccinia Viruses" }, { name: "Airborne: Avian Influenza" }, { name: "Airborne: Varicella-Zoster" }, { name: "Airborne: S. Pneumoniae" }, { name: "Contact: Acute Diarrhea" }, { name: "Contact: Influenza Virus" }, { name: "Contact: Marburg Viruses" }, { name: "Contact: C. Difficile" }, { name: "Contact: Parainfluenza Virus" }, { name: "Contact: Adenovirus" }, { name: "Contact: Enteroviruses" }, { name: "Contact: Lassa Viruses" }, { name: "Contact: Norovirus" }, { name: "Contact: Group A Streptococcus" }, { name: "Contact: Respiratory Syncytial Virus (RSV)" }, { name: "Contact: Human Metapneumovirus" }, { name: "Droplet: Neisseria Meningitidis" }, { name: "Interdisciplinary Team Approach to Identifying and Reporting Infections" },
+    ]},
+    { title: "Diagnostics, Labs & Medication Administration", skills: [
+      { name: "Comprehensive Metabolic Panel (CMP)" }, { name: "Lactic Acid/Repeat Lactic Acid" }, { name: "Urine Culture" }, { name: "Polymerase Chain Reaction (PCR)" }, { name: "Complete Blood Count (CBC)" }, { name: "Procalcitonin" }, { name: "C-Reactive Protein (CRP)" }, { name: "Enzyme-Linked Immunosorbent Assay (ELISA)" }, { name: "Urinalysis" }, { name: "Rapid Plasma Reagin (RPR)" }, { name: "Blood Cultures" }, { name: "Administration of Liquid Medications in Pediatrics" }, { name: "Administration via NG/OG/NJ Tube" }, { name: "Administration of IV/PICC/Central Line Medications" }, { name: "Administration of Rectal Medications" }, { name: "Administration via PEG/Jejunostomy Tube" }, { name: "Administration of Oral Medications" },
+    ]},
+    { title: "Common Antibiotics", skills: [
+      { name: "Fluoroquinolones (e.g., Ciprofloxacin, Levofloxacin)" }, { name: "Penicillins (e.g., Flucloxacillin, Amoxicillin)" }, { name: "Aminoglycosides (e.g., Gentamicin, Tobramycin)" }, { name: "Macrolides (e.g., Erythromycin, Azithromycin)" }, { name: "Cephalosporins (e.g., Cefaclor, Cephalexin)" }, { name: "Glycopeptides (e.g., Vancomycin, Telavancin)" }, { name: "Tetracyclines (e.g., Doxycycline, Minocycline)" }, { name: "Sulfonamides (e.g., Sulfadiazine, Acetazolamide)" },
+    ]},
+    { title: "Sepsis Management", skills: [
+      { name: "Knowledge of How to Properly Implement Sepsis Bundle" }, { name: "Use of Aseptic Technique During Blood Culture Collection" }, { name: "Identifying Signs of Sepsis" }, { name: "Correct Administration of Antibiotics" },
+    ]},
+    { title: "Wound Care", skills: [
+      { name: "Alginate Dressing" }, { name: "Collagen Dressing" }, { name: "Silver Dressing" }, { name: "Wound Vac" }, { name: "Transparent Film Dressing" }, { name: "Hydrocolloid Dressing" }, { name: "Hydrogel Dressing" }, { name: "Foam Dressing" }, { name: "Gauze Dressing" }, { name: "Non-Adherent Dressing" }, { name: "Composite Dressing" }, { name: "Chemical Wound Care" }, { name: "Abrasion Care" }, { name: "Penetrating Wound Care (e.g., GSW, Stab Wound)" }, { name: "Laceration Care" }, { name: "Surgical Wound Care" }, { name: "Bite and Sting Care (Human, Animal, Insect)" }, { name: "Ulcer Care" }, { name: "Electrical Wound Care" }, { name: "Thermal Wound Care" },
+    ]},
+    { title: "CLABSI & CAUTI Prevention", skills: [
+      { name: "Change Infusion Tubing" }, { name: "Assist With Central Line Insertion (Ensuring Sterility)" }, { name: "Central Line Dressing Changes" }, { name: "Awareness of Signs of Infection (Redness, Warmth, Discharge, Odor)" }, { name: "Removal of PICC Line" }, { name: "Performing Chlorhexidine Baths Every 24 Hours" }, { name: "Use of Bladder Scanner" }, { name: "Identifying Signs of UTI (Mental Status Change, Cloudy/Foul-Smelling Urine)" }, { name: "Aseptic Technique During Foley Insertion, Maintenance, and Removal" }, { name: "Aseptic Technique When Emptying Drainage Bag" },
+    ]},
     { title: "Prevention", skills: [
-      { name: "Hand Hygiene Monitoring" }, { name: "Isolation Precautions" }, { name: "Standard Precautions" }, { name: "Surgical Site Infection Prevention" }, { name: "CLABSI Prevention" }, { name: "CAUTI Prevention" }, { name: "VAP Prevention" },
+      { name: "Hand Hygiene Monitoring" }, { name: "Standard Precautions" }, { name: "Surgical Site Infection Prevention" }, { name: "CLABSI Prevention" }, { name: "CAUTI Prevention" }, { name: "VAP Prevention" },
     ]},
     { title: "Education", skills: [
       { name: "Staff Education" }, { name: "Patient/Family Education" }, { name: "New Employee Orientation" }, { name: "Annual Competency Training" },
@@ -415,6 +436,9 @@ export const specialtyCareChecklists: ChecklistSpec[] = [
     ]},
     { title: "Reporting", skills: [
       { name: "NHSN Reporting" }, { name: "State Reporting Requirements" }, { name: "Antibiogram Development" }, { name: "Annual Reports" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
     ]},
   ]},
 ];
