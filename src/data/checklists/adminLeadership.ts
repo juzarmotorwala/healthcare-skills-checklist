@@ -38,20 +38,32 @@ export const adminLeadershipChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "social-worker", title: "Social Worker Skills Checklist", shortTitle: "Social Worker", icon: "🤝", group: "Administration & Leadership", categories: [
-    { title: "Knowledge of Assessment Process", skills: [
-      { name: "Psychosocial assessment (social history, living situation, support systems, decision making, communication, mental illness, family discord)" },
+    { title: "Assessment & Treatment Planning", skills: [
+      { name: "Psychosocial assessment (social history, living situation, support systems, decision making, communication, mental illness, family discord)" }, { name: "Perform risk assessment" }, { name: "Consider culture during assessment and treatment planning" }, { name: "Engage patient in intake process" }, { name: "Recognize indicators of behavioral dysfunction and mental illness" }, { name: "Assess support structure" }, { name: "Present problem identification" }, { name: "Knowledge of environmental effects on patient behavior" }, { name: "Assess patient/family dynamics and functioning" }, { name: "Recognize indicators of addiction and substance abuse" }, { name: "Assess nature, severity, and danger of patient's crisis" }, { name: "Match intervention with patient's individual needs" }, { name: "Assess patient's eligibility for services" }, { name: "Assess for suspected abuse/neglect" }, { name: "Conduct patient's biopsychosocial assessment" }, { name: "Identify patient strengths, resources, and challenges" }, { name: "Perform community needs assessment" },
     ]},
-    { title: "Communication Abilities", skills: [
-      { name: "Develop and maintain communication on complex matters" }, { name: "Communicate effectively with diverse populations" }, { name: "Crisis communication" }, { name: "Family meetings/conferences" }, { name: "Interdisciplinary team communication" },
+    { title: "Therapeutic Relationship & Communication", skills: [
+      { name: "Develop and maintain communication on complex matters" }, { name: "Communicate effectively with diverse populations" }, { name: "Crisis communication" }, { name: "Family meetings/conferences" }, { name: "Interdisciplinary team communication" }, { name: "Obtain/confirm informed consent for treatment" }, { name: "Engage patient/caregiver in treatment planning" },
     ]},
-    { title: "Discharge Planning", skills: [
-      { name: "Assessment of post-acute needs" }, { name: "Community resource identification" }, { name: "SNF/Rehab placement" }, { name: "Home health coordination" }, { name: "Hospice referral" }, { name: "Financial assistance programs" },
+    { title: "Clinical Interventions & Case Management", skills: [
+      { name: "Support patient/family with grieving process" }, { name: "Develop treatment/discharge plan with patient" }, { name: "Coordinate care with interdisciplinary team" }, { name: "Provide case management services" }, { name: "Formulate measurable and realistic treatment goals" }, { name: "Provide conflict resolution" }, { name: "Ability to modify treatment plan" }, { name: "Advocate for patient rights" },
+    ]},
+    { title: "Discharge Planning & Community Resources", skills: [
+      { name: "Assessment of post-acute needs" }, { name: "Community resource identification" }, { name: "SNF/Rehab placement" }, { name: "Home health coordination" }, { name: "Hospice referral" }, { name: "Financial assistance programs" }, { name: "Assist and refer patient to community resources" },
+    ]},
+    { title: "Interdisciplinary Collaboration", skills: [
+      { name: "Timely follow-up on patient referrals" }, { name: "Understand basic terminology of professions other than social work" }, { name: "Participate in and/or lead case conferences" }, { name: "Understand roles and responsibilities of other healthcare professionals/support staff" }, { name: "Facilitate referral process early into patient's admission" },
     ]},
     { title: "Crisis Intervention", skills: [
       { name: "Suicide risk assessment" }, { name: "Domestic violence screening" }, { name: "Child/Elder abuse reporting" }, { name: "Substance abuse intervention" }, { name: "Grief/bereavement counseling" },
     ]},
-    { title: "Legal/Ethical", skills: [
-      { name: "Advance directives" }, { name: "Guardianship/Conservatorship" }, { name: "Patient rights" }, { name: "Mandatory reporting" }, { name: "HIPAA compliance" }, { name: "Informed consent" },
+    { title: "Professional Ethics & Legal Compliance", skills: [
+      { name: "Advance directives" }, { name: "Guardianship/Conservatorship" }, { name: "Patient rights" }, { name: "Mandatory reporting" }, { name: "HIPAA compliance" }, { name: "Informed consent" }, { name: "Understand mandatory reporting requirements of ethical issues" }, { name: "Identify and resolve ethical dilemmas" }, { name: "Understand legal and ethical issues related to confidentiality" }, { name: "Protect and augment patient self-determination" }, { name: "Document ethical issues" },
+    ]},
+    { title: "Supervision", skills: [
+      { name: "Understand the supervisee's and supervisor's role in supervision" }, { name: "Understand the impact of transference and countertransference within supervisory relationships" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
     ]},
   ]},
 
