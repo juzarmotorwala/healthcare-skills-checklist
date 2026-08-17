@@ -338,6 +338,21 @@ export const diagnosticLabChecklists: ChecklistSpec[] = [
     { title: "Collaboration", skills: [
       { name: "Physician plan review coordination" }, { name: "Medical physicist collaboration" }, { name: "Documentation and chart checks" },
     ]},
+    { title: "Radiation Physics", skills: [
+      { name: "Physical Properties of Dose and Exposure" }, { name: "Physical Property of Atoms and Nuclei" }, { name: "Basic Nuclear Transformations" }, { name: "Electron Beam Therapy" }, { name: "Medical Linear Accelerators" }, { name: "Radioactive Isotopes" }, { name: "3D Conformal Radiation Therapy" }, { name: "IMRT (Intensity Modulated Radiation Therapy)" }, { name: "Compton Scatter" }, { name: "Pair Production" }, { name: "Photoelectric Effect" }, { name: "CT Scan Interpretation for Planning" }, { name: "MRI Interpretation for Planning" }, { name: "PET Scan Interpretation for Planning" },
+    ]},
+    { title: "Brachytherapy Procedures", skills: [
+      { name: "Prostate Seed Implants (P-103 Seeds)" }, { name: "Prostate Seed Implants (I-125 Seeds)" }, { name: "Localization" }, { name: "Computer Treatment Planning" }, { name: "Manual Verification of Computer Calculations" }, { name: "Patient Preparation, Setup, and Treatment" }, { name: "Post-Treatment Quality Assurance" }, { name: "Minor and Major Emergencies" }, { name: "Physical Plant Emergencies" }, { name: "Routine Emergency Equipment" },
+    ]},
+    { title: "Special Techniques", skills: [
+      { name: "Stereotactic Radiosurgery (SRS)" }, { name: "Stereotactic Body Radiation Therapy (SBRT)" }, { name: "Total Body Irradiation" }, { name: "Intraoperative Radiation Therapy" },
+    ]},
+    { title: "Standards & Treatment Aids", skills: [
+      { name: "Auxiliary Devices (Digitizer, Plotter)" }, { name: "Quality Assurance" }, { name: "Treatment Planning Software" }, { name: "In Vivo Dosimetry" }, { name: "Use of TLD (Thermoluminescent Dosimeters) Chips" }, { name: "Anatomic Landmarks" }, { name: "Field Shaping" }, { name: "Custom Blocking" }, { name: "Half-Value Thick Blocks" }, { name: "Multileaf Collimators" }, { name: "Internal Shields" }, { name: "Gonadal Shields" }, { name: "Eye Shields" }, { name: "Patient/Body Positioning" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
+    ]},
   ]},
 
   { slug: "ultrasound-tech", title: "Diagnostic Medical Sonographer / Ultrasound Technologist Skills Checklist", shortTitle: "Ultrasound Tech", icon: "🔊", group: "Diagnostic & Lab", categories: [
