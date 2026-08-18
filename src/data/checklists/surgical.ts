@@ -194,17 +194,32 @@ export const surgicalChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "sterile-processing-tech", title: "Sterile Processing Technician Skills Checklist", shortTitle: "Sterile Processing Tech", icon: "🧼", group: "Surgical", categories: [
-    { title: "Processing", skills: [
-      { name: "Single instruments" }, { name: "Endoscopes" }, { name: "Repair" }, { name: "Sets/Trays" }, { name: "Care of instruments" },
-    ]},
     { title: "Decontamination", skills: [
-      { name: "Manual cleaning" }, { name: "Ultrasonic cleaning" }, { name: "Automated washers" }, { name: "Chemical disinfection" },
+      { name: "Washer disinfectors" }, { name: "Soiled receiving" }, { name: "Disposable items" }, { name: "Detergents" }, { name: "Instrument inspection" }, { name: "Mechanical cleaning techniques" }, { name: "Ultrasonic cleaners" }, { name: "Rigid endoscopes" }, { name: "Brushes and cleaning tools" }, { name: "Personal protective equipment (PPE) in decontamination" }, { name: "Sending items for external maintenance" }, { name: "Sink arrangement" }, { name: "Pasteurizers" }, { name: "Manual cleaning techniques" }, { name: "Leak testing endoscopes" }, { name: "Automated cart washers" }, { name: "Precleaning" }, { name: "Handling sharps" }, { name: "Water quality" }, { name: "Automated endoscope reprocessors" }, { name: "Enzyme products" }, { name: "Irrigating sonics" }, { name: "Flexible endoscopes" },
+    ]},
+    { title: "Assembly and Packaging", skills: [
+      { name: "Heat sealing" }, { name: "Magnifying lamps" }, { name: "Wrapping techniques" }, { name: "Rigid containers" }, { name: "Instrument identification" }, { name: "Lubricating instruments" }, { name: "Instrument inspection" }, { name: "Tamper-evident seals" }, { name: "Reusable material (e.g., woven, towels)" }, { name: "Paper materials" }, { name: "Instrument count sheets" }, { name: "Light tables" }, { name: "Autoclave tape" }, { name: "Packaging labeling" }, { name: "Preparing instrument trays" }, { name: "Multifaceted instruments" }, { name: "Sending defective items for repair" }, { name: "Disposable packaging material (e.g., paper, flat wrap)" }, { name: "Tray filters" }, { name: "Wicking material (e.g., towels)" }, { name: "Instrument testing" }, { name: "Peel pouches" }, { name: "Pass-thru window" }, { name: "Demagnetizer" }, { name: "Protects instruments (e.g., tip protectors, silicone mats, sleeves)" },
+    ]},
+    { title: "Instrument Care and Handling", skills: [
+      { name: "Flexible endoscopes" }, { name: "Pneumatic-powered equipment" }, { name: "Single-use instruments" }, { name: "Powered surgical instruments" }, { name: "Rigid endoscopes" }, { name: "Implants" }, { name: "Robotic instruments" }, { name: "Loaner instruments" },
     ]},
     { title: "Sterilization", skills: [
-      { name: "Steam sterilization" }, { name: "ETO sterilization" }, { name: "Sterrad/Plasma sterilization" }, { name: "Biological indicators" }, { name: "Chemical indicators" },
+      { name: "Loading/unloading sterilizers" }, { name: "Chemical indicators" }, { name: "Prevacuum sterilizers" }, { name: "Hydrogen peroxide systems" }, { name: "Immediate Use Steam Sterilization (IUSS)" }, { name: "Gravity air displacement sterilizers" }, { name: "Maintaining and cleaning sterilizers" }, { name: "Steam-flush pressure-pulse sterilizers" }, { name: "Sterilizer cycle reports" }, { name: "Ozone sterilization" }, { name: "Steam sterilization parameters" }, { name: "Wet packs" }, { name: "Tabletop sterilizers" }, { name: "Ethylene oxide" }, { name: "Biological indicators" },
     ]},
-    { title: "Distribution", skills: [
-      { name: "Case cart system" }, { name: "Inventory management" }, { name: "Par level maintenance" }, { name: "Implant tracking" },
+    { title: "Disinfection", skills: [
+      { name: "Vapor exposure levels" }, { name: "Low- to Intermediate-Level Disinfectants" }, { name: "High-Level Disinfectants" }, { name: "Cleaning noncritical items and surfaces" }, { name: "Disinfectant labeling" }, { name: "Minimum effective concentration (MEC) of the active ingredient" },
+    ]},
+    { title: "Sterile Storage & Distribution", skills: [
+      { name: "Storage carts" }, { name: "Drying and storing endoscopes" }, { name: "Shelf-life events that compromise sterility" }, { name: "Closed shelving" }, { name: "Stock rotation" }, { name: "Semi-closed shelving" }, { name: "Environmental conditions" }, { name: "Dust covers" }, { name: "Open shelving" }, { name: "Contaminated items" }, { name: "Endoscope storage cabinets" }, { name: "Transporting sterile items" }, { name: "Event-related sterility" }, { name: "Hazardous materials and sharps" }, { name: "Leakproof, puncture-resistant containers" }, { name: "Endoscopes" },
+    ]},
+    { title: "Inventory Management", skills: [
+      { name: "Radio-frequency identification (RFID)" }, { name: "Entering and receiving sterile/unsterile inventory" }, { name: "Automated (PAR) levels for items" }, { name: "Tracking packages" }, { name: "Preference card / pick list" }, { name: "Preparing case carts" }, { name: "First-in, first-out (FIFO) system" }, { name: "Exchange carts" },
+    ]},
+    { title: "Infection Prevention & Professional Issues", skills: [
+      { name: "Hand hygiene" }, { name: "Personal protective equipment (PPE)" }, { name: "Traffic control" }, { name: "Negative/positive pressure airflow" }, { name: "Chain of infection" }, { name: "Testing/monitoring" }, { name: "Biofilm formation" }, { name: "Routine cleaning" }, { name: "Air exchange rate" }, { name: "Attire (semi-restricted and restricted areas)" }, { name: "Environmental standards" }, { name: "Record keeping" }, { name: "Following manufacturer's instructions for use (IFU)" }, { name: "Location safety data sheets (SDS)" }, { name: "Location of emergency eyewash stations" }, { name: "Spaulding Classification system" }, { name: "Confliction resolution" }, { name: "Health Insurance Portability and Accountability Act (HIPAA)" }, { name: "Collaboration" }, { name: "Documentation" }, { name: "Time management" }, { name: "Job responsibilities" }, { name: "Ethical considerations" }, { name: "Workplace safety" }, { name: "Therapeutic communication" }, { name: "Professional development" }, { name: "Active listening" }, { name: "Personal development" }, { name: "Legal responsibilities" }, { name: "Scope of practice" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
     ]},
   ]},
 

@@ -122,17 +122,35 @@ export const nursingChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "correctional-nursing", title: "Correctional Nursing (RN/LPN) Skills Checklist", shortTitle: "Correctional Nursing", icon: "🔐", group: "Nursing", categories: [
-    { title: "Facility & Security Protocols", skills: [
-      { name: "Security clearance and facility protocols" }, { name: "Contraband awareness" }, { name: "Inmate movement/escort coordination" }, { name: "Emergency lockdown procedures" },
+    { title: "Clinical Experience & Background", skills: [
+      { name: "Medical/Surgical Nursing" }, { name: "Neonatal Intensive Care Unit" }, { name: "Chemical Dependency (Substance Abuse Treatment)" }, { name: "Labor and Delivery" }, { name: "Operating Room" }, { name: "Intensive Care Unit/Coronary Care Unit" }, { name: "Outpatient Clinic Nursing" }, { name: "Nursery" }, { name: "Rehabilitation" }, { name: "Long-Term Care" }, { name: "Orthopedics" }, { name: "Telemetry" }, { name: "Obstetrics/Postpartum" }, { name: "Cardiac Intensive Care Unit" }, { name: "Pediatrics" }, { name: "Intellectual and Developmental Disabilities" }, { name: "Industrial/Occupational Health" }, { name: "Emergency Room" }, { name: "Post-Anesthesia Care Unit" }, { name: "Correctional Facility Nursing" }, { name: "Psychiatry/Psychiatric Nursing" }, { name: "Surgical Intensive Care Unit" },
     ]},
-    { title: "Intake & Assessment", skills: [
-      { name: "Intake health screening" }, { name: "Mental health/suicide risk screening" }, { name: "Withdrawal/detox assessment" }, { name: "Chronic disease intake assessment" },
+    { title: "Neurological & Cardiovascular Care", skills: [
+      { name: "Seizure precautions - assessment and response to seizure or seizure-like activity" }, { name: "Acute head injury" }, { name: "Managing patients with spinal precautions" }, { name: "Treating patients for neuropathy" }, { name: "Spinal cord injury" }, { name: "Chronic and acute CVA/TIA" }, { name: "Drug overdose" }, { name: "Neuro assessment/Neuro vitals" }, { name: "Using Glasgow Coma Scale" }, { name: "Cardiopulmonary arrests" }, { name: "Assessing and treating orthostatic BP" }, { name: "Evaluation of peripheral perfusion" }, { name: "Assessing abnormal heart sounds" }, { name: "Running a code" }, { name: "Angina (acute and chronic)" }, { name: "Identification and evaluation of peripheral pulses" }, { name: "Identifying dysrhythmias as indicated" },
     ]},
-    { title: "Clinical Care", skills: [
-      { name: "Medication pass (directly observed therapy)" }, { name: "Sick call triage" }, { name: "Chronic care clinic management (diabetes, hypertension)" }, { name: "Infectious disease management (TB, HIV, Hepatitis)" },
+    { title: "Pulmonary Care", skills: [
+      { name: "Use of oxygen saturation monitor" }, { name: "Collecting sputum specimen" }, { name: "Using different masks for oxygenation" }, { name: "Administering nebulizer treatments" }, { name: "Use of incentive spirometer" }, { name: "Assessment of lung sounds" }, { name: "Administering oxygen – nasal cannula, mask" }, { name: "Tracheostomy" }, { name: "CHF" }, { name: "Tuberculosis" }, { name: "COPD" }, { name: "Asthma" },
     ]},
-    { title: "Documentation & Legal", skills: [
-      { name: "Correctional-specific EMR documentation" }, { name: "Use of force medical clearance" }, { name: "Grievance response documentation" }, { name: "HIPAA compliance within correctional setting" },
+    { title: "Gastrointestinal & Endocrine Care", skills: [
+      { name: "Palpation" }, { name: "Managing suprapubic catheter" }, { name: "Administering enemas (tap water, Fleet, return flow)" }, { name: "Colostomy and drain care" }, { name: "Caring for patients with chronic liver failure" }, { name: "Knowledge of UA values" }, { name: "Placing condom catheter" }, { name: "Inserting suppositories" }, { name: "Caring for patients on dialysis" }, { name: "Collecting urine specimens" }, { name: "Obtaining stool specimens" }, { name: "Managing urostomy" }, { name: "Caring for acute GI bleed" }, { name: "Assessing bowel sounds" }, { name: "Caring for patients with chronic renal failure" }, { name: "Assessing fluid and electrolyte problems" }, { name: "Insulin administration" }, { name: "Treating hypo/hyperglycemia" }, { name: "Caring for diabetic patient" }, { name: "Checking blood glucose levels" }, { name: "ADA diets" }, { name: "Identifying hypo/hyperglycemia" },
+    ]},
+    { title: "Musculoskeletal Care", skills: [
+      { name: "Crutches" }, { name: "Gait belt" }, { name: "Walker" }, { name: "Amputations" }, { name: "Caring/Removal of staples and stitches" }, { name: "Cervical collars" }, { name: "Assessing for need of assistive devices" }, { name: "Slings/Splints" }, { name: "Braces" }, { name: "Stump care" }, { name: "Prosthetic care" }, { name: "Casts" }, { name: "Bone/Joint disorders" },
+    ]},
+    { title: "Nutrition & Vital Signs", skills: [
+      { name: "Counting calories" }, { name: "Caring for patients on fluid restriction" }, { name: "Caring for patients placed on NPO" }, { name: "Aspiration precautions" }, { name: "Specialty medical diets" }, { name: "Assisting with nourishments" }, { name: "BP including orthostatic" }, { name: "Temperature (oral, rectal, axillary, tympanic)" }, { name: "Pulse/Radial" }, { name: "Weight" }, { name: "Respirations" }, { name: "Height" }, { name: "Automatic BP machine (Dynamap)" }, { name: "Electronic thermometer" }, { name: "Oximeter" },
+    ]},
+    { title: "Infection Control & Safety", skills: [
+      { name: "Hand washing (new CDC guidelines)" }, { name: "MRSA precautions" }, { name: "Proper use of PPE (gloves, gowns, mask, goggles)" }, { name: "Infectious/Hazardous waste disposal" }, { name: "Isolation/Reverse isolation" }, { name: "Sharps disposal" }, { name: "Body substance isolation" }, { name: "TB precautions" }, { name: "Use of proper body mechanics" }, { name: "Use of alarms (bed, patient, unit) and call light" }, { name: "Determining the need and when to summon additional help" }, { name: "Use of CPR mask/valve/bag" }, { name: "Assessing safety and ADL needs" }, { name: "Determining patient ID" }, { name: "Suicide precautions" }, { name: "Recognizing and responding to psychiatric and mental health problems" }, { name: "Recognizing signs and symptoms of abuse (substance, physical, emotional)" }, { name: "Identifying and responding to safety hazards" }, { name: "Wrist/ankle" }, { name: "Belt" }, { name: "Restraint chairs" }, { name: "Seat belt" },
+    ]},
+    { title: "Care Routines & Documentation", skills: [
+      { name: "Knowledge of lab values (chemistry, CBC, drug levels)" }, { name: "Medication administration" }, { name: "Starting IVs and IV therapy" }, { name: "Health screening" }, { name: "Care of the detox patient" }, { name: "Pain management" }, { name: "First aid" }, { name: "Preparing for and explaining routines to patient" }, { name: "Medication profile" }, { name: "Wound care" }, { name: "Obtaining peripheral blood samples" }, { name: "New admissions and transfers" }, { name: "Unusual incidents" }, { name: "Communicating with MD/Officers" }, { name: "Changes in patient condition" }, { name: "Patient needs, complaints, and concerns" }, { name: "The need for alternative communication mechanism" }, { name: "Vital signs" }, { name: "Patient/Unit activity" },
+    ]},
+    { title: "Unit Activity & Patients' Rights", skills: [
+      { name: "Adherence to security protocol" }, { name: "Completing risk management reports as needed" }, { name: "Identifying unusual incidents on the unit that require reporting" }, { name: "Charging for patient care items" }, { name: "Identifying breach of security" }, { name: "Patient's Right to Care and Right to Refuse Care" }, { name: "Communicating and maintaining confidentiality while upholding HIPAA laws" }, { name: "Providing accurate information to patients in a timely manner" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
     ]},
   ]},
 
