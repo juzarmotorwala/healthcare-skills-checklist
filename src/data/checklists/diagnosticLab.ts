@@ -206,20 +206,32 @@ export const diagnosticLabChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "cath-lab", title: "Cath Lab / Interventional Radiology Skills Checklist", shortTitle: "Cath Lab", icon: "🏥", group: "Diagnostic & Lab", categories: [
-    { title: "Work Setting", skills: [
-      { name: "Procedural Cath Lab" }, { name: "Interventional Cath Lab" }, { name: "EP Lab" }, { name: "Interventional Radiology" }, { name: "Pre/Post Procedural Setting" },
+    { title: "Work Setting & Team Collaboration", skills: [
+      { name: "Procedural Cath Lab" }, { name: "Interventional Cath Lab" }, { name: "EP Lab" }, { name: "Interventional Radiology" }, { name: "Pre/Post Procedural Setting" }, { name: "Participate in Pre-Procedure Briefings and Post-Procedure Debriefings" }, { name: "Collaborate With the Multidisciplinary Team to Coordinate Patient Care" }, { name: "Provide Handoff Communication Using a Standardized Format (e.g., SBAR)" }, { name: "Report Abnormal Findings, Equipment Malfunctions, and Supply Issues Promptly" },
     ]},
-    { title: "Cardiac Catheterization", skills: [
-      { name: "Diagnostic Catheterization" }, { name: "Coronary Angiography" }, { name: "PCI/Angioplasty/Stent" }, { name: "Right Heart Catheterization" }, { name: "Hemodynamic Monitoring" },
+    { title: "Cardiac Catheterization Procedures", skills: [
+      { name: "Diagnostic Catheterization (Adult)" }, { name: "Diagnostic Catheterization (Pediatric/Neonatal)" }, { name: "Coronary Angiography" }, { name: "Aortography" }, { name: "Internal Mammary Angiography" }, { name: "Pulmonary Angiography" }, { name: "Saphenous Vein Graft Angiography" }, { name: "Right Heart Catheterization" }, { name: "Shunt Detection & Calculation" }, { name: "PCI/Angioplasty/Stent" }, { name: "Atherectomy/Debulking" }, { name: "Assist With A-Line Insertion" }, { name: "Assist With PA-Line Insertion" }, { name: "Assist With Open Chest Emergency" },
+    ]},
+    { title: "Hemodynamic Monitoring", skills: [
+      { name: "Pulmonary Artery Pressure (PAP)" }, { name: "Pulmonary Capillary Wedge Pressure (PCW)" }, { name: "Central Venous Pressure (CVP)" }, { name: "Systemic Vascular Resistance (SVR)" }, { name: "Pulmonary Vascular Resistance (PVR)" }, { name: "Cardiac Output (CO)" }, { name: "Cardiac Index (CI)" }, { name: "SVO2 Recording" }, { name: "Intra-Procedure Blood Pressure Measurement" }, { name: "Intracardiac Echocardiography (ICE)" },
     ]},
     { title: "Electrophysiology", skills: [
-      { name: "EP Studies" }, { name: "Ablation" }, { name: "Pacemaker Implant" }, { name: "ICD Implant" }, { name: "Lead Extraction" },
+      { name: "EP Studies" }, { name: "Arrhythmia Ablation" }, { name: "Permanent Pacemaker Placement" }, { name: "Temporary Pacemaker Placement" }, { name: "Automatic Implantable Cardiac Defibrillator (AICD)" }, { name: "Lead Extraction" }, { name: "Lead Placement" },
     ]},
-    { title: "Vascular", skills: [
-      { name: "Peripheral Angiography" }, { name: "Peripheral Intervention" }, { name: "Carotid Stenting" }, { name: "Sheath Removal" }, { name: "Vascular Closure Devices" },
+    { title: "Vascular Access, Closure & Support Devices", skills: [
+      { name: "Peripheral Angiography" }, { name: "Peripheral Intervention" }, { name: "Carotid Stenting" }, { name: "Sheath Removal" }, { name: "Vascular Closure Devices" }, { name: "FemStop Device" }, { name: "Vasoseal" }, { name: "Angioseal" }, { name: "Perclose" }, { name: "Ventricular Assist Device (VAD)" }, { name: "Intra-Aortic Balloon Pump (IABP)" }, { name: "Impella Insertion and Management" },
+    ]},
+    { title: "Interventional & Special Procedures", skills: [
+      { name: "Specimen Radiographs" }, { name: "Selective Angiography" }, { name: "Cerebral Angiography" }, { name: "Cerebral Embolization – Coiling" }, { name: "Cerebral Embolization – Gelfoam" }, { name: "Cerebral Embolization – PVA" }, { name: "Carotid Arteriogram" }, { name: "Brachial Arteriogram" }, { name: "Pulmonary Arteriogram" }, { name: "Arch Arteriogram" }, { name: "Renal Arteriogram" }, { name: "Femoral Arteriogram" }, { name: "Abdominal Arteriogram" }, { name: "Mesenteric Arteriogram" }, { name: "Venogram" }, { name: "Nephrostomy" }, { name: "Embolizations" }, { name: "A/V Fistulas" }, { name: "IVC Filter (Inferior Vena Cava)" }, { name: "TIPS Procedure" }, { name: "Ablations" }, { name: "Endografts" }, { name: "Pressure Monitoring" },
     ]},
     { title: "Medications", skills: [
-      { name: "Conscious Sedation" }, { name: "Anticoagulants (Heparin, Bivalirudin)" }, { name: "Antiplatelets" }, { name: "Vasodilators" }, { name: "Emergency Medications" },
+      { name: "Conscious Sedation (e.g., Fentanyl, Versed, Propofol)" }, { name: "Reversal Agents" }, { name: "Anticoagulants (e.g., Heparin, Bivalirudin)" }, { name: "Antiplatelets" }, { name: "Vasodilators" }, { name: "Antiarrhythmics" }, { name: "Emergency Medications" }, { name: "Allergic Reaction Management (e.g., Epinephrine, Diphenhydramine)" },
+    ]},
+    { title: "Equipment & Computerized Charting", skills: [
+      { name: "Cardioversion" }, { name: "Defibrillator" }, { name: "Fluoroscopy/Imaging Equipment" }, { name: "Contrast Injector Systems" }, { name: "Cerner" }, { name: "Epic" }, { name: "Meditech" }, { name: "McKesson" }, { name: "Computerized Physician Order Entry (CPOE)" }, { name: "Bar Coding for Medication Administration" },
+    ]},
+    { title: "Safety & Emergency Response", skills: [
+      { name: "Accurate Patient Identification" }, { name: "Effective Communication" }, { name: "Infection Control" }, { name: "Universal Precautions" }, { name: "Patients in Isolation" }, { name: "Minimize Risk for Falls" }, { name: "Cardiac Arrest/CPR" }, { name: "Use of Rapid Response Teams" }, { name: "Emergent Angioplasty/Stenting" },
     ]},
     { title: "Age Specific Competencies", skills: [
       { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
