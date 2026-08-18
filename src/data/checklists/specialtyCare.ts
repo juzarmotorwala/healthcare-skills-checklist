@@ -59,20 +59,56 @@ export const specialtyCareChecklists: ChecklistSpec[] = [
     { title: "Radiation Therapy", skills: [
       { name: "Skin Assessment" }, { name: "Total Body Irradiation" }, { name: "Side Effect Management" }, { name: "External Radiotherapy" }, { name: "Brachytherapy" }, { name: "Radiation Safety Precautions" },
     ]},
-    { title: "Chemotherapy", skills: [
-      { name: "Chemotherapy Administration" }, { name: "Safe Handling of Chemotherapy" }, { name: "Vesicant Administration" }, { name: "Side Effect Management" }, { name: "Anaphylaxis Management" },
+    { title: "Cardiovascular", skills: [
+      { name: "Pulses/Circulation via Palpation" }, { name: "Normal Heart Tones (S1, S2)" }, { name: "ECG Changes for MI" }, { name: "Abnormal Heart Tones (murmur, friction rub)" }, { name: "Rhythm Interpretation" }, { name: "Pulses/Circulation via Doppler" }, { name: "Blood Pressure (Non-Invasive)" }, { name: "Apply/Perform 12-Lead ECG" }, { name: "Cardiac Arrhythmias" }, { name: "Lymphedema" }, { name: "Cardiovascular Toxicity Related to Cancer Therapy" }, { name: "Malignant Pericardial Effusion" }, { name: "Edema" }, { name: "Thrombotic Events" }, { name: "Cardiac Tamponade" }, { name: "Assist with Automatic CPR Machine" }, { name: "Assist with Central Line Insertion" }, { name: "Assist with Pericardiocentesis" }, { name: "Assist with Cardioversion" }, { name: "Assist with Defibrillation" }, { name: "Assist with Temporary Pacemaker Insertion" }, { name: "Cardiac Pacing" },
     ]},
-    { title: "Vascular Access", skills: [
-      { name: "PICC Line Care" }, { name: "Port Access/De-access" }, { name: "Central Line Care" }, { name: "Implanted Pump" },
+    { title: "Pulmonary", skills: [
+      { name: "Application of CPAP" }, { name: "Identify Adventitious Lung Sounds" }, { name: "Auscultate for Confirmation of ET Tube Placement" }, { name: "Application of Oximetry" }, { name: "Auscultate Breath Sounds" }, { name: "Application of BiPAP" }, { name: "Interpretation of Oximetry Values" }, { name: "Pulmonary Embolism" }, { name: "Atelectasis/Pneumothorax" }, { name: "Pulmonary Toxicity Related to Cancer Therapy" }, { name: "Respiratory Distress" }, { name: "Dyspnea" }, { name: "Reactive Airway Disease/Asthma" }, { name: "Pneumonitis" }, { name: "Superior Vena Cava Syndrome" }, { name: "Pleural Effusion" }, { name: "Troubleshoot Ventilator Alarms" }, { name: "Obtain Arterial Blood Gas" }, { name: "Assist with Chest Tube Insertion" }, { name: "Oxygen Therapy and Medication Delivery Systems" }, { name: "Care of the Patient on the Ventilator" }, { name: "Assist with Rapid Sequence Intubation (RSI)" }, { name: "Care of the Patient with a Chest Tube" }, { name: "Assist with Thoracentesis" }, { name: "Airway Management Devices/Suctioning" }, { name: "Assist with Intubation" }, { name: "Pulse Oximetry" },
     ]},
-    { title: "Symptom Management", skills: [
-      { name: "Pain Management" }, { name: "Nausea/Vomiting" }, { name: "Neutropenic Precautions" }, { name: "Mucositis Care" }, { name: "Tumor Lysis Syndrome" },
+    { title: "Hematology & Immunology", skills: [
+      { name: "Bone Marrow Involvement" }, { name: "High Tumor Burden" }, { name: "Type and Dose Intensity of Chemotherapy" }, { name: "Comorbidities: Diabetes" }, { name: "History of Chemotherapy or Radiation" }, { name: "Bleeding" }, { name: "Pre-Existing Cytopenias" }, { name: "Electrolyte Monitoring" }, { name: "Elevated Lactate Dehydrogenase Level" }, { name: "Allogeneic Bone Marrow Transplant" }, { name: "Infection" }, { name: "Graft-Versus-Host Disease (GvHD)" }, { name: "Sepsis/Septic Shock" }, { name: "Thrombocytopenia" }, { name: "Apheresis" }, { name: "Neutropenia" }, { name: "Neutropenic Precautions" }, { name: "Disseminated Intravascular Coagulation" }, { name: "Fever and Chills" }, { name: "Anemia" }, { name: "Thrombotic Thrombocytopenia Purpura" }, { name: "Immunosuppression" }, { name: "Neutropenic Fever" }, { name: "Graft Rejection" }, { name: "Autologous Bone Marrow Transplant" }, { name: "Hemorrhage" }, { name: "Electrolyte Imbalance" }, { name: "Assist with Intrathecal Chemotherapy Administration" }, { name: "Assist with Lumbar Puncture" }, { name: "Isolation" }, { name: "Assist with Bone Marrow Biopsy" }, { name: "Specimen Collection: Flow Cytometry/FISH/Cytogenetics" }, { name: "Neutropenic Precautions/Laminar Airflow" }, { name: "Blood Transfusion" }, { name: "Platelet Transfusion" }, { name: "Colony Stimulating Factors" },
     ]},
-    { title: "Blood Products", skills: [
-      { name: "Blood Transfusion" }, { name: "Platelet Transfusion" }, { name: "Colony Stimulating Factors" },
+    { title: "Gastroenterology", skills: [
+      { name: "Nutritional Status" }, { name: "Proper NG Tube Placement" }, { name: "Bowel Sounds" }, { name: "Xerostomia" }, { name: "Failure to Thrive" }, { name: "Nausea/Vomiting" }, { name: "Bowel Obstruction" }, { name: "Pancreatitis" }, { name: "Constipation" }, { name: "Fluid-Electrolyte Imbalance" }, { name: "Ascites" }, { name: "Stomatitis/Mucositis" }, { name: "GI Bleed" }, { name: "Diarrhea" }, { name: "Dysphagia" }, { name: "Insertion and Maintenance of NG Tube" }, { name: "Gastrostomy/Jejunostomy Tube" }, { name: "Removal of NG Tube" }, { name: "NG Tube to Suction" }, { name: "Assist with Paracentesis" }, { name: "Saline Lavage" },
+    ]},
+    { title: "Endocrine", skills: [
+      { name: "S/S Hypoglycemia/Hyperglycemia" }, { name: "S/S Diabetic Ketoacidosis (DKA)" }, { name: "Hyperparathyroidism" }, { name: "Hypokalemia/Hyperkalemia" }, { name: "Diabetic Ketoacidosis" }, { name: "Hypopituitarism" }, { name: "Hyperthyroidism" }, { name: "Adrenal Insufficiency" }, { name: "Syndrome of Inappropriate Antidiuretic Hormone" }, { name: "Hypercalcemia" }, { name: "Diabetes Mellitus" }, { name: "Hypothyroidism" }, { name: "Tumor Lysis Syndrome" }, { name: "Hypoparathyroidism" }, { name: "Fingerstick Blood Glucose" }, { name: "Implementation of Sliding Scale" }, { name: "Use of Insulin Pen" }, { name: "Tube Feeding" },
+    ]},
+    { title: "Neurological", skills: [
+      { name: "Cranial Nerves" }, { name: "Glasgow Coma Scale (GCS)" }, { name: "Reflex/Motor Deficits" }, { name: "Pathologic Reflexes" }, { name: "Visual or Communication Deficits" }, { name: "Stress Fracture" }, { name: "Cerebrovascular Accident (CVA)" }, { name: "Increased Intracranial Pressure" }, { name: "Spinal Cord Compression" }, { name: "Seizures" }, { name: "Headaches/Migraines" }, { name: "Neuropathy" },
+    ]},
+    { title: "Renal & Genitourinary", skills: [
+      { name: "Fluid Status" }, { name: "AV Fistula/Shunt" }, { name: "Acute Kidney Injury" }, { name: "Urine Specimen Collection" }, { name: "Renal Calculi" }, { name: "Transurethral Resection of the Prostate (TURP)" }, { name: "Hemodialysis" }, { name: "Insertion and Care of Male Foley Catheter" }, { name: "Insertion and Care of Female Foley Catheter" }, { name: "Pyelonephritis" }, { name: "Peritoneal Dialysis" }, { name: "Acute Renal Failure" }, { name: "Sexually Transmitted Infections (STIs)" }, { name: "Urinary Tract Infection (UTI)" }, { name: "Vaginal Bleeding" },
+    ]},
+    { title: "Wound Management & Surgery", skills: [
+      { name: "Wound Location" }, { name: "Wound Staging" }, { name: "Wound Characteristics" }, { name: "Pressure Relief Surfaces" }, { name: "Assist with Sutures" }, { name: "Set Up Suture Tray" }, { name: "Suture Removal" }, { name: "Assist with Staples" }, { name: "Staple Removal" },
+    ]},
+    { title: "Pain Management", skills: [
+      { name: "Therapeutic Response to Pain Medications" }, { name: "Pain Level/Tolerance" }, { name: "Non-Pharmacological Comfort Measures" }, { name: "Epidural Analgesia" }, { name: "Patient Controlled Analgesia" }, { name: "Non-Narcotic Agents" }, { name: "Narcotic Analgesia" },
+    ]},
+    { title: "Vascular Access & IV Therapy", skills: [
+      { name: "Patency" }, { name: "Intravenous Therapy" }, { name: "IV Tubing Connections" }, { name: "Extravasation/Infiltration" }, { name: "Vascular Access Site" }, { name: "Peripheral Line/Dressing" }, { name: "Broviac/Hickman" }, { name: "Portacath" }, { name: "Port Access/De-Access" }, { name: "Tunneled and Nontunneled Catheters" }, { name: "Syringe Pumps" }, { name: "Disinfection of Catheters/Hubs" }, { name: "Peripherally Inserted Central Catheter (PICC)" }, { name: "Central Line Dressing Maintenance" }, { name: "Implanted Pump" }, { name: "IV Insertion" }, { name: "Administration of Blood/Blood Products" }, { name: "Smart Pumps and Guardrails" }, { name: "Antibiotics/Antifungals/Antivirals" }, { name: "IV Bolus Administration" }, { name: "Drawing Venous Blood" }, { name: "Declotting Catheter/Port Occlusion" }, { name: "IV Compatibility" }, { name: "Total Parenteral Nutrition" }, { name: "Assist with Insertion of Central Lines" }, { name: "Closed System Transfer Devices" }, { name: "Ambulatory Infusion Pump" },
+    ]},
+    { title: "Catheters & Drains", skills: [
+      { name: "Chest Tube" }, { name: "Suprapubic Catheter" }, { name: "Peritoneal Drain Catheter" }, { name: "Colostomy" }, { name: "Ambulatory Infusion Pumps" }, { name: "Intrathecal Implantable Pump" }, { name: "Ileal Conduit" }, { name: "Indwelling Pleural Catheter" }, { name: "Urostomy" }, { name: "Indwelling Urinary Catheter" },
+    ]},
+    { title: "Chemotherapy & Medication Administration", skills: [
+      { name: "Chemotherapy Administration" }, { name: "Safe Handling of Chemotherapy" }, { name: "Vesicant Administration" }, { name: "Anaphylaxis Management" }, { name: "Immunotherapies" }, { name: "Opioids" }, { name: "Antineoplastics" }, { name: "Hormonal Agents" }, { name: "Supportive Therapies (steroids, antiemetics)" }, { name: "Targeted Agents" }, { name: "Intravesical Administration" }, { name: "Subcutaneous Injections" }, { name: "Intrathecal Administration" }, { name: "Hypersensitivity Reaction" }, { name: "Oral Anticancer Drugs" }, { name: "IM Injections" },
+    ]},
+    { title: "Infectious Diseases", skills: [
+      { name: "Acquired Immune Deficiency Syndrome/HIV" }, { name: "VRE" }, { name: "Tuberculosis" }, { name: "Meningitis" }, { name: "MRSA" }, { name: "Hepatitis" }, { name: "Varicella (Chicken Pox)" }, { name: "Influenza" }, { name: "Pertussis" }, { name: "COVID-19" }, { name: "Interpretation of CBC" }, { name: "Interpretation of ABG Results" }, { name: "Interpretation of Chemistry" },
+    ]},
+    { title: "Psychosocial Care", skills: [
+      { name: "Provide Care for End-of-Life Decisions Families Face (e.g., withdrawal of life support)" }, { name: "Demonstrate Effective Coping Skills in Caring for the Oncology Patient" }, { name: "Grief Counseling" }, { name: "Caregiver/Family Support" }, { name: "Adhere to Legal Procedures Regarding Notification of Organ Donation Provider" }, { name: "Survivorship Care" }, { name: "Hospice" }, { name: "Advance Care Planning" }, { name: "Ethical Decision Making" }, { name: "Demonstrate Spiritual/Cultural Considerations for the Oncology Patient" }, { name: "Palliative Care" },
+    ]},
+    { title: "Patient Education", skills: [
+      { name: "Provide Education Regarding Preparation for Invasive Procedures" }, { name: "Provide Education Regarding Medications and Disease Process" }, { name: "Provide Education Regarding Follow-Up Care as Indicated" },
+    ]},
+    { title: "Professional Practice", skills: [
+      { name: "Maintain Nursing Competencies/Certifications Required by Facility/State" }, { name: "Maintain Privacy/Dignity for Each Patient" }, { name: "Utilize EMR for Accurate Patient Documentation" }, { name: "Perform All Nursing Functions Within RN Scope of Practice" }, { name: "Collaborate with Interdisciplinary Teams for Care of Patient" }, { name: "Maintain Patient Confidentiality per HIPAA Guidelines" }, { name: "Communicate with Patient Using Age and Cultural Appropriate Methods" }, { name: "Comply with Joint Commission, CMS, and Other Federal/State Regulations and Guidelines" },
     ]},
     { title: "Age Specific Competencies", skills: [
-      { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
     ]},
   ]},
 
