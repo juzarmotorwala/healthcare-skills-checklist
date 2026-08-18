@@ -122,20 +122,47 @@ export const criticalCareChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "pacu", title: "Registered Nurse – PACU Skills Checklist", shortTitle: "RN – PACU", icon: "😴", group: "Critical Care", categories: [
-    { title: "Cardiovascular", skills: [
-      { name: "Open Heart Recovery" }, { name: "AAA Repair" }, { name: "Vascular Surgery" }, { name: "Pacemaker-Permanent & Temporary" }, { name: "Cardioversion" }, { name: "AICD Insertion" },
+    { title: "Communication & Collaboration", skills: [
+      { name: "Request and provide pertinent patient data with interdisciplinary team members, patients, and families" }, { name: "Communicate with patients using age and culturally appropriate methods" }, { name: "Collaborate with interdisciplinary teams in the pre-operative, intra-operative, and post-operative environments" }, { name: "Perform hand-off from surgical services staff to the receiving unit to ensure continuity of care" },
     ]},
-    { title: "General/Abdominal Surgery", skills: [
-      { name: "Appendectomy" }, { name: "Cholecystectomy" }, { name: "Colon Resection" }, { name: "Hernia Repair" }, { name: "Mastectomy" }, { name: "Laparoscopic Procedures" },
+    { title: "Admission & Assessment", skills: [
+      { name: "Monitor recovery from general, regional, and local anesthesia" }, { name: "Identify and treat abnormal breath sounds (e.g. rales, rhonchi)" }, { name: "Assign Aldrete scores to determine recovery progression" }, { name: "Inspect surgical sites, dressings, drains, and tubes for signs of bleeding, infection, and other complications" }, { name: "Assess and maintain a patent airway using oral/nasal airways, ETT, or LMA" }, { name: "Use pulmonary support (e.g. bag valve mask, ventilator, BiPAP/CPAP, adjustment of settings, extubation parameters, weaning protocols)" }, { name: "Assess vital signs including temperature and skin condition (e.g. color, temperature, turgor)" }, { name: "Evaluate neurological status including level of consciousness and motor function" }, { name: "Recognize and intervene in respiratory distress by monitoring respiratory rate, rhythm, depth, and symmetry" },
     ]},
-    { title: "Orthopedic", skills: [
-      { name: "Total Hip Replacement" }, { name: "Total Knee Replacement" }, { name: "Fracture Repair" }, { name: "Arthroscopy" }, { name: "Spinal Surgery" },
+    { title: "Discharge Planning & General PACU Practices", skills: [
+      { name: "Provide post-operative education to patients and families including discharge instructions" }, { name: "Determine patient's readiness for discharge from PACU using facility-specific criteria" }, { name: "Use personal protective equipment (PPE) when indicated in the PACU environment" }, { name: "Follow and use equipment according to manufacturer's recommendations (e.g. testing/QA, cleaning)" },
     ]},
-    { title: "Respiratory", skills: [
-      { name: "Chest Tube Management" }, { name: "Ventilator Management" }, { name: "Intubation/Extubation" }, { name: "ABG Interpretation" }, { name: "Pulse Oximetry" },
+    { title: "Nursing Procedures", skills: [
+      { name: "Peripheral IV placement" }, { name: "Point-of-care testing" }, { name: "Indwelling and/or straight urinary catheter" }, { name: "Suctioning" }, { name: "NG tube insertion" }, { name: "Wound care or dressing changes" },
+    ]},
+    { title: "Scoring Systems & Assessment Scales", skills: [
+      { name: "Aldrete Scoring System" }, { name: "Pain assessment scales (e.g. Numeric Rating Scale, FLACC for pediatrics)" }, { name: "Glasgow Coma Scale (GCS)" }, { name: "Post Anesthetic Discharge Scoring System (PADSS)" }, { name: "Dermatome Levels" }, { name: "Braden Scale" }, { name: "Modified Scoring System" }, { name: "White's Fast Tracking Scoring System" }, { name: "Richmond Agitation Sedation Scale (RASS)" },
+    ]},
+    { title: "Equipment", skills: [
+      { name: "Ventilator" }, { name: "Suction equipment" }, { name: "Bladder scanner" }, { name: "Defibrillator" }, { name: "Cardiac monitor" }, { name: "Electric bed" }, { name: "IV Pump" }, { name: "End Tidal CO2 Capnography" }, { name: "Glucometer" }, { name: "Oxygen saturation monitor" }, { name: "Stretchers" }, { name: "CPM machine" }, { name: "PCA/PCEA pumps" }, { name: "Forced air warming devices (e.g. Bair Hugger)" },
+    ]},
+    { title: "Invasive Procedures", skills: [
+      { name: "Epidural catheter management" }, { name: "Intubation" }, { name: "Blood transfusion administration" }, { name: "Nerve blocks" }, { name: "A-line placement" }, { name: "PICC lines" }, { name: "Tracheotomy" }, { name: "Insertion of chest tubes" }, { name: "Pulmonary artery catheter (Swan Ganz) placement" }, { name: "Central lines" },
+    ]},
+    { title: "Common Surgery Subspecialties", skills: [
+      { name: "Colon and rectal surgery" }, { name: "Orthopedics" }, { name: "Ear, nose and throat" }, { name: "Neurological" }, { name: "Urology" }, { name: "Bariatric surgery" }, { name: "Thoracic/Open heart" }, { name: "Gynecology and obstetrics" }, { name: "Transplant" }, { name: "Ophthalmology" }, { name: "Vascular" }, { name: "Pediatrics" }, { name: "Endoscopic procedures" }, { name: "Gynecologic oncology" }, { name: "Plastics" }, { name: "General surgery" }, { name: "Trauma" }, { name: "Oral and maxillofacial" },
+    ]},
+    { title: "Physiologic Balance", skills: [
+      { name: "Monitor for electrolyte imbalances" }, { name: "Review patient data related to physiological status (e.g. lab values, allergies, secondary diagnoses/conditions, NPO status)" }, { name: "Perform interventions for maintaining physiological comfort (e.g. nausea, vomiting, pain)" }, { name: "Identify patient's actual and potential physiological responses to operative experience (e.g. tissue perfusion, body temperature, thermal regulation, infection)" }, { name: "Recognize and intervene for signs of fluid overload or dehydration" }, { name: "Perform physical assessment on surgical patients" }, { name: "Perform interventions for maintaining normal thermal stability" }, { name: "Administer blood products per physician's order to maintain hemodynamic status" },
+    ]},
+    { title: "Emergency Situations", skills: [
+      { name: "Respiratory arrest" }, { name: "Cardiac arrest" }, { name: "Environmental disasters" }, { name: "Lethal arrhythmias" }, { name: "PACU-specific complications (e.g. post-operative bleeding, acute hypotension)" }, { name: "Malignant hyperthermia" }, { name: "Loss of airway" }, { name: "Anaphylaxis" }, { name: "Laryngospasm" },
+    ]},
+    { title: "Professional Considerations", skills: [
+      { name: "Confirm patient identification using a minimum of 2 patient identifiers" }, { name: "Communicate with multiple members of the interdisciplinary team in the PACU regarding patient status (e.g. critical lab values, medications, allergies)" }, { name: "Delegate appropriate tasks to other personnel as needed within scope of practice" }, { name: "Maintain privacy and dignity for each patient during entire PACU stay" }, { name: "Participate in performance improvement initiatives and projects" }, { name: "Perform all nursing functions within scope of practice" }, { name: "Confirm presence and status of DNR orders and/or advance directive" }, { name: "Manage outside personnel when present in the PACU environment (e.g. supply/equipment vendors, students, family members)" }, { name: "Follow chain of command in regard to reporting potential situations (e.g. possible drug diversion/impairment, medication errors, sentinel events)" }, { name: "Develop, monitor, and revise plan of care for the PACU patient" }, { name: "Maintain patient confidentiality according to HIPAA guidelines including status updates to family members" }, { name: "Participate in root-cause-analysis of events (e.g. sentinel events, medication errors, near-misses)" },
+    ]},
+    { title: "Patient Safety", skills: [
+      { name: "Ensure proper positioning and use of safety devices (e.g. padded side rails, restraints, safety straps)" }, { name: "Implement solutions for patient communication barriers (e.g. physiological, cultural, language)" }, { name: "Promote safety for patient, staff, and visitors in the PACU setting (e.g. chemical exposure, radiation exposure)" }, { name: "Maintain privacy and dignity for each patient during their PACU stay" },
+    ]},
+    { title: "Surgical Settings", skills: [
+      { name: "Other Specialty Surgery Hospital or Center" }, { name: "Cosmetic and/or Facial Surgery Center" }, { name: "Oral and Maxillofacial Surgery Center" }, { name: "Acute Care Hospital" }, { name: "Orthopedic Surgery Center" }, { name: "Endoscopy Center" }, { name: "Ophthalmology and/or Laser Eye Surgery Center" }, { name: "Outpatient Surgery Center" },
     ]},
     { title: "Age Specific Competencies", skills: [
-      { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
     ]},
   ]},
 
