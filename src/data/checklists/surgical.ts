@@ -5,6 +5,9 @@ export const surgicalChecklists: ChecklistSpec[] = [
     { title: "Work Setting", skills: [
       { name: "General OR" }, { name: "CVOR" }, { name: "Outpatient" }, { name: "Trauma" }, { name: "Peds-General OR" }, { name: "Peds-CVOR" },
     ]},
+    { title: "Surgical Specialties", skills: [
+      { name: "Cardiac Cath Lab" }, { name: "Spinal Reconstruction" }, { name: "Prenatal" }, { name: "Foot and Ankle" }, { name: "Endocrine (thyroid, parathyroid, adrenal glands)" }, { name: "Bariatric" }, { name: "Obstetrics" }, { name: "Pediatric" }, { name: "Endoscopy" }, { name: "Oral" }, { name: "Laparoscopy" }, { name: "Cystoscopy" }, { name: "Colon and Rectal" }, { name: "Hand and Wrist" }, { name: "Joint Replacement" }, { name: "Robotics" }, { name: "Open Heart" }, { name: "Ophthalmic" }, { name: "Gynecology" }, { name: "Oncology" }, { name: "Organ Procurement" }, { name: "Neurosurgery of the Brain and Peripheral Nerves" }, { name: "Sports Medicine" }, { name: "Plastic and Maxillofacial" }, { name: "Transplant" }, { name: "Neonatal" }, { name: "Vascular" }, { name: "Oculoplastic" }, { name: "Otolaryngology (ENT)" }, { name: "Urology" },
+    ]},
     { title: "General Surgery", skills: [
       { name: "Appendectomy" }, { name: "Cholecystectomy" }, { name: "Colectomy/Bowel Resection" }, { name: "Mastectomy" }, { name: "Hernia Repair" }, { name: "Thyroidectomy" }, { name: "Gastrectomy" }, { name: "Exploratory Laparotomy" },
     ]},
@@ -20,23 +23,56 @@ export const surgicalChecklists: ChecklistSpec[] = [
     { title: "GU/GYN", skills: [
       { name: "Hysterectomy" }, { name: "C-Section" }, { name: "TURP" }, { name: "Nephrectomy" }, { name: "Cystoscopy" },
     ]},
+    { title: "Preoperative Responsibilities", skills: [
+      { name: "Advance Directives/DNR Orders" }, { name: "Medication Reconciliation" }, { name: "Physical and Pain Assessment" }, { name: "Patient Interview (NPO status, lab values, imaging, allergies, diagnoses, conditions)" }, { name: "Universal Protocol" }, { name: "Health History" }, { name: "Surgical and Anesthesia Consents (accuracy, laterality, signature, dated)" }, { name: "Verifying Surgical Site Marking" }, { name: "Patient Identification (name, DOB, medical record number)" }, { name: "Preoperative Education" },
+    ]},
     { title: "Circulating Duties", skills: [
-      { name: "Sponge, Sharps & Instrument Counts" }, { name: "Patient Positioning" }, { name: "Specimen Handling and Labeling" }, { name: "Intraoperative Documentation" }, { name: "Fire Safety Protocol" }, { name: "Time-Out/Patient Advocacy" },
+      { name: "Sponge, Sharps & Instrument Counts" }, { name: "Patient Positioning" }, { name: "Specimen Handling and Labeling" }, { name: "Intraoperative Documentation" }, { name: "Fire Safety Protocol" }, { name: "Time-Out/Patient Advocacy" }, { name: "Thermoregulation" }, { name: "Bowel Isolation Technique" }, { name: "Equipment, Supplies, and Instrument Management" }, { name: "Maintaining the Sterile Field" }, { name: "Case Carts" }, { name: "Setting Up and Running the Backtable" }, { name: "Preference Card/Pick List" }, { name: "Sterile Attire" }, { name: "Retrieving Supplies and Instruments" }, { name: "Opening Sterile Items and Trays" }, { name: "Medication Handling" }, { name: "Patient Monitoring (tissue perfusion, vital signs)" }, { name: "Wound Classification" }, { name: "Implant Handling" }, { name: "Assisting the Surgeon at Sterile Field" },
+    ]},
+    { title: "Postoperative Responsibilities", skills: [
+      { name: "Skin and Wound Assessment" }, { name: "Postoperative Education" }, { name: "Complete Documentation" }, { name: "Wound Care" }, { name: "Transfer of Patient" }, { name: "Evaluate Patient's Physiological Status/Hemodynamics" }, { name: "Hand-Off Report to Post-Anesthesia Care Nurse" }, { name: "Surgical Drain Care" },
+    ]},
+    { title: "Patient Positioning", skills: [
+      { name: "Prone" }, { name: "Trendelenburg" }, { name: "Positioning Individuals Who Are Pregnant" }, { name: "Proper Use of Positioning Devices" }, { name: "Kidney" }, { name: "Supine" }, { name: "Safe Patient Handling" }, { name: "Knee-Chest" }, { name: "Sitting, Modified-Sitting (Fowlers/Semi-Fowlers), and Beach-Chair" }, { name: "Positioning Injuries and Prevention" }, { name: "Sims" }, { name: "Pressure Injury Prevention and Assessment" }, { name: "Cranial Fixation/Skull Pins" }, { name: "Positioning Individuals with Obesity (bariatric surgery)" }, { name: "Lateral" }, { name: "Jackknife" }, { name: "Reverse Trendelenburg" }, { name: "Lithotomy" }, { name: "Transfer Devices" },
+    ]},
+    { title: "Surgical Site Prep", skills: [
+      { name: "Ear" }, { name: "Inguinal Hernia" }, { name: "Scalp" }, { name: "Hand" }, { name: "Back" }, { name: "Decolonization (antimicrobial soap, skin cleansing)" }, { name: "Facial" }, { name: "Chest" }, { name: "Knee" }, { name: "Neck" }, { name: "Areas with High Microbial Counts (groin, axilla, anus, perineum, skin folds, umbilicus)" }, { name: "Hair Removal" }, { name: "Antiseptic Agents (alcohol, chlorhexidine gluconate, iodine, iodophors, parachlorometaxylenol)" }, { name: "Lateral Thoracic" }, { name: "Eye" }, { name: "Vagina" }, { name: "Stoma" }, { name: "Shoulder" }, { name: "Cesarean Section" }, { name: "Mucous Membranes" }, { name: "Skin Assessment" }, { name: "Abdominal" }, { name: "Hip" },
     ]},
     { title: "Scrub Duties", skills: [
       { name: "Sterile Field Setup and Maintenance" }, { name: "Instrument Passing Technique" }, { name: "Gowning and Gloving (Self and Team)" }, { name: "Back-Table/Mayo Stand Setup" },
     ]},
+    { title: "Instrument Handling & Inventory Management", skills: [
+      { name: "Single-Use Instruments" }, { name: "Inspection" }, { name: "Surgical Instrument Count and Discrepancies" }, { name: "Powered Instruments" }, { name: "Naming and Classification" }, { name: "Identifying Defective Instruments and Sending for Repair" }, { name: "Breaking Down the Backtable" },
+    ]},
+    { title: "Instrument Processing & Sterilization", skills: [
+      { name: "Gravity Air Displacement Sterilizers" }, { name: "Enzymatic Products" }, { name: "Chemical Indicators" }, { name: "Spaulding Classification (critical, semicritical, noncritical)" }, { name: "Immediate Use Steam Sterilization (IUSS)" }, { name: "Rigid Containers" }, { name: "Hydrogen Peroxide Systems" }, { name: "Autoclave Tape" }, { name: "Tamper-Evident Seals" }, { name: "Sterility Assurance" }, { name: "Wet Packs" }, { name: "Reusable Packaging Material (woven)" }, { name: "Ozone Sterilization" }, { name: "Instrument Count Sheets" }, { name: "Minimum Effective Concentration (MEC) of the Active Ingredient" }, { name: "Sterilizer Cycle Reports" }, { name: "Vapor Exposure Levels" }, { name: "Steam Sterilization Parameters" }, { name: "Tray Filters" }, { name: "Wicking Material (towels)" }, { name: "Low- to Intermediate-Level Disinfectants" }, { name: "Steam-Flush Pressure-Pulse Sterilizers" }, { name: "Point-of-Use Cleaning" }, { name: "Disposable Packaging Material (paper, flat wrap)" }, { name: "Biological Indicators" }, { name: "High-Level Disinfectants" }, { name: "Prevacuum Sterilizers" }, { name: "Handling and Transporting Contaminated Items" }, { name: "Ethylene Oxide" }, { name: "Protective Instrument Devices (tip protectors, silicone mats, sleeves)" }, { name: "Tabletop Sterilizers" }, { name: "Loading and Unloading Sterilizers" }, { name: "Sterile Processing Zones" }, { name: "Peel Pouches" },
+    ]},
+    { title: "Sterile Storage", skills: [
+      { name: "Open Shelving" }, { name: "Dust Covers" }, { name: "Closed Shelving" }, { name: "Transporting Sterile Items" }, { name: "Storage Carts" }, { name: "Environmental Conditions" }, { name: "Event-Related Sterility" }, { name: "Semi-Closed Shelving" },
+    ]},
+    { title: "Endoscopes", skills: [
+      { name: "Storage Cabinets" }, { name: "Assembly (accessories, testing before use, wearing gloves)" }, { name: "Point-of-Use Cleaning" }, { name: "Packaging" }, { name: "Transportation to Processing Area" },
+    ]},
+    { title: "Infection Prevention & Hand Hygiene", skills: [
+      { name: "Standard Precautions" }, { name: "Personal Protective Equipment (PPE)" }, { name: "Transmission-Based Precautions (droplet, airborne, contact)" }, { name: "Special Pathogens (Creutzfeldt-Jakob disease, multidrug-resistant organisms)" }, { name: "Hazardous Materials and Sharps" }, { name: "Surgical Hand Antisepsis (surgical hand scrub/rub steps, scrub sinks)" }, { name: "Hand Care (fingernail length, nail polish, dermatitis, cuts/injuries, artificial nails)" }, { name: "Jewelry" }, { name: "Hand Hygiene (handwashing, alcohol-based rubs, indications)" },
+    ]},
+    { title: "Intraoperative Environment Care & Maintenance", skills: [
+      { name: "Temperature, Moisture, and Humidity Monitoring" }, { name: "Surgical Suite Zones (unrestricted, semi-restricted, restricted)" }, { name: "Lighting (overhead, spotlights, greenlights)" }, { name: "Environmental Contamination (construction, condensation, flooding)" }, { name: "Ventilation and Airflow (positive and negative pressure)" }, { name: "Traffic Flow" },
+    ]},
+    { title: "Environmental Cleaning", skills: [
+      { name: "Cleaning Non-Critical Items and Surfaces" }, { name: "Cleaning Procedures (damp dusting, terminal cleaning, mopping, mattresses, frequency, protective barriers)" }, { name: "Waste (trash, recycling, linens)" }, { name: "Cleaning Products (contact times, selecting correct chemicals, PPE, cleaning materials)" },
+    ]},
     { title: "Anesthesia Assist", skills: [
-      { name: "Positioning for Induction" }, { name: "Airway Equipment Assist" }, { name: "Regional Block Assist" }, { name: "Malignant Hyperthermia Response" },
+      { name: "Positioning for Induction" }, { name: "Airway Equipment Assist" }, { name: "Regional Block Assist" }, { name: "Malignant Hyperthermia Response" }, { name: "Induction and Intubation" }, { name: "Anesthesia Emergencies" }, { name: "Awake Intubation" }, { name: "Extubation and Emergence" },
     ]},
     { title: "Equipment & Technology", skills: [
-      { name: "Electrocautery Setup" }, { name: "Robotic Surgical System Assist (da Vinci)" }, { name: "C-Arm/Fluoroscopy Positioning" }, { name: "Laser Safety" },
+      { name: "Electrocautery Setup" }, { name: "Robotic Surgical System Assist (da Vinci)" }, { name: "C-Arm/Fluoroscopy Positioning" }, { name: "Laser Safety" }, { name: "Operating Microscopes" }, { name: "Safety Straps" }, { name: "Electrosurgical (ESU) Generator and Accessories" }, { name: "Fire Prevention" }, { name: "Patient and Personnel Injury Prevention" }, { name: "Patient Monitoring Devices" }, { name: "Sequential Compression Devices" }, { name: "Pneumatic Tourniquets" }, { name: "Antiembolic Stockings" }, { name: "OR Table Assembly and Attachments" }, { name: "Image Guided Devices" }, { name: "Fluid Warmers and Thermoregulatory Devices" }, { name: "Energy Generating Devices" }, { name: "Suction/Irrigation Devices" },
     ]},
     { title: "Sterile Technique & Safety", skills: [
-      { name: "Surgical Asepsis Principles" }, { name: "Sterile Field Break/Correction" }, { name: "Surgical Skin Prep Technique" }, { name: "Universal Protocol Compliance" },
+      { name: "Surgical Asepsis Principles" }, { name: "Sterile Field Break/Correction" }, { name: "Surgical Skin Prep Technique" }, { name: "Universal Protocol Compliance" }, { name: "Medical Gases (carbon dioxide, nitrogen, oxygen)" }, { name: "Latex Precautions and Sensitivity" }, { name: "Slips, Trips, and Falls" }, { name: "Ergonomics" }, { name: "Fire Safety and Prevention" }, { name: "Chemical Handling and Exposure (PPE, spill plan, storage, eyewash stations)" }, { name: "Anesthesia Waste Gases" }, { name: "Radiation Exposure" }, { name: "Biohazardous Materials" }, { name: "Needlestick and Other Personal Injuries" }, { name: "Noise and Distractions" }, { name: "Manufacturer's Instructions for Use (IFU)" }, { name: "Safety Data Sheets (SDS)" }, { name: "Fire Extinguishers" }, { name: "Emergency Eyewash Stations" }, { name: "Emergency Carts" },
     ]},
     { title: "Emergency Procedures", skills: [
-      { name: "Malignant Hyperthermia Cart" }, { name: "Massive Hemorrhage Protocol" }, { name: "Emergency Conversion (Lap to Open)" }, { name: "Code Response in OR" },
+      { name: "Malignant Hyperthermia Cart" }, { name: "Massive Hemorrhage Protocol" }, { name: "Emergency Conversion (Lap to Open)" }, { name: "Code Response in OR" }, { name: "Local Anesthetic Systemic Toxicity (LAST)" }, { name: "Airway Emergencies (difficult intubation, emergent cricothyrotomy)" }, { name: "Anaphylaxis" }, { name: "Surgical Fire" },
     ]},
     { title: "Age Specific Competencies", skills: [
       { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
