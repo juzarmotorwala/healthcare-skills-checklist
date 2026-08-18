@@ -257,14 +257,29 @@ export const diagnosticLabChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "cardiac-cath-tech", title: "Cardiac Cath Lab Technologist Skills Checklist", shortTitle: "Cardiac Cath Tech", icon: "🫀", group: "Diagnostic & Lab", categories: [
-    { title: "Procedures", skills: [
-      { name: "Diagnostic cardiac catheterization" }, { name: "PCI/angioplasty assist" }, { name: "Stent placement assist" }, { name: "Electrophysiology study assist" }, { name: "Pacemaker/ICD implant assist" }, { name: "Peripheral vascular intervention assist" },
+    { title: "Cardiac Catheterization Procedures", skills: [
+      { name: "Atherectomy" }, { name: "Pressure Wire" }, { name: "Chronic Total Occlusions" }, { name: "Intravascular Ultrasound" }, { name: "Angiography" }, { name: "Right Heart Catheterization" }, { name: "Pericardiocentesis" }, { name: "Thrombolysis" }, { name: "Embolization" }, { name: "Impella insertion" }, { name: "Portal Shunts (TIPS)" }, { name: "Central Line Placement" }, { name: "Left Heart Catheterization" }, { name: "Stent Placement" }, { name: "Angioplasty" }, { name: "Coronary Angioplasty" }, { name: "Thrombectomy" }, { name: "PCI (Complex)" }, { name: "Biopsy" }, { name: "Endomyocardial Biopsy" }, { name: "Intra-Aortic Balloon Pump" }, { name: "PCI (Basic)" }, { name: "C-Arm positioning" }, { name: "Pan Table" }, { name: "Venography" }, { name: "Arterial Line Insertion" }, { name: "Temporary Pacemaker Insertion" }, { name: "Directional/Rotational Atherectomy" }, { name: "Power Injectors" },
     ]},
-    { title: "Equipment & Technique", skills: [
-      { name: "Hemodynamic monitoring" }, { name: "Fluoroscopy operation" }, { name: "Sterile scrub technique" }, { name: "Contrast media administration" }, { name: "Intra-aortic balloon pump setup" }, { name: "Closure device application" },
+    { title: "Patient Assessment & Hemodynamic Monitoring", skills: [
+      { name: "Pain Assessment/Reassessment" }, { name: "Blood Pressure - Invasive" }, { name: "Blood Pressure - Non-Invasive" }, { name: "12 Lead EKG Interpretation" }, { name: "Right Heart Pressure Assessment" }, { name: "Left Heart Pressure Assessment" }, { name: "Arrhythmia" }, { name: "Blood Oximetry" }, { name: "Hemodynamic Monitoring (Arterial)" }, { name: "Hemodynamic Monitoring (Venous)" },
     ]},
-    { title: "Patient Care & Safety", skills: [
-      { name: "Pre-procedure patient prep" }, { name: "Conscious sedation monitoring" }, { name: "Radiation safety" }, { name: "Emergency response (code, arrhythmia)" }, { name: "Post-procedure site care" },
+    { title: "Sheath Site Assessment & Closure Devices", skills: [
+      { name: "Femoral Venous" }, { name: "Radial Arterial" }, { name: "Femoral Arterial" }, { name: "Intrajugular Vein" }, { name: "Brachial Arterial" }, { name: "Perclose (Suture Closure)" }, { name: "Vaso-Seal" }, { name: "Manual Pressure Hold" }, { name: "Mynx-Grip" }, { name: "Star Close" }, { name: "Angio-Seal" }, { name: "Radial Compression devices" },
+    ]},
+    { title: "Hemodynamic Calculations", skills: [
+      { name: "Valve Area Calculation" }, { name: "SVO2 Recording" }, { name: "Ventricular End Diastolic Area Measurement" }, { name: "AVO2 Difference" }, { name: "Systemic Vascular Resistance" }, { name: "Cardiac Index" }, { name: "Valve Measurement" }, { name: "Ejection Fraction" }, { name: "Cardiac Output – Thermodilution" }, { name: "Pulmonary Vascular Resistance" }, { name: "Cardiac Output – Fick" }, { name: "Ventricular End Systolic Area Measurement" },
+    ]},
+    { title: "Electrophysiology", skills: [
+      { name: "Tilt Table Studies" }, { name: "Pulsed Field Ablation" }, { name: "Adenosine Testing" }, { name: "Exercise Treadmill Test" }, { name: "Transseptal Access" }, { name: "Loop Recorder Implants" }, { name: "Cardioversion" }, { name: "Intracardiac Mapping" }, { name: "Biventricular Pacemaker Implantations" }, { name: "Cryoablation" }, { name: "Pacemaker/ICD Insertion" }, { name: "Radiofrequency Ablation" }, { name: "EP Studies Stimulation Protocol" },
+    ]},
+    { title: "Emergency Procedures", skills: [
+      { name: "Cardioversion" }, { name: "Transvenous Pacing" }, { name: "Code Protocol, Treatment, and Medications" }, { name: "ACLS Algorithm" }, { name: "Defibrillation" }, { name: "Airway Management" }, { name: "Patient Monitoring" }, { name: "Transcutaneous Pacing" },
+    ]},
+    { title: "Cath-Lab Medications", skills: [
+      { name: "Morphine (Duramorph®)" }, { name: "Hydromorphone (Dilaudid®)" }, { name: "Midazolam (Versed®)" }, { name: "Fentanyl (Actiq®)" }, { name: "Sodium Nitroprusside (Nipride)" }, { name: "Hydralazine" }, { name: "Metoprolol (Lopressor®)" }, { name: "Naloxone (Narcan®)" }, { name: "Protamine" }, { name: "Flumazenil (Romazicon®)" }, { name: "Heparin" }, { name: "Bivalirudin (Angiomax®)" }, { name: "Cangrelor (Kengreal®)" }, { name: "Eptifibatide (Integrilin®)" }, { name: "Amiodarone (Pacerone®)" }, { name: "Diltiazem (Cardizem®)" }, { name: "Ticagrelor (Brilinta®)" }, { name: "Aspirin (Acuprin®)" }, { name: "Clopidogrel (Plavix®)" }, { name: "Prasugrel (Effient®)" }, { name: "Epinephrine (Adrenalin®)" }, { name: "Nitroglycerine (Nitro-Bid®)" }, { name: "Dopamine (Intropin®)" }, { name: "Sodium Bicarbonate" }, { name: "Atropine (Atreza®)" }, { name: "Adenosine (Adenocard®)" }, { name: "Lidocaine (Xylocaine®)" }, { name: "Vasopressin (Pitressin®)" }, { name: "IV Antibiotics" }, { name: "Verapamil (Calan®)" }, { name: "Nicardipine (Cardene®)" }, { name: "Furosemide (Lasix®)" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
     ]},
   ]},
 
@@ -320,14 +335,32 @@ export const diagnosticLabChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "ekg-tech", title: "EKG Technician Skills Checklist", shortTitle: "EKG Tech", icon: "📈", group: "Diagnostic & Lab", categories: [
-    { title: "Procedures", skills: [
-      { name: "12-lead EKG acquisition" }, { name: "Holter monitor placement" }, { name: "Stress test assist" }, { name: "Event monitor setup" },
+    { title: "EKG Acquisition & Equipment", skills: [
+      { name: "Electrode Placement" }, { name: "Skin Preparation" }, { name: "Methods to Reduce Significant Artifact" }, { name: "Lead Placement" }, { name: "Load EKG Paper" }, { name: "Calibrating EKG Machines" }, { name: "Troubleshooting" }, { name: "Uploading/Deleting Reports" }, { name: "Machine Maintenance" },
     ]},
-    { title: "Technical Skills", skills: [
-      { name: "Lead placement accuracy" }, { name: "Artifact troubleshooting" }, { name: "Basic rhythm recognition" }, { name: "Equipment maintenance" },
+    { title: "Heart Monitor Placement", skills: [
+      { name: "Zio Patches" }, { name: "Holter Monitors" }, { name: "Event Monitors" },
     ]},
-    { title: "Patient Care", skills: [
-      { name: "Patient prep and education" }, { name: "Infection control" }, { name: "Documentation and transmission of results" },
+    { title: "EKG Interpretation", skills: [
+      { name: "Anatomy of the Cardiovascular System" }, { name: "Identification of Lethal Arrhythmias" }, { name: "Identification of Artifact" }, { name: "Scanning Heart Monitors" }, { name: "Identification of Abnormal Arrhythmias" }, { name: "Pathology of the Cardiovascular System" },
+    ]},
+    { title: "Cardiology Procedure Assistance", skills: [
+      { name: "Pacemaker Monitoring" }, { name: "Monitor EKG Waveform" }, { name: "Stress Testing" },
+    ]},
+    { title: "Patient Care & Infection Control", skills: [
+      { name: "Patient Education on Equipment Function/Procedures" }, { name: "Cultural Competence" }, { name: "Patient Identification" }, { name: "Patient Safety" }, { name: "Monitor Vital Signs" }, { name: "Standard Precautions" }, { name: "Isolation Precautions" }, { name: "When to Use PPE" }, { name: "Environmental Control" }, { name: "Donning/Doffing PPE" },
+    ]},
+    { title: "Patient Rights & Communication", skills: [
+      { name: "Identifying/Accommodating Patient Needs and Privacy" }, { name: "Manage Refusals" }, { name: "Maintain Confidentiality" }, { name: "Adhere to HIPAA Regulations" }, { name: "Manage Complaints" }, { name: "Collaboration with Team Members" }, { name: "Communication with Physicians/Nurses" }, { name: "Communication with Patients" }, { name: "Use of Translator Devices/Services" },
+    ]},
+    { title: "Documentation & Clerical Duties", skills: [
+      { name: "Knowledge of Cardiovascular Anatomy" }, { name: "Upload Reports from Third-Party Vendors" }, { name: "Knowledge of Medical Terminology Related to Cardiology" }, { name: "Use of EMR/EHR Systems" }, { name: "Respond to Patient Messages" }, { name: "Respond to Provider Messages" }, { name: "Answer Phone Calls" }, { name: "Schedule/Cancel Appointments" },
+    ]},
+    { title: "Practice Setting Experience", skills: [
+      { name: "Nursing Facilities" }, { name: "Hospital" }, { name: "Physician Office" }, { name: "Imaging Center" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
     ]},
   ]},
 

@@ -350,17 +350,14 @@ export const nursingChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "rn-case-manager", title: "Registered Nurse Case Manager Skills Checklist", shortTitle: "RN Case Manager", icon: "📁", group: "Nursing", categories: [
-    { title: "Utilization Review", skills: [
-      { name: "InterQual Criteria" }, { name: "Milliman Care Guidelines" }, { name: "Medical necessity review" }, { name: "Concurrent review" }, { name: "Retrospective review" }, { name: "Denial management and appeals" }, { name: "Level of care determination" },
+    { title: "Skilled Care Environments", skills: [
+      { name: "Acute Care/Hospital" }, { name: "Managed Care" }, { name: "SNF/Long Term Care" },
     ]},
-    { title: "Discharge Planning & Care Coordination", skills: [
-      { name: "Assessment of post-acute needs" }, { name: "SNF/rehab placement coordination" }, { name: "Home health referral" }, { name: "DME coordination" }, { name: "Hospice referral" }, { name: "Insurance authorization" }, { name: "Interdisciplinary rounding" }, { name: "Readmission risk screening" },
+    { title: "Case Management & Utilization Review", skills: [
+      { name: "Communicates Well with Others, Verbally" }, { name: "Communicates Well with Others, in Writing (Reconsideration Letters)" }, { name: "Basic Negotiation Strategies" }, { name: "Basic Computer Skills" }, { name: "Ability to Prioritize" }, { name: "Concurrent Review" }, { name: "Retrospective Review" }, { name: "Disability Review" }, { name: "Long Term / Short Term Disability Case Management" }, { name: "Workers Compensation Review" }, { name: "Workers Compensation Case Management" }, { name: "PAC - Pre Certification / Pre-Admission Certification" }, { name: "CSR – Continued Stay Review" }, { name: "MCM – Medical Case Management" }, { name: "DP / DCP – Discharge Planning" }, { name: "Discharge Screens—Specific Indicators of Patients' Ability" }, { name: "ISD-A Interqual – Criteria for Hospital Admissions" }, { name: "Intensity of Service—Diagnostic & Therapeutic Services" }, { name: "Appropriateness of Care-Special Diagnostic & Therapeutic Procedures" }, { name: "Severity of Illness—Objective Clinical Data" }, { name: "DRG-Diagnostic Related Grouping (Exempt & Non-Exempt States)" }, { name: "ICD-9-CM" }, { name: "CPT" }, { name: "SSO" }, { name: "SIMS-Interqual - Criteria for SSO Waiver" }, { name: "Milliman & Robertson Criteria" }, { name: "PPR- Prospective Procedure Review" }, { name: "PA-Physician Advisor" },
     ]},
-    { title: "Documentation & Compliance", skills: [
-      { name: "Electronic medical record case notes" }, { name: "Care plan development" }, { name: "CMS/Medicare Conditions of Participation" }, { name: "HIPAA compliance" }, { name: "Payer communication and authorization tracking" },
-    ]},
-    { title: "Communication", skills: [
-      { name: "Patient and family education" }, { name: "Physician collaboration" }, { name: "Payer/insurance liaison" }, { name: "Conflict resolution" },
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
     ]},
   ]},
 
@@ -437,17 +434,23 @@ export const nursingChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "crna", title: "Certified Registered Nurse Anesthetist Skills Checklist", shortTitle: "CRNA", icon: "💤", group: "Nursing", categories: [
-    { title: "Anesthesia Administration", skills: [
-      { name: "General anesthesia administration" }, { name: "Regional anesthesia (spinal, epidural, nerve block)" }, { name: "Monitored anesthesia care (MAC)" }, { name: "Airway management (intubation, LMA)" }, { name: "Difficult airway management" },
+    { title: "Practice Settings", skills: [
+      { name: "Dentist office" }, { name: "COPA (Combined oro-pharyngeal airway)" }, { name: "Neuromuscular status and function" }, { name: "Acute care hospital" }, { name: "Nerve block" }, { name: "Outpatient surgery center" }, { name: "Patient positioning" }, { name: "Plastic surgery center" }, { name: "Private practice office setting" },
     ]},
-    { title: "Perioperative Management", skills: [
-      { name: "Pre-anesthesia assessment" }, { name: "Hemodynamic monitoring and management" }, { name: "Emergence and recovery management" }, { name: "Pain management planning" },
+    { title: "Surgical Procedures Supported", skills: [
+      { name: "Orthopedics" }, { name: "Open heart" }, { name: "Obstetrics" }, { name: "Plastics" }, { name: "Trauma" }, { name: "ENT" }, { name: "Neurosurgical" }, { name: "Vascular" },
     ]},
-    { title: "Specialty Populations", skills: [
-      { name: "Obstetric anesthesia" }, { name: "Pediatric anesthesia" }, { name: "Cardiac/thoracic anesthesia" }, { name: "Trauma/emergency anesthesia" },
+    { title: "Anesthesia Medications", skills: [
+      { name: "Accessory medications" }, { name: "Methohexital" }, { name: "Versed" }, { name: "Nitrous oxide" }, { name: "Valium" }, { name: "Adjuvant medications" }, { name: "Fluids" }, { name: "Sodium Thiopental" }, { name: "Blood products" }, { name: "Ketamine" },
     ]},
-    { title: "Emergency Management", skills: [
-      { name: "Malignant hyperthermia protocol" }, { name: "Anaphylaxis management" }, { name: "Advanced cardiac life support" },
+    { title: "Airway Management", skills: [
+      { name: "Nasal Intubation" }, { name: "Oxygenation" }, { name: "Fiber optic Intubation" }, { name: "Cardiovascular status" }, { name: "Ventilation" }, { name: "Endotracheal Intubation" },
+    ]},
+    { title: "Anesthesia Care & Regional Techniques", skills: [
+      { name: "Infection control practices" }, { name: "Obtaining accurate pre-anesthesia assessment" }, { name: "Intravenous regional" }, { name: "Local:" }, { name: "Intercostal block" }, { name: "Subarachnoid block" }, { name: "Periocular" }, { name: "Major" }, { name: "Retrobulbar" }, { name: "Mask induction and maintenance" }, { name: "Transtracheal block" }, { name: "Caudal" }, { name: "IV maintenance" }, { name: "Total IV anesthesia" }, { name: "Interpretation of lab studies" }, { name: "Recommend appropriate diagnostic studies" }, { name: "Epidural" }, { name: "IV general anesthesia" }, { name: "Local infiltration block" }, { name: "Plexus" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
     ]},
   ]},
 

@@ -217,23 +217,47 @@ export const newAdditionsChecklists: ChecklistSpec[] = [
 
 
   { slug: "rn-surgical-icu", title: "Registered Nurse – Surgical ICU Skills Checklist", shortTitle: "RN – Surgical ICU", icon: "🛏️", group: "Critical Care", categories: [
-    { title: "Post-Surgical Critical Care", skills: [
-      { name: "Post-Cardiac Surgery Recovery" }, { name: "Post-Abdominal Surgery Recovery" }, { name: "Post-Transplant Recovery" }, { name: "Post-Trauma Surgery Recovery" }, { name: "Post-Neurosurgery Recovery" },
+    { title: "General Postoperative Care", skills: [
+      { name: "Management of patient in the immediate post-operative phase" }, { name: "Assessment and management of post-op complications" },
     ]},
-    { title: "Hemodynamic Monitoring", skills: [
-      { name: "Arterial Line Management" }, { name: "Central Venous Pressure Monitoring" }, { name: "Cardiac Output Monitoring" }, { name: "Vasoactive Drip Titration" },
+    { title: "Cardiovascular Assessment & Care", skills: [
+      { name: "Normal Heart Tones (i.e.:S1,S2)" }, { name: "Insertion site invasive lines" }, { name: "Blood Pressure (non-invasive)" }, { name: "S/S DVT" }, { name: "Pulses/Circulation via palpation" }, { name: "Abnormal heart tones (i.e.: murmur, gallop, friction rub)" }, { name: "Rhythm interpretation" }, { name: "12-lead EKG interpretation" }, { name: "Identification of PMI (Point Maximal Intensity)" }, { name: "EKG Changes for MI" }, { name: "Pulses/Circulation via Doppler" }, { name: "Blood and blood product administration" }, { name: "Blood transfusion reactions" }, { name: "Cardiac Arrest" }, { name: "CHF" }, { name: "Pericardial Effusion" }, { name: "Carotid Endarterectomy" }, { name: "Pericarditis" }, { name: "MI" }, { name: "Myocardial contusion" }, { name: "Cardiac Tamponade" },
     ]},
-    { title: "Respiratory Management", skills: [
-      { name: "Mechanical Ventilation Management" }, { name: "Ventilator Weaning" }, { name: "Chest Tube Management" }, { name: "ABG Interpretation" },
+    { title: "Cardiovascular Procedures & Hemodynamic Monitoring", skills: [
+      { name: "Proper Cardiac Monitor lead placement" }, { name: "Obtain lab specimens from A-line" }, { name: "PCWP Measurement" }, { name: "Obtain lab specimens from Central Line" }, { name: "Removal of femoral sheath" }, { name: "Perform Venipuncture" }, { name: "Obtain Cardiac Output" }, { name: "Obtain CVP Measurement" }, { name: "Perform 12-lead EKG" }, { name: "Removal of radial arterial line" }, { name: "Obtain MAP" }, { name: "Management of Arterial Line" }, { name: "Zero and calibration of transducers" }, { name: "Management of PA/Swan-Ganz" }, { name: "Assess adequate perfusion with invasive lines" }, { name: "Management of CVP Line" }, { name: "Chest Tube Removal" }, { name: "Arterial line insertion" }, { name: "Thoracentesis" }, { name: "Cardioversion" }, { name: "Central Line insertion" }, { name: "PA/Swan-Ganz insertion" }, { name: "Transesophageal echocardiogram" }, { name: "Set-Up for Cardioversion" }, { name: "Emergency Tracheostomy" }, { name: "Pericardiocentesis" }, { name: "Chest Tube insertion" }, { name: "CAVH-D" }, { name: "SVR" }, { name: "PVR" },
     ]},
-    { title: "Wound & Drain Management", skills: [
-      { name: "Surgical Wound Assessment" }, { name: "JP/Surgical Drain Management" }, { name: "Ostomy Care" }, { name: "Negative Pressure Wound Therapy" },
+    { title: "Pacemaker Management", skills: [
+      { name: "Transvenous" }, { name: "Transcutaneous" }, { name: "PPM" }, { name: "Manipulation of TPM settings" }, { name: "Troubleshoot TPM settings" }, { name: "Recognition of failure to sense, capture" }, { name: "CVP waveform" }, { name: "PA/Swan-Ganz waveform" }, { name: "SVO2 Data" }, { name: "PCWP waveform" }, { name: "Arterial waveform" },
     ]},
-    { title: "Patient Safety & Quality", skills: [
-      { name: "Sedation Vacation/Spontaneous Awakening Trials" }, { name: "Delirium Screening (CAM-ICU)" }, { name: "Early Mobility Protocols" }, { name: "VAP/CLABSI Prevention Bundles" },
+    { title: "Respiratory Care", skills: [
+      { name: "Application of BiPAP" }, { name: "Application of Oximetry" }, { name: "Manage patient on mechanical ventilation" }, { name: "Assess and confirm proper Vent settings" }, { name: "Application of CPAP" }, { name: "Identify adventitious lung sounds" }, { name: "Interpretation of Oximetry Values" }, { name: "Auscultate for confirmation of ET Tube placement" }, { name: "Maintain pulmonary stability post-extubation" }, { name: "Auscultate breath sounds" }, { name: "Assist with post-extubation care" }, { name: "Implement Ventilator Acquired Pneumonia protocols" }, { name: "Perform NT(Nasotracheal) suctioning" }, { name: "Collection of Sputum Specimen via ET(closed system)" }, { name: "Emergency Intubation" }, { name: "Perform suctioning of Tracheostomy" }, { name: "Collection of Sputum via NT Suction" }, { name: "Assist with extubation of patient" }, { name: "Perform ET Tube suctioning" }, { name: "Near Drowning" }, { name: "Acute Pneumonia" }, { name: "COPD" }, { name: "Pulmonary Embolism" }, { name: "ARDS" }, { name: "Tuberculosis" }, { name: "Cor Pulmonale" }, { name: "Status Asthmaticus" }, { name: "Pulmonary Edema" }, { name: "Pulmonary Hypertension" }, { name: "Chest Trauma" }, { name: "Fresh Tracheostomy" }, { name: "Thoracotomy" }, { name: "Identify presence of air leak" }, { name: "Monitor & record chest tube output" }, { name: "Identify and troubleshoot clotted chest tube" }, { name: "Perform Chest Tube Set-up" }, { name: "Identify and troubleshoot patient bleeding from chest" },
+    ]},
+    { title: "Gastrointestinal Care", skills: [
+      { name: "Bowel Sounds" }, { name: "Nutritional status" }, { name: "Proper N/G Tube placement" }, { name: "Penetrating trauma" }, { name: "GI Surgery" }, { name: "Ileostomy" }, { name: "Colostomy" }, { name: "Liver Transplant" }, { name: "Esophageal Bleed" }, { name: "Hemicolectomy" }, { name: "Blunt Abdominal Trauma" }, { name: "Inflammatory Bowel Disease" }, { name: "Bowel Obstruction" }, { name: "Pancreatitis" }, { name: "Small bowel resection" }, { name: "GI Bleed" }, { name: "Liver Failure" }, { name: "Hepatitis" }, { name: "Paralytic Ileus" }, { name: "Insertion and maintenance of N/G Tube" }, { name: "Removal of N/G Tube" }, { name: "Gravity feeding" }, { name: "TPN and lipids administration" }, { name: "Balloon tamponade (Sengstaken Blakemore)" }, { name: "Insertion and maintenance of Rectal Tube" }, { name: "Continuous Suction" }, { name: "PPN (peripheral parenteral nutrition)" }, { name: "Iced saline lavage" }, { name: "Administration of tube feeding" }, { name: "Flexible feeding tube (Dobhoff)" }, { name: "Utilization of feeding pump" },
+    ]},
+    { title: "Endocrine Care", skills: [
+      { name: "Insulin Shock" }, { name: "Addison's Disease" }, { name: "Diabetes Insipidus" }, { name: "Diabetes mellitus" }, { name: "Hyperthyroidism" }, { name: "Thyroidectomy" }, { name: "Diabetic ketoacidosis" }, { name: "Cushing's Syndrome" }, { name: "Hypothyroidism" }, { name: "Blood glucose monitoring devices" }, { name: "Use of Insulin Pen" }, { name: "Use of Lancet" }, { name: "Fingerstick Blood Glucose" }, { name: "Implementation of Sliding Scale" },
+    ]},
+    { title: "Neurological Care", skills: [
+      { name: "Reflex/Motor Deficits" }, { name: "Cranial Nerves" }, { name: "Glasgow Coma Scale" }, { name: "Analyze ICP waveforms" }, { name: "Visual/Communication Deficits" }, { name: "Troubleshoot ICP Monitoring" }, { name: "Pathologic Reflexes" }, { name: "Multiple Sclerosis" }, { name: "Basilar Skull Fracture" }, { name: "Ventriculostomy" }, { name: "TIA" }, { name: "Seizure Disorder" }, { name: "Neurogenic Shock" }, { name: "Encephalopathy" }, { name: "Meningitis" }, { name: "Externalized VP shunts" }, { name: "Post Craniotomy" }, { name: "Spinal cord injury" }, { name: "DT's" }, { name: "Metastatic tumor/intracranial tumor resection" }, { name: "Closed Head Injury" }, { name: "Increased ICP" }, { name: "CVA" }, { name: "Coma" }, { name: "Laminectomy" }, { name: "Aneurysm Precautions" }, { name: "Encephalitis" }, { name: "Seizure precautions" }, { name: "Spinal precautions" }, { name: "Rotating bed" }, { name: "Use of hyper/hypothermia blanket" },
+    ]},
+    { title: "Renal Care", skills: [
+      { name: "Nephrectomy" }, { name: "TURP" }, { name: "CRRT" }, { name: "Renal Transplant" }, { name: "Acute Renal Failure" }, { name: "Urinary diversion (i.e.: ileal, conduit nephrostomy)" }, { name: "CAVH dialysis" }, { name: "Renal Rejection Syndrome" }, { name: "Peritoneal dialysis" }, { name: "Urinary tract infection" }, { name: "Hemodialysis" }, { name: "Bladder Irrigation" }, { name: "CRRT" }, { name: "CAVH dialysis" }, { name: "Insertion of Female Foley Catheter" }, { name: "Hemodialysis" }, { name: "A-V Fistula/Shunt" }, { name: "Fluid Status" },
+    ]},
+    { title: "Multisystem & Pain Management", skills: [
+      { name: "AIDS" }, { name: "Alcohol Overdose" }, { name: "Splenectomy" }, { name: "Gunshot Wounds" }, { name: "Septic Shock" }, { name: "Drug Overdose" }, { name: "Organ/tissue donation" }, { name: "Hypovolemic Shock" }, { name: "Multi-system organ failure" }, { name: "Cancer" }, { name: "Anaphylactic shock" }, { name: "Implementation of Core Measures" }, { name: "Exploratory laparotomy" }, { name: "Disseminated intravascular coagulation (DIC)" }, { name: "Cardiogenic Shock" }, { name: "Pain Level" }, { name: "Therapeutic Response" }, { name: "Groshong" }, { name: "IV conscious sedation" }, { name: "Quinton" }, { name: "Peripheral line/dressing" }, { name: "Patient controlled analgesia" }, { name: "Hickman" }, { name: "Portacath" }, { name: "Epidural anesthesia/analgesia" }, { name: "PICC Line" }, { name: "Broviac Catheter" },
+    ]},
+    { title: "Integumentary Care", skills: [
+      { name: "Surgical Wound Healing" }, { name: "Skin intact" }, { name: "Stasis Ulcers" }, { name: "Sterile dressing changes" }, { name: "Wound care/irrigations" }, { name: "Air fluidized, low airloss beds" }, { name: "Surgical Wounds w/drains" }, { name: "Burns" }, { name: "Pressure Sores" }, { name: "Traumatic Wounds" }, { name: "Staged Decubitus Ulcers" },
+    ]},
+    { title: "Labs & Pharmacology", skills: [
+      { name: "Coagulation Studies" }, { name: "Blood glucose" }, { name: "ABG's" }, { name: "Electrolytes" }, { name: "Thyroid Panel" }, { name: "Cardiac Enzymes" }, { name: "BUN/Creatinine" }, { name: "Titrate vasopressors to effect/parameters" }, { name: "Assess for therapeutic response to titration" }, { name: "Management of Epidural Administration" }, { name: "Perform dosage drip calculations" }, { name: "Lasix (Furosemide)" }, { name: "Ventolin (Albuterol)" }, { name: "Decadron (Dexamethasone)" }, { name: "Phenobarbital" }, { name: "Diltiazem (Cardizem)" }, { name: "Heparin Drip" }, { name: "Valium (Diazepam)" }, { name: "Barbiturate induced coma" }, { name: "Sodium Bicarbonate" }, { name: "Neosynephrine" }, { name: "Dobutamine (Dobutrex)" }, { name: "Bretylium (Bretylol)" }, { name: "Nipride (Nitroprusside)" }, { name: "Kayexelate" }, { name: "Succinylcholine" }, { name: "Digoxin (Lanoxin)" }, { name: "Aminophylline (Theophylline)" }, { name: "AquaMephyton (Vitamin K)" }, { name: "Lidocaine" }, { name: "Pitressin (Vasopressin)" }, { name: "Verapamil (Calan, Isoptin, Verelan)" }, { name: "Amiodarone (Cordarone)" }, { name: "Apresoline" }, { name: "Inderal (Propranolol)" }, { name: "Metoprolol (Lopressor)" }, { name: "Epinephrine (Adrenalin)" }, { name: "Corticosteroids" }, { name: "Alupent (Metaproterenol)" }, { name: "Nitroglycerin (Tridil)" }, { name: "Lactulose (Cephulac)" }, { name: "Esmolol (Brevibloc)" }, { name: "Dilantin (Phenytoin)" }, { name: "Amicar" }, { name: "Atropine" }, { name: "Procainamide (Pronestyl)" }, { name: "Levophed" }, { name: "Dopamine (Intropin)" }, { name: "Vecuronium" }, { name: "Propofol(Diprivan)" }, { name: "Inocor (Amrinone)" },
+    ]},
+    { title: "Patient Education & Advocacy", skills: [
+      { name: "Use of incentive spirometer" }, { name: "Management of disease process" }, { name: "Turn, cough, and deep breathing technique" }, { name: "Importance of increasing mobility post-op when applicable" }, { name: "Splinting technique post-op" }, { name: "Provide care for end-of-life decisions that families face in ICU such as withdrawal of life support" }, { name: "Provide for the integration of comfort care and death with dignity" }, { name: "Demonstrate effective coping skills in caring for the critical care patient" }, { name: "Adhere to legal procedures regarding notification of organ donation provider" }, { name: "Demonstrate Spiritual and Cultural Considerations for the Critical Care patient" },
     ]},
     { title: "Age Specific Competencies", skills: [
-      { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
     ]},
   ]},
 
@@ -406,41 +430,62 @@ export const newAdditionsChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "cardiac-sonographer", title: "Cardiac Sonographer Skills Checklist", shortTitle: "Cardiac Sonographer", icon: "🫀", group: "Diagnostic & Lab", categories: [
-    { title: "Echocardiographic Views & Image Acquisition", skills: [
-      { name: "Parasternal Long Axis View" }, { name: "Parasternal Short Axis View" }, { name: "Apical Four Chamber View" }, { name: "Apical Two/Three Chamber View" }, { name: "Subcostal View" }, { name: "Suprasternal View" },
+    { title: "Embryology & Congenital Heart Defects", skills: [
+      { name: "Truncus arteriosus" }, { name: "Sinus venosus" }, { name: "Bulbus cordis" }, { name: "Atrioventricular sulcus" }, { name: "Aortic sac" }, { name: "Interventricular sulcus" }, { name: "Endocardial cushion" }, { name: "Ductus arteriosus" }, { name: "Umbilical vein" }, { name: "Placenta" }, { name: "Foramen ovale" }, { name: "Ligamentum arterisum" }, { name: "Ligamentum venosum" }, { name: "Fossa ovalis" }, { name: "Tetralogy of Fallot" }, { name: "Atrial septal defect: Ostium primum, ostium secundum, sinus venosus, coronary sinus, common atrium" }, { name: "Pulmonic stenosis" }, { name: "Aortic coarctation" }, { name: "Transposition of the great vessels: Levo, dextro" }, { name: "Ventricular septal defects: Inlet, trabecular or muscular, outlet, membranous or perimembranous, malalignment, eisenmenger syndrome" }, { name: "Endocardial cushion defect/atrioventricular septal defect" }, { name: "Tricuspid atresia" }, { name: "Ebstein anomaly" },
     ]},
-    { title: "Doppler Techniques", skills: [
-      { name: "Color Flow Doppler" }, { name: "Pulsed Wave Doppler" }, { name: "Continuous Wave Doppler" }, { name: "Tissue Doppler Imaging" },
+    { title: "Cardiac Anatomy", skills: [
+      { name: "Pulmonary artery" }, { name: "Heart wall layers: Endocardium, myocardium, epicardium, pericardial space/fluid, parietal layer, serous pericardium, fibrous pericardium" }, { name: "Atria: Left and right" }, { name: "Atrioventricular valves: Mitral and tricuspid" }, { name: "Normal variants: Moderator band, crista terminalis, eustachian valve, chiari network" }, { name: "Pulmonary veins: Two right, two left" }, { name: "Main coronary arteries: Left anterior descending (LAD), left main coronary, right coronary artery (RCA), left circumflex, posterior descending artery (PDA)" }, { name: "Pulmonary artery branches: Left and right" }, { name: "Ventricles: Left and right" }, { name: "Inferior vena cava" }, { name: "Superior vena cava" }, { name: "Semilunar valves: Aortic and pulmonic" }, { name: "Aorta: Ascending, arch, descending" },
     ]},
-    { title: "Measurements & Calculations", skills: [
-      { name: "Ejection Fraction Calculation" }, { name: "Chamber Size Measurement" }, { name: "Valve Area/Gradient Calculation" }, { name: "Diastolic Function Assessment" },
+    { title: "Cardiac Physiology", skills: [
+      { name: "Atrioventricular node" }, { name: "Bundle of His" }, { name: "Sinoatrial node" }, { name: "Purkinje fibers" }, { name: "ST segment" }, { name: "QRS complex" }, { name: "T wave" }, { name: "P wave" }, { name: "Isovolumic relaxation" }, { name: "Systole" }, { name: "Isovolumic contraction" }, { name: "Diastole" }, { name: "Resistance: Ventricular outflow obstructions, systemic hypertension, pulmonary hypertension" }, { name: "Volume: Regurgitation, ventricular septal defects, atrial septal defects" }, { name: "Epicardium, myocardium, endocardium" }, { name: "Diastolic filling process" },
     ]},
-    { title: "Specialized Studies", skills: [
-      { name: "Stress Echocardiography" }, { name: "Transesophageal Echo (TEE) Assist" }, { name: "Contrast Echocardiography" }, { name: "3D Echocardiography" },
+    { title: "Valvular Disease & Cardiomyopathies", skills: [
+      { name: "Tricuspid regurgitation" }, { name: "Pulmonic stenosis" }, { name: "Aortic regurgitation" }, { name: "Mitral stenosis" }, { name: "Tricuspid stenosis" }, { name: "Mitral valve prolapse" }, { name: "Pulmonic regurgitation" }, { name: "Aortic stenosis" }, { name: "Mitral regurgitation" }, { name: "Restrictive" }, { name: "Dilated" }, { name: "Arrythmogenic right ventricular dysplasia" }, { name: "Left ventricular non-compaction" }, { name: "Hypertrophic" },
     ]},
-    { title: "Equipment, QA & Patient Care", skills: [
-      { name: "Ultrasound Equipment Operation and QA" }, { name: "Patient Positioning and Prep" }, { name: "Image Optimization" }, { name: "Report Documentation" },
+    { title: "Ischemic, Pericardial & Pulmonary Hypertension Disease", skills: [
+      { name: "Myocardial infarction" }, { name: "Complications of MI: New onset mitral regurgitation, ventricular rupture, aneurysm, arrhythmias, emboli, pericardial effusion" }, { name: "Pericardial effusion" }, { name: "Pericarditis" }, { name: "Tricuspid regurgitation" }, { name: "Modified Bernoulli equation" }, { name: "Right atrial pressure" }, { name: "Inferior vena cava size and collapse" },
+    ]},
+    { title: "Cardiac Masses & Aortic Disease", skills: [
+      { name: "Secondary tumors (metastatic): Renal cancer, lung cancer, breast cancer, melanoma, lymphoma" }, { name: "Primary tumors: Myxoma, lipoma, papillary fibroelastoma, rhabdomyoma, fibroma, teratoma" }, { name: "Dissection" }, { name: "Ehlers-Danlos syndrome" }, { name: "Atherosclerosis" }, { name: "Marfan syndrome" }, { name: "Aneurysm" },
+    ]},
+    { title: "Cardiac Devices & Procedures", skills: [
+      { name: "Amplatzer" }, { name: "Bioprosthetic valves" }, { name: "Pacemaker" }, { name: "Watchman" }, { name: "Mechanical valves" }, { name: "Impella" }, { name: "Bentall" }, { name: "Fontan" }, { name: "Glenn operation" }, { name: "Valve clips" }, { name: "Mustard" }, { name: "Norwood" }, { name: "Ross" }, { name: "Transcatheter aortic valve replacement (TAVR)" }, { name: "Coronary artery bypass graft (CABG)" },
+    ]},
+    { title: "Advanced Cardiac Testing & Echocardiography", skills: [
+      { name: "Apical 3 chamber: Apical cap, apical lateral, mid inferolateral, basal inferolateral, apical septal, mid anteroseptal, basal anteroseptal" }, { name: "Parasternal long axis: Basal anteroseptal, mid anteroseptal, basal inferolateral, mid inferolateral" }, { name: "Parasternal short axis: Anterior, anterolateral, anteroseptal, inferior, inferolateral, inferoseptal" }, { name: "Apical 4 chamber: Apical cap, apical septal, mid inferoseptal, basal inferoseptal, apical lateral, mid anterolateral, basal anterolateral" }, { name: "Apical 2 chamber: Apical cap, apical inferior, mid inferior, basal inferior, apical anterior, mid anterior, basal anterior" }, { name: "Role of atropine" }, { name: "Contraindications: Acute MI, uncontrolled arrhythmias, aortic dissection, severe and symptomatic aortic stenosis, heart muscle inflammation" }, { name: "Treadmill" }, { name: "Indications: Ischemic disease, valvular disease" }, { name: "Dobutamine" }, { name: "Views: Midesophageal (5 chamber, 4 chamber, bicommissural, long axis, ascending aorta, pulmonary veins, SAX, bicaval, appendage), transgastric, aorta" }, { name: "Indications: Arrhythmias, stroke, endocarditis/bacteremia, valvular disease, masses, heart failure" }, { name: "Contraindications: Esophageal disease, varices, prior stomach surgery, uncooperative patient, acute GI bleed" }, { name: "Testing for a persistent left superior vena cava" }, { name: "PFO/ASD" }, { name: "Use of valsalva maneuver" }, { name: "Comet tail" }, { name: "Side lobes" }, { name: "Enhancement" }, { name: "Ring down" }, { name: "Reverberation" }, { name: "Mirroring" }, { name: "Refraction" }, { name: "Shadowing" }, { name: "Definity, Lumason, Optison" }, { name: "Injection rate" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
     ]},
   ]},
 
   { slug: "medical-lab-scientist", title: "Medical Lab Scientist (MLS) Skills Checklist", shortTitle: "Medical Lab Scientist", icon: "🧬", group: "Diagnostic & Lab", categories: [
-    { title: "Hematology", skills: [
-      { name: "CBC/Differential" }, { name: "Manual Differential" }, { name: "Coagulation Studies (PT/INR, PTT)" }, { name: "Body Fluid Analysis" }, { name: "Flow Cytometry" },
+    { title: "Blood Bank / Transfusion Medicine", skills: [
+      { name: "Frozen blood products preparation" }, { name: "Antigen testing" }, { name: "IS XM" }, { name: "Rh typing" }, { name: "Antibody screen" }, { name: "Transfusion reaction investigation" }, { name: "ABO discrepancies" }, { name: "Autoadsorption" }, { name: "AHG XM" }, { name: "ABO blood typing" }, { name: "Elution" }, { name: "DAT/Coombs test" }, { name: "Electronic crossmatch" }, { name: "Blood products issuance" }, { name: "Fetal bleed screening test (FMH rapid screen)" }, { name: "Antibody identification" },
     ]},
-    { title: "Clinical Chemistry", skills: [
-      { name: "Routine and Special Chemistry" }, { name: "Immunoassay" }, { name: "Blood Gas Analysis" }, { name: "Electrophoresis" }, { name: "Therapeutic Drug Monitoring" },
+    { title: "Hematology", skills: [
+      { name: "Blood smear for malarial parasite" }, { name: "Platelet clumper samples" }, { name: "Bone marrow" }, { name: "Cytocentrifuge" }, { name: "Buffy coat smears" }, { name: "Serous body fluids cell count and differentials" }, { name: "Albumin smears" }, { name: "Synovial fluid cell count and differentials" }, { name: "CBC analysis" }, { name: "Making blood smear" }, { name: "Pathologist's review procedure" }, { name: "SP-10" }, { name: "Reading manual differentials" }, { name: "Cellavision" }, { name: "Reticulocyte testing" }, { name: "Kleihauer Betke fetal hemoglobin" }, { name: "Hematek stainer" }, { name: "ESR" }, { name: "CSF cell count and differentials" }, { name: "Sysmex XN analyzer" }, { name: "Eosinophil smear (sputum/nasal)" }, { name: "Malaria antigen test" },
+    ]},
+    { title: "Coagulation", skills: [
+      { name: "Fibrinogen" }, { name: "Platelet function Aspirin" }, { name: "APTT" }, { name: "Platelet function Plavix" }, { name: "D-dimer" }, { name: "Platelet function analysis" }, { name: "Heparin anti-Xa" }, { name: "PT" }, { name: "Factor II and Factor V Leiden Cepheid" },
+    ]},
+    { title: "Urinalysis", skills: [
+      { name: "Automated urine analysis" }, { name: "Clinitek" }, { name: "Occult blood" }, { name: "Manual urine analysis" }, { name: "Gastroccult" }, { name: "Refractometer" }, { name: "Ictotest" }, { name: "Iris analyzer" },
+    ]},
+    { title: "Clinical Chemistry & Serology", skills: [
+      { name: "Electrolyte panel" }, { name: "Thyroid function panel" }, { name: "HbA1c" }, { name: "Comprehensive metabolic panel" }, { name: "Liver panel" }, { name: "Lipid panel" }, { name: "Basic metabolic panel" }, { name: "Kidney panel" }, { name: "RPR" }, { name: "Rheumatoid factor" }, { name: "HIV" }, { name: "CRP" }, { name: "Procalcitonin" }, { name: "ASO" },
     ]},
     { title: "Microbiology", skills: [
-      { name: "Culture Setup and Identification" }, { name: "Susceptibility Testing" }, { name: "Gram Stain" }, { name: "Mycobacteriology" }, { name: "Parasitology" },
+      { name: "AFB" }, { name: "Blood culture and sensitivity" }, { name: "Stool ova and parasite" }, { name: "PCR tests" }, { name: "Susceptibility testing" }, { name: "Stool culture" }, { name: "Fungal culture" }, { name: "KOH mount" }, { name: "NAAT" }, { name: "Wet mount" }, { name: "Biochemical tests" }, { name: "Gram stain" }, { name: "Bacterial culture" },
     ]},
-    { title: "Blood Bank/Immunohematology", skills: [
-      { name: "ABO/Rh Typing" }, { name: "Antibody Screen and Identification" }, { name: "Crossmatch" }, { name: "Component Preparation" }, { name: "Transfusion Reaction Workup" },
+    { title: "Central Processing & Laboratory Practices", skills: [
+      { name: "Receipt of samples" }, { name: "Processing send-out samples" }, { name: "Checking samples for proper labelling and identification" }, { name: "Critical resulting with readback" }, { name: "Method validation" }, { name: "Troubleshooting QC problems" }, { name: "Instrument maintenance and calibrations" }, { name: "Delta checks" }, { name: "Reagent reconstitution and preparation" }, { name: "Running QCs" }, { name: "Checking sample integrity for contamination, hemolysis, clot, lipemia, and icterus" }, { name: "Troubleshooting instrument flags and problems" },
     ]},
-    { title: "Molecular Diagnostics & Point-of-Care", skills: [
-      { name: "PCR-Based Testing" }, { name: "Point-of-Care Testing Oversight" }, { name: "Molecular Infectious Disease Panels" },
+    { title: "Population & Specialty Laboratory Experience", skills: [
+      { name: "Pediatrics" }, { name: "Oncology" }, { name: "Heart Center" }, { name: "Labor and Delivery" }, { name: "Trauma Center" }, { name: "Immunology" }, { name: "Special Coagulation" }, { name: "Genetics" }, { name: "Histopathology and Cytopathology" }, { name: "Fertility Clinic" }, { name: "Biotechnology" }, { name: "Toxicology" }, { name: "Molecular Diagnostics" }, { name: "Transfusion Medicine" }, { name: "Special Chemistry" }, { name: "Special Hematology" }, { name: "Histocompatibility & Immunogenetics Lab (HLA)" },
     ]},
-    { title: "Quality Management & Lab Safety", skills: [
-      { name: "Quality Control/Quality Assurance" }, { name: "Proficiency Testing" }, { name: "CLIA/CAP Compliance" }, { name: "Specimen Handling and Chain of Custody" },
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
     ]},
   ]},
 ];
