@@ -19,6 +19,7 @@ interface SubmitButtonProps {
   ratings: ProficiencyRatings;
   consent: boolean;
   website: string;
+  onSubmitted?: () => void;
 }
 
 function downloadBase64Pdf(base64: string, fileName: string) {
@@ -48,6 +49,7 @@ export default function SubmitButton({
   ratings,
   consent,
   website,
+  onSubmitted,
 }: SubmitButtonProps) {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -80,6 +82,7 @@ export default function SubmitButton({
       }
 
       setSubmitted(true);
+      onSubmitted?.();
       if (data.pdfBase64 && data.fileName) {
         setPdfData({ base64: data.pdfBase64, fileName: data.fileName });
         downloadBase64Pdf(data.pdfBase64, data.fileName);

@@ -1,7 +1,9 @@
-import { useState, forwardRef, useImperativeHandle } from "react";
+import { useState, useEffect, forwardRef, useImperativeHandle } from "react";
 import { ChecklistCategory } from "@/data/checklistData";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { toTitleCase } from "@/lib/titleCase";
+import { loadRatings, saveRatings, clearRatings } from "@/lib/checklistStorage";
+import { toast } from "@/hooks/use-toast";
 
 // Keyed by "categoryIndex:skillIndex" rather than skill name — some checklists
 // have two skills sharing the same name in different categories (or even the
@@ -12,6 +14,8 @@ export interface ProficiencyRatings {
 
 interface ChecklistTableProps {
   categories: ChecklistCategory[];
+  // Used to namespace saved progress in localStorage — see checklistStorage.ts.
+  slug: string;
   // Called with the freshly-computed rated count whenever a rating changes.
   // We pass the value directly rather than making the parent read it off a
   // ref during its own render — refs are only guaranteed fresh *after* the
@@ -25,6 +29,9 @@ export interface ChecklistTableHandle {
   getRatings: () => ProficiencyRatings;
   getTotalSkills: () => number;
   getRatedCount: () => number;
+  // Called after a successful submission so saved progress doesn't linger
+  // in localStorage on a shared/public computer.
+  clearSavedProgress: () => void;
 }
 
 const proficiencyLabels = [
@@ -49,18 +56,38 @@ const skillKey = (catIdx: number, skillIdx: number) => `${catIdx}:${skillIdx}`;
 // source casing (see src/lib/titleCase.ts for the acronym-aware rules).
 
 const ChecklistTable = forwardRef<ChecklistTableHandle, ChecklistTableProps>(
-  ({ categories, onRatingChange }, ref) => {
-    const [ratings, setRatings] = useState<ProficiencyRatings>({});
+  ({ categories, slug, onRatingChange }, ref) => {
+    const totalSkills = categories.reduce((sum, cat) => sum + cat.skills.length, 0);
+
+    // Lazy initializer so the very first render already reflects any saved
+    // progress for this checklist — avoids a flash of an empty table.
+    const [ratings, setRatings] = useState<ProficiencyRatings>(
+      () => loadRatings(slug, totalSkills) ?? {}
+    );
     const [collapsed, setCollapsed] = useState<Record<number, boolean>>({});
 
-    const totalSkills = categories.reduce((sum, cat) => sum + cat.skills.length, 0);
     const ratedSkills = Object.values(ratings).filter(v => v !== null && v !== undefined).length;
     const progressPercent = totalSkills > 0 ? Math.round((ratedSkills / totalSkills) * 100) : 0;
+
+    // Let the parent know about restored progress on mount, so the submit
+    // button's rated count stays in sync with what we just loaded.
+    useEffect(() => {
+      if (ratedSkills > 0) {
+        onRatingChange?.(ratedSkills);
+        toast({
+          title: "Resumed your saved progress",
+          description: `${ratedSkills} of ${totalSkills} skills were already rated on this device.`,
+        });
+      }
+      // Only ever run this once, right after mount.
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     useImperativeHandle(ref, () => ({
       getRatings: () => ratings,
       getTotalSkills: () => totalSkills,
       getRatedCount: () => ratedSkills,
+      clearSavedProgress: () => clearRatings(slug),
     }));
 
     const toggleCategory = (catIdx: number) => {
@@ -73,6 +100,7 @@ const ChecklistTable = forwardRef<ChecklistTableHandle, ChecklistTableProps>(
         [key]: ratings[key] === value ? null : value,
       };
       setRatings(next);
+      saveRatings(slug, totalSkills, next);
       const nextRatedCount = Object.values(next).filter(v => v !== null && v !== undefined).length;
       onRatingChange?.(nextRatedCount);
     };

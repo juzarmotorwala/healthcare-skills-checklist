@@ -130,8 +130,10 @@ export default function ChecklistPage() {
             </div>
 
             <ChecklistTable
+              key={checklist.slug}
               ref={tableRef}
               categories={checklist.categories}
+              slug={checklist.slug}
               onRatingChange={handleRatingChange}
             />
 
@@ -180,6 +182,7 @@ export default function ChecklistPage() {
                   ratings={tableRef.current?.getRatings() ?? {}}
                   consent={consent}
                   website={website}
+                  onSubmitted={() => tableRef.current?.clearSavedProgress()}
                 />
               </div>
             </div>
