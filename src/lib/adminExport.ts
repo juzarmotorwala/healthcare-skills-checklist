@@ -20,6 +20,8 @@ export interface SubmissionForExport {
   created_at: string;
   hiring_facility_email: string | null;
   hiring_email_sent: boolean | null;
+  years_experience_total: string | number | null;
+  years_experience_specialty: string | number | null;
 }
 
 // Builds a two-sheet workbook from the given submissions and triggers a browser download.
@@ -38,6 +40,8 @@ export function downloadSubmissionsExcel(rows: SubmissionForExport[], fileNamePr
       "City": row.candidate_city,
       "State": row.candidate_state,
       "Zip": row.candidate_zip ?? "",
+      "Total Years Experience": row.years_experience_total ?? "",
+      "Specialty Years Experience": row.years_experience_specialty ?? "",
       "Checklist": row.checklist_title,
       "Rated": row.rated_skills,
       "Total Skills": row.total_skills,
@@ -75,6 +79,7 @@ export function downloadSubmissionsExcel(rows: SubmissionForExport[], fileNamePr
   const summarySheet = XLSX.utils.json_to_sheet(summarySheetData);
   summarySheet["!cols"] = [
     { wch: 22 }, { wch: 26 }, { wch: 14 }, { wch: 16 }, { wch: 8 },
+    { wch: 10 }, { wch: 12 }, { wch: 14 },
     { wch: 30 }, { wch: 8 }, { wch: 12 }, { wch: 18 },
     { wch: 10 }, { wch: 26 }, { wch: 14 }, { wch: 20 },
   ];

@@ -15,6 +15,11 @@ export interface CandidateInfo {
   city: string;
   state: string;
   zipCode: string;
+  // Total years of professional healthcare experience, and years specifically
+  // in the specialty this checklist covers — gives a recruiter context for
+  // how to read the self-assessed ratings below.
+  yearsExperienceTotal: string;
+  yearsExperienceSpecialty: string;
   // Optional — if set, the hiring facility/agency also gets emailed a copy
   // of the completed PDF automatically when the candidate submits.
   hiringFacilityEmail: string;
@@ -35,10 +40,27 @@ const US_STATES = [
 export default function CandidateInfoForm({ info, onChange }: CandidateInfoFormProps) {
   const update = (field: keyof CandidateInfo, value: string) => {
     if (field === "phone") {
-      value = value.replace(/[^\d+\-() ]/g, "");
+      // Auto-format to xxx-xxx-xxxx as the user types, regardless of how
+      // they enter it (with dashes, spaces, parens, or nothing at all).
+      const digits = value.replace(/\D/g, "").slice(0, 10);
+      if (digits.length > 6) {
+        value = `${digits.slice(0, 3)}-${digits.slice(3, 6)}-${digits.slice(6)}`;
+      } else if (digits.length > 3) {
+        value = `${digits.slice(0, 3)}-${digits.slice(3)}`;
+      } else {
+        value = digits;
+      }
     }
     if (field === "zipCode") {
       value = value.replace(/[^\d-]/g, "").slice(0, 10);
+    }
+    if (field === "yearsExperienceTotal" || field === "yearsExperienceSpecialty") {
+      // Allow a single decimal point (e.g. 2.5 years).
+      value = value.replace(/[^\d.]/g, "");
+      const firstDot = value.indexOf(".");
+      if (firstDot !== -1) {
+        value = value.slice(0, firstDot + 1) + value.slice(firstDot + 1).replace(/\./g, "");
+      }
     }
     onChange({ ...info, [field]: value });
   };
@@ -71,7 +93,8 @@ export default function CandidateInfoForm({ info, onChange }: CandidateInfoFormP
         </div>
         <div className="space-y-1.5">
           <Label htmlFor="phone">
-            Phone Number <span className="text-destructive">*</span>
+            Phone Number <span className="text-destructive">*</span>{" "}
+            <span className="text-muted-foreground font-normal">(xxx-xxx-xxxx)</span>
           </Label>
           <Input
             id="phone"
@@ -116,6 +139,28 @@ export default function CandidateInfoForm({ info, onChange }: CandidateInfoFormP
             inputMode="numeric"
             value={info.zipCode}
             onChange={(e) => update("zipCode", e.target.value)}
+          />
+        </div>
+        <div className="space-y-1.5">
+          <Label htmlFor="yearsExperienceTotal">
+            Total Years of Experience <span className="text-destructive">*</span>
+          </Label>
+          <Input
+            id="yearsExperienceTotal"
+            inputMode="decimal"
+            value={info.yearsExperienceTotal}
+            onChange={(e) => update("yearsExperienceTotal", e.target.value)}
+          />
+        </div>
+        <div className="space-y-1.5">
+          <Label htmlFor="yearsExperienceSpecialty">
+            Years of Experience in This Specialty <span className="text-destructive">*</span>
+          </Label>
+          <Input
+            id="yearsExperienceSpecialty"
+            inputMode="decimal"
+            value={info.yearsExperienceSpecialty}
+            onChange={(e) => update("yearsExperienceSpecialty", e.target.value)}
           />
         </div>
       </div>

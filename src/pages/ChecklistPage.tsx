@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const phoneRegex = /^\d{3}-\d{3}-\d{4}$/;
 
 export default function ChecklistPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -30,6 +31,8 @@ export default function ChecklistPage() {
     city: "",
     state: "",
     zipCode: "",
+    yearsExperienceTotal: "",
+    yearsExperienceSpecialty: "",
     hiringFacilityEmail: "",
   });
 
@@ -68,13 +71,24 @@ export default function ChecklistPage() {
     candidateInfo.hiringFacilityEmail.trim().length === 0 ||
     emailRegex.test(candidateInfo.hiringFacilityEmail.trim());
 
+  const phoneValid = phoneRegex.test(candidateInfo.phone.trim());
+
+  const yearsExperienceValid =
+    candidateInfo.yearsExperienceTotal.trim().length > 0 &&
+    !Number.isNaN(Number(candidateInfo.yearsExperienceTotal)) &&
+    Number(candidateInfo.yearsExperienceTotal) >= 0 &&
+    candidateInfo.yearsExperienceSpecialty.trim().length > 0 &&
+    !Number.isNaN(Number(candidateInfo.yearsExperienceSpecialty)) &&
+    Number(candidateInfo.yearsExperienceSpecialty) >= 0;
+
   const infoComplete =
     candidateInfo.fullName.trim().length > 0 &&
     emailRegex.test(candidateInfo.email.trim()) &&
-    candidateInfo.phone.trim().length >= 7 &&
+    phoneValid &&
     candidateInfo.city.trim().length > 0 &&
     candidateInfo.state.trim().length > 0 &&
     candidateInfo.zipCode.trim().length > 0 &&
+    yearsExperienceValid &&
     hiringEmailValid;
 
   const totalSkills = checklist.categories.reduce((sum, cat) => sum + cat.skills.length, 0);
@@ -175,6 +189,8 @@ export default function ChecklistPage() {
                   {!canSave && (
                     <ul className="text-xs text-muted-foreground mt-1 space-y-0.5">
                       {!infoComplete && <li>• Fill in all of your information</li>}
+                      {!phoneValid && <li>• Enter your phone number as xxx-xxx-xxxx</li>}
+                      {!yearsExperienceValid && <li>• Enter your years of experience (total and in this specialty)</li>}
                       {!hiringEmailValid && <li>• Enter a valid hiring facility email, or leave it blank</li>}
                       {!allRated && <li>• Rate every skill (select 1–4)</li>}
                       {!consent && <li>• Agree to the Privacy Policy and Terms of Use</li>}

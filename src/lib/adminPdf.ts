@@ -13,6 +13,8 @@ export interface SubmissionForPdf {
   candidateCity: string;
   candidateState: string;
   candidateZip?: string | null;
+  yearsExperienceTotal?: string | number | null;
+  yearsExperienceSpecialty?: string | number | null;
   categories: ChecklistCategory[];
   ratings: Record<string, number | null>;
   // ISO timestamp (or any Date-parseable string) of the original submission —
@@ -58,15 +60,20 @@ export function downloadSubmissionPdf(sub: SubmissionForPdf) {
   doc.text(sub.checklistTitle, margin, y);
   y += 7;
 
+  // Uses the ORIGINAL submission timestamp, not the moment this PDF is being
+  // re-downloaded — so a re-downloaded copy is identical to what the
+  // candidate originally received, not stamped with today's date.
   doc.setFontSize(8);
   doc.setFont("helvetica", "normal");
   doc.setTextColor(120, 120, 120);
-  doc.text(`Re-generated: ${new Date().toLocaleDateString()}`, margin, y);
+  doc.text(`Generated: ${new Date(sub.submittedAt).toLocaleString()}`, margin, y);
   y += 10;
 
+  const hasExperience = String(sub.yearsExperienceTotal ?? "").trim() || String(sub.yearsExperienceSpecialty ?? "").trim();
+  const infoBoxHeight = hasExperience ? 35 : 28;
   doc.setDrawColor(200, 200, 200);
   doc.setFillColor(248, 250, 252);
-  doc.roundedRect(margin, y, contentWidth, 28, 2, 2, "FD");
+  doc.roundedRect(margin, y, contentWidth, infoBoxHeight, 2, 2, "FD");
   doc.setTextColor(60, 60, 60);
   doc.setFontSize(10);
   doc.setFont("helvetica", "bold");
@@ -82,7 +89,11 @@ export function downloadSubmissionPdf(sub: SubmissionForPdf) {
     ? `${sub.candidateCity}, ${sub.candidateState} ${sub.candidateZip.trim()}`
     : `${sub.candidateCity}, ${sub.candidateState}`;
   doc.text(`Location: ${location}`, col2, y + 20);
-  y += 34;
+  if (hasExperience) {
+    doc.text(`Total Experience: ${sub.yearsExperienceTotal ?? "—"} yrs`, col1, y + 27);
+    doc.text(`Specialty Experience: ${sub.yearsExperienceSpecialty ?? "—"} yrs`, col2, y + 27);
+  }
+  y += infoBoxHeight + 6;
 
   // Cumulative self-assessed proficiency summary — an overall average plus a
   // per-category breakdown, so a recruiter skimming the top of the PDF gets

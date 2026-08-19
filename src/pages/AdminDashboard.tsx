@@ -37,6 +37,8 @@ interface SubmissionRow {
   created_at: string;
   hiring_facility_email: string | null;
   hiring_email_sent: boolean | null;
+  years_experience_total: string | number | null;
+  years_experience_specialty: string | number | null;
 }
 
 export default function AdminDashboard() {
@@ -103,7 +105,7 @@ export default function AdminDashboard() {
       const overallAverage = checklist
         ? computeProficiencySummary(checklist.categories, row.ratings).overallAverage
         : null;
-      return { ...row, overallAverage };
+      return { ...row, overallAverage, shortTitle: checklist?.shortTitle ?? row.checklist_title };
     });
   }, [rows]);
 
@@ -158,6 +160,8 @@ export default function AdminDashboard() {
       candidateCity: row.candidate_city,
       candidateState: row.candidate_state,
       candidateZip: row.candidate_zip,
+      yearsExperienceTotal: row.years_experience_total,
+      yearsExperienceSpecialty: row.years_experience_specialty,
       categories: checklist?.categories ?? [],
       ratings: row.ratings,
       submittedAt: row.created_at,
@@ -277,7 +281,7 @@ export default function AdminDashboard() {
                           <div className="text-xs text-muted-foreground">{row.candidate_email}</div>
                           <div className="text-xs text-muted-foreground">{row.candidate_phone}</div>
                         </TableCell>
-                        <TableCell className="text-sm">{row.checklist_title}</TableCell>
+                        <TableCell className="text-sm">{row.shortTitle}</TableCell>
                         <TableCell className="text-sm">
                           {row.rated_skills}/{row.total_skills}
                         </TableCell>

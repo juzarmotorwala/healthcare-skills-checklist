@@ -8,11 +8,22 @@ const corsHeaders = {
 };
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const phoneRegex = /^\d{3}-\d{3}-\d{4}$/;
 const proficiencyLabels = ["No Experience", "Need Training", "With Supervision", "Independent"];
 
 interface Skill { name: string }
 interface Category { title: string; skills: Skill[] }
-interface Candidate { fullName: string; email: string; phone: string; city: string; state: string; zipCode?: string; hiringFacilityEmail?: string }
+interface Candidate {
+  fullName: string;
+  email: string;
+  phone: string;
+  city: string;
+  state: string;
+  zipCode?: string;
+  yearsExperienceTotal?: string;
+  yearsExperienceSpecialty?: string;
+  hiringFacilityEmail?: string;
+}
 interface Payload {
   slug: string;
   checklistTitle: string;
@@ -188,12 +199,14 @@ function buildPdf(payload: Payload): Uint8Array {
   doc.setFontSize(8);
   doc.setFont("helvetica", "normal");
   doc.setTextColor(120, 120, 120);
-  doc.text(`Generated: ${new Date().toLocaleDateString()}`, margin, y);
+  doc.text(`Generated: ${new Date().toLocaleString()}`, margin, y);
   y += 10;
 
+  const hasExperience = candidate.yearsExperienceTotal?.trim() || candidate.yearsExperienceSpecialty?.trim();
+  const infoBoxHeight = hasExperience ? 35 : 28;
   doc.setDrawColor(200, 200, 200);
   doc.setFillColor(248, 250, 252);
-  doc.roundedRect(margin, y, contentWidth, 28, 2, 2, "FD");
+  doc.roundedRect(margin, y, contentWidth, infoBoxHeight, 2, 2, "FD");
   doc.setTextColor(60, 60, 60);
   doc.setFontSize(10);
   doc.setFont("helvetica", "bold");
@@ -209,7 +222,11 @@ function buildPdf(payload: Payload): Uint8Array {
     ? `${candidate.city}, ${candidate.state} ${candidate.zipCode.trim()}`
     : `${candidate.city}, ${candidate.state}`;
   doc.text(`Location: ${location}`, col2, y + 20);
-  y += 34;
+  if (hasExperience) {
+    doc.text(`Total Experience: ${candidate.yearsExperienceTotal || "—"} yrs`, col1, y + 27);
+    doc.text(`Specialty Experience: ${candidate.yearsExperienceSpecialty || "—"} yrs`, col2, y + 27);
+  }
+  y += infoBoxHeight + 6;
 
   // Cumulative self-assessed proficiency summary — an overall average plus a
   // per-category breakdown, so a recruiter skimming the top of the PDF gets
@@ -379,10 +396,20 @@ Deno.serve(async (req: Request) => {
     }
     if (!candidate?.fullName?.trim()) throw new Error("Full name is required");
     if (!emailRegex.test(candidate.email?.trim() ?? "")) throw new Error("A valid email is required");
-    if (!candidate.phone?.trim() || candidate.phone.trim().length < 7) throw new Error("A valid phone number is required");
+    if (!phoneRegex.test(candidate.phone?.trim() ?? "")) throw new Error("Phone number must be in xxx-xxx-xxxx format");
     if (!candidate.city?.trim()) throw new Error("City is required");
     if (!candidate.state?.trim()) throw new Error("State is required");
     if (!candidate.zipCode?.trim()) throw new Error("Zip code is required");
+
+    const yearsTotal = Number(candidate.yearsExperienceTotal);
+    const yearsSpecialty = Number(candidate.yearsExperienceSpecialty);
+    if (!candidate.yearsExperienceTotal?.trim() || Number.isNaN(yearsTotal) || yearsTotal < 0) {
+      throw new Error("Total years of experience is required");
+    }
+    if (!candidate.yearsExperienceSpecialty?.trim() || Number.isNaN(yearsSpecialty) || yearsSpecialty < 0) {
+      throw new Error("Years of experience in this specialty is required");
+    }
+
     if (!consent) throw new Error("Consent is required to submit");
 
     const hiringFacilityEmail = candidate.hiringFacilityEmail?.trim() || null;
@@ -477,9 +504,9 @@ Deno.serve(async (req: Request) => {
 
     await sql`
       insert into public.submissions
-        (checklist_slug, checklist_title, candidate_name, candidate_email, candidate_phone, candidate_city, candidate_state, candidate_zip, ratings, total_skills, rated_skills, email_sent, email_error, consent_given, consent_at, ip_address, hiring_facility_email, hiring_email_sent, hiring_email_error)
+        (checklist_slug, checklist_title, candidate_name, candidate_email, candidate_phone, candidate_city, candidate_state, candidate_zip, ratings, total_skills, rated_skills, email_sent, email_error, consent_given, consent_at, ip_address, hiring_facility_email, hiring_email_sent, hiring_email_error, years_experience_total, years_experience_specialty)
       values
-        (${slug}, ${checklistTitle}, ${candidate.fullName}, ${candidate.email}, ${candidate.phone}, ${candidate.city}, ${candidate.state}, ${candidate.zipCode?.trim() || null}, ${sql.json(ratings)}, ${totalSkills}, ${ratedSkills}, ${emailOk}, ${emailError}, ${consent}, now(), ${ip}, ${hiringFacilityEmail}, ${hiringEmailOk}, ${hiringEmailError})
+        (${slug}, ${checklistTitle}, ${candidate.fullName}, ${candidate.email}, ${candidate.phone}, ${candidate.city}, ${candidate.state}, ${candidate.zipCode?.trim() || null}, ${sql.json(ratings)}, ${totalSkills}, ${ratedSkills}, ${emailOk}, ${emailError}, ${consent}, now(), ${ip}, ${hiringFacilityEmail}, ${hiringEmailOk}, ${hiringEmailError}, ${yearsTotal}, ${yearsSpecialty})
     `;
 
     await sql.end();
