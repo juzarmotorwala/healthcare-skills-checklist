@@ -7,10 +7,10 @@ export const reliasBatch4Checklists: ChecklistSpec[] = [
       { name: "Bathing, Grooming, and Oral Hygiene" }, { name: "Dressing and Toileting Assistance" }, { name: "Feeding and Fluid Assistance" }, { name: "Transfers and Range of Motion" }, { name: "Catheter and Ostomy Care" }, { name: "Skin and Foot Care" }, { name: "Assistive Device Use (Walker, Shower Chair, Brace)" }, { name: "Fall Prevention and Environment Safety" },
     ]},
     { title: "Patient Status Monitoring", skills: [
-      { name: "Observing and Reporting Pain/Discomfort" }, { name: "Monitoring Skin, Vital Signs, and Breathing Changes" }, { name: "Recognizing Signs of Impending Death" }, { name: "Symptom Relief Measures (Repositioning, Compress, Music)" },
+      { name: "Observing and Reporting Pain/Discomfort" }, { name: "Monitoring Skin, Vital Signs, and Breathing Changes" }, { name: "Recognizing Signs of Impending Death" }, { name: "Symptom Relief Measures (Repositioning, Compress, Music)" }, { name: "Recognizing Terminal Restlessness" },
     ]},
     { title: "Psychosocial & Spiritual Care", skills: [
-      { name: "Recognizing Spiritual Distress" }, { name: "Honoring Spiritual Beliefs and Practices" }, { name: "Providing Emotional and Spiritual Support" }, { name: "Avoiding Assumptions and Implicit Bias" }, { name: "Connecting Patients with Chaplains/Spiritual Leaders" },
+      { name: "Recognizing Spiritual Distress" }, { name: "Honoring Spiritual Beliefs and Practices" }, { name: "Providing Emotional and Spiritual Support" }, { name: "Avoiding Assumptions and Implicit Bias" }, { name: "Connecting Patients With Chaplains/Spiritual Leaders" },
     ]},
     { title: "Communication", skills: [
       { name: "Active Listening and Open-Ended Questions" }, { name: "Verbal Communication Adapted to Patient Needs" }, { name: "Nonverbal Communication and Presence" }, { name: "Use of Interpreters and Communication Aids" }, { name: "Supporting Patient Privacy and Trust" },
@@ -28,16 +28,19 @@ export const reliasBatch4Checklists: ChecklistSpec[] = [
 
   { slug: "cna-sitter-acute", title: "CNA Sitter (Acute Care) Skills Checklist", shortTitle: "CNA Sitter", icon: "👁️", group: "Nursing", categories: [
     { title: "Specialty Care Areas", skills: [
-      { name: "Behavioral Health / Psychiatric" }, { name: "Emergency Department" }, { name: "Labor and Delivery / Nursery" }, { name: "Pre- and Post-Operative Care" }, { name: "Pediatrics" }, { name: "Geriatric / Hospice" }, { name: "Crisis Intervention" }, { name: "Adult Med/Surg" },
+      { name: "Behavioral Health / Psychiatric" }, { name: "Emergency Department" }, { name: "Labor and Delivery / Nursery" }, { name: "Pre- and Post-Operative Care" }, { name: "Pediatrics" }, { name: "Geriatric / Hospice" }, { name: "Crisis Intervention" }, { name: "Adult Med/Surg" }, { name: "ICU/Critical Care" },
     ]},
     { title: "Patient Care", skills: [
-      { name: "Care of Confused or Combative Patient" }, { name: "Care of Suicidal Patient" }, { name: "Bed Bath and Oral Hygiene" }, { name: "Foot Care and Urinary Catheter Care" }, { name: "Assist with Showering and Commode/Urinal Use" }, { name: "Range of Motion Assistance" }, { name: "Unoccupied Bed Making" },
+      { name: "Care of Confused or Combative Patient" }, { name: "Care of Suicidal Patient" }, { name: "Bed Bath and Oral Hygiene" }, { name: "Foot Care and Urinary Catheter Care" }, { name: "Assist With Showering and Commode/Urinal Use" }, { name: "Range of Motion Assistance" }, { name: "Unoccupied Bed Making" }, { name: "One-to-One Continuous Observation" },
     ]},
     { title: "Vital Signs & Monitoring", skills: [
-      { name: "Rectal Temperature" }, { name: "Pulse and Respirations" }, { name: "Pain Level Assessment" },
+      { name: "Rectal Temperature" }, { name: "Pulse and Respirations" }, { name: "Pain Level Assessment" }, { name: "Continuous Behavioral Monitoring" },
     ]},
     { title: "Documentation & Safety", skills: [
-      { name: "Blood Glucose Monitoring" }, { name: "CPR/Basic Life Support" }, { name: "Computer and Paper Charting (Graphic Sheets)" }, { name: "Reporting Emergencies to Charge Nurse/Supervisor" },
+      { name: "Blood Glucose Monitoring" }, { name: "CPR/Basic Life Support" }, { name: "Computer and Paper Charting (Graphic Sheets)" }, { name: "Reporting Emergencies to Charge Nurse/Supervisor" }, { name: "Fall Precaution Monitoring" }, { name: "Elopement Risk Monitoring" },
+    ]},
+    { title: "De-Escalation & Safety Awareness", skills: [
+      { name: "Verbal De-Escalation Techniques" }, { name: "Recognizing Escalating Behavior" }, { name: "Environmental Safety/Hazard Removal" }, { name: "Restraint Alternative Awareness" },
     ]},
   ]},
 
@@ -52,13 +55,16 @@ export const reliasBatch4Checklists: ChecklistSpec[] = [
       { name: "Feeding Assistance and Meal Intake Recording" }, { name: "Aspiration Precautions During Meals" }, { name: "Special Diet Awareness" }, { name: "Recognizing Swallowing Difficulties" }, { name: "Assistive Feeding Device Use" },
     ]},
     { title: "Vital Signs & Bedmaking", skills: [
-      { name: "Manual Blood Pressure Measurement" }, { name: "Vital Signs Recording" }, { name: "Occupied and Unoccupied Bedmaking" }, { name: "Soiled Linen Handling" },
+      { name: "Manual Blood Pressure Measurement" }, { name: "Vital Signs Recording" }, { name: "Occupied and Unoccupied Bedmaking" }, { name: "Soiled Linen Handling" }, { name: "Weight and Height Measurement" },
     ]},
     { title: "Infection Control & Safety", skills: [
       { name: "Standard and Transmission-Based Precautions" }, { name: "PPE Application and Removal" }, { name: "Hand Hygiene per CDC Guidelines" }, { name: "Environmental Safety and Hazard Identification" }, { name: "Fall, Suicide, and Aspiration Precautions" }, { name: "Two-Identifier Verification" },
     ]},
     { title: "Documentation & Communication", skills: [
-      { name: "Electronic and Flowsheet Documentation" }, { name: "Intake and Output Recording" }, { name: "Reporting Concerns to Nursing Staff" }, { name: "Confidentiality and Privacy Compliance" },
+      { name: "Electronic and Flowsheet Documentation" }, { name: "Intake and Output Recording" }, { name: "Reporting Concerns to Nursing Staff" }, { name: "Confidentiality and Privacy Compliance" }, { name: "MDS/RAI Data Contribution" },
+    ]},
+    { title: "Restorative & Psychosocial Care", skills: [
+      { name: "Restorative Nursing Program Participation" }, { name: "Activities of Daily Living Encouragement" }, { name: "Emotional Support and Companionship" }, { name: "Dementia/Cognitive Impairment Care Approach" },
     ]},
   ]},
 ];

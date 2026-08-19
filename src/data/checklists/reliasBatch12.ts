@@ -21,17 +21,26 @@ export const reliasBatch12Checklists: ChecklistSpec[] = [
     { title: "Practice Settings", skills: [
       { name: "Inpatient Rehab and Skilled Nursing Facility" }, { name: "Outpatient and Home Health" }, { name: "School-Based and Pediatric Practice" }, { name: "Telehealth Practice" }, { name: "Psychiatric Hospital and Early Intervention" },
     ]},
+    { title: "Group & Program Facilitation", skills: [
+      { name: "Group Therapy Facilitation" }, { name: "Sensory Integration Group Programs" }, { name: "Fall Prevention Program Participation" },
+    ]},
   ]},
 
   { slug: "patient-transport", title: "Patient Transport Skills Checklist", shortTitle: "Patient Transport", icon: "🛏️", group: "Allied Health", categories: [
     { title: "Work Ethic & Job Responsibility", skills: [
-      { name: "Effective Time Management" }, { name: "Respond to Transport Requests with Confidence" }, { name: "Punctuality and Availability" },
+      { name: "Effective Time Management" }, { name: "Respond to Transport Requests With Confidence" }, { name: "Punctuality and Availability" }, { name: "Prioritizing Multiple Simultaneous Requests" },
     ]},
     { title: "Patient & Colleague Relationships", skills: [
-      { name: "Clear Communication with Colleagues" }, { name: "Clear Communication with Patients and Families" }, { name: "Maintain Patient Confidentiality" }, { name: "Maintain Patient Dignity" },
+      { name: "Clear Communication With Colleagues" }, { name: "Clear Communication With Patients and Families" }, { name: "Maintain Patient Confidentiality" }, { name: "Maintain Patient Dignity" }, { name: "Two-Identifier Patient Verification" },
     ]},
     { title: "Transport Techniques", skills: [
-      { name: "Proper Lifting, Carrying, and Pushing Technique" }, { name: "Transport Patient via Gurney" }, { name: "Transport Patient via Wheelchair" }, { name: "Transport Equipment" }, { name: "Transport Specimens" },
+      { name: "Proper Lifting, Carrying, and Pushing Technique" }, { name: "Transport Patient via Gurney" }, { name: "Transport Patient via Wheelchair" }, { name: "Transport Equipment" }, { name: "Transport Specimens" }, { name: "Transport Patient via Bed" }, { name: "Isolation Patient Transport Precautions" }, { name: "Oxygen Tank/Portable Monitor Transport" },
+    ]},
+    { title: "Safety & Emergency Awareness", skills: [
+      { name: "Fall Prevention During Transport" }, { name: "Elevator and Hallway Safety" }, { name: "Recognizing Patient Distress During Transport" }, { name: "Emergency Response/Code Notification" },
+    ]},
+    { title: "Documentation & Coordination", skills: [
+      { name: "Transport Log Documentation" }, { name: "Coordinating With Receiving Department" }, { name: "Equipment Cleaning Between Transports" },
     ]},
   ]},
 
@@ -56,6 +65,9 @@ export const reliasBatch12Checklists: ChecklistSpec[] = [
     ]},
     { title: "Housekeeping & Support Duties", skills: [
       { name: "Light Cleaning and Laundry" }, { name: "Grocery Shopping and Errands" }, { name: "Bed Fixing (Occupied and Unoccupied)" },
+    ]},
+    { title: "Companionship & Wellbeing", skills: [
+      { name: "Social Engagement and Companionship" }, { name: "Medication Reminders (Non-Administration)" }, { name: "Recognizing Signs of Depression/Isolation" },
     ]},
   ]},
 ];

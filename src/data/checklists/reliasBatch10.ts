@@ -46,7 +46,7 @@ export const reliasBatch10Checklists: ChecklistSpec[] = [
       { name: "Verify the Six Rights of Medication Administration" }, { name: "Administer Medications via Multiple Routes" }, { name: "Calculate Medication Dosages" }, { name: "Vaccination Education and Administration" }, { name: "Maintain Medication Inventory" },
     ]},
     { title: "Medical Terminology & Communication", skills: [
-      { name: "Anatomical and Physiological Terminology" }, { name: "Medical Abbreviations and Symbols" }, { name: "Communicate Effectively with Patients and Providers" },
+      { name: "Anatomical and Physiological Terminology" }, { name: "Medical Abbreviations and Symbols" }, { name: "Communicate Effectively With Patients and Providers" },
     ]},
     { title: "Medical Records & Financial Management", skills: [
       { name: "EMR Data Entry and HIPAA Compliance" }, { name: "Schedule and Coordinate Appointments" }, { name: "Collect Informed Consent" }, { name: "Resolve Billing Discrepancies" }, { name: "ICD-10 and CPT Coding Familiarity" }, { name: "Process Payments and Explain EOBs" },
@@ -54,17 +54,20 @@ export const reliasBatch10Checklists: ChecklistSpec[] = [
     { title: "Office Management & Professionalism", skills: [
       { name: "OSHA Workplace Safety Standards" }, { name: "Inventory and Supply Management" }, { name: "Professional Telephone Etiquette" }, { name: "Cultural Competency and Ethical Conduct" }, { name: "Team Collaboration and Problem-Solving" },
     ]},
+    { title: "Referral & Care Coordination", skills: [
+      { name: "Prior Authorization Coordination" }, { name: "Specialist Referral Processing" }, { name: "Patient Education Material Distribution" },
+    ]},
   ]},
 
   { slug: "medication-aide-snf-ltc", title: "Medication Aide – SNF/LTC Skills Checklist", shortTitle: "Medication Aide – SNF/LTC", icon: "💊", group: "Nursing", categories: [
     { title: "Clinical Practice & Vital Signs", skills: [
-      { name: "Assist with ADLs (Toileting, Bathing, Ambulation, Transferring)" }, { name: "Vital Signs Monitoring (BP, Temperature, Pulse, Respiration)" }, { name: "Glucometer Use and Calibration" }, { name: "Oxygen Use Assistance" }, { name: "Reporting to RN/LPN/LVN" },
+      { name: "Assist With ADLs (Toileting, Bathing, Ambulation, Transferring)" }, { name: "Vital Signs Monitoring (BP, Temperature, Pulse, Respiration)" }, { name: "Glucometer Use and Calibration" }, { name: "Oxygen Use Assistance" }, { name: "Reporting to RN/LPN/LVN" },
     ]},
     { title: "Facility Emergencies & Resident Safety", skills: [
       { name: "Basic Life Support (CPR)" }, { name: "Fire Emergency Procedures" }, { name: "Fall, Seizure, and Aspiration Precautions" }, { name: "Completing an Incident Report" }, { name: "Directing Emergency Medical Personnel" },
     ]},
     { title: "Infection Control", skills: [
-      { name: "Hand Hygiene and PPE Use" }, { name: "Standard, Airborne, and Droplet Precautions" }, { name: "Medical Asepsis with Medication Preparation" }, { name: "Safe Handling and Disposal of Sharps" },
+      { name: "Hand Hygiene and PPE Use" }, { name: "Standard, Airborne, and Droplet Precautions" }, { name: "Medical Asepsis With Medication Preparation" }, { name: "Safe Handling and Disposal of Sharps" },
     ]},
     { title: "Medication Administration", skills: [
       { name: "Six Rights of Medication Administration" }, { name: "Administer Oral, Transdermal, Ophthalmic, Otic, and Nasal Medications" }, { name: "Prepare/Crush Tablets Appropriately" }, { name: "Count and Document Controlled Medications" }, { name: "Observe and Report Allergic Reactions or Side Effects" }, { name: "PRN Medication Administration and Follow-Up" }, { name: "Understand Scope of Practice for Medication Aides" },
@@ -73,7 +76,10 @@ export const reliasBatch10Checklists: ChecklistSpec[] = [
       { name: "Proper Medication Handling and Storage Protocols" }, { name: "Disposal of Unused/Expired Medications" }, { name: "eMAR Documentation" }, { name: "Report Medication Errors and Near Misses" }, { name: "Participate in Medication Audits and Reconciliation" },
     ]},
     { title: "Professional & Therapeutic Communication", skills: [
-      { name: "HIPAA Guidelines and Chain of Command" }, { name: "Cultural Awareness and Non-English Speaking Communication" }, { name: "Therapeutic Communication with Dementia/Alzheimer's Patients" }, { name: "Shift Hand-Off Reporting" }, { name: "Basic Math and Metric Equivalences" },
+      { name: "HIPAA Guidelines and Chain of Command" }, { name: "Cultural Awareness and Non-English Speaking Communication" }, { name: "Therapeutic Communication With Dementia/Alzheimer's Patients" }, { name: "Shift Hand-Off Reporting" }, { name: "Basic Math and Metric Equivalences" },
+    ]},
+    { title: "Regulatory Compliance", skills: [
+      { name: "State Medication Aide Certification Requirements" }, { name: "Survey Readiness/Documentation Standards" }, { name: "Resident Rights Awareness" },
     ]},
   ]},
 ];

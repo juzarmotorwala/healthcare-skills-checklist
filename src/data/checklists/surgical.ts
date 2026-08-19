@@ -81,16 +81,19 @@ export const surgicalChecklists: ChecklistSpec[] = [
 
   { slug: "or-surg", title: "OR Surgical Skills Checklist", shortTitle: "OR Surgical", icon: "✂️", group: "Surgical", categories: [
     { title: "General Surgery", skills: [
-      { name: "Abdominal Perineal Resection" }, { name: "Appendectomy/Cholecystectomy" }, { name: "Breast Biopsy" }, { name: "Colon Resection/Surgery" }, { name: "Gastrectomy" }, { name: "Hernia Repair" }, { name: "Mastectomy" }, { name: "Thyroidectomy" }, { name: "Exploratory Laparotomy" },
+      { name: "Abdominal Perineal Resection" }, { name: "Appendectomy/Cholecystectomy" }, { name: "Breast Biopsy" }, { name: "Colon Resection/Surgery" }, { name: "Gastrectomy" }, { name: "Hernia Repair" }, { name: "Mastectomy" }, { name: "Thyroidectomy" }, { name: "Exploratory Laparotomy" }, { name: "Splenectomy" },
     ]},
     { title: "Laparoscopic Procedures", skills: [
-      { name: "Laparoscopic Cholecystectomy" }, { name: "Laparoscopic Hernia" }, { name: "Laparoscopic Nissen" }, { name: "Laparoscopic Appendectomy" },
+      { name: "Laparoscopic Cholecystectomy" }, { name: "Laparoscopic Hernia" }, { name: "Laparoscopic Nissen" }, { name: "Laparoscopic Appendectomy" }, { name: "Robotic-Assisted Laparoscopic Surgery" },
     ]},
     { title: "Orthopedic Surgery", skills: [
-      { name: "Total Hip Replacement" }, { name: "Total Knee Replacement" }, { name: "ORIF" }, { name: "Arthroscopy" }, { name: "Spinal Surgery" }, { name: "Rotator Cuff Repair" }, { name: "Carpal Tunnel Release" },
+      { name: "Total Hip Replacement" }, { name: "Total Knee Replacement" }, { name: "ORIF" }, { name: "Arthroscopy" }, { name: "Spinal Surgery" }, { name: "Rotator Cuff Repair" }, { name: "Carpal Tunnel Release" }, { name: "Shoulder Replacement" },
     ]},
     { title: "Neurosurgery", skills: [
-      { name: "Craniotomy" }, { name: "Laminectomy" }, { name: "Spinal Fusion" }, { name: "VP Shunt" },
+      { name: "Craniotomy" }, { name: "Laminectomy" }, { name: "Spinal Fusion" }, { name: "VP Shunt" }, { name: "Deep Brain Stimulator Placement" },
+    ]},
+    { title: "Gynecologic & Urologic Surgery", skills: [
+      { name: "Hysterectomy" }, { name: "Cystoscopy" }, { name: "TURP" }, { name: "Robotic Prostatectomy" },
     ]},
     { title: "Age Specific Competencies", skills: [
       { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
@@ -99,16 +102,19 @@ export const surgicalChecklists: ChecklistSpec[] = [
 
   { slug: "perioperative", title: "Registered Nurse – Perioperative Skills Checklist", shortTitle: "RN – Perioperative", icon: "🏗️", group: "Surgical", categories: [
     { title: "IV Therapy", skills: [
-      { name: "Start peripheral IV" }, { name: "Insertion of A-lines" }, { name: "Insertion of CVP - jugular" }, { name: "Insertion of CVP - subclavian" }, { name: "Insertion of Swan-Ganz" },
+      { name: "Start Peripheral IV" }, { name: "Insertion of A-Lines" }, { name: "Insertion of CVP - Jugular" }, { name: "Insertion of CVP - Subclavian" }, { name: "Insertion of Swan-Ganz" },
     ]},
-    { title: "Pre-operative Care", skills: [
-      { name: "Patient assessment" }, { name: "Consent verification" }, { name: "Site marking" }, { name: "Time out procedure" }, { name: "Medication reconciliation" },
+    { title: "Pre-Operative Care", skills: [
+      { name: "Patient Assessment" }, { name: "Consent Verification" }, { name: "Site Marking" }, { name: "Time Out Procedure" }, { name: "Medication Reconciliation" }, { name: "Pre-Op Patient Education" },
     ]},
-    { title: "Intra-operative Care", skills: [
-      { name: "Circulating" }, { name: "Scrubbing" }, { name: "Positioning" }, { name: "Specimen handling" }, { name: "Counts (sponge, sharps, instruments)" },
+    { title: "Intra-Operative Care", skills: [
+      { name: "Circulating" }, { name: "Scrubbing" }, { name: "Positioning" }, { name: "Specimen Handling" }, { name: "Counts (Sponge, Sharps, Instruments)" }, { name: "Sterile Technique Maintenance" },
     ]},
-    { title: "Post-operative Care", skills: [
-      { name: "PACU recovery" }, { name: "Pain management" }, { name: "Discharge criteria assessment" }, { name: "Wound assessment" },
+    { title: "Post-Operative Care", skills: [
+      { name: "PACU Recovery" }, { name: "Pain Management" }, { name: "Discharge Criteria Assessment" }, { name: "Wound Assessment" }, { name: "Post-Op Complication Recognition" },
+    ]},
+    { title: "Surgical Safety & Emergency Response", skills: [
+      { name: "Universal Protocol Compliance" }, { name: "Malignant Hyperthermia Response" }, { name: "Fire Safety Protocol" }, { name: "Code Response in OR" },
     ]},
     { title: "Age Specific Competencies", skills: [
       { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
@@ -321,13 +327,19 @@ export const surgicalChecklists: ChecklistSpec[] = [
 
   { slug: "spd-shift-manager", title: "SPD Shift Manager Skills Checklist", shortTitle: "SPD Shift Manager", icon: "🗝️", group: "Surgical", categories: [
     { title: "Department Operations", skills: [
-      { name: "Staff scheduling and workflow management" }, { name: "Instrument tray inventory management" }, { name: "Case cart preparation oversight" }, { name: "Equipment loan/repair coordination" },
+      { name: "Staff Scheduling and Workflow Management" }, { name: "Instrument Tray Inventory Management" }, { name: "Case Cart Preparation Oversight" }, { name: "Equipment Loan/Repair Coordination" }, { name: "Par Level Management" }, { name: "Turnaround Time Monitoring" },
     ]},
     { title: "Quality & Compliance", skills: [
-      { name: "Sterilization validation and documentation" }, { name: "AAMI/AORN standards compliance" }, { name: "Regulatory survey readiness" }, { name: "Incident/near-miss investigation" },
+      { name: "Sterilization Validation and Documentation" }, { name: "AAMI/AORN Standards Compliance" }, { name: "Regulatory Survey Readiness" }, { name: "Incident/Near-Miss Investigation" }, { name: "Biological/Chemical Indicator Monitoring Oversight" },
     ]},
     { title: "Staff Leadership", skills: [
-      { name: "Staff training and competency validation" }, { name: "Performance management" }, { name: "Cross-department communication (OR, sterile processing)" },
+      { name: "Staff Training and Competency Validation" }, { name: "Performance Management" }, { name: "Cross-Department Communication (OR, Sterile Processing)" }, { name: "New Hire Onboarding" },
+    ]},
+    { title: "Equipment & Technology", skills: [
+      { name: "Sterilizer/Washer-Disinfector Maintenance Oversight" }, { name: "Instrument Tracking System Management" }, { name: "Loaner Instrument Program Management" },
+    ]},
+    { title: "Safety & Environment", skills: [
+      { name: "OSHA/Chemical Safety Compliance" }, { name: "Environmental Cleaning Standards" }, { name: "PPE Compliance Monitoring" },
     ]},
   ]},
 

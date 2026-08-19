@@ -180,28 +180,34 @@ export const diagnosticLabChecklists: ChecklistSpec[] = [
       { name: "Adult Acute Care" }, { name: "ED/ICU" }, { name: "Adult Outpatient" }, { name: "Pediatric Acute Care" }, { name: "Pediatric Outpatient" },
     ]},
     { title: "Adult Echo", skills: [
-      { name: "Transthoracic Echo (TTE)" }, { name: "Transesophageal Echo (TEE)" }, { name: "Stress Echo" }, { name: "Dobutamine Stress Echo" }, { name: "Contrast Echo" },
+      { name: "Transthoracic Echo (TTE)" }, { name: "Transesophageal Echo (TEE)" }, { name: "Stress Echo" }, { name: "Dobutamine Stress Echo" }, { name: "Contrast Echo" }, { name: "Point-of-Care Echo" },
     ]},
     { title: "Measurements & Calculations", skills: [
-      { name: "M-Mode" }, { name: "2D Imaging" }, { name: "Doppler (PW, CW, Color)" }, { name: "Tissue Doppler" }, { name: "Strain Imaging" },
+      { name: "M-Mode" }, { name: "2D Imaging" }, { name: "Doppler (PW, CW, Color)" }, { name: "Tissue Doppler" }, { name: "Strain Imaging" }, { name: "Ejection Fraction Calculation" }, { name: "Chamber Quantification" },
     ]},
     { title: "Pathology Recognition", skills: [
-      { name: "Valvular Disease" }, { name: "Cardiomyopathy" }, { name: "Pericardial Disease" }, { name: "Congenital Heart Disease" }, { name: "Aortic Disease" },
+      { name: "Valvular Disease" }, { name: "Cardiomyopathy" }, { name: "Pericardial Disease" }, { name: "Congenital Heart Disease" }, { name: "Aortic Disease" }, { name: "Wall Motion Abnormality Recognition" },
+    ]},
+    { title: "Equipment & Reporting", skills: [
+      { name: "Ultrasound Equipment Operation" }, { name: "Image Optimization/QC" }, { name: "Report Generation and Physician Communication" },
     ]},
   ]},
 
   { slug: "cardiac-echocardiography", title: "Cardiac Echocardiography Skills Checklist (Advanced)", shortTitle: "Cardiac Echocardiography", icon: "🫀", group: "Diagnostic & Lab", categories: [
     { title: "Ultrasound-Echocardiography", skills: [
-      { name: "Adult Echocardiography" }, { name: "Pediatric Echocardiography" }, { name: "Fetal Echocardiography" }, { name: "Trauma Echocardiography" }, { name: "Stress Echocardiography" },
+      { name: "Adult Echocardiography" }, { name: "Pediatric Echocardiography" }, { name: "Fetal Echocardiography" }, { name: "Trauma Echocardiography" }, { name: "Stress Echocardiography" }, { name: "Point-of-Care Echocardiography" },
     ]},
     { title: "Advanced Imaging", skills: [
-      { name: "3D Echocardiography" }, { name: "Strain/Speckle Tracking" }, { name: "Contrast Echocardiography" }, { name: "Intracardiac Echo" },
+      { name: "3D Echocardiography" }, { name: "Strain/Speckle Tracking" }, { name: "Contrast Echocardiography" }, { name: "Intracardiac Echo" }, { name: "Tissue Doppler Imaging" },
     ]},
     { title: "Procedures", skills: [
-      { name: "Transesophageal Echo (TEE)" }, { name: "Intraoperative TEE" }, { name: "Stress Testing (Exercise)" }, { name: "Stress Testing (Pharmacological)" },
+      { name: "Transesophageal Echo (TEE)" }, { name: "Intraoperative TEE" }, { name: "Stress Testing (Exercise)" }, { name: "Stress Testing (Pharmacological)" }, { name: "Structural Heart Procedure Imaging Support (e.g., TAVR, MitraClip)" },
+    ]},
+    { title: "Measurements & Pathology Recognition", skills: [
+      { name: "Ejection Fraction Calculation" }, { name: "Valvular Disease Assessment" }, { name: "Cardiomyopathy Recognition" }, { name: "Pericardial Disease Recognition" }, { name: "Congenital Heart Disease Recognition" },
     ]},
     { title: "Age Specific Competencies", skills: [
-      { name: "Neonate (birth-30 days)" }, { name: "Infant (1 month-1 year)" }, { name: "Pediatric (1-18 years)" }, { name: "Adult (18-64 years)" }, { name: "Geriatric (65+ years)" },
+      { name: "Neonate (Birth-30 Days)" }, { name: "Infant (1 Month-1 Year)" }, { name: "Pediatric (1-18 Years)" }, { name: "Adult (18-64 Years)" }, { name: "Geriatric (65+ Years)" },
     ]},
   ]},
 
@@ -297,28 +303,28 @@ export const diagnosticLabChecklists: ChecklistSpec[] = [
 
   { slug: "cardiac-monitor-tech", title: "Cardiac Monitor Technician Skills Checklist", shortTitle: "Cardiac Monitor Tech", icon: "📟", group: "Diagnostic & Lab", categories: [
     { title: "Rhythm Recognition", skills: [
-      { name: "Normal sinus rhythm identification" }, { name: "Atrial arrhythmias" }, { name: "Ventricular arrhythmias" }, { name: "Heart blocks" }, { name: "Life-threatening arrhythmia recognition" }, { name: "12-lead EKG interpretation basics" },
+      { name: "Normal Sinus Rhythm Identification" }, { name: "Atrial Arrhythmias (e.g., AFib, Aflutter, SVT)" }, { name: "Ventricular Arrhythmias (e.g., PVCs, VTach, VFib)" }, { name: "Heart Blocks (1st, 2nd, 3rd Degree)" }, { name: "Life-Threatening Arrhythmia Recognition" }, { name: "12-Lead EKG Interpretation Basics" }, { name: "Pacemaker Rhythm Recognition" }, { name: "Artifact vs. True Arrhythmia Differentiation" },
     ]},
     { title: "Monitoring Systems", skills: [
-      { name: "Central telemetry station operation" }, { name: "Alarm management and prioritization" }, { name: "Lead placement and troubleshooting" }, { name: "Documentation of rhythm strips" },
+      { name: "Central Telemetry Station Operation" }, { name: "Alarm Management and Prioritization" }, { name: "Lead Placement and Troubleshooting" }, { name: "Documentation of Rhythm Strips" }, { name: "Multi-Patient Monitoring" }, { name: "Telemetry Battery/Equipment Management" },
     ]},
     { title: "Communication & Escalation", skills: [
-      { name: "Notifying RN/physician of critical changes" }, { name: "Code blue notification protocol" }, { name: "Shift handoff reporting" },
+      { name: "Notifying RN/Physician of Critical Changes" }, { name: "Code Blue Notification Protocol" }, { name: "Shift Handoff Reporting" }, { name: "Critical Value Documentation" },
     ]},
   ]},
 
   { slug: "echo-vascular-tech", title: "Echocardiography / Vascular Ultrasound Technologist Skills Checklist", shortTitle: "Echo/Vascular Tech", icon: "🌊", group: "Diagnostic & Lab", categories: [
     { title: "Echocardiography", skills: [
-      { name: "Transthoracic echocardiogram (TTE)" }, { name: "Transesophageal echocardiogram (TEE) assist" }, { name: "Stress echocardiography" }, { name: "Doppler and color flow imaging" }, { name: "Pediatric echocardiography" },
+      { name: "Transthoracic Echocardiogram (TTE)" }, { name: "Transesophageal Echocardiogram (TEE) Assist" }, { name: "Stress Echocardiography" }, { name: "Doppler and Color Flow Imaging" }, { name: "Pediatric Echocardiography" }, { name: "3D Echocardiography" }, { name: "Contrast Echocardiography" },
     ]},
     { title: "Vascular Studies", skills: [
-      { name: "Carotid duplex" }, { name: "Venous duplex/DVT studies" }, { name: "Arterial duplex" }, { name: "Ankle-brachial index (ABI)" }, { name: "Renal and abdominal vascular studies" },
+      { name: "Carotid Duplex" }, { name: "Venous Duplex/DVT Studies" }, { name: "Arterial Duplex" }, { name: "Ankle-Brachial Index (ABI)" }, { name: "Renal and Abdominal Vascular Studies" }, { name: "Dialysis Access Mapping" }, { name: "Post-Intervention Graft Surveillance" },
     ]},
     { title: "Equipment & Technique", skills: [
-      { name: "Ultrasound machine operation" }, { name: "Image optimization" }, { name: "Measurement and calculation accuracy" }, { name: "Report generation" },
+      { name: "Ultrasound Machine Operation" }, { name: "Image Optimization" }, { name: "Measurement and Calculation Accuracy" }, { name: "Report Generation" }, { name: "Quality Control/Probe Maintenance" },
     ]},
     { title: "Patient Care", skills: [
-      { name: "Patient positioning and comfort" }, { name: "Pediatric and geriatric considerations" }, { name: "Infection control between studies" },
+      { name: "Patient Positioning and Comfort" }, { name: "Pediatric and Geriatric Considerations" }, { name: "Infection Control Between Studies" }, { name: "Patient History Review Prior to Study" },
     ]},
   ]},
 
@@ -378,13 +384,13 @@ export const diagnosticLabChecklists: ChecklistSpec[] = [
 
   { slug: "mammographer", title: "Mammographer Skills Checklist", shortTitle: "Mammographer", icon: "🎗️", group: "Diagnostic & Lab", categories: [
     { title: "Procedures", skills: [
-      { name: "Screening mammography" }, { name: "Diagnostic mammography" }, { name: "Stereotactic breast biopsy assist" }, { name: "Breast ultrasound assist" }, { name: "3D tomosynthesis" }, { name: "Breast Specimen Imaging" },
+      { name: "Screening Mammography" }, { name: "Diagnostic Mammography" }, { name: "Stereotactic Breast Biopsy Assist" }, { name: "Breast Ultrasound Assist" }, { name: "3D Tomosynthesis" }, { name: "Breast Specimen Imaging" }, { name: "Ductography/Galactography Assist" }, { name: "Needle Localization Assist" },
     ]},
     { title: "Technical Skills", skills: [
-      { name: "Positioning technique" }, { name: "Medial Lateral (ML) Positioning" }, { name: "Tangential (TAN) Positioning" }, { name: "Film-Screen Mammography" }, { name: "MQSA/ACR/FDA Compliance" }, { name: "Image quality/QC" }, { name: "Radiation dose management" },
+      { name: "Positioning Technique" }, { name: "Medial Lateral (ML) Positioning" }, { name: "Tangential (TAN) Positioning" }, { name: "Craniocaudal (CC) Positioning" }, { name: "Film-Screen Mammography" }, { name: "MQSA/ACR/FDA Compliance" }, { name: "Image Quality/QC" }, { name: "Radiation Dose Management" },
     ]},
     { title: "Patient Care", skills: [
-      { name: "Patient comfort and communication" }, { name: "Sensitivity to anxious patients" }, { name: "Imaging Patients with Implants" }, { name: "Imaging Patients with Reduction History" }, { name: "Documentation and BI-RADS familiarity" },
+      { name: "Patient Comfort and Communication" }, { name: "Sensitivity to Anxious Patients" }, { name: "Imaging Patients With Implants" }, { name: "Imaging Patients With Reduction History" }, { name: "Documentation and BI-RADS Familiarity" }, { name: "Follow-Up Result Communication Coordination" },
     ]},
   ]},
 
@@ -441,13 +447,16 @@ export const diagnosticLabChecklists: ChecklistSpec[] = [
 
   { slug: "pet-ct-tech", title: "PET/CT Technologist Skills Checklist", shortTitle: "PET/CT Tech", icon: "🔬", group: "Diagnostic & Lab", categories: [
     { title: "Procedures", skills: [
-      { name: "Oncology PET/CT imaging" }, { name: "Cardiac PET imaging" }, { name: "Neurology PET imaging" }, { name: "Attenuation correction" },
+      { name: "Oncology PET/CT Imaging" }, { name: "Cardiac PET Imaging" }, { name: "Neurology PET Imaging" }, { name: "Attenuation Correction" }, { name: "Whole-Body PET/CT Protocols" }, { name: "PET/MRI Imaging" },
     ]},
     { title: "Radiopharmaceutical & Safety", skills: [
-      { name: "FDG dose preparation and administration" }, { name: "Radiation safety/ALARA" }, { name: "Blood glucose screening pre-injection" }, { name: "Uptake time management" },
+      { name: "FDG Dose Preparation and Administration" }, { name: "Radiation Safety/ALARA" }, { name: "Dose Calibrator Quality Control" }, { name: "Blood Glucose Screening Pre-Injection" }, { name: "Uptake Time Management" }, { name: "Radiopharmaceutical Waste Disposal" },
     ]},
-    { title: "Equipment & Patient Care", skills: [
-      { name: "PET/CT scanner operation" }, { name: "Image fusion and QC" }, { name: "Diabetic patient protocol management" }, { name: "Claustrophobia/anxiety management" },
+    { title: "Equipment & Image Quality", skills: [
+      { name: "PET/CT Scanner Operation" }, { name: "Image Fusion and QC" }, { name: "Daily/Weekly Scanner Quality Control" }, { name: "Reconstruction Parameter Selection" },
+    ]},
+    { title: "Patient Care", skills: [
+      { name: "Diabetic Patient Protocol Management" }, { name: "Claustrophobia/Anxiety Management" }, { name: "Pediatric Patient Preparation" }, { name: "IV Access for Radiotracer Administration" }, { name: "Patient History and Prior Study Review" },
     ]},
   ]},
 
@@ -486,13 +495,19 @@ export const diagnosticLabChecklists: ChecklistSpec[] = [
 
   { slug: "radiation-therapist", title: "Radiation Therapist Skills Checklist", shortTitle: "Radiation Therapist", icon: "🎯", group: "Diagnostic & Lab", categories: [
     { title: "Treatment Delivery", skills: [
-      { name: "External beam radiation therapy (EBRT)" }, { name: "IMRT/VMAT delivery" }, { name: "Stereotactic radiosurgery (SRS/SBRT)" }, { name: "Brachytherapy assist" }, { name: "Patient positioning and immobilization" },
+      { name: "External Beam Radiation Therapy (EBRT)" }, { name: "IMRT/VMAT Delivery" }, { name: "Stereotactic Radiosurgery (SRS/SBRT)" }, { name: "Brachytherapy Assist" }, { name: "Total Body Irradiation (TBI)" }, { name: "Electron Beam Therapy" }, { name: "Patient Positioning and Immobilization" },
     ]},
     { title: "Simulation & Planning", skills: [
-      { name: "CT simulation" }, { name: "Treatment planning system familiarity" }, { name: "Image-guided radiation therapy (IGRT)" }, { name: "Daily setup verification" },
+      { name: "CT Simulation" }, { name: "Treatment Planning System Familiarity" }, { name: "Image-Guided Radiation Therapy (IGRT)" }, { name: "Cone Beam CT Verification" }, { name: "Daily Setup Verification" }, { name: "4D CT/Respiratory Gating" },
+    ]},
+    { title: "Site-Specific Treatment", skills: [
+      { name: "Breast Cancer Treatment" }, { name: "Prostate Cancer Treatment" }, { name: "Head and Neck Cancer Treatment" }, { name: "CNS/Brain Tumor Treatment" }, { name: "Pediatric Oncology Treatment" },
     ]},
     { title: "Patient Care & Safety", skills: [
-      { name: "Radiation safety principles" }, { name: "Side effect management and education" }, { name: "Skin care during treatment" }, { name: "Emotional support for oncology patients" },
+      { name: "Radiation Safety Principles" }, { name: "Side Effect Management and Education" }, { name: "Skin Care During Treatment" }, { name: "Emotional Support for Oncology Patients" }, { name: "Nutrition/Weight Monitoring During Treatment" },
+    ]},
+    { title: "Equipment & Quality Assurance", skills: [
+      { name: "Linear Accelerator Operation" }, { name: "Daily Machine QA Checks" }, { name: "Immobilization Device Fabrication" }, { name: "Dosimetry Verification" },
     ]},
   ]},
 
@@ -578,20 +593,23 @@ export const diagnosticLabChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "cytotechnologist", title: "Cytotechnologist Skills Checklist", shortTitle: "Cytotechnologist", icon: "🔬", group: "Diagnostic & Lab", categories: [
-    { title: "Specimen Analysis", skills: [
-      { name: "Pap smear screening" }, { name: "Non-gynecologic cytology (fluids, FNA)" }, { name: "Liquid-based cytology preparation" }, { name: "Microscopic slide screening" }, { name: "Abnormality identification and classification" },
+    { title: "Gynecologic Cytology", skills: [
+      { name: "Pap Smear Screening" }, { name: "Liquid-Based Cytology Preparation" }, { name: "HPV Co-Testing Correlation" }, { name: "Squamous Cell Abnormality Identification" }, { name: "Glandular Cell Abnormality Identification" },
+    ]},
+    { title: "Non-Gynecologic Cytology", skills: [
+      { name: "Fine Needle Aspiration (FNA) Screening" }, { name: "Body Fluid Cytology (Pleural, Peritoneal, CSF)" }, { name: "Urine Cytology" }, { name: "Respiratory Cytology (Bronchial Wash/Brush)" }, { name: "Fine Needle Aspiration Rapid On-Site Evaluation (ROSE)" },
     ]},
     { title: "Laboratory Technique", skills: [
-      { name: "Specimen preparation and staining" }, { name: "Quality control procedures" }, { name: "LIS documentation" }, { name: "Correlation with histology/biopsy results" },
+      { name: "Specimen Preparation and Staining" }, { name: "Papanicolaou Staining Technique" }, { name: "Quality Control Procedures" }, { name: "LIS Documentation" }, { name: "Correlation With Histology/Biopsy Results" }, { name: "Immunocytochemistry Techniques" },
     ]},
     { title: "Compliance", skills: [
-      { name: "CAP/CLIA regulatory compliance" }, { name: "Proficiency testing participation" },
+      { name: "CAP/CLIA Regulatory Compliance" }, { name: "Proficiency Testing Participation" }, { name: "Bethesda System Reporting Standards" }, { name: "Turnaround Time Standards" },
     ]},
   ]},
 
   { slug: "histology-tech", title: "Histology Technician Skills Checklist", shortTitle: "Histology Tech", icon: "🧫", group: "Diagnostic & Lab", categories: [
     { title: "Specimen Processing", skills: [
-      { name: "Tissue grossing assist" }, { name: "Tissue processing/embedding" }, { name: "Microtomy/sectioning" }, { name: "Special stains (H&E, IHC)" }, { name: "Frozen section preparation" },
+      { name: "Tissue Grossing Assist" }, { name: "Tissue Processing/Embedding" }, { name: "Microtomy/Sectioning" }, { name: "Special Stains (H&E, IHC)" }, { name: "Frozen Section Preparation" }, { name: "Decalcification Techniques" }, { name: "Cytology Slide Preparation" },
     ]},
     { title: "Equipment Operation & Quality Control", skills: [
       { name: "Operate and Maintain Tissue Processor" }, { name: "Operate and Maintain Automatic Coverslipper" }, { name: "Operate and Maintain IHC Stainer" }, { name: "Operate, Clean, and Maintain Microscopes" }, { name: "Operate and Maintain Microtomes" }, { name: "Operate and Maintain Slide Stainer" }, { name: "Operate and Maintain Cryostat" }, { name: "Conduct Validations of New Equipment" }, { name: "Calibrate Pipettors at Least Annually" }, { name: "Check Refrigerators and Freezers Daily for Proper Operation" }, { name: "Document Corrective Actions for Out-of-Range Refrigerator/Freezer Temperatures" },
@@ -600,25 +618,28 @@ export const diagnosticLabChecklists: ChecklistSpec[] = [
       { name: "Select Stain Based on Substance Reactivity" }, { name: "Recognize Substances in Tissues via Color Reaction" }, { name: "Perform Positive Controls on Stains" }, { name: "Select Mounting Media" }, { name: "Place Coverslip on Slide After Staining" },
     ]},
     { title: "Safety Practices", skills: [
-      { name: "Wear PPE in Accordance with Infection Prevention Policies" }, { name: "Know Location and How to Access Safety Data Sheets" }, { name: "Safely Dilute Acids" },
+      { name: "Wear PPE in Accordance With Infection Prevention Policies" }, { name: "Know Location and How to Access Safety Data Sheets" }, { name: "Safely Dilute Acids" }, { name: "Formalin/Xylene Chemical Safety Handling" },
     ]},
     { title: "Age Specific Competencies", skills: [
       { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
     ]},
     { title: "Compliance", skills: [
-      { name: "CAP/CLIA regulatory compliance" }, { name: "Specimen chain of custody" },
+      { name: "CAP/CLIA Regulatory Compliance" }, { name: "Specimen Chain of Custody" }, { name: "Proficiency Testing Participation" },
     ]},
   ]},
 
   { slug: "pathologist-assistant", title: "Pathologist / Pathologist Assistant Skills Checklist", shortTitle: "Pathologist Assistant", icon: "🩸", group: "Diagnostic & Lab", categories: [
     { title: "Gross & Surgical Pathology", skills: [
-      { name: "Surgical specimen grossing" }, { name: "Autopsy assist" }, { name: "Frozen section preparation and consultation" }, { name: "Specimen photography and documentation" },
+      { name: "Surgical Specimen Grossing" }, { name: "Small Biopsy Grossing" }, { name: "Complex Resection Grossing (e.g., Oncologic Resections)" }, { name: "Autopsy Assist" }, { name: "Frozen Section Preparation and Consultation" }, { name: "Specimen Photography and Documentation" }, { name: "Lymph Node Dissection" }, { name: "Margin Assessment and Inking" },
     ]},
     { title: "Diagnostic Support", skills: [
-      { name: "Microscopic slide preparation for physician review" }, { name: "Correlation with clinical/radiologic findings" }, { name: "Molecular/IHC test coordination" },
+      { name: "Microscopic Slide Preparation for Physician Review" }, { name: "Correlation With Clinical/Radiologic Findings" }, { name: "Molecular/IHC Test Coordination" }, { name: "Cytogenetic Specimen Handling" }, { name: "Tumor Board Case Preparation" },
     ]},
-    { title: "Compliance", skills: [
-      { name: "CAP/CLIA regulatory compliance" }, { name: "Chain of custody documentation" }, { name: "Quality assurance participation" },
+    { title: "Specimen Handling & Systems", skills: [
+      { name: "Specimen Accessioning" }, { name: "Chain of Custody Documentation" }, { name: "LIS Documentation" }, { name: "Cassette and Slide Labeling Accuracy" }, { name: "Fixation and Decalcification Protocols" },
+    ]},
+    { title: "Compliance & Safety", skills: [
+      { name: "CAP/CLIA Regulatory Compliance" }, { name: "Formalin/Chemical Safety Handling" }, { name: "Biohazard Waste Disposal" }, { name: "Quality Assurance Participation" }, { name: "Proficiency Testing Participation" },
     ]},
   ]},
 ];

@@ -216,16 +216,19 @@ export const pediatricMaternalChecklists: ChecklistSpec[] = [
 
   { slug: "ob-labor-delivery", title: "Registered Nurse – OB Labor & Delivery Skills Checklist", shortTitle: "RN – OB Labor & Delivery", icon: "🫄", group: "Pediatric & Maternal", categories: [
     { title: "Patient Rights", skills: [
-      { name: "Communicates and obtains information respecting privacy and confidentiality" }, { name: "Involves patient and family in care decisions including Advanced Directives" }, { name: "Complies with Organ Donation policy" }, { name: "Meets communication needs including interpreter services" },
+      { name: "Communicates and Obtains Information Respecting Privacy and Confidentiality" }, { name: "Involves Patient and Family in Care Decisions Including Advanced Directives" }, { name: "Complies With Organ Donation Policy" }, { name: "Meets Communication Needs Including Interpreter Services" },
     ]},
     { title: "Antepartum Care", skills: [
-      { name: "Gestational Diabetes" }, { name: "Preeclampsia/Eclampsia" }, { name: "Preterm Labor" }, { name: "Placenta Previa" }, { name: "Fetal Monitoring" },
+      { name: "Gestational Diabetes" }, { name: "Preeclampsia/Eclampsia" }, { name: "Preterm Labor" }, { name: "Placenta Previa" }, { name: "Fetal Monitoring" }, { name: "Placental Abruption" }, { name: "Multiple Gestation Management" }, { name: "Amniotic Fluid Assessment" },
     ]},
     { title: "Labor & Delivery", skills: [
-      { name: "Vaginal Delivery" }, { name: "C-Section" }, { name: "Induction/Augmentation" }, { name: "Epidural Management" }, { name: "Fetal Heart Rate Interpretation" }, { name: "Emergency Delivery" },
+      { name: "Vaginal Delivery" }, { name: "C-Section" }, { name: "Induction/Augmentation" }, { name: "Epidural Management" }, { name: "Fetal Heart Rate Interpretation" }, { name: "Emergency Delivery" }, { name: "Vacuum/Forceps-Assisted Delivery" }, { name: "Shoulder Dystocia Management" }, { name: "VBAC Management" },
     ]},
     { title: "Postpartum", skills: [
-      { name: "Fundal Assessment" }, { name: "Postpartum Hemorrhage" }, { name: "Breastfeeding Support" }, { name: "Newborn Assessment" }, { name: "APGAR Scoring" },
+      { name: "Fundal Assessment" }, { name: "Postpartum Hemorrhage" }, { name: "Breastfeeding Support" }, { name: "Newborn Assessment" }, { name: "APGAR Scoring" }, { name: "Perineal/Laceration Care" }, { name: "Postpartum Depression Screening" },
+    ]},
+    { title: "High-Risk & Emergency Care", skills: [
+      { name: "Magnesium Sulfate Administration" }, { name: "Amniotic Fluid Embolism Recognition" }, { name: "Neonatal Resuscitation" }, { name: "Maternal Hemorrhage Protocol (Massive Transfusion)" },
     ]},
     { title: "Age Specific Competencies", skills: [
       { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" },
@@ -234,16 +237,19 @@ export const pediatricMaternalChecklists: ChecklistSpec[] = [
 
   { slug: "ob-tech", title: "OB Technician Skills Checklist", shortTitle: "OB Tech", icon: "🩰", group: "Pediatric & Maternal", categories: [
     { title: "Labor & Delivery Support", skills: [
-      { name: "Room setup and equipment preparation" }, { name: "Delivery table/instrument setup" }, { name: "Assisting with vaginal delivery" }, { name: "Assisting with C-section" }, { name: "Sterile technique and gowning" },
+      { name: "Room Setup and Equipment Preparation" }, { name: "Delivery Table/Instrument Setup" }, { name: "Assisting With Vaginal Delivery" }, { name: "Assisting With C-Section" }, { name: "Sterile Technique and Gowning" }, { name: "Precipitous Delivery Assist" },
     ]},
     { title: "Patient Care", skills: [
-      { name: "Vital signs monitoring" }, { name: "External fetal monitor application" }, { name: "Patient positioning and comfort measures" }, { name: "Postpartum patient assistance" },
+      { name: "Vital Signs Monitoring" }, { name: "External Fetal Monitor Application" }, { name: "Patient Positioning and Comfort Measures" }, { name: "Postpartum Patient Assistance" }, { name: "Perineal Care" }, { name: "Ambulation Assistance Post-Delivery" },
     ]},
     { title: "Newborn Support", skills: [
-      { name: "Newborn warmer setup" }, { name: "Assisting with initial newborn care" }, { name: "Specimen labeling and transport" },
+      { name: "Newborn Warmer Setup" }, { name: "Assisting With Initial Newborn Care" }, { name: "Specimen Labeling and Transport" }, { name: "Newborn Bath Assist" }, { name: "Cord Blood Collection Assist" },
     ]},
     { title: "Equipment & Supplies", skills: [
-      { name: "Sterilization of instruments" }, { name: "Supply stocking and inventory" }, { name: "Emergency cart checks" },
+      { name: "Sterilization of Instruments" }, { name: "Supply Stocking and Inventory" }, { name: "Emergency Cart Checks" }, { name: "Fetal Monitor Equipment Maintenance" },
+    ]},
+    { title: "Safety & Emergency Support", skills: [
+      { name: "Postpartum Hemorrhage Response Assist" }, { name: "Neonatal Resuscitation Support" }, { name: "Emergency C-Section Preparation" },
     ]},
   ]},
 

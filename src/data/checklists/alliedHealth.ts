@@ -111,19 +111,22 @@ export const alliedHealthChecklists: ChecklistSpec[] = [
 
   { slug: "patient-care-tech", title: "Patient Care Technician Skills Checklist", shortTitle: "Patient Care Tech", icon: "🫂", group: "Allied Health", categories: [
     { title: "Obtaining and Recording", skills: [
-      { name: "BP, including Orthostatic" }, { name: "Vital Signs and Weights" }, { name: "Administering an Enema" }, { name: "Applying Ted Hose" }, { name: "Assessing Respirations" }, { name: "Bathing (Bed/Shower/Tub)" }, { name: "Blood Glucose Monitoring" }, { name: "Catheter Care" },
+      { name: "BP, Including Orthostatic" }, { name: "Vital Signs and Weights" }, { name: "Administering an Enema" }, { name: "Applying Ted Hose" }, { name: "Assessing Respirations" }, { name: "Bathing (Bed/Shower/Tub)" }, { name: "Blood Glucose Monitoring" }, { name: "Catheter Care" }, { name: "Intake and Output Monitoring" }, { name: "Pulse Oximetry" },
     ]},
     { title: "Patient Care", skills: [
-      { name: "Ambulation" }, { name: "Positioning/Turning" }, { name: "Transfer (Bed/Chair/Commode)" }, { name: "ROM Exercises" }, { name: "Feeding Patients" }, { name: "Oral Care" }, { name: "Perineal Care" }, { name: "Skin Assessment" },
+      { name: "Ambulation" }, { name: "Positioning/Turning" }, { name: "Transfer (Bed/Chair/Commode)" }, { name: "ROM Exercises" }, { name: "Feeding Patients" }, { name: "Oral Care" }, { name: "Perineal Care" }, { name: "Skin Assessment" }, { name: "Pressure Injury Prevention" }, { name: "Post-Mortem Care" },
     ]},
     { title: "Phlebotomy", skills: [
-      { name: "Venipuncture" }, { name: "Capillary Puncture" }, { name: "Blood Cultures" }, { name: "Specimen Processing" },
+      { name: "Venipuncture" }, { name: "Capillary Puncture" }, { name: "Blood Cultures" }, { name: "Specimen Processing" }, { name: "Specimen Labeling and Chain of Custody" },
     ]},
     { title: "EKG", skills: [
-      { name: "12-Lead EKG" }, { name: "Rhythm Strip" }, { name: "Telemetry Monitor" },
+      { name: "12-Lead EKG" }, { name: "Rhythm Strip" }, { name: "Telemetry Monitor" }, { name: "Basic Rhythm Recognition" },
     ]},
     { title: "Safety", skills: [
-      { name: "Fall Prevention" }, { name: "Restraint Application" }, { name: "Infection Control" }, { name: "Standard Precautions" }, { name: "Sharps Disposal" },
+      { name: "Fall Prevention" }, { name: "Restraint Application" }, { name: "Infection Control" }, { name: "Standard Precautions" }, { name: "Sharps Disposal" }, { name: "Isolation Precautions" }, { name: "Patient Identification (Two Identifiers)" },
+    ]},
+    { title: "Documentation & Communication", skills: [
+      { name: "Charting/Documentation in EMR" }, { name: "Reporting Changes in Patient Condition" }, { name: "Communication With Nursing Staff" },
     ]},
     { title: "Age Specific Competencies", skills: [
       { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
@@ -180,25 +183,34 @@ export const alliedHealthChecklists: ChecklistSpec[] = [
 
   { slug: "ophthalmic-tech", title: "Ophthalmic Technician Skills Checklist", shortTitle: "Ophthalmic Tech", icon: "👁️", group: "Allied Health", categories: [
     { title: "Diagnostic Testing", skills: [
-      { name: "Visual acuity testing" }, { name: "Tonometry (IOP measurement)" }, { name: "Refraction/autorefraction" }, { name: "Visual field testing" }, { name: "OCT imaging" }, { name: "Fundus photography" },
+      { name: "Visual Acuity Testing" }, { name: "Tonometry (IOP Measurement)" }, { name: "Refraction/Autorefraction" }, { name: "Visual Field Testing" }, { name: "OCT Imaging" }, { name: "Fundus Photography" }, { name: "Corneal Topography" }, { name: "Keratometry" }, { name: "Color Vision Testing" }, { name: "Pachymetry" }, { name: "A-Scan/B-Scan Ultrasound" },
     ]},
-    { title: "Clinical Skills", skills: [
-      { name: "Pupil dilation" }, { name: "Slit lamp assist" }, { name: "Contact lens fitting assist" }, { name: "Minor procedure assist" },
+    { title: "Clinical Assist Skills", skills: [
+      { name: "Pupil Dilation" }, { name: "Slit Lamp Assist" }, { name: "Contact Lens Fitting Assist" }, { name: "Minor Procedure Assist (e.g., Foreign Body Removal)" }, { name: "Laser Procedure Assist" }, { name: "Intraocular Injection Assist" }, { name: "Ocular Motility Testing" }, { name: "Cover/Uncover Test" },
     ]},
-    { title: "Patient Care", skills: [
-      { name: "Patient history intake" }, { name: "Pediatric and geriatric patient handling" }, { name: "Equipment sterilization" },
+    { title: "Patient Care & History", skills: [
+      { name: "Patient History Intake" }, { name: "Chief Complaint Documentation" }, { name: "Medication History Review" }, { name: "Pediatric Patient Handling" }, { name: "Geriatric Patient Handling" }, { name: "Low Vision Patient Assistance" },
+    ]},
+    { title: "Equipment & Safety", skills: [
+      { name: "Equipment Sterilization" }, { name: "Instrument Calibration" }, { name: "Infection Control Standards" }, { name: "Emergency Eye Wash Protocols" },
     ]},
   ]},
 
   { slug: "audiologist", title: "Audiologist Skills Checklist", shortTitle: "Audiologist", icon: "👂", group: "Allied Health", categories: [
     { title: "Diagnostic Testing", skills: [
-      { name: "Pure tone audiometry" }, { name: "Speech audiometry" }, { name: "Tympanometry" }, { name: "Otoacoustic emissions (OAE) testing" }, { name: "Auditory brainstem response (ABR) testing" }, { name: "Newborn hearing screening" },
+      { name: "Pure Tone Audiometry" }, { name: "Speech Audiometry" }, { name: "Tympanometry" }, { name: "Acoustic Reflex Testing" }, { name: "Otoacoustic Emissions (OAE) Testing" }, { name: "Auditory Brainstem Response (ABR) Testing" }, { name: "Newborn Hearing Screening" }, { name: "Electrocochleography (ECochG)" }, { name: "Vestibular Evoked Myogenic Potentials (VEMP)" },
+    ]},
+    { title: "Balance & Vestibular Assessment", skills: [
+      { name: "Videonystagmography (VNG)" }, { name: "Rotary Chair Testing" }, { name: "Computerized Dynamic Posturography" }, { name: "Dix-Hallpike Maneuver" }, { name: "Canalith Repositioning Procedures" },
     ]},
     { title: "Treatment & Rehabilitation", skills: [
-      { name: "Hearing aid fitting and programming" }, { name: "Cochlear implant candidacy evaluation" }, { name: "Aural rehabilitation" }, { name: "Tinnitus management" },
+      { name: "Hearing Aid Fitting and Programming" }, { name: "Hearing Aid Real-Ear Verification" }, { name: "Cochlear Implant Candidacy Evaluation" }, { name: "Cochlear Implant Programming/Mapping" }, { name: "Bone-Anchored Hearing System Fitting" }, { name: "Aural Rehabilitation" }, { name: "Tinnitus Management" }, { name: "Assistive Listening Device Fitting" },
     ]},
-    { title: "Patient Care", skills: [
-      { name: "Pediatric hearing assessment" }, { name: "Geriatric hearing assessment" }, { name: "Patient/family counseling and education" },
+    { title: "Pediatric & Geriatric Care", skills: [
+      { name: "Pediatric Hearing Assessment" }, { name: "Visual Reinforcement Audiometry" }, { name: "Play Audiometry" }, { name: "Geriatric Hearing Assessment" }, { name: "Presbycusis Management" },
+    ]},
+    { title: "Counseling & Documentation", skills: [
+      { name: "Patient/Family Counseling and Education" }, { name: "Auditory Processing Disorder Evaluation" }, { name: "Ototoxicity Monitoring" }, { name: "Clinical Documentation and Reporting" },
     ]},
   ]},
 

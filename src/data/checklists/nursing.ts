@@ -228,7 +228,13 @@ export const nursingChecklists: ChecklistSpec[] = [
 
   { slug: "rn-appeals-writer", title: "RN Appeals Writer Skills Checklist", shortTitle: "RN Appeals Writer", icon: "📝", group: "Nursing", categories: [
     { title: "Knowledge, Skills, Abilities", skills: [
-      { name: "Review, analysis and extraction of clinical information from patient records" }, { name: "Drafting effective narratives for Medicare and Medicaid appeals documentation" }, { name: "Drafted briefs in support of denied cases under appeal" }, { name: "Maintained current knowledge base of medical coding" }, { name: "Knowledge of federal and state hospital Utilization Review regulations" }, { name: "Knowledge of Medicare guidelines regarding medical necessity" }, { name: "Knowledge of Medicare guidelines regarding inpatient and outpatient observation" }, { name: "Research and preparation for beneficiary hearings" }, { name: "Experience testifying as expert witness in hearings" }, { name: "Collaborated with internal and external legal sources" }, { name: "Chart review skills" }, { name: "Ability to quickly research and extract relevant data from a medical record" }, { name: "Develop and Draft clear narratives for appeals" }, { name: "Experience with electronic medical record" }, { name: "Knowledge of acute hospital utilization review using InterQual and/or Milliman" }, { name: "Working knowledge of medical coding" }, { name: "Knowledge and experience with case management" }, { name: "Knowledge and experience with government and contracted payers" }, { name: "Attention to details, timeliness and accuracy" }, { name: "Ability to work independently while working efficiently" }, { name: "Ability to work within a high production team" },
+      { name: "Review, Analysis and Extraction of Clinical Information From Patient Records" }, { name: "Drafting Effective Narratives for Medicare and Medicaid Appeals Documentation" }, { name: "Drafted Briefs in Support of Denied Cases Under Appeal" }, { name: "Maintained Current Knowledge Base of Medical Coding" }, { name: "Knowledge of Federal and State Hospital Utilization Review Regulations" }, { name: "Knowledge of Medicare Guidelines Regarding Medical Necessity" }, { name: "Knowledge of Medicare Guidelines Regarding Inpatient and Outpatient Observation" }, { name: "Research and Preparation for Beneficiary Hearings" }, { name: "Experience Testifying as Expert Witness in Hearings" }, { name: "Collaborated With Internal and External Legal Sources" }, { name: "Chart Review Skills" }, { name: "Ability to Quickly Research and Extract Relevant Data From a Medical Record" }, { name: "Develop and Draft Clear Narratives for Appeals" }, { name: "Experience With Electronic Medical Record" }, { name: "Knowledge of Acute Hospital Utilization Review Using InterQual and/or Milliman" }, { name: "Working Knowledge of Medical Coding" }, { name: "Knowledge and Experience With Case Management" }, { name: "Knowledge and Experience With Government and Contracted Payers" }, { name: "Attention to Details, Timeliness and Accuracy" }, { name: "Ability to Work Independently While Working Efficiently" }, { name: "Ability to Work Within a High Production Team" },
+    ]},
+    { title: "Appeals Process & Levels", skills: [
+      { name: "Level 1 Redetermination Appeals" }, { name: "Level 2 Reconsideration Appeals" }, { name: "Administrative Law Judge (ALJ) Hearing Preparation" }, { name: "Medicare Appeals Council Review Support" }, { name: "Commercial Payer Appeal Letter Drafting" }, { name: "Appeal Deadline and Timeline Tracking" },
+    ]},
+    { title: "Denial Analysis", skills: [
+      { name: "Denial Reason Code Analysis" }, { name: "Clinical Validation Denial Response" }, { name: "DRG Downgrade Appeal Response" }, { name: "Medical Necessity Denial Response" },
     ]},
     { title: "Age Specific Competencies", skills: [
       { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
@@ -327,13 +333,16 @@ export const nursingChecklists: ChecklistSpec[] = [
 
   { slug: "don", title: "Director of Nursing Skills Checklist", shortTitle: "Director of Nursing (DON)", icon: "👑", group: "Nursing", categories: [
     { title: "Leadership Domain", skills: [
-      { name: "Communicates effectively with residents, families, and team members" }, { name: "Communicates effectively with peers, physicians, and State agencies" }, { name: "Coordinates resident care to multidisciplinary team" }, { name: "Provides updated resident information to physician, family, legal, consultants" }, { name: "Knowledgeable in human resource policies" }, { name: "Delegates as appropriate" }, { name: "Demonstrates excellent customer service skills" }, { name: "Monitors progress and holds associates accountable" }, { name: "Enforces regulatory and employee law compliance" },
+      { name: "Communicates Effectively With Residents, Families, and Team Members" }, { name: "Communicates Effectively With Peers, Physicians, and State Agencies" }, { name: "Coordinates Resident Care to Multidisciplinary Team" }, { name: "Provides Updated Resident Information to Physician, Family, Legal, Consultants" }, { name: "Knowledgeable in Human Resource Policies" }, { name: "Delegates as Appropriate" }, { name: "Demonstrates Excellent Customer Service Skills" }, { name: "Monitors Progress and Holds Associates Accountable" }, { name: "Enforces Regulatory and Employee Law Compliance" },
     ]},
     { title: "Technical Domain", skills: [
-      { name: "Assesses and monitors staff compliance of infection control" }, { name: "Demonstrates excellent technical skills and judgment" }, { name: "Assess and monitors Facility Scorecard and CMS quality indicator data" }, { name: "Actively participates in facility QA&A meetings" }, { name: "Promotes survey preparedness at all times" }, { name: "Demonstrates basic working knowledge of Computer systems" }, { name: "Demonstrates understanding of quality event investigating" }, { name: "Maintains current knowledge of LTC Federal/state regulations" }, { name: "Ensure RAI functions are completed timely" }, { name: "Assess and ensure execution of Facility standards and policies" }, { name: "Provides and monitors clinical orientation and ongoing training" }, { name: "Actively participates in recruiting, hiring and orientation" },
+      { name: "Assesses and Monitors Staff Compliance of Infection Control" }, { name: "Demonstrates Excellent Technical Skills and Judgment" }, { name: "Assess and Monitors Facility Scorecard and CMS Quality Indicator Data" }, { name: "Actively Participates in Facility QA&A Meetings" }, { name: "Promotes Survey Preparedness at All Times" }, { name: "Demonstrates Basic Working Knowledge of Computer Systems" }, { name: "Demonstrates Understanding of Quality Event Investigating" }, { name: "Maintains Current Knowledge of LTC Federal/State Regulations" }, { name: "Ensure RAI Functions Are Completed Timely" }, { name: "Assess and Ensure Execution of Facility Standards and Policies" }, { name: "Provides and Monitors Clinical Orientation and Ongoing Training" }, { name: "Actively Participates in Recruiting, Hiring and Orientation" },
     ]},
     { title: "Problem Solving Domain", skills: [
-      { name: "Utilizes the nursing process to structure care" }, { name: "Demonstrates ability to assess and interpret resident data" }, { name: "Collaborates with DNS/Consultants on noncompliance areas" }, { name: "Effectively troubleshoots staffing resource allocation" }, { name: "Demonstrates understanding of census and expense control" }, { name: "Assess and monitors discharge/rehospitalization patterns" },
+      { name: "Utilizes the Nursing Process to Structure Care" }, { name: "Demonstrates Ability to Assess and Interpret Resident Data" }, { name: "Collaborates With DNS/Consultants on Noncompliance Areas" }, { name: "Effectively Troubleshoots Staffing Resource Allocation" }, { name: "Demonstrates Understanding of Census and Expense Control" }, { name: "Assess and Monitors Discharge/Rehospitalization Patterns" },
+    ]},
+    { title: "Clinical Program Oversight", skills: [
+      { name: "Wound Care Program Oversight" }, { name: "Falls Prevention Program Oversight" }, { name: "Infection Prevention Program Oversight" }, { name: "Restorative Nursing Program Oversight" }, { name: "Medication Management Program Oversight" },
     ]},
     { title: "Age Specific Competencies", skills: [
       { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
@@ -354,25 +363,28 @@ export const nursingChecklists: ChecklistSpec[] = [
 
   { slug: "float-rn", title: "Float RN Skills Checklist", shortTitle: "Float RN", icon: "🔀", group: "Nursing", categories: [
     { title: "Cross-Unit Adaptability", skills: [
-      { name: "Rapid unit orientation and huddle briefing" }, { name: "Med/Surg patient care" }, { name: "Telemetry monitoring basics" }, { name: "Step-down/intermediate care basics" }, { name: "Basic ICU support tasks" }, { name: "Emergency department support" }, { name: "Prioritization across unfamiliar patient assignments" }, { name: "Rapid chart review and handoff (SBAR)" },
+      { name: "Rapid Unit Orientation and Huddle Briefing" }, { name: "Med/Surg Patient Care" }, { name: "Telemetry Monitoring Basics" }, { name: "Step-Down/Intermediate Care Basics" }, { name: "Basic ICU Support Tasks" }, { name: "Emergency Department Support" }, { name: "Prioritization Across Unfamiliar Patient Assignments" }, { name: "Rapid Chart Review and Handoff (SBAR)" },
     ]},
     { title: "Clinical Skills", skills: [
-      { name: "Medication administration (oral, IV, IM, SQ)" }, { name: "IV insertion and maintenance" }, { name: "Vital signs and early warning score assessment" }, { name: "Wound care basics" }, { name: "Foley catheter insertion and care" }, { name: "NG tube insertion and care" }, { name: "Blood product administration" }, { name: "Code blue / rapid response participation" },
+      { name: "Medication Administration (Oral, IV, IM, SQ)" }, { name: "IV Insertion and Maintenance" }, { name: "Vital Signs and Early Warning Score Assessment" }, { name: "Wound Care Basics" }, { name: "Foley Catheter Insertion and Care" }, { name: "NG Tube Insertion and Care" }, { name: "Blood Product Administration" }, { name: "Code Blue/Rapid Response Participation" },
     ]},
     { title: "Systems & Documentation", skills: [
-      { name: "Epic" }, { name: "Cerner" }, { name: "Meditech" }, { name: "Multiple unit-specific charting workflows" }, { name: "Computerized Physician Order Entry (CPOE)" }, { name: "Barcode medication administration" },
+      { name: "Epic" }, { name: "Cerner" }, { name: "Meditech" }, { name: "Multiple Unit-Specific Charting Workflows" }, { name: "Computerized Physician Order Entry (CPOE)" }, { name: "Barcode Medication Administration" },
     ]},
     { title: "Age Specific Competencies", skills: [
-      { name: "Neonatal (birth - 30 days)" }, { name: "Infant (1 month - 1 year)" }, { name: "Pediatric (1-12 years)" }, { name: "Adolescent (13-17 years)" }, { name: "Adult (18-64 years)" }, { name: "Geriatric (65+ years)" },
+      { name: "Neonatal (Birth - 30 Days)" }, { name: "Infant (1 Month - 1 Year)" }, { name: "Pediatric (1-12 Years)" }, { name: "Adolescent (13-17 Years)" }, { name: "Adult (18-64 Years)" }, { name: "Geriatric (65+ Years)" },
     ]},
   ]},
 
   { slug: "rn-case-manager", title: "Registered Nurse Case Manager Skills Checklist", shortTitle: "RN Case Manager", icon: "📁", group: "Nursing", categories: [
     { title: "Skilled Care Environments", skills: [
-      { name: "Acute Care/Hospital" }, { name: "Managed Care" }, { name: "SNF/Long Term Care" },
+      { name: "Acute Care/Hospital" }, { name: "Managed Care" }, { name: "SNF/Long Term Care" }, { name: "Home Health" }, { name: "Insurance/Payer" },
     ]},
     { title: "Case Management & Utilization Review", skills: [
-      { name: "Communicates Well with Others, Verbally" }, { name: "Communicates Well with Others, in Writing (Reconsideration Letters)" }, { name: "Basic Negotiation Strategies" }, { name: "Basic Computer Skills" }, { name: "Ability to Prioritize" }, { name: "Concurrent Review" }, { name: "Retrospective Review" }, { name: "Disability Review" }, { name: "Long Term / Short Term Disability Case Management" }, { name: "Workers Compensation Review" }, { name: "Workers Compensation Case Management" }, { name: "PAC - Pre Certification / Pre-Admission Certification" }, { name: "CSR – Continued Stay Review" }, { name: "MCM – Medical Case Management" }, { name: "DP / DCP – Discharge Planning" }, { name: "Discharge Screens—Specific Indicators of Patients' Ability" }, { name: "ISD-A Interqual – Criteria for Hospital Admissions" }, { name: "Intensity of Service—Diagnostic & Therapeutic Services" }, { name: "Appropriateness of Care-Special Diagnostic & Therapeutic Procedures" }, { name: "Severity of Illness—Objective Clinical Data" }, { name: "DRG-Diagnostic Related Grouping (Exempt & Non-Exempt States)" }, { name: "ICD-9-CM" }, { name: "CPT" }, { name: "SSO" }, { name: "SIMS-Interqual - Criteria for SSO Waiver" }, { name: "Milliman & Robertson Criteria" }, { name: "PPR- Prospective Procedure Review" }, { name: "PA-Physician Advisor" },
+      { name: "Communicates Well With Others, Verbally" }, { name: "Communicates Well With Others, in Writing (Reconsideration Letters)" }, { name: "Basic Negotiation Strategies" }, { name: "Basic Computer Skills" }, { name: "Ability to Prioritize" }, { name: "Concurrent Review" }, { name: "Retrospective Review" }, { name: "Disability Review" }, { name: "Long Term / Short Term Disability Case Management" }, { name: "Workers Compensation Review" }, { name: "Workers Compensation Case Management" }, { name: "PAC - Pre Certification / Pre-Admission Certification" }, { name: "CSR – Continued Stay Review" }, { name: "MCM – Medical Case Management" }, { name: "DP / DCP – Discharge Planning" }, { name: "Discharge Screens—Specific Indicators of Patients' Ability" }, { name: "ISD-A Interqual – Criteria for Hospital Admissions" }, { name: "Intensity of Service—Diagnostic & Therapeutic Services" }, { name: "Appropriateness of Care-Special Diagnostic & Therapeutic Procedures" }, { name: "Severity of Illness—Objective Clinical Data" }, { name: "DRG-Diagnostic Related Grouping (Exempt & Non-Exempt States)" }, { name: "ICD-9-CM" }, { name: "CPT" }, { name: "SSO" }, { name: "SIMS-Interqual - Criteria for SSO Waiver" }, { name: "Milliman & Robertson Criteria" }, { name: "PPR- Prospective Procedure Review" }, { name: "PA-Physician Advisor" },
+    ]},
+    { title: "Care Coordination & Discharge Planning", skills: [
+      { name: "Post-Acute Placement Coordination" }, { name: "DME Coordination" }, { name: "Home Health Referral" }, { name: "Community Resource Referral" }, { name: "Readmission Risk Assessment" },
     ]},
     { title: "Age Specific Competencies", skills: [
       { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
@@ -381,46 +393,46 @@ export const nursingChecklists: ChecklistSpec[] = [
 
   { slug: "rn-first-assist", title: "Registered Nurse First Assist Skills Checklist", shortTitle: "RN First Assist", icon: "🔧", group: "Nursing", categories: [
     { title: "Pre-Operative", skills: [
-      { name: "Patient positioning" }, { name: "Surgical site preparation" }, { name: "Sterile field setup" }, { name: "Instrument and equipment verification" }, { name: "Time-out/surgical safety checklist participation" },
+      { name: "Patient Positioning" }, { name: "Surgical Site Preparation" }, { name: "Sterile Field Setup" }, { name: "Instrument and Equipment Verification" }, { name: "Time-Out/Surgical Safety Checklist Participation" },
     ]},
     { title: "Intra-Operative Assisting", skills: [
-      { name: "Tissue handling" }, { name: "Hemostasis technique" }, { name: "Suturing and wound closure" }, { name: "Retraction" }, { name: "Electrocautery use" }, { name: "Sponge, needle, and instrument counts" }, { name: "Specimen handling" },
+      { name: "Tissue Handling" }, { name: "Hemostasis Technique" }, { name: "Suturing and Wound Closure" }, { name: "Retraction" }, { name: "Electrocautery Use" }, { name: "Sponge, Needle, and Instrument Counts" }, { name: "Specimen Handling" }, { name: "First Assist Camera Operation (Laparoscopic/Robotic)" },
     ]},
     { title: "Surgical Specialty Exposure", skills: [
-      { name: "General surgery" }, { name: "Orthopedic surgery" }, { name: "Cardiovascular/thoracic surgery" }, { name: "Gynecologic surgery" }, { name: "Urologic surgery" }, { name: "Neurosurgery" },
+      { name: "General Surgery" }, { name: "Orthopedic Surgery" }, { name: "Cardiovascular/Thoracic Surgery" }, { name: "Gynecologic Surgery" }, { name: "Urologic Surgery" }, { name: "Neurosurgery" },
     ]},
     { title: "Post-Operative", skills: [
-      { name: "Dressing application" }, { name: "Post-op orders review" }, { name: "Hand-off to PACU/recovery" }, { name: "Post-op complication recognition" },
+      { name: "Dressing Application" }, { name: "Post-Op Orders Review" }, { name: "Hand-Off to PACU/Recovery" }, { name: "Post-Op Complication Recognition" },
     ]},
   ]},
 
   { slug: "rn-risk-manager", title: "Registered Nurse Risk Manager Skills Checklist", shortTitle: "RN Risk Manager", icon: "🛡️", group: "Nursing", categories: [
     { title: "Patient Safety & Incident Management", skills: [
-      { name: "Incident investigation" }, { name: "Root cause analysis" }, { name: "Sentinel event reporting" }, { name: "Near-miss tracking and trending" }, { name: "Adverse event disclosure support" },
+      { name: "Incident Investigation" }, { name: "Root Cause Analysis" }, { name: "Sentinel Event Reporting" }, { name: "Near-Miss Tracking and Trending" }, { name: "Adverse Event Disclosure Support" }, { name: "Failure Mode and Effects Analysis (FMEA)" },
     ]},
     { title: "Regulatory & Compliance", skills: [
-      { name: "Joint Commission standards" }, { name: "CMS Conditions of Participation" }, { name: "State health department reporting" }, { name: "Policy and procedure development" }, { name: "Survey readiness" },
+      { name: "Joint Commission Standards" }, { name: "CMS Conditions of Participation" }, { name: "State Health Department Reporting" }, { name: "Policy and Procedure Development" }, { name: "Survey Readiness" },
     ]},
     { title: "Claims & Quality", skills: [
-      { name: "Claims management support" }, { name: "Quality improvement project participation" }, { name: "Risk assessment and mitigation planning" }, { name: "Peer review process" }, { name: "Staff education on risk topics" },
+      { name: "Claims Management Support" }, { name: "Quality Improvement Project Participation" }, { name: "Risk Assessment and Mitigation Planning" }, { name: "Peer Review Process" }, { name: "Staff Education on Risk Topics" },
     ]},
-    { title: "Documentation", skills: [
-      { name: "Incident report systems (e.g., RL6, Midas)" }, { name: "Legal/risk documentation standards" }, { name: "Data trend reporting to leadership" },
+    { title: "Documentation & Reporting", skills: [
+      { name: "Incident Report Systems (e.g., RL6, Midas)" }, { name: "Legal/Risk Documentation Standards" }, { name: "Data Trend Reporting to Leadership" }, { name: "Insurance Carrier Coordination" },
     ]},
   ]},
 
   { slug: "rn-phone-triage", title: "Registered Nurse Phone Triage Skills Checklist", shortTitle: "RN Phone Triage", icon: "☎️", group: "Nursing", categories: [
     { title: "Telephonic Assessment", skills: [
-      { name: "Standardized triage protocols (e.g., Schmitt-Thompson)" }, { name: "Symptom-based assessment" }, { name: "Chief complaint prioritization" }, { name: "Emergency vs. non-emergency identification" }, { name: "De-escalation of anxious callers" },
+      { name: "Standardized Triage Protocols (e.g., Schmitt-Thompson)" }, { name: "Symptom-Based Assessment" }, { name: "Chief Complaint Prioritization" }, { name: "Emergency vs. Non-Emergency Identification" }, { name: "De-Escalation of Anxious Callers" }, { name: "Pediatric Symptom Triage" },
     ]},
     { title: "Clinical Decision Support", skills: [
-      { name: "Protocol-driven disposition (ER, urgent care, self-care)" }, { name: "Medication and dosage guidance within scope" }, { name: "Recognition of red-flag symptoms" }, { name: "Escalation to on-call provider" },
+      { name: "Protocol-Driven Disposition (ER, Urgent Care, Self-Care)" }, { name: "Medication and Dosage Guidance Within Scope" }, { name: "Recognition of Red-Flag Symptoms" }, { name: "Escalation to On-Call Provider" }, { name: "Poison Control Coordination" },
     ]},
     { title: "Systems & Documentation", skills: [
-      { name: "Telehealth/telephonic charting platforms" }, { name: "Call documentation standards" }, { name: "EMR integration" }, { name: "HIPAA compliance in remote settings" },
+      { name: "Telehealth/Telephonic Charting Platforms" }, { name: "Call Documentation Standards" }, { name: "EMR Integration" }, { name: "HIPAA Compliance in Remote Settings" },
     ]},
     { title: "Communication", skills: [
-      { name: "Active listening" }, { name: "Patient education over the phone" }, { name: "Multilingual/interpreter service coordination" }, { name: "Callback and follow-up protocols" },
+      { name: "Active Listening" }, { name: "Patient Education Over the Phone" }, { name: "Multilingual/Interpreter Service Coordination" }, { name: "Callback and Follow-Up Protocols" },
     ]},
   ]},
 
@@ -474,13 +486,16 @@ export const nursingChecklists: ChecklistSpec[] = [
 
   { slug: "nurse-educator", title: "Nurse Educator Skills Checklist", shortTitle: "Nurse Educator", icon: "🎓", group: "Nursing", categories: [
     { title: "Curriculum & Instruction", skills: [
-      { name: "Curriculum development" }, { name: "Competency-based education design" }, { name: "Simulation-based training" }, { name: "Skills lab instruction" }, { name: "Adult learning theory application" },
+      { name: "Curriculum Development" }, { name: "Competency-Based Education Design" }, { name: "Simulation-Based Training" }, { name: "Skills Lab Instruction" }, { name: "Adult Learning Theory Application" }, { name: "Blended/E-Learning Development" },
     ]},
     { title: "Onboarding & Orientation", skills: [
-      { name: "New hire orientation programs" }, { name: "Preceptor program development" }, { name: "Clinical competency validation" }, { name: "Annual mandatory education/compliance training" },
+      { name: "New Hire Orientation Programs" }, { name: "Preceptor Program Development" }, { name: "Clinical Competency Validation" }, { name: "Annual Mandatory Education/Compliance Training" }, { name: "Residency Program Coordination" },
     ]},
-    { title: "Evaluation", skills: [
-      { name: "Learning needs assessment" }, { name: "Performance evaluation and feedback" }, { name: "Education outcome tracking" },
+    { title: "Evaluation & Outcomes", skills: [
+      { name: "Learning Needs Assessment" }, { name: "Performance Evaluation and Feedback" }, { name: "Education Outcome Tracking" }, { name: "Knowledge/Skills Testing Development" },
+    ]},
+    { title: "Specialty Education", skills: [
+      { name: "ACLS/BLS/PALS Instruction" }, { name: "Equipment/Technology Training" }, { name: "Evidence-Based Practice Education" }, { name: "Interdisciplinary Education Program Coordination" },
     ]},
   ]},
 
@@ -504,40 +519,49 @@ export const nursingChecklists: ChecklistSpec[] = [
 
   { slug: "clinical-research-nurse", title: "Clinical Research Nurse Skills Checklist", shortTitle: "Clinical Research Nurse", icon: "🧪", group: "Nursing", categories: [
     { title: "Clinical Trial Management", skills: [
-      { name: "Protocol adherence" }, { name: "Informed consent process" }, { name: "Subject screening and enrollment" }, { name: "Adverse event reporting" }, { name: "Investigational drug/device administration" },
+      { name: "Protocol Adherence" }, { name: "Informed Consent Process" }, { name: "Subject Screening and Enrollment" }, { name: "Adverse Event Reporting" }, { name: "Investigational Drug/Device Administration" }, { name: "Randomization Procedures" },
     ]},
     { title: "Regulatory & Documentation", skills: [
-      { name: "Good Clinical Practice (GCP) standards" }, { name: "IRB submission support" }, { name: "Source document/CRF completion" }, { name: "FDA regulatory compliance" },
+      { name: "Good Clinical Practice (GCP) Standards" }, { name: "IRB Submission Support" }, { name: "Source Document/CRF Completion" }, { name: "FDA Regulatory Compliance" }, { name: "Protocol Deviation Reporting" },
     ]},
     { title: "Patient Care", skills: [
-      { name: "Study subject education" }, { name: "Coordination with study sponsors/monitors" }, { name: "Specimen collection and processing per protocol" },
+      { name: "Study Subject Education" }, { name: "Coordination With Study Sponsors/Monitors" }, { name: "Specimen Collection and Processing Per Protocol" }, { name: "Vital Sign and Assessment Collection Per Protocol" },
+    ]},
+    { title: "Study Coordination", skills: [
+      { name: "Investigator Meeting Participation" }, { name: "Monitor Visit Preparation" }, { name: "Drug Accountability Log Maintenance" }, { name: "Study Budget and Billing Compliance" },
     ]},
   ]},
 
   { slug: "transplant-coordinator", title: "Transplant Coordinator Skills Checklist", shortTitle: "Transplant Coordinator", icon: "🫂", group: "Nursing", categories: [
     { title: "Pre-Transplant", skills: [
-      { name: "Donor/recipient evaluation coordination" }, { name: "Organ allocation process (UNOS)" }, { name: "Waitlist management" }, { name: "Living donor coordination" },
+      { name: "Donor/Recipient Evaluation Coordination" }, { name: "Organ Allocation Process (UNOS)" }, { name: "Waitlist Management" }, { name: "Living Donor Coordination" }, { name: "Transplant Candidacy Assessment" }, { name: "Multidisciplinary Selection Committee Presentation" },
     ]},
     { title: "Peri-Transplant", skills: [
-      { name: "Organ procurement coordination" }, { name: "Cross-matching coordination" }, { name: "Surgical team communication" },
+      { name: "Organ Procurement Coordination" }, { name: "Cross-Matching Coordination" }, { name: "Surgical Team Communication" }, { name: "Organ Transport Logistics" }, { name: "Operating Room Readiness Coordination" },
     ]},
     { title: "Post-Transplant", skills: [
-      { name: "Immunosuppression management education" }, { name: "Rejection monitoring coordination" }, { name: "Long-term follow-up coordination" }, { name: "Patient/family education and support" },
+      { name: "Immunosuppression Management Education" }, { name: "Rejection Monitoring Coordination" }, { name: "Long-Term Follow-Up Coordination" }, { name: "Patient/Family Education and Support" }, { name: "Infection Prevention Education" }, { name: "Biopsy Coordination" },
+    ]},
+    { title: "Regulatory & Program Compliance", skills: [
+      { name: "UNOS/OPTN Reporting Requirements" }, { name: "CMS Conditions of Participation for Transplant Programs" }, { name: "Transplant Program Data Submission (SRTR)" }, { name: "Informed Consent Process" },
     ]},
   ]},
 
   { slug: "rn-urology", title: "Registered Nurse – Urology Skills Checklist", shortTitle: "RN – Urology", icon: "🫘", group: "Nursing", categories: [
     { title: "Assessment", skills: [
-      { name: "Genitourinary assessment" }, { name: "Post-op urologic surgery assessment" }, { name: "Bladder scanning" }, { name: "Urodynamic testing assist" },
+      { name: "Genitourinary Assessment" }, { name: "Post-Op Urologic Surgery Assessment" }, { name: "Bladder Scanning" }, { name: "Urodynamic Testing Assist" }, { name: "Hematuria Assessment and Management" },
     ]},
     { title: "Catheter & Drainage Management", skills: [
-      { name: "Foley catheter insertion/care" }, { name: "Suprapubic catheter care" }, { name: "Nephrostomy tube care" }, { name: "Ureteral stent management" }, { name: "Continuous bladder irrigation" },
+      { name: "Foley Catheter Insertion/Care" }, { name: "Suprapubic Catheter Care" }, { name: "Nephrostomy Tube Care" }, { name: "Ureteral Stent Management" }, { name: "Continuous Bladder Irrigation" }, { name: "Three-Way Catheter Management" },
     ]},
     { title: "Surgical Care", skills: [
-      { name: "Pre/post-op prostatectomy care" }, { name: "Post-op cystectomy/urinary diversion care" }, { name: "Ostomy/stoma care (urostomy)" }, { name: "Robotic urologic surgery recovery care" },
+      { name: "Pre/Post-Op Prostatectomy Care" }, { name: "Post-Op Cystectomy/Urinary Diversion Care" }, { name: "Ostomy/Stoma Care (Urostomy)" }, { name: "Robotic Urologic Surgery Recovery Care" }, { name: "Kidney Transplant Recovery Care" },
     ]},
     { title: "Patient Education", skills: [
-      { name: "Catheter care teaching" }, { name: "Incontinence management education" }, { name: "Post-op activity restrictions education" },
+      { name: "Catheter Care Teaching" }, { name: "Incontinence Management Education" }, { name: "Post-Op Activity Restrictions Education" }, { name: "Pelvic Floor Therapy Referral" },
+    ]},
+    { title: "Diagnostic Support", skills: [
+      { name: "Cystoscopy Assist" }, { name: "PSA/Lab Value Monitoring" }, { name: "Renal Function Monitoring" },
     ]},
   ]},
 ];

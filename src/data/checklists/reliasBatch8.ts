@@ -25,19 +25,22 @@ export const reliasBatch8Checklists: ChecklistSpec[] = [
 
   { slug: "immunization-nurse", title: "Immunization Nurse Skills Checklist", shortTitle: "Immunization Nurse", icon: "💉", group: "Nursing", categories: [
     { title: "General Immunization Practice", skills: [
-      { name: "Implement the 5 Rights of Medication Administration" }, { name: "Obtain Consent Prior to Immunization" }, { name: "Determine Eligibility to Receive Vaccine" }, { name: "Obtain History Regarding Contraindications" }, { name: "Ensure Anaphylaxis Kit Present During Immunization" }, { name: "Document Refusal and Contraindications" }, { name: "Adhere to HIPAA Guidelines" }, { name: "Follow Manufacturer Storage, Handling, and Transport Protocols" },
+      { name: "Implement the 5 Rights of Medication Administration" }, { name: "Obtain Consent Prior to Immunization" }, { name: "Determine Eligibility to Receive Vaccine" }, { name: "Obtain History Regarding Contraindications" }, { name: "Ensure Anaphylaxis Kit Present During Immunization" }, { name: "Document Refusal and Contraindications" }, { name: "Adhere to HIPAA Guidelines" }, { name: "Follow Manufacturer Storage, Handling, and Transport Protocols" }, { name: "Cold Chain Monitoring and Documentation" },
     ]},
     { title: "Administration Technique", skills: [
-      { name: "Intradermal Testing (e.g., Tuberculin Solution)" }, { name: "Site Selection and Positioning" }, { name: "Check Expiration Date and Visual Inspection Prior to Administration" }, { name: "Reconstitute Vials When Appropriate" }, { name: "Subcutaneous, Intramuscular, Intradermal, and Oral Routes" },
+      { name: "Intradermal Testing (e.g., Tuberculin Solution)" }, { name: "Site Selection and Positioning" }, { name: "Check Expiration Date and Visual Inspection Prior to Administration" }, { name: "Reconstitute Vials When Appropriate" }, { name: "Subcutaneous, Intramuscular, Intradermal, and Oral Routes" }, { name: "Pediatric and Infant Positioning for Injection" },
     ]},
     { title: "Vaccine Types", skills: [
-      { name: "Live Attenuated (OPV, MMR, Varicella)" }, { name: "Inactivated/Killed Vaccines (IPV, Hepatitis A)" }, { name: "Toxoid Vaccines (Diphtheria, Tetanus)" }, { name: "Recombinant Vaccines (Hib, Hepatitis B, Pneumococcal)" },
+      { name: "Live Attenuated (OPV, MMR, Varicella)" }, { name: "Inactivated/Killed Vaccines (IPV, Hepatitis A)" }, { name: "Toxoid Vaccines (Diphtheria, Tetanus)" }, { name: "Recombinant Vaccines (Hib, Hepatitis B, Pneumococcal)" }, { name: "mRNA Vaccines" }, { name: "Combination Vaccines" },
     ]},
     { title: "Client & Caregiver Education", skills: [
-      { name: "Explain Purpose and Importance of Immunization" }, { name: "Educate on Recommended Immunization Schedules" }, { name: "Provide Immunization Record with Follow-Up Schedule" }, { name: "Explain Expected Reactions and Post-Immunization Instructions" },
+      { name: "Explain Purpose and Importance of Immunization" }, { name: "Educate on Recommended Immunization Schedules" }, { name: "Provide Immunization Record With Follow-Up Schedule" }, { name: "Explain Expected Reactions and Post-Immunization Instructions" }, { name: "Address Vaccine Hesitancy" },
     ]},
     { title: "Clinical Settings", skills: [
-      { name: "Health Fairs and Community Outreach" }, { name: "Occupational Health Settings" }, { name: "Clinic-Based Administration" }, { name: "School-Based Administration" },
+      { name: "Health Fairs and Community Outreach" }, { name: "Occupational Health Settings" }, { name: "Clinic-Based Administration" }, { name: "School-Based Administration" }, { name: "Travel Medicine/International Vaccine Clinics" },
+    ]},
+    { title: "Emergency Response & Reporting", skills: [
+      { name: "Anaphylaxis Recognition and Response" }, { name: "Epinephrine Auto-Injector Administration" }, { name: "VAERS Reporting" }, { name: "State Immunization Registry Documentation" },
     ]},
   ]},
 ];

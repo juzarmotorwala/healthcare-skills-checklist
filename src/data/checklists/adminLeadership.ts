@@ -3,16 +3,19 @@ import { ChecklistSpec } from "../checklistData";
 export const adminLeadershipChecklists: ChecklistSpec[] = [
   { slug: "case-management", title: "Case Management / Utilization Skills Checklist", shortTitle: "Case Management", icon: "📂", group: "Administration & Leadership", categories: [
     { title: "Setting", skills: [
-      { name: "Acute Care" }, { name: "Skilled/LTAC" }, { name: "MDS Coordinator" }, { name: "Home Health" }, { name: "Telephonic" }, { name: "Workers Compensation" }, { name: "Insurance/Managed Care" },
+      { name: "Acute Care" }, { name: "Skilled/LTAC" }, { name: "MDS Coordinator" }, { name: "Home Health" }, { name: "Telephonic" }, { name: "Workers Compensation" }, { name: "Insurance/Managed Care" }, { name: "Behavioral Health" },
     ]},
     { title: "Utilization Review", skills: [
-      { name: "InterQual Criteria" }, { name: "Milliman Criteria" }, { name: "Medical Necessity Review" }, { name: "Concurrent Review" }, { name: "Retrospective Review" }, { name: "Denial Management" }, { name: "Appeals Process" },
+      { name: "InterQual Criteria" }, { name: "Milliman Criteria" }, { name: "Medical Necessity Review" }, { name: "Concurrent Review" }, { name: "Retrospective Review" }, { name: "Denial Management" }, { name: "Appeals Process" }, { name: "Peer-to-Peer Review Coordination" },
     ]},
     { title: "Discharge Planning", skills: [
-      { name: "Assessment of Post-Acute Needs" }, { name: "SNF Placement" }, { name: "Home Health Referral" }, { name: "DME Coordination" }, { name: "Hospice Referral" }, { name: "Insurance Authorization" },
+      { name: "Assessment of Post-Acute Needs" }, { name: "SNF Placement" }, { name: "Home Health Referral" }, { name: "DME Coordination" }, { name: "Hospice Referral" }, { name: "Insurance Authorization" }, { name: "Transportation Coordination" }, { name: "Follow-Up Appointment Scheduling" },
+    ]},
+    { title: "Care Coordination", skills: [
+      { name: "Interdisciplinary Rounds Participation" }, { name: "Length of Stay Management" }, { name: "Readmission Risk Assessment" }, { name: "Community Resource Referral" }, { name: "Social Determinants of Health Screening" },
     ]},
     { title: "Documentation", skills: [
-      { name: "Electronic Medical Record" }, { name: "Care Plans" }, { name: "Clinical Summaries" }, { name: "Progress Notes" }, { name: "Medicare/Medicaid Documentation" },
+      { name: "Electronic Medical Record" }, { name: "Care Plans" }, { name: "Clinical Summaries" }, { name: "Progress Notes" }, { name: "Medicare/Medicaid Documentation" }, { name: "InterQual/Milliman Documentation Standards" },
     ]},
     { title: "Age Specific Competencies", skills: [
       { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
@@ -21,19 +24,22 @@ export const adminLeadershipChecklists: ChecklistSpec[] = [
 
   { slug: "healthcare-leadership", title: "Healthcare Leadership Competencies Checklist", shortTitle: "Healthcare Leadership", icon: "🎯", group: "Administration & Leadership", categories: [
     { title: "Relationship Management", skills: [
-      { name: "Organizational structure and relationship" }, { name: "Build collaborative relationships" }, { name: "Develop and maintain medical staff relationships" }, { name: "Provide internal customer service" }, { name: "Vendor/contractor relationship management" },
+      { name: "Organizational Structure and Relationships" }, { name: "Build Collaborative Relationships" }, { name: "Develop and Maintain Medical Staff Relationships" }, { name: "Provide Internal Customer Service" }, { name: "Vendor/Contractor Relationship Management" }, { name: "Community and Stakeholder Relations" },
     ]},
     { title: "Communication", skills: [
-      { name: "Written communication" }, { name: "Oral communication" }, { name: "Presentation skills" }, { name: "Facilitation skills" }, { name: "Media relations" },
+      { name: "Written Communication" }, { name: "Oral Communication" }, { name: "Presentation Skills" }, { name: "Facilitation Skills" }, { name: "Media Relations" }, { name: "Crisis Communication" },
     ]},
-    { title: "Leadership", skills: [
-      { name: "Change management" }, { name: "Performance management" }, { name: "Succession planning" }, { name: "Staff development" }, { name: "Team building" }, { name: "Conflict resolution" }, { name: "Strategic planning" },
+    { title: "Leadership & People Development", skills: [
+      { name: "Change Management" }, { name: "Performance Management" }, { name: "Succession Planning" }, { name: "Staff Development" }, { name: "Team Building" }, { name: "Conflict Resolution" }, { name: "Coaching and Mentoring" }, { name: "Delegation" },
+    ]},
+    { title: "Strategic Planning", skills: [
+      { name: "Strategic Planning" }, { name: "Service Line Growth Strategy" }, { name: "Market Analysis" }, { name: "Population Health Strategy" },
     ]},
     { title: "Professional Development", skills: [
-      { name: "Continuing education" }, { name: "Professional associations" }, { name: "Mentoring" }, { name: "Ethics and compliance" }, { name: "Cultural competence" },
+      { name: "Continuing Education" }, { name: "Professional Associations" }, { name: "Mentoring" }, { name: "Ethics and Compliance" }, { name: "Cultural Competence" }, { name: "Diversity, Equity, and Inclusion Leadership" },
     ]},
-    { title: "Business Knowledge", skills: [
-      { name: "Financial management" }, { name: "Budgeting" }, { name: "Revenue cycle" }, { name: "Quality improvement" }, { name: "Risk management" }, { name: "Regulatory compliance" }, { name: "Information systems" },
+    { title: "Business & Quality Knowledge", skills: [
+      { name: "Financial Management" }, { name: "Budgeting" }, { name: "Revenue Cycle" }, { name: "Quality Improvement" }, { name: "Risk Management" }, { name: "Regulatory Compliance" }, { name: "Information Systems" }, { name: "Value-Based Care Models" },
     ]},
   ]},
 
@@ -68,80 +74,125 @@ export const adminLeadershipChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "psychologist", title: "Psychologist Skills Checklist", shortTitle: "Psychologist", icon: "🧠", group: "Administration & Leadership", categories: [
-    { title: "Assessment", skills: [
-      { name: "Psychological/diagnostic assessment" }, { name: "Cognitive/neuropsychological testing" }, { name: "Risk assessment (suicide/homicide)" }, { name: "Substance use assessment" },
+    { title: "Assessment & Testing", skills: [
+      { name: "Psychological/Diagnostic Assessment" }, { name: "Cognitive/Neuropsychological Testing" }, { name: "Personality Assessment (e.g., MMPI, PAI)" }, { name: "Risk Assessment (Suicide/Homicide)" }, { name: "Substance Use Assessment" }, { name: "Developmental/Autism Spectrum Assessment" },
     ]},
-    { title: "Therapeutic Intervention", skills: [
-      { name: "Individual psychotherapy" }, { name: "Group therapy facilitation" }, { name: "Cognitive behavioral therapy (CBT)" }, { name: "Crisis intervention counseling" }, { name: "Family therapy" },
+    { title: "Individual Therapy Modalities", skills: [
+      { name: "Individual Psychotherapy" }, { name: "Cognitive Behavioral Therapy (CBT)" }, { name: "Dialectical Behavior Therapy (DBT)" }, { name: "Trauma-Focused Therapy" }, { name: "Motivational Interviewing" }, { name: "Acceptance and Commitment Therapy (ACT)" },
+    ]},
+    { title: "Group & Family Therapy", skills: [
+      { name: "Group Therapy Facilitation" }, { name: "Family Therapy" }, { name: "Couples Counseling" }, { name: "Psychoeducation Groups" },
     ]},
     { title: "Crisis Management", skills: [
-      { name: "De-escalation techniques" }, { name: "Involuntary commitment evaluation" }, { name: "Safety planning" },
+      { name: "De-Escalation Techniques" }, { name: "Involuntary Commitment Evaluation" }, { name: "Safety Planning" }, { name: "Crisis Intervention Counseling" }, { name: "Emergency Psychiatric Evaluation" },
     ]},
-    { title: "Documentation & Ethics", skills: [
-      { name: "Clinical documentation/treatment planning" }, { name: "HIPAA and confidentiality compliance" }, { name: "Interdisciplinary team collaboration" }, { name: "Ethical/legal standards of practice" },
+    { title: "Documentation & Treatment Planning", skills: [
+      { name: "Clinical Documentation/Treatment Planning" }, { name: "Diagnostic Formulation (DSM-5-TR)" }, { name: "Progress Note Documentation" }, { name: "Discharge/Transition Planning" },
+    ]},
+    { title: "Ethics & Collaboration", skills: [
+      { name: "HIPAA and Confidentiality Compliance" }, { name: "Interdisciplinary Team Collaboration" }, { name: "Ethical/Legal Standards of Practice" }, { name: "Consultation With Psychiatry/Medical Providers" }, { name: "Cultural Competence in Treatment" },
     ]},
   ]},
 
   { slug: "clinical-documentation-specialist", title: "Clinical Documentation Specialist Skills Checklist", shortTitle: "CDS", icon: "📄", group: "Administration & Leadership", categories: [
-    { title: "Documentation Review", skills: [
-      { name: "Concurrent chart review" }, { name: "Clinical indicator identification" }, { name: "Query formulation (physician queries)" }, { name: "DRG/severity of illness validation" },
+    { title: "Concurrent Documentation Review", skills: [
+      { name: "Concurrent Chart Review" }, { name: "Clinical Indicator Identification" }, { name: "Principal Diagnosis Determination" }, { name: "Comorbidity/Complication (CC/MCC) Capture" }, { name: "Present on Admission (POA) Indicator Review" }, { name: "Working DRG Assignment" },
     ]},
-    { title: "Coding & Compliance", skills: [
-      { name: "ICD-10-CM/PCS familiarity" }, { name: "CMS documentation guidelines" }, { name: "Coding compliance standards" }, { name: "Case mix index impact awareness" },
+    { title: "Physician Query Management", skills: [
+      { name: "Query Formulation (Verbal and Written)" }, { name: "Compliant Query Practices (AHIMA/ACDIS Guidelines)" }, { name: "Query Escalation Process" }, { name: "Physician Response Tracking" }, { name: "Retrospective Query Management" },
     ]},
-    { title: "Systems & Collaboration", skills: [
-      { name: "EMR/CDI software platforms" }, { name: "Physician education and collaboration" }, { name: "Coding department liaison" },
+    { title: "Coding & Severity Validation", skills: [
+      { name: "ICD-10-CM/PCS Familiarity" }, { name: "DRG/Severity of Illness Validation" }, { name: "Risk of Mortality Assessment" }, { name: "Case Mix Index Impact Awareness" }, { name: "Clinical Validation of Diagnoses (e.g., Sepsis, Malnutrition, AKI)" }, { name: "Coding Compliance Standards" },
+    ]},
+    { title: "Regulatory & Quality Impact", skills: [
+      { name: "CMS Documentation Guidelines" }, { name: "Hospital-Acquired Condition (HAC) Awareness" }, { name: "Patient Safety Indicator (PSI) Awareness" }, { name: "Quality Metric/Publicly Reported Outcome Impact" }, { name: "Value-Based Purchasing Documentation Impact" },
+    ]},
+    { title: "Systems & Reporting", skills: [
+      { name: "EMR/CDI Software Platforms (e.g., 3M, Optum, Iodine)" }, { name: "CDI Analytics and Dashboard Reporting" }, { name: "Query Response Rate Tracking" }, { name: "CC/MCC Capture Rate Reporting" },
+    ]},
+    { title: "Education & Collaboration", skills: [
+      { name: "Physician Education and Collaboration" }, { name: "Coding Department Liaison" }, { name: "New Provider Documentation Orientation" }, { name: "Interdisciplinary CDI Rounding" },
     ]},
   ]},
 
   { slug: "nursing-informatics", title: "Nursing Informatics Skills Checklist", shortTitle: "Informatics", icon: "💻", group: "Administration & Leadership", categories: [
-    { title: "EMR & Systems", skills: [
-      { name: "EMR build/configuration support" }, { name: "Clinical workflow analysis" }, { name: "Order set development" }, { name: "Clinical decision support tools" },
+    { title: "EMR Build & Configuration", skills: [
+      { name: "EMR Build/Configuration Support" }, { name: "Order Set Development" }, { name: "Documentation Flowsheet Design" }, { name: "Nursing Care Plan Templates" }, { name: "Charge Capture Build" }, { name: "Interface/Integration Testing" },
     ]},
-    { title: "Implementation & Training", skills: [
-      { name: "System go-live support" }, { name: "End-user training" }, { name: "Super-user program coordination" }, { name: "Downtime procedure planning" },
+    { title: "Clinical Workflow & Decision Support", skills: [
+      { name: "Clinical Workflow Analysis" }, { name: "Clinical Decision Support Tools" }, { name: "Alert and Alarm Fatigue Management" }, { name: "Best Practice Advisory (BPA) Design" }, { name: "Barcode Medication Administration (BCMA) Workflow" }, { name: "Clinical Pathway/Order Set Optimization" },
     ]},
-    { title: "Data & Quality", skills: [
-      { name: "Data analytics/reporting" }, { name: "Quality metrics extraction" }, { name: "Interoperability standards (HL7, FHIR)" },
+    { title: "Implementation & Go-Live", skills: [
+      { name: "System Go-Live Support" }, { name: "Super-User Program Coordination" }, { name: "Downtime Procedure Planning" }, { name: "Command Center/At-the-Elbow Support" }, { name: "Post-Go-Live Optimization" },
+    ]},
+    { title: "Training & Education", skills: [
+      { name: "End-User Training Development" }, { name: "New Hire EMR Onboarding" }, { name: "Competency Validation for System Use" }, { name: "Training Material Development" },
+    ]},
+    { title: "Data, Quality & Analytics", skills: [
+      { name: "Data Analytics/Reporting" }, { name: "Quality Metrics Extraction" }, { name: "Core Measure/Regulatory Reporting Support" }, { name: "Data Integrity Auditing" }, { name: "Dashboard Development" },
+    ]},
+    { title: "Interoperability & Governance", skills: [
+      { name: "Interoperability Standards (HL7, FHIR)" }, { name: "Governance Committee Participation" }, { name: "Change Control Process Management" }, { name: "Vendor Relationship Management" },
     ]},
   ]},
 
   { slug: "director-patient-care-services", title: "Director of Patient Care Services Skills Checklist", shortTitle: "Director of Patient Care", icon: "🏛️", group: "Administration & Leadership", categories: [
     { title: "Strategic Leadership", skills: [
-      { name: "Multi-unit oversight" }, { name: "Strategic planning" }, { name: "Budget and financial management" }, { name: "Regulatory/accreditation oversight" },
+      { name: "Multi-Unit Oversight" }, { name: "Strategic Planning" }, { name: "Service Line Development" }, { name: "Organizational Goal Alignment" }, { name: "Board and Executive Reporting" },
     ]},
-    { title: "Operations", skills: [
-      { name: "Nurse manager supervision" }, { name: "Staffing model development" }, { name: "Capacity/patient flow management" }, { name: "Emergency preparedness planning" },
+    { title: "Financial & Operational Management", skills: [
+      { name: "Budget and Financial Management" }, { name: "Capital Planning" }, { name: "Productivity and Labor Cost Management" }, { name: "Revenue Cycle Impact Awareness" },
     ]},
-    { title: "Quality & Culture", skills: [
-      { name: "Quality and safety program oversight" }, { name: "Patient experience initiatives" }, { name: "Staff engagement and culture building" }, { name: "Interdisciplinary collaboration" },
+    { title: "Workforce & Staffing", skills: [
+      { name: "Nurse Manager Supervision" }, { name: "Staffing Model Development" }, { name: "Recruitment and Retention Strategy" }, { name: "Succession Planning" }, { name: "Performance Management" },
+    ]},
+    { title: "Operations & Patient Flow", skills: [
+      { name: "Capacity/Patient Flow Management" }, { name: "Emergency Preparedness Planning" }, { name: "Throughput and Length of Stay Initiatives" }, { name: "Interdepartmental Resource Coordination" },
+    ]},
+    { title: "Quality & Regulatory Oversight", skills: [
+      { name: "Regulatory/Accreditation Oversight" }, { name: "Quality and Safety Program Oversight" }, { name: "Core Measure/Outcome Performance Monitoring" }, { name: "Risk Management Collaboration" },
+    ]},
+    { title: "Patient Experience & Culture", skills: [
+      { name: "Patient Experience Initiatives" }, { name: "Staff Engagement and Culture Building" }, { name: "Interdisciplinary Collaboration" }, { name: "Shared Governance Facilitation" },
     ]},
   ]},
 
   { slug: "laboratory-director", title: "Laboratory Director Skills Checklist", shortTitle: "Laboratory Director", icon: "🔬", group: "Administration & Leadership", categories: [
     { title: "Operations Leadership", skills: [
-      { name: "Multi-department lab oversight (chemistry, hematology, micro, blood bank)" }, { name: "Staffing and scheduling management" }, { name: "Budget and capital equipment planning" }, { name: "Vendor/contract management" },
+      { name: "Multi-Department Lab Oversight (Chemistry, Hematology, Micro, Blood Bank)" }, { name: "Staffing and Scheduling Management" }, { name: "Budget and Capital Equipment Planning" }, { name: "Vendor/Contract Management" }, { name: "Send-Out Testing Program Oversight" },
     ]},
-    { title: "Quality & Compliance", skills: [
-      { name: "CAP/CLIA accreditation oversight" }, { name: "Quality assurance program management" }, { name: "Proficiency testing oversight" }, { name: "Regulatory survey preparedness" },
+    { title: "Quality & Accreditation", skills: [
+      { name: "CAP/CLIA Accreditation Oversight" }, { name: "Quality Assurance Program Management" }, { name: "Proficiency Testing Oversight" }, { name: "Regulatory Survey Preparedness" }, { name: "Non-Conformance/Corrective Action Management" },
     ]},
-    { title: "Technical Oversight", skills: [
-      { name: "Test menu and method validation" }, { name: "Instrument/technology evaluation" }, { name: "Result turnaround time management" },
+    { title: "Technical & Method Oversight", skills: [
+      { name: "Test Menu and Method Validation" }, { name: "Instrument/Technology Evaluation" }, { name: "Result Turnaround Time Management" }, { name: "Critical Value Reporting Oversight" }, { name: "Reference Range Establishment" },
     ]},
-    { title: "Staff Development", skills: [
-      { name: "Staff competency assessment" }, { name: "Continuing education program oversight" }, { name: "Performance management" },
+    { title: "Staff Development & Competency", skills: [
+      { name: "Staff Competency Assessment" }, { name: "Continuing Education Program Oversight" }, { name: "Performance Management" }, { name: "New Employee Orientation Oversight" },
+    ]},
+    { title: "Safety & Compliance", skills: [
+      { name: "OSHA Bloodborne Pathogen Compliance" }, { name: "Chemical Hygiene Plan Oversight" }, { name: "Biohazard/Waste Management Compliance" }, { name: "Emergency/Disaster Preparedness Planning" },
     ]},
   ]},
 
   { slug: "credentialing-specialist", title: "Credentialing Specialist Skills Checklist", shortTitle: "Credentialing Specialist", icon: "📋", group: "Administration & Leadership", categories: [
-    { title: "Credentialing & Privileging", skills: [
-      { name: "Primary source verification" }, { name: "Provider application processing" }, { name: "Privileging coordination" }, { name: "Re-credentialing cycle management" }, { name: "NPDB/OIG sanction checks" },
+    { title: "Credentialing & Verification", skills: [
+      { name: "Primary Source Verification" }, { name: "Provider Application Processing" }, { name: "Education and Training Verification" }, { name: "Work History and Reference Verification" }, { name: "License and DEA Verification" }, { name: "Board Certification Verification" },
+    ]},
+    { title: "Privileging", skills: [
+      { name: "Privileging Coordination" }, { name: "Clinical Privilege Delineation Forms" }, { name: "Focused Professional Practice Evaluation (FPPE) Coordination" }, { name: "Ongoing Professional Practice Evaluation (OPPE) Support" },
+    ]},
+    { title: "Re-Credentialing & Monitoring", skills: [
+      { name: "Re-Credentialing Cycle Management" }, { name: "NPDB/OIG Sanction Checks" }, { name: "Expirable Tracking (Licenses, Certifications)" }, { name: "Malpractice Insurance Verification" }, { name: "Adverse Action/Sanction Monitoring" },
+    ]},
+    { title: "Payer Enrollment", skills: [
+      { name: "Payer Enrollment Coordination" }, { name: "CAQH Profile Management" }, { name: "Medicare/Medicaid Enrollment" }, { name: "Commercial Payer Application Submission" },
     ]},
     { title: "Compliance & Systems", skills: [
-      { name: "Joint Commission/NCQA credentialing standards" }, { name: "Payer enrollment coordination" }, { name: "Credentialing software (e.g., CAQH, Symplr)" }, { name: "Expirable tracking (licenses, certifications)" },
+      { name: "Joint Commission/NCQA Credentialing Standards" }, { name: "State-Specific Credentialing Requirements" }, { name: "Credentialing Software (e.g., CAQH, Symplr, MD-Staff)" }, { name: "Audit Support" },
     ]},
-    { title: "Communication", skills: [
-      { name: "Provider communication and follow-up" }, { name: "Medical staff office coordination" }, { name: "Audit support" },
+    { title: "Communication & Coordination", skills: [
+      { name: "Provider Communication and Follow-Up" }, { name: "Medical Staff Office Coordination" }, { name: "Credentials Committee Support" }, { name: "New Provider Onboarding Coordination" },
     ]},
   ]},
 
@@ -179,50 +230,83 @@ export const adminLeadershipChecklists: ChecklistSpec[] = [
   ]},
 
   { slug: "medical-transcriptionist", title: "Medical Transcriptionist Skills Checklist", shortTitle: "Medical Transcriptionist", icon: "⌨️", group: "Administration & Leadership", categories: [
-    { title: "Transcription", skills: [
-      { name: "Physician dictation transcription" }, { name: "Medical terminology accuracy" }, { name: "Speech recognition editing" }, { name: "Report formatting standards" },
+    { title: "Core Transcription Skills", skills: [
+      { name: "Physician Dictation Transcription" }, { name: "Medical Terminology Accuracy" }, { name: "Speech Recognition Editing" }, { name: "Report Formatting Standards" }, { name: "Grammar and Punctuation Accuracy" }, { name: "Blank Flagging for Unclear Dictation" }, { name: "Critical Result Flagging" },
     ]},
-    { title: "Specialty Reports", skills: [
-      { name: "Operative reports" }, { name: "Discharge summaries" }, { name: "History and physical reports" }, { name: "Consultation notes" },
+    { title: "Specialty Report Types", skills: [
+      { name: "Operative Reports" }, { name: "Discharge Summaries" }, { name: "History and Physical Reports" }, { name: "Consultation Notes" }, { name: "Radiology Reports" }, { name: "Pathology Reports" }, { name: "Progress Notes" }, { name: "Emergency Department Reports" },
     ]},
-    { title: "Compliance & Systems", skills: [
-      { name: "HIPAA compliance" }, { name: "EMR/dictation software platforms" }, { name: "Turnaround time standards" },
+    { title: "Medical Terminology by Specialty", skills: [
+      { name: "Surgical Terminology" }, { name: "Cardiology Terminology" }, { name: "Orthopedic Terminology" }, { name: "Oncology Terminology" }, { name: "Psychiatric Terminology" }, { name: "Pharmacology/Drug Name Accuracy" },
+    ]},
+    { title: "Compliance & Confidentiality", skills: [
+      { name: "HIPAA Compliance" }, { name: "Patient Confidentiality Standards" }, { name: "Chain of Custody for Dictated Files" }, { name: "Record Retention Requirements" },
+    ]},
+    { title: "Systems & Productivity", skills: [
+      { name: "EMR/Dictation Software Platforms" }, { name: "Digital Voice Recognition Software" }, { name: "Turnaround Time Standards" }, { name: "Line Count/Productivity Standards" }, { name: "Quality Assurance/Self-Audit" },
     ]},
   ]},
 
   { slug: "patient-access-rep", title: "Patient Access Representative Skills Checklist", shortTitle: "Patient Access Rep", icon: "🗂️", group: "Administration & Leadership", categories: [
     { title: "Registration & Scheduling", skills: [
-      { name: "Patient registration" }, { name: "Appointment scheduling" }, { name: "Insurance verification" }, { name: "Pre-authorization coordination" },
+      { name: "Patient Registration (Inpatient/Outpatient/ED)" }, { name: "Appointment Scheduling and Rescheduling" }, { name: "Physician Order Verification" }, { name: "Bed Assignment Coordination" }, { name: "Multi-System Patient Search and Duplicate Record Prevention" }, { name: "Master Patient Index (MPI) Management" }, { name: "Walk-In and Same-Day Registration" }, { name: "Surgical/Procedural Pre-Registration" },
     ]},
-    { title: "Financial", skills: [
-      { name: "Point-of-service collections" }, { name: "Financial counseling referral" }, { name: "Charity care/payment plan assistance" },
+    { title: "Insurance & Financial Clearance", skills: [
+      { name: "Insurance Eligibility and Benefits Verification" }, { name: "Pre-Authorization and Referral Coordination" }, { name: "Medicare Secondary Payer Questionnaire" }, { name: "Coordination of Benefits" }, { name: "Coverage Discovery" }, { name: "Insurance Card Scanning and Data Entry" }, { name: "Workers' Compensation and Third-Party Liability Intake" },
     ]},
-    { title: "Customer Service & Systems", skills: [
-      { name: "Patient customer service" }, { name: "EMR/registration software" }, { name: "HIPAA and consent form processing" },
+    { title: "Point-of-Service Collections & Financial Counseling", skills: [
+      { name: "Point-of-Service Collections" }, { name: "Estimate of Patient Financial Responsibility" }, { name: "Financial Counseling Referral" }, { name: "Charity Care/Payment Plan Assistance" }, { name: "Cash Handling and Reconciliation" }, { name: "Payment Plan Setup" },
+    ]},
+    { title: "Customer Service & Patient Experience", skills: [
+      { name: "Patient Customer Service" }, { name: "De-Escalation of Frustrated Patients" }, { name: "Wayfinding and Facility Navigation Assistance" }, { name: "Language Line/Interpreter Services Coordination" }, { name: "Patient/Family Communication" }, { name: "Complaint Intake and Escalation" },
+    ]},
+    { title: "Systems & Documentation", skills: [
+      { name: "EMR/Registration Software (e.g., Epic, Cerner)" }, { name: "HIPAA and Consent Form Processing" }, { name: "Advance Directive Documentation" }, { name: "Medical Record Number Assignment" }, { name: "Scanning and Document Indexing" }, { name: "Downtime Registration Procedures" },
+    ]},
+    { title: "Compliance & Regulatory", skills: [
+      { name: "HIPAA Privacy and Security Compliance" }, { name: "EMTALA Compliance" }, { name: "Medicare Conditions of Participation" }, { name: "Notice of Privacy Practices Distribution" }, { name: "Consent for Treatment Documentation" },
     ]},
   ]},
 
   { slug: "patient-safety-specialist", title: "Patient Safety Specialist Skills Checklist", shortTitle: "Patient Safety Specialist", icon: "✅", group: "Administration & Leadership", categories: [
-    { title: "Safety Program Management", skills: [
-      { name: "Patient safety event investigation" }, { name: "Root cause analysis facilitation" }, { name: "Failure mode and effects analysis (FMEA)" }, { name: "Safety culture surveys" },
+    { title: "Event Investigation & Analysis", skills: [
+      { name: "Patient Safety Event Investigation" }, { name: "Root Cause Analysis (RCA) Facilitation" }, { name: "Failure Mode and Effects Analysis (FMEA)" }, { name: "Sentinel Event Response" }, { name: "Near-Miss Analysis" }, { name: "Common Cause/Trend Analysis" },
     ]},
-    { title: "Accreditation & Compliance", skills: [
-      { name: "Joint Commission National Patient Safety Goals" }, { name: "CMS Conditions of Participation" }, { name: "Accreditation survey preparation" }, { name: "Policy development and review" },
+    { title: "Proactive Risk Assessment", skills: [
+      { name: "Proactive Risk Assessment Tools" }, { name: "High-Reliability Organization Principles" }, { name: "Human Factors Analysis" }, { name: "Safety Culture Surveys" }, { name: "Simulation-Based Risk Assessment" },
     ]},
-    { title: "Education & Reporting", skills: [
-      { name: "Staff safety education" }, { name: "Event reporting system management" }, { name: "Leadership safety reporting/dashboards" },
+    { title: "Accreditation & Regulatory Compliance", skills: [
+      { name: "Joint Commission National Patient Safety Goals" }, { name: "CMS Conditions of Participation" }, { name: "Accreditation Survey Preparation" }, { name: "Sentinel Event Reporting (Regulatory)" }, { name: "State Reportable Event Compliance" },
+    ]},
+    { title: "Policy & Program Development", skills: [
+      { name: "Policy Development and Review" }, { name: "Patient Safety Program Management" }, { name: "Corrective Action Plan Development" }, { name: "Action Plan Follow-Up and Closure Tracking" },
+    ]},
+    { title: "Education & Culture", skills: [
+      { name: "Staff Safety Education" }, { name: "Just Culture Framework Application" }, { name: "Safety Huddle Facilitation" }, { name: "Speak-Up Culture Promotion" },
+    ]},
+    { title: "Reporting & Analytics", skills: [
+      { name: "Event Reporting System Management" }, { name: "Leadership Safety Reporting/Dashboards" }, { name: "Patient Safety Indicator (PSI) Tracking" }, { name: "Board/Committee Safety Presentations" },
     ]},
   ]},
 
   { slug: "executive-assistant", title: "Executive Assistant Skills Checklist", shortTitle: "Executive Assistant", icon: "🗓️", group: "Administration & Leadership", categories: [
-    { title: "Administrative Support", skills: [
-      { name: "Calendar and scheduling management" }, { name: "Travel coordination" }, { name: "Correspondence drafting" }, { name: "Meeting/board preparation" }, { name: "Minute taking" },
+    { title: "Calendar & Scheduling", skills: [
+      { name: "Calendar and Scheduling Management" }, { name: "Multi-Executive Calendar Coordination" }, { name: "Meeting Conflict Resolution" }, { name: "Time Zone Coordination" },
     ]},
-    { title: "Office & Project Management", skills: [
-      { name: "Project tracking and follow-up" }, { name: "Budget/expense report processing" }, { name: "Vendor coordination" }, { name: "Confidential document handling" },
+    { title: "Travel & Logistics", skills: [
+      { name: "Travel Coordination" }, { name: "Itinerary Development" }, { name: "Expense Reconciliation for Travel" }, { name: "Event and Offsite Coordination" },
     ]},
-    { title: "Systems & Communication", skills: [
-      { name: "Microsoft Office/Google Workspace proficiency" }, { name: "Executive-level communication" }, { name: "Discretion with confidential information" },
+    { title: "Communication & Correspondence", skills: [
+      { name: "Correspondence Drafting" }, { name: "Executive-Level Communication" }, { name: "Email and Inbox Management" }, { name: "Internal and External Stakeholder Liaison" },
+    ]},
+    { title: "Meeting & Board Support", skills: [
+      { name: "Meeting/Board Preparation" }, { name: "Minute Taking" }, { name: "Agenda Development" }, { name: "Board Portal Management" }, { name: "Presentation Preparation" },
+    ]},
+    { title: "Project & Office Management", skills: [
+      { name: "Project Tracking and Follow-Up" }, { name: "Budget/Expense Report Processing" }, { name: "Vendor Coordination" }, { name: "Office Supply and Facilities Coordination" },
+    ]},
+    { title: "Systems & Confidentiality", skills: [
+      { name: "Microsoft Office/Google Workspace Proficiency" }, { name: "Confidential Document Handling" }, { name: "Discretion With Confidential Information" }, { name: "Record Retention and Filing Systems" },
     ]},
   ]},
 ];

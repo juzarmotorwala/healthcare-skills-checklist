@@ -4,19 +4,22 @@ import { ChecklistSpec } from "../checklistData";
 export const reliasBatch6Checklists: ChecklistSpec[] = [
   { slug: "dental-hygienist", title: "Dental Hygienist Skills Checklist", shortTitle: "Dental Hygienist", icon: "🦷", group: "Allied Health", categories: [
     { title: "Patient Preparation", skills: [
-      { name: "Review Dental and Medical History" }, { name: "Obtain Informed Consent" }, { name: "Set Up Treatment Room and Supplies" }, { name: "Seat Patient with Bibs and Eye Protection" },
+      { name: "Review Dental and Medical History" }, { name: "Obtain Informed Consent" }, { name: "Set Up Treatment Room and Supplies" }, { name: "Seat Patient With Bibs and Eye Protection" }, { name: "Infection Control/Sterilization Setup" },
     ]},
     { title: "Patient Assessment", skills: [
-      { name: "Intraoral and Extraoral Exam/Screening" }, { name: "Periodontal Health Assessment" }, { name: "Vital Signs and Medication Review" }, { name: "Dental X-Ray Capture and Interpretation" }, { name: "Intraoral Photography and Itero Scanning" }, { name: "Sleep Concern Screening" }, { name: "Dental Charting" },
+      { name: "Intraoral and Extraoral Exam/Screening" }, { name: "Periodontal Health Assessment" }, { name: "Vital Signs and Medication Review" }, { name: "Dental X-Ray Capture and Interpretation" }, { name: "Intraoral Photography and Itero Scanning" }, { name: "Sleep Concern Screening" }, { name: "Dental Charting" }, { name: "Oral Cancer Screening" },
     ]},
     { title: "Prophylaxis & Treatment", skills: [
-      { name: "Scaling and Deplaquing" }, { name: "Polishing and Flossing" }, { name: "Sealant and Fluoride Application" }, { name: "Topical Anesthetic Application" },
+      { name: "Scaling and Deplaquing" }, { name: "Polishing and Flossing" }, { name: "Sealant and Fluoride Application" }, { name: "Topical Anesthetic Application" }, { name: "Local Anesthesia Administration (Where Licensed)" }, { name: "Root Planing" }, { name: "Desensitizing Agent Application" },
     ]},
     { title: "Patient Education", skills: [
-      { name: "Homecare Routine and Tool Instruction" }, { name: "Nutritional Counseling for Oral Health" }, { name: "Tobacco and Risk Factor Discussion" }, { name: "Summarizing Clinical Findings" },
+      { name: "Homecare Routine and Tool Instruction" }, { name: "Nutritional Counseling for Oral Health" }, { name: "Tobacco and Risk Factor Discussion" }, { name: "Summarizing Clinical Findings" }, { name: "Pediatric Oral Health Education" },
     ]},
     { title: "Professional Skills", skills: [
-      { name: "Explaining Procedures and Treatment Plans" }, { name: "Collaboration with Dentists and Specialists" }, { name: "Patient Referrals" }, { name: "Professional Communication and Appearance" },
+      { name: "Explaining Procedures and Treatment Plans" }, { name: "Collaboration With Dentists and Specialists" }, { name: "Patient Referrals" }, { name: "Professional Communication and Appearance" }, { name: "Insurance/Billing Coordination" },
+    ]},
+    { title: "Special Populations & Safety", skills: [
+      { name: "Pediatric Patient Management" }, { name: "Geriatric and Medically Complex Patient Care" }, { name: "Anxious/Special Needs Patient Management" }, { name: "Medical Emergency Response in Dental Setting" },
     ]},
   ]},
 

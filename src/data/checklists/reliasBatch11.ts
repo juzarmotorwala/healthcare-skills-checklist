@@ -40,13 +40,19 @@ export const reliasBatch11Checklists: ChecklistSpec[] = [
       { name: "Assess Fitness for Duty and Reasonable Accommodation" }, { name: "Facilitate Return to Work and Job Accommodation" }, { name: "Case Management and Early Intervention Identification" }, { name: "Document Plan and Client Status in Health Record" }, { name: "Client and Family Education on Risk Reduction" }, { name: "Maintain Confidentiality and Obtain Written Release of Information" },
     ]},
     { title: "Workplace & Environmental Health", skills: [
-      { name: "Workplace Risk Assessment" }, { name: "Health Screening and Surveillance" }, { name: "Review of Material Safety Data Sheets (MSDS)" }, { name: "Exposure Monitoring Techniques" }, { name: "Worker and Management Hazard Training" }, { name: "Trend Analysis of Workplace Injuries" },
+      { name: "Workplace Risk Assessment" }, { name: "Health Screening and Surveillance" }, { name: "Review of Material Safety Data Sheets (MSDS)" }, { name: "Exposure Monitoring Techniques" }, { name: "Worker and Management Hazard Training" }, { name: "Trend Analysis of Workplace Injuries" }, { name: "Ergonomic Assessment" },
     ]},
     { title: "Health Promotion & Disease Prevention", skills: [
-      { name: "Needs Assessment for Program Planning" }, { name: "Plan, Implement, and Evaluate Health Promotion Programs" }, { name: "Develop Disease Prevention Services" },
+      { name: "Needs Assessment for Program Planning" }, { name: "Plan, Implement, and Evaluate Health Promotion Programs" }, { name: "Develop Disease Prevention Services" }, { name: "Immunization Program Management" },
     ]},
     { title: "Emergency & Clinical Response", skills: [
       { name: "Chemical Exposure and Poison Ingestion Response" }, { name: "Traumatic Amputation and Burn Care" }, { name: "Acute MI and Angina Recognition" }, { name: "Seizure and Spinal Cord Injury Response" }, { name: "Electrocution and Penetrating Eye Injury Response" }, { name: "Overdose and Aspiration Management" },
+    ]},
+    { title: "Regulatory & Compliance", skills: [
+      { name: "OSHA Recordkeeping and Reporting" }, { name: "Workers' Compensation Case Coordination" }, { name: "ADA Compliance Support" }, { name: "Drug and Alcohol Testing Program Management" },
+    ]},
+    { title: "Program Management", skills: [
+      { name: "Wellness/Biometric Screening Program Coordination" }, { name: "Travel Health Program Management" }, { name: "Disability Management Coordination" }, { name: "Health and Safety Committee Participation" },
     ]},
   ]},
 ];

@@ -201,31 +201,37 @@ export const therapyRehabChecklists: ChecklistSpec[] = [
 
   { slug: "recreation-therapist", title: "Recreation Therapist / Activity Therapist Skills Checklist", shortTitle: "Recreation Therapist", icon: "🎨", group: "Therapy & Rehab", categories: [
     { title: "Assessment", skills: [
-      { name: "Leisure interest assessment" }, { name: "Functional/cognitive assessment for activity planning" }, { name: "Treatment goal development" },
+      { name: "Leisure Interest Assessment" }, { name: "Functional/Cognitive Assessment for Activity Planning" }, { name: "Treatment Goal Development" }, { name: "Social Skills Assessment" },
     ]},
     { title: "Therapeutic Interventions", skills: [
-      { name: "Group activity facilitation" }, { name: "Adaptive sports and recreation" }, { name: "Arts and crafts programming" }, { name: "Music/sensory-based interventions" }, { name: "Community reintegration outings" },
+      { name: "Group Activity Facilitation" }, { name: "Adaptive Sports and Recreation" }, { name: "Arts and Crafts Programming" }, { name: "Music/Sensory-Based Interventions" }, { name: "Community Reintegration Outings" }, { name: "Horticultural Therapy" }, { name: "Aquatic Therapy Programming" },
     ]},
     { title: "Population-Specific Programming", skills: [
-      { name: "Geriatric/dementia programming" }, { name: "Pediatric programming" }, { name: "Behavioral health programming" }, { name: "Physical disability adaptation" },
+      { name: "Geriatric/Dementia Programming" }, { name: "Pediatric Programming" }, { name: "Behavioral Health Programming" }, { name: "Physical Disability Adaptation" }, { name: "Substance Use Recovery Programming" },
     ]},
     { title: "Documentation", skills: [
-      { name: "Treatment plan documentation" }, { name: "Progress note charting" }, { name: "Interdisciplinary team collaboration" },
+      { name: "Treatment Plan Documentation" }, { name: "Progress Note Charting" }, { name: "Interdisciplinary Team Collaboration" }, { name: "Outcome Measurement Tracking" },
+    ]},
+    { title: "Facility & Safety Management", skills: [
+      { name: "Activity Equipment Safety Checks" }, { name: "Adaptive Equipment Selection" }, { name: "Emergency Procedures During Outings" },
     ]},
   ]},
 
   { slug: "exercise-physiologist", title: "Exercise Physiologist Skills Checklist", shortTitle: "Exercise Physiologist", icon: "🏃‍♂️", group: "Therapy & Rehab", categories: [
     { title: "Testing & Evaluation", skills: [
-      { name: "Cardiopulmonary exercise testing" }, { name: "Stress test administration (exercise/pharmacological)" }, { name: "Body composition analysis" }, { name: "Functional capacity evaluation" },
+      { name: "Cardiopulmonary Exercise Testing" }, { name: "Stress Test Administration (Exercise/Pharmacological)" }, { name: "Body Composition Analysis" }, { name: "Functional Capacity Evaluation" }, { name: "VO2 Max Testing" }, { name: "Strength and Flexibility Testing" },
     ]},
     { title: "Exercise Prescription", skills: [
-      { name: "Individualized exercise program design" }, { name: "Cardiac rehabilitation exercise sessions" }, { name: "Pulmonary rehabilitation exercise sessions" }, { name: "Chronic disease exercise management (diabetes, obesity)" },
+      { name: "Individualized Exercise Program Design" }, { name: "Cardiac Rehabilitation Exercise Sessions" }, { name: "Pulmonary Rehabilitation Exercise Sessions" }, { name: "Chronic Disease Exercise Management (Diabetes, Obesity)" }, { name: "Resistance Training Program Design" }, { name: "Post-Surgical Exercise Progression" },
     ]},
     { title: "Patient Monitoring", skills: [
-      { name: "Telemetry/EKG monitoring during exercise" }, { name: "Vital sign monitoring" }, { name: "Recognition of exercise intolerance/emergency response" },
+      { name: "Telemetry/EKG Monitoring During Exercise" }, { name: "Vital Sign Monitoring" }, { name: "Recognition of Exercise Intolerance/Emergency Response" }, { name: "Rate of Perceived Exertion (RPE) Monitoring" }, { name: "Oxygen Saturation Monitoring During Exercise" },
     ]},
-    { title: "Education", skills: [
-      { name: "Patient lifestyle/behavior change counseling" }, { name: "Risk factor modification education" },
+    { title: "Education & Counseling", skills: [
+      { name: "Patient Lifestyle/Behavior Change Counseling" }, { name: "Risk Factor Modification Education" }, { name: "Nutrition and Weight Management Counseling" }, { name: "Home Exercise Program Instruction" },
+    ]},
+    { title: "Emergency Response", skills: [
+      { name: "CPR/AED Certification" }, { name: "Cardiac Emergency Response Protocol" }, { name: "Exercise-Induced Symptom Recognition" },
     ]},
   ]},
 
@@ -244,6 +250,9 @@ export const therapyRehabChecklists: ChecklistSpec[] = [
     ]},
     { title: "Functional Assessment", skills: [
       { name: "FIM Scoring" }, { name: "ADL Assessment" }, { name: "Mobility Assessment" }, { name: "Cognitive Assessment" }, { name: "Discharge Planning" },
+    ]},
+    { title: "Interdisciplinary Rehab Team", skills: [
+      { name: "PT/OT/SLP Coordination" }, { name: "Family/Caregiver Training" }, { name: "Equipment/DME Coordination" }, { name: "Rehab Goal Setting and Progress Review" },
     ]},
     { title: "Age Specific Competencies", skills: [
       { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },

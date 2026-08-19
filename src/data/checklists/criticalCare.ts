@@ -135,13 +135,22 @@ export const criticalCareChecklists: ChecklistSpec[] = [
 
   { slug: "intermediate-care", title: "Registered Nurse – Intermediate Care Skills Checklist", shortTitle: "RN – Intermediate Care", icon: "🔄", group: "Critical Care", categories: [
     { title: "Cardiac", skills: [
-      { name: "Acute Coronary Syndrome" }, { name: "Congestive Heart Failure" }, { name: "Post Open Heart" }, { name: "Carotid Endarterectomy" }, { name: "Post Vascular Surgery" }, { name: "Heart Transplant" }, { name: "Pacemaker" }, { name: "Heart Sounds" },
+      { name: "Acute Coronary Syndrome" }, { name: "Congestive Heart Failure" }, { name: "Post Open Heart" }, { name: "Carotid Endarterectomy" }, { name: "Post Vascular Surgery" }, { name: "Heart Transplant" }, { name: "Pacemaker" }, { name: "Heart Sounds" }, { name: "Telemetry Monitoring" }, { name: "12-Lead EKG Interpretation" }, { name: "Cardiac Enzyme/Troponin Trending" },
     ]},
     { title: "Pulmonary", skills: [
-      { name: "Pneumonia" }, { name: "Respiratory Distress" }, { name: "COPD" }, { name: "Breath Sounds" }, { name: "Post Thoracic Surgery" }, { name: "Chest Tube Management" }, { name: "Trach Management" }, { name: "Ventilator Modes" }, { name: "Intubation/Extubation" }, { name: "CPAP/BiPAP" }, { name: "ABG Interpretation" },
+      { name: "Pneumonia" }, { name: "Respiratory Distress" }, { name: "COPD" }, { name: "Breath Sounds" }, { name: "Post Thoracic Surgery" }, { name: "Chest Tube Management" }, { name: "Trach Management" }, { name: "Ventilator Modes" }, { name: "Intubation/Extubation" }, { name: "CPAP/BiPAP" }, { name: "ABG Interpretation" }, { name: "Pulse Oximetry Monitoring" },
     ]},
     { title: "Neurologic", skills: [
-      { name: "Stroke Scale Assessment" }, { name: "CVA" }, { name: "Brain Injury" }, { name: "Seizure Disorders" },
+      { name: "Stroke Scale Assessment (NIHSS)" }, { name: "CVA" }, { name: "Brain Injury" }, { name: "Seizure Disorders" }, { name: "Neuro Checks" }, { name: "Glasgow Coma Scale" }, { name: "Intracranial Pressure Monitoring Awareness" },
+    ]},
+    { title: "Renal & Endocrine", skills: [
+      { name: "Acute Kidney Injury" }, { name: "Fluid and Electrolyte Management" }, { name: "Diabetic Ketoacidosis Management" }, { name: "Insulin Drip Titration" }, { name: "Continuous Renal Replacement Therapy Awareness" },
+    ]},
+    { title: "Medications & Drips", skills: [
+      { name: "Titratable Cardiac Drips (e.g., Nitroglycerin, Amiodarone)" }, { name: "Anticoagulant Management" }, { name: "IV Push Medication Administration" }, { name: "Central Line Medication Administration" },
+    ]},
+    { title: "Safety & Emergency Response", skills: [
+      { name: "Rapid Response Activation" }, { name: "Code Blue Response" }, { name: "Fall Prevention" }, { name: "Skin/Pressure Injury Prevention" },
     ]},
     { title: "Age Specific Competencies", skills: [
       { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
@@ -339,19 +348,25 @@ export const criticalCareChecklists: ChecklistSpec[] = [
 
   { slug: "urgent-care", title: "Registered Nurse – Urgent Care Skills Checklist", shortTitle: "RN – Urgent Care", icon: "⏰", group: "Critical Care", categories: [
     { title: "Cardiovascular", skills: [
-      { name: "Auscultation/Irregular Heart Sounds" }, { name: "Peripheral Edema" }, { name: "PQRST Assessment" }, { name: "EKG Interpretation" }, { name: "Lab Tests (Cardiac Enzymes, Troponin, BNP)" }, { name: "Cardiac Monitor" }, { name: "AED/Defibrillation" },
+      { name: "Auscultation/Irregular Heart Sounds" }, { name: "Peripheral Edema" }, { name: "PQRST Assessment" }, { name: "EKG Interpretation" }, { name: "Lab Tests (Cardiac Enzymes, Troponin, BNP)" }, { name: "Cardiac Monitor" }, { name: "AED/Defibrillation" }, { name: "Chest Pain Protocol" },
     ]},
     { title: "Respiratory", skills: [
-      { name: "Lung Sound Assessment" }, { name: "Pulse Oximetry" }, { name: "Peak Flow Meter" }, { name: "Nebulizer Treatment" }, { name: "Chest X-ray Interpretation" }, { name: "ABG Interpretation" },
+      { name: "Lung Sound Assessment" }, { name: "Pulse Oximetry" }, { name: "Peak Flow Meter" }, { name: "Nebulizer Treatment" }, { name: "Chest X-ray Interpretation" }, { name: "ABG Interpretation" }, { name: "Oxygen Delivery Devices" },
     ]},
     { title: "Neurological", skills: [
-      { name: "Stroke Assessment" }, { name: "Glasgow Coma Scale" }, { name: "Pupil Assessment" }, { name: "Cranial Nerve Assessment" },
+      { name: "Stroke Assessment" }, { name: "Glasgow Coma Scale" }, { name: "Pupil Assessment" }, { name: "Cranial Nerve Assessment" }, { name: "Head Injury Assessment" },
     ]},
     { title: "Wound Care", skills: [
-      { name: "Laceration Repair" }, { name: "Wound Irrigation" }, { name: "Suturing" }, { name: "Stapling" }, { name: "Wound Closure Strips" }, { name: "Burn Assessment and Care" }, { name: "Abscess I&D" },
+      { name: "Laceration Repair" }, { name: "Wound Irrigation" }, { name: "Suturing" }, { name: "Stapling" }, { name: "Wound Closure Strips" }, { name: "Burn Assessment and Care" }, { name: "Abscess I&D" }, { name: "Foreign Body Removal" }, { name: "Tetanus Prophylaxis Assessment" },
     ]},
     { title: "Orthopedic", skills: [
-      { name: "Fracture Assessment" }, { name: "Splinting" }, { name: "Joint Reduction" }, { name: "X-ray Interpretation" },
+      { name: "Fracture Assessment" }, { name: "Splinting" }, { name: "Joint Reduction Assist" }, { name: "X-ray Interpretation" }, { name: "Sprain/Strain Assessment" }, { name: "Crutch/Assistive Device Fitting" },
+    ]},
+    { title: "Infectious Disease & Point-of-Care Testing", skills: [
+      { name: "Rapid Strep Testing" }, { name: "Rapid Flu/COVID Testing" }, { name: "Urinalysis/UTI Testing" }, { name: "Wound Culture Collection" }, { name: "Communicable Disease Screening" },
+    ]},
+    { title: "Procedures & Immunizations", skills: [
+      { name: "Immunization Administration" }, { name: "Occupational Health/Drug Screen Collection" }, { name: "IV Insertion and Fluid Administration" }, { name: "Injection Administration (IM/SubQ)" },
     ]},
     { title: "Age Specific Competencies", skills: [
       { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },

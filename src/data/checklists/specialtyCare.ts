@@ -117,13 +117,16 @@ export const specialtyCareChecklists: ChecklistSpec[] = [
       { name: "Acute/Inpatient Dialysis" }, { name: "Chronic/Outpatient Dialysis" }, { name: "Dialysis Home Care" }, { name: "Pediatric Dialysis" }, { name: "Apheresis" }, { name: "Plasmapheresis" },
     ]},
     { title: "Hemodialysis", skills: [
-      { name: "AV Fistula Cannulation" }, { name: "AV Graft Cannulation" }, { name: "Catheter Management" }, { name: "Machine Setup" }, { name: "Dialysate Preparation" }, { name: "Water Treatment" },
+      { name: "AV Fistula Cannulation" }, { name: "AV Graft Cannulation" }, { name: "Catheter Management" }, { name: "Machine Setup" }, { name: "Dialysate Preparation" }, { name: "Water Treatment" }, { name: "Anticoagulation During Dialysis (Heparin)" },
     ]},
     { title: "Peritoneal Dialysis", skills: [
-      { name: "CAPD" }, { name: "CCPD" }, { name: "Catheter Care" }, { name: "Peritonitis Management" },
+      { name: "CAPD" }, { name: "CCPD" }, { name: "Catheter Care" }, { name: "Peritonitis Management" }, { name: "Exit Site Care" },
     ]},
     { title: "Complications", skills: [
-      { name: "Hypotension" }, { name: "Cramps" }, { name: "Air Embolism" }, { name: "Clotting" }, { name: "Infection" }, { name: "Disequilibrium Syndrome" },
+      { name: "Hypotension" }, { name: "Cramps" }, { name: "Air Embolism" }, { name: "Clotting" }, { name: "Infection" }, { name: "Disequilibrium Syndrome" }, { name: "Fluid Overload Management" },
+    ]},
+    { title: "Patient Education & Monitoring", skills: [
+      { name: "Fluid Restriction Education" }, { name: "Diet/Renal Nutrition Education" }, { name: "Vascular Access Care Education" }, { name: "Lab Value Trending (BUN/Creatinine/Potassium)" },
     ]},
     { title: "Age Specific Competencies", skills: [
       { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
@@ -165,19 +168,22 @@ export const specialtyCareChecklists: ChecklistSpec[] = [
 
   { slug: "rn-neuro", title: "Registered Nurse – Neuroscience/Stroke Unit Skills Checklist", shortTitle: "RN – Neuro/Stroke", icon: "🧠", group: "Specialty Care", categories: [
     { title: "Neurological Assessment", skills: [
-      { name: "NIH Stroke Scale (NIHSS)" }, { name: "Glasgow Coma Scale" }, { name: "Frequent neuro checks" }, { name: "Pupillary assessment" }, { name: "Cranial nerve assessment" },
+      { name: "NIH Stroke Scale (NIHSS)" }, { name: "Glasgow Coma Scale" }, { name: "Frequent Neuro Checks" }, { name: "Pupillary Assessment" }, { name: "Cranial Nerve Assessment" }, { name: "Motor/Sensory Function Assessment" },
     ]},
     { title: "Stroke Care", skills: [
-      { name: "tPA/thrombolytic administration" }, { name: "Post-thrombectomy monitoring" }, { name: "Stroke protocol/code stroke activation" }, { name: "Dysphagia/swallow screening" }, { name: "Blood pressure management post-stroke" },
+      { name: "tPA/Thrombolytic Administration" }, { name: "Post-Thrombectomy Monitoring" }, { name: "Stroke Protocol/Code Stroke Activation" }, { name: "Dysphagia/Swallow Screening" }, { name: "Blood Pressure Management Post-Stroke" }, { name: "Hemorrhagic Transformation Monitoring" },
     ]},
     { title: "Neurosurgical Care", skills: [
-      { name: "Post-craniotomy care" }, { name: "External ventricular drain (EVD) management" }, { name: "ICP monitoring basics" }, { name: "Spinal surgery post-op care" },
+      { name: "Post-Craniotomy Care" }, { name: "External Ventricular Drain (EVD) Management" }, { name: "ICP Monitoring Basics" }, { name: "Spinal Surgery Post-Op Care" }, { name: "Lumbar Drain Management" },
     ]},
     { title: "Seizure & Movement Disorders", skills: [
-      { name: "Seizure precautions and management" }, { name: "Status epilepticus response" }, { name: "Parkinson's disease management" }, { name: "Multiple sclerosis care" },
+      { name: "Seizure Precautions and Management" }, { name: "Status Epilepticus Response" }, { name: "Parkinson's Disease Management" }, { name: "Multiple Sclerosis Care" }, { name: "Myasthenia Gravis Care" },
+    ]},
+    { title: "Neurological Conditions", skills: [
+      { name: "Guillain-Barré Syndrome Care" }, { name: "Traumatic Brain Injury Management" }, { name: "Spinal Cord Injury Care" }, { name: "Meningitis/Encephalitis Care" },
     ]},
     { title: "Patient Safety & Discharge", skills: [
-      { name: "Fall risk precautions" }, { name: "Aspiration precautions" }, { name: "Family education on discharge/rehab planning" },
+      { name: "Fall Risk Precautions" }, { name: "Aspiration Precautions" }, { name: "Family Education on Discharge/Rehab Planning" }, { name: "Cognitive/Behavioral Change Monitoring" },
     ]},
   ]},
 
@@ -237,16 +243,19 @@ export const specialtyCareChecklists: ChecklistSpec[] = [
       { name: "Acute Care – Adult" }, { name: "Clinic – Adult" }, { name: "SNF/LTAC/Subacute" }, { name: "Hospice/Palliative Care" }, { name: "Acute/Long Term Care – Pediatrics" }, { name: "Clinic – Pediatrics" }, { name: "Home Health" },
     ]},
     { title: "Wound Assessment", skills: [
-      { name: "Wound Measurement" }, { name: "Wound Staging" }, { name: "Tissue Type Identification" }, { name: "Wound Photography" }, { name: "Risk Assessment Tools (Braden Scale)" },
+      { name: "Wound Measurement" }, { name: "Wound Staging" }, { name: "Tissue Type Identification" }, { name: "Wound Photography" }, { name: "Risk Assessment Tools (Braden Scale)" }, { name: "Wound Culture Collection" },
     ]},
     { title: "Wound Types", skills: [
       { name: "Pressure Ulcers" }, { name: "Diabetic Ulcers" }, { name: "Venous Ulcers" }, { name: "Arterial Ulcers" }, { name: "Surgical Wounds" }, { name: "Traumatic Wounds" }, { name: "Burns" },
     ]},
     { title: "Treatment Modalities", skills: [
-      { name: "Negative Pressure Wound Therapy (VAC)" }, { name: "Wound Debridement" }, { name: "Compression Therapy" }, { name: "Hyperbaric Oxygen Therapy" }, { name: "Skin Substitutes" },
+      { name: "Negative Pressure Wound Therapy (VAC)" }, { name: "Wound Debridement" }, { name: "Compression Therapy" }, { name: "Hyperbaric Oxygen Therapy" }, { name: "Skin Substitutes" }, { name: "Dressing Selection (Alginate, Hydrocolloid, Foam)" },
     ]},
     { title: "Ostomy Care", skills: [
       { name: "Colostomy Care" }, { name: "Ileostomy Care" }, { name: "Urostomy Care" }, { name: "Pouching Systems" }, { name: "Stoma Assessment" }, { name: "Patient Education" },
+    ]},
+    { title: "Prevention & Program Management", skills: [
+      { name: "Pressure Injury Prevention Protocol" }, { name: "Nutrition and Wound Healing Optimization" }, { name: "Interdisciplinary Wound Rounds" }, { name: "Wound Care Documentation Standards" },
     ]},
   ]},
 
@@ -474,16 +483,19 @@ export const specialtyCareChecklists: ChecklistSpec[] = [
 
   { slug: "ambulatory", title: "Registered Nurse – Ambulatory Skills Checklist", shortTitle: "RN – Ambulatory", icon: "🚶", group: "Specialty Care", categories: [
     { title: "General Patient Care", skills: [
-      { name: "Admit and Assess Patients" }, { name: "Advance Directives" }, { name: "Collect Appropriate Data" }, { name: "Discharge Teaching" }, { name: "Preoperative Teaching" }, { name: "Patient Prep" },
+      { name: "Admit and Assess Patients" }, { name: "Advance Directives" }, { name: "Collect Appropriate Data" }, { name: "Discharge Teaching" }, { name: "Preoperative Teaching" }, { name: "Patient Prep" }, { name: "Triage Assessment" },
     ]},
     { title: "Clinical Procedures", skills: [
-      { name: "Vital Signs" }, { name: "Blood Glucose Monitoring" }, { name: "EKG" }, { name: "Phlebotomy" }, { name: "Specimen Collection" }, { name: "Wound Care" },
+      { name: "Vital Signs" }, { name: "Blood Glucose Monitoring" }, { name: "EKG" }, { name: "Phlebotomy" }, { name: "Specimen Collection" }, { name: "Wound Care" }, { name: "Suture/Staple Removal" },
     ]},
     { title: "Medication Administration", skills: [
-      { name: "Oral Medications" }, { name: "IM/SQ Injections" }, { name: "IV Medications" }, { name: "Immunizations" }, { name: "Allergy Testing" },
+      { name: "Oral Medications" }, { name: "IM/SQ Injections" }, { name: "IV Medications" }, { name: "Immunizations" }, { name: "Allergy Testing" }, { name: "Medication Reconciliation" },
     ]},
     { title: "Surgical Procedures", skills: [
-      { name: "Pre-op Assessment" }, { name: "Conscious Sedation" }, { name: "Post-op Recovery" }, { name: "Discharge Criteria" },
+      { name: "Pre-Op Assessment" }, { name: "Conscious Sedation" }, { name: "Post-Op Recovery" }, { name: "Discharge Criteria" },
+    ]},
+    { title: "Chronic Disease Management", skills: [
+      { name: "Diabetes Management Support" }, { name: "Hypertension Monitoring" }, { name: "COPD/Asthma Management Support" }, { name: "Care Coordination for Chronic Conditions" },
     ]},
     { title: "Age Specific Competencies", skills: [
       { name: "Infant (Birth - 1 year)" }, { name: "Preschooler (ages 2-5 years)" }, { name: "Childhood (ages 6-12 years)" }, { name: "Adolescents (ages 13-21 years)" }, { name: "Young Adults (ages 22-39 years)" }, { name: "Adults (ages 40-64 years)" }, { name: "Older Adults (ages 65-79 years)" }, { name: "Elderly (ages 80+ years)" },
