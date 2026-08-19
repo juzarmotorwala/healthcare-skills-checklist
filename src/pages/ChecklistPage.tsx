@@ -74,6 +74,7 @@ export default function ChecklistPage() {
     candidateInfo.phone.trim().length >= 7 &&
     candidateInfo.city.trim().length > 0 &&
     candidateInfo.state.trim().length > 0 &&
+    candidateInfo.zipCode.trim().length > 0 &&
     hiringEmailValid;
 
   const totalSkills = checklist.categories.reduce((sum, cat) => sum + cat.skills.length, 0);

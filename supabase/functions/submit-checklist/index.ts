@@ -170,12 +170,12 @@ function buildPdf(payload: Payload): Uint8Array {
   doc.setFontSize(20);
   doc.setFont("helvetica", "bold");
   doc.setTextColor(30, 60, 90);
-  doc.text("healthcareskillschecklist.com", margin, y);
+  doc.text("HealthcareSkillsChecklist.com", margin, y);
   y += 6;
   doc.setFontSize(8.5);
   doc.setFont("helvetica", "italic");
   doc.setTextColor(120, 120, 120);
-  doc.text("Helping healthcare professionals self-assess their skills", margin, y);
+  doc.text("Helping Healthcare Professionals Self-Assess Their Skills", margin, y);
   y += 10;
 
   // Checklist title is secondary content, sized down from the brand line.
@@ -217,10 +217,10 @@ function buildPdf(payload: Payload): Uint8Array {
   // rather than one blended number hiding them.
   const summary = computeProficiencySummary(categories, ratings);
   if (summary.overallAverage != null) {
-    checkPage(20);
+    checkPage(18);
     doc.setDrawColor(200, 200, 200);
     doc.setFillColor(248, 250, 252);
-    doc.roundedRect(margin, y, contentWidth, 18, 2, 2, "FD");
+    doc.roundedRect(margin, y, contentWidth, 16, 2, 2, "FD");
     doc.setFontSize(10);
     doc.setFont("helvetica", "bold");
     doc.setTextColor(30, 60, 90);
@@ -229,11 +229,7 @@ function buildPdf(payload: Payload): Uint8Array {
     doc.setFontSize(9);
     doc.setTextColor(60, 60, 60);
     doc.text(`Overall: ${summary.overallAverage.toFixed(1)} of 4 — ${summary.descriptor}`, margin + 4, y + 13);
-    doc.setFontSize(7);
-    doc.setFont("helvetica", "italic");
-    doc.setTextColor(130, 130, 130);
-    doc.text("Self-reported average across all rated skills — not a validated assessment.", margin + 4, y + 16.5);
-    y += 24;
+    y += 22;
 
     checkPage(8);
     doc.setFontSize(8.5);
@@ -319,25 +315,35 @@ function buildPdf(payload: Payload): Uint8Array {
     y += 4;
   }
 
-  checkPage(20);
+  checkPage(26);
   y += 8;
   const submittedAt = new Date().toLocaleString();
+  const footerHeight = summary.overallAverage != null ? 22 : 16;
   doc.setDrawColor(200, 200, 200);
   doc.setFillColor(248, 250, 252);
-  doc.roundedRect(margin, y, contentWidth, 16, 2, 2, "FD");
+  doc.roundedRect(margin, y, contentWidth, footerHeight, 2, 2, "FD");
   doc.setFontSize(8);
   doc.setFont("helvetica", "italic");
   doc.setTextColor(80, 80, 80);
   const attestLine1 = doc.splitTextToSize(
-    `Electronically submitted by ${candidate.fullName} on ${submittedAt} via healthcareskillschecklist.com.`,
+    `Electronically submitted by ${candidate.fullName} on ${submittedAt} via HealthcareSkillsChecklist.com.`,
     contentWidth - 8,
   );
   doc.text(attestLine1, margin + 4, y + 6);
   doc.text(
-    "This is a self-assessment. Submission of this form constitutes the candidate's attestation that the information above is accurate.",
+    `This is a self-assessment. Submission of this form constitutes ${candidate.fullName}'s attestation that the information above is accurate.`,
     margin + 4,
     y + 12,
   );
+  if (summary.overallAverage != null) {
+    doc.setFontSize(7);
+    doc.setTextColor(130, 130, 130);
+    doc.text(
+      "The proficiency summary above is a self-reported average across all rated skills, not a validated assessment.",
+      margin + 4,
+      y + 18,
+    );
+  }
 
   return new Uint8Array(doc.output("arraybuffer"));
 }
@@ -376,6 +382,7 @@ Deno.serve(async (req: Request) => {
     if (!candidate.phone?.trim() || candidate.phone.trim().length < 7) throw new Error("A valid phone number is required");
     if (!candidate.city?.trim()) throw new Error("City is required");
     if (!candidate.state?.trim()) throw new Error("State is required");
+    if (!candidate.zipCode?.trim()) throw new Error("Zip code is required");
     if (!consent) throw new Error("Consent is required to submit");
 
     const hiringFacilityEmail = candidate.hiringFacilityEmail?.trim() || null;
@@ -458,8 +465,8 @@ Deno.serve(async (req: Request) => {
         body: JSON.stringify({
           from: "Healthcare Skills Checklist <admin@healthcareskillschecklist.com>",
           to: [hiringFacilityEmail],
-          subject: `${candidate.fullName} shared their ${checklistTitle} results with you`,
-          html: `<p>Hi,</p><p><strong>${candidate.fullName}</strong> has completed a self-assessment for <strong>${checklistTitle}</strong> on Healthcare Skills Checklist and shared a copy of the results with you. The completed checklist is attached as a PDF.</p><p>Contact info: ${candidate.email}${candidate.phone ? " · " + candidate.phone : ""}</p><p>— Healthcare Skills Checklist</p>`,
+          subject: `${checklistTitle} Submitted by ${candidate.fullName}`,
+          html: `<p>Hi,</p><p><strong>${candidate.fullName}</strong> has completed a self-assessment for <strong>${checklistTitle}</strong> on Healthcare Skills Checklist. The completed checklist is attached as a PDF.</p><p>Contact info: ${candidate.email}${candidate.phone ? " · " + candidate.phone : ""}</p><p>— Healthcare Skills Checklist</p>`,
           attachments: [{ filename: fileName, content: pdfBase64 }],
         }),
       });

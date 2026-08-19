@@ -108,7 +108,9 @@ export default function CandidateInfoForm({ info, onChange }: CandidateInfoFormP
           </Select>
         </div>
         <div className="space-y-1.5">
-          <Label htmlFor="zipCode">Zip Code</Label>
+          <Label htmlFor="zipCode">
+            Zip Code <span className="text-destructive">*</span>
+          </Label>
           <Input
             id="zipCode"
             inputMode="numeric"

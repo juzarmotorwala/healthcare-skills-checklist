@@ -43,12 +43,12 @@ export function downloadSubmissionPdf(sub: SubmissionForPdf) {
   doc.setFontSize(20);
   doc.setFont("helvetica", "bold");
   doc.setTextColor(30, 60, 90);
-  doc.text("healthcareskillschecklist.com", margin, y);
+  doc.text("HealthcareSkillsChecklist.com", margin, y);
   y += 6;
   doc.setFontSize(8.5);
   doc.setFont("helvetica", "italic");
   doc.setTextColor(120, 120, 120);
-  doc.text("Helping healthcare professionals self-assess their skills", margin, y);
+  doc.text("Helping Healthcare Professionals Self-Assess Their Skills", margin, y);
   y += 10;
 
   // Checklist title is secondary content, sized down from the brand line.
@@ -90,10 +90,10 @@ export function downloadSubmissionPdf(sub: SubmissionForPdf) {
   // rather than one blended number hiding them.
   const summary = computeProficiencySummary(sub.categories, sub.ratings);
   if (summary.overallAverage != null) {
-    checkPage(20);
+    checkPage(18);
     doc.setDrawColor(200, 200, 200);
     doc.setFillColor(248, 250, 252);
-    doc.roundedRect(margin, y, contentWidth, 18, 2, 2, "FD");
+    doc.roundedRect(margin, y, contentWidth, 16, 2, 2, "FD");
     doc.setFontSize(10);
     doc.setFont("helvetica", "bold");
     doc.setTextColor(30, 60, 90);
@@ -102,11 +102,7 @@ export function downloadSubmissionPdf(sub: SubmissionForPdf) {
     doc.setFontSize(9);
     doc.setTextColor(60, 60, 60);
     doc.text(`Overall: ${summary.overallAverage.toFixed(1)} of 4 — ${summary.descriptor}`, margin + 4, y + 13);
-    doc.setFontSize(7);
-    doc.setFont("helvetica", "italic");
-    doc.setTextColor(130, 130, 130);
-    doc.text("Self-reported average across all rated skills — not a validated assessment.", margin + 4, y + 16.5);
-    y += 24;
+    y += 22;
 
     checkPage(8);
     doc.setFontSize(8.5);
@@ -192,25 +188,35 @@ export function downloadSubmissionPdf(sub: SubmissionForPdf) {
     y += 4;
   }
 
-  checkPage(20);
+  checkPage(26);
   y += 8;
   const submittedAt = new Date(sub.submittedAt).toLocaleString();
+  const footerHeight = summary.overallAverage != null ? 22 : 16;
   doc.setDrawColor(200, 200, 200);
   doc.setFillColor(248, 250, 252);
-  doc.roundedRect(margin, y, contentWidth, 16, 2, 2, "FD");
+  doc.roundedRect(margin, y, contentWidth, footerHeight, 2, 2, "FD");
   doc.setFontSize(8);
   doc.setFont("helvetica", "italic");
   doc.setTextColor(80, 80, 80);
   const attestLine1 = doc.splitTextToSize(
-    `Electronically submitted by ${sub.candidateName} on ${submittedAt} via healthcareskillschecklist.com.`,
+    `Electronically submitted by ${sub.candidateName} on ${submittedAt} via HealthcareSkillsChecklist.com.`,
     contentWidth - 8,
   );
   doc.text(attestLine1, margin + 4, y + 6);
   doc.text(
-    "Submission of this form constitutes the candidate's attestation that the information above is accurate.",
+    `Submission of this form constitutes ${sub.candidateName}'s attestation that the information above is accurate.`,
     margin + 4,
     y + 12,
   );
+  if (summary.overallAverage != null) {
+    doc.setFontSize(7);
+    doc.setTextColor(130, 130, 130);
+    doc.text(
+      "The proficiency summary above is a self-reported average across all rated skills, not a validated assessment.",
+      margin + 4,
+      y + 18,
+    );
+  }
 
   const fileName = `${sub.checklistTitle.replace(/[^a-zA-Z0-9]/g, "_")}_${sub.candidateName.replace(/\s+/g, "_")}.pdf`;
   doc.save(fileName);
