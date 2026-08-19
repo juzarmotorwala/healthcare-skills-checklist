@@ -440,7 +440,7 @@ Deno.serve(async (req: Request) => {
         from: "Healthcare Skills Checklist <admin@healthcareskillschecklist.com>",
         to: [candidate.email],
         subject: `Your ${checklistTitle} Submission`,
-        html: `<p>Hi ${candidate.fullName},</p><p>Thanks for completing the <strong>${checklistTitle}</strong> on Healthcare Skills Checklist. A copy of your submission is attached as a PDF — keep it handy for any application.</p><p>— Healthcare Skills Checklist</p>`,
+        html: `<p>Hi ${candidate.fullName},</p><p>Thanks for completing the <strong>${checklistTitle}</strong> on Healthcare Skills Checklist. A copy of your submission is attached as a PDF — keep it handy for any application.</p><p>Stay Blessed !!!<br>HealthcareSkillsChecklist.com</p>`,
         attachments: [{ filename: fileName, content: pdfBase64 }],
       }),
     });
@@ -466,7 +466,7 @@ Deno.serve(async (req: Request) => {
           from: "Healthcare Skills Checklist <admin@healthcareskillschecklist.com>",
           to: [hiringFacilityEmail],
           subject: `${checklistTitle} Submitted by ${candidate.fullName}`,
-          html: `<p>Hi,</p><p><strong>${candidate.fullName}</strong> has completed a self-assessment for <strong>${checklistTitle}</strong> on Healthcare Skills Checklist. The completed checklist is attached as a PDF.</p><p>Contact info: ${candidate.email}${candidate.phone ? " · " + candidate.phone : ""}</p><p>— Healthcare Skills Checklist</p>`,
+          html: `<p>Hi,</p><p><strong>${candidate.fullName}</strong> has completed a self-assessment for <strong>${checklistTitle}</strong> on Healthcare Skills Checklist. The completed checklist is attached as a PDF.</p><p>Contact info: ${candidate.email}${candidate.phone ? " · " + candidate.phone : ""}</p><p>Stay Blessed !!!<br>HealthcareSkillsChecklist.com</p>`,
           attachments: [{ filename: fileName, content: pdfBase64 }],
         }),
       });
