@@ -12,7 +12,7 @@ const proficiencyLabels = ["No Experience", "Need Training", "With Supervision",
 
 interface Skill { name: string }
 interface Category { title: string; skills: Skill[] }
-interface Candidate { fullName: string; email: string; phone: string; city: string; state: string; zipCode?: string }
+interface Candidate { fullName: string; email: string; phone: string; city: string; state: string; zipCode?: string; hiringFacilityEmail?: string }
 interface Payload {
   slug: string;
   checklistTitle: string;
@@ -279,6 +279,11 @@ Deno.serve(async (req: Request) => {
     if (!candidate.state?.trim()) throw new Error("State is required");
     if (!consent) throw new Error("Consent is required to submit");
 
+    const hiringFacilityEmail = candidate.hiringFacilityEmail?.trim() || null;
+    if (hiringFacilityEmail && !emailRegex.test(hiringFacilityEmail)) {
+      throw new Error("Hiring facility email is invalid");
+    }
+
     let totalSkills = 0;
     let ratedSkills = 0;
     for (let catIdx = 0; catIdx < categories.length; catIdx++) {
@@ -337,11 +342,38 @@ Deno.serve(async (req: Request) => {
     const emailOk = emailRes.ok;
     const emailError = emailOk ? null : await emailRes.text();
 
+    // If a hiring facility/agency email was provided, send them a second,
+    // separately-worded copy (this one isn't addressed to the candidate by
+    // name) with the same PDF attached. A failure here never blocks the
+    // candidate's own submission — it's recorded on the row for visibility
+    // in the admin dashboard, but the candidate still gets their PDF either way.
+    let hiringEmailOk: boolean | null = null;
+    let hiringEmailError: string | null = null;
+    if (hiringFacilityEmail) {
+      const hiringEmailRes = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${resendKey}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: "Healthcare Skills Checklist <admin@healthcareskillschecklist.com>",
+          to: [hiringFacilityEmail],
+          subject: `${candidate.fullName} shared their ${checklistTitle} results with you`,
+          html: `<p>Hi,</p><p><strong>${candidate.fullName}</strong> has completed a self-assessment for <strong>${checklistTitle}</strong> on Healthcare Skills Checklist and shared a copy of the results with you. The completed checklist is attached as a PDF.</p><p>Contact info: ${candidate.email}${candidate.phone ? " · " + candidate.phone : ""}</p><p>— Healthcare Skills Checklist</p>`,
+          attachments: [{ filename: fileName, content: pdfBase64 }],
+        }),
+      });
+      hiringEmailOk = hiringEmailRes.ok;
+      hiringEmailError = hiringEmailOk ? null : await hiringEmailRes.text();
+      if (!hiringEmailOk) console.error("Resend error (hiring facility):", hiringEmailError);
+    }
+
     await sql`
       insert into public.submissions
-        (checklist_slug, checklist_title, candidate_name, candidate_email, candidate_phone, candidate_city, candidate_state, candidate_zip, ratings, total_skills, rated_skills, email_sent, email_error, consent_given, consent_at, ip_address)
+        (checklist_slug, checklist_title, candidate_name, candidate_email, candidate_phone, candidate_city, candidate_state, candidate_zip, ratings, total_skills, rated_skills, email_sent, email_error, consent_given, consent_at, ip_address, hiring_facility_email, hiring_email_sent, hiring_email_error)
       values
-        (${slug}, ${checklistTitle}, ${candidate.fullName}, ${candidate.email}, ${candidate.phone}, ${candidate.city}, ${candidate.state}, ${candidate.zipCode?.trim() || null}, ${sql.json(ratings)}, ${totalSkills}, ${ratedSkills}, ${emailOk}, ${emailError}, ${consent}, now(), ${ip})
+        (${slug}, ${checklistTitle}, ${candidate.fullName}, ${candidate.email}, ${candidate.phone}, ${candidate.city}, ${candidate.state}, ${candidate.zipCode?.trim() || null}, ${sql.json(ratings)}, ${totalSkills}, ${ratedSkills}, ${emailOk}, ${emailError}, ${consent}, now(), ${ip}, ${hiringFacilityEmail}, ${hiringEmailOk}, ${hiringEmailError})
     `;
 
     await sql.end();
@@ -350,12 +382,12 @@ Deno.serve(async (req: Request) => {
     if (!emailOk) {
       console.error("Resend error:", emailError);
       return new Response(
-        JSON.stringify({ success: true, emailSent: false, pdfBase64, fileName, error: "Saved, but the email failed to send — you can still download your PDF below." }),
+        JSON.stringify({ success: true, emailSent: false, hiringEmailSent: hiringEmailOk, pdfBase64, fileName, error: "Saved, but the email failed to send — you can still download your PDF below." }),
         { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } },
       );
     }
 
-    return new Response(JSON.stringify({ success: true, emailSent: true, pdfBase64, fileName }), {
+    return new Response(JSON.stringify({ success: true, emailSent: true, hiringEmailSent: hiringEmailOk, pdfBase64, fileName }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   } catch (err) {

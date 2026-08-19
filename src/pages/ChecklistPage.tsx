@@ -30,6 +30,7 @@ export default function ChecklistPage() {
     city: "",
     state: "",
     zipCode: "",
+    hiringFacilityEmail: "",
   });
 
   const [consent, setConsent] = useState(false);
@@ -63,12 +64,17 @@ export default function ChecklistPage() {
 
   const hasContent = checklist.categories.length > 0;
 
+  const hiringEmailValid =
+    candidateInfo.hiringFacilityEmail.trim().length === 0 ||
+    emailRegex.test(candidateInfo.hiringFacilityEmail.trim());
+
   const infoComplete =
     candidateInfo.fullName.trim().length > 0 &&
     emailRegex.test(candidateInfo.email.trim()) &&
     candidateInfo.phone.trim().length >= 7 &&
     candidateInfo.city.trim().length > 0 &&
-    candidateInfo.state.trim().length > 0;
+    candidateInfo.state.trim().length > 0 &&
+    hiringEmailValid;
 
   const totalSkills = checklist.categories.reduce((sum, cat) => sum + cat.skills.length, 0);
   const allRated = totalSkills > 0 && ratedCount === totalSkills;
@@ -168,6 +174,7 @@ export default function ChecklistPage() {
                   {!canSave && (
                     <ul className="text-xs text-muted-foreground mt-1 space-y-0.5">
                       {!infoComplete && <li>• Fill in all of your information</li>}
+                      {!hiringEmailValid && <li>• Enter a valid hiring facility email, or leave it blank</li>}
                       {!allRated && <li>• Rate every skill (select 1–4)</li>}
                       {!consent && <li>• Agree to the Privacy Policy and Terms of Use</li>}
                     </ul>

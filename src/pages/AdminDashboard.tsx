@@ -32,6 +32,8 @@ interface SubmissionRow {
   rated_skills: number;
   email_sent: boolean;
   created_at: string;
+  hiring_facility_email: string | null;
+  hiring_email_sent: boolean | null;
 }
 
 export default function AdminDashboard() {
@@ -201,6 +203,7 @@ export default function AdminDashboard() {
                       <TableHead>Checklist</TableHead>
                       <TableHead>Rated</TableHead>
                       <TableHead>Email</TableHead>
+                      <TableHead>Hiring Facility</TableHead>
                       <TableHead>Submitted</TableHead>
                       <TableHead className="text-right">PDF</TableHead>
                     </TableRow>
@@ -222,6 +225,20 @@ export default function AdminDashboard() {
                             <Badge className="bg-emerald-100 text-emerald-800 hover:bg-emerald-100">Sent</Badge>
                           ) : (
                             <Badge variant="destructive">Failed</Badge>
+                          )}
+                        </TableCell>
+                        <TableCell className="text-xs">
+                          {row.hiring_facility_email ? (
+                            <div className="space-y-1">
+                              <div className="text-muted-foreground">{row.hiring_facility_email}</div>
+                              {row.hiring_email_sent ? (
+                                <Badge className="bg-emerald-100 text-emerald-800 hover:bg-emerald-100">Sent</Badge>
+                              ) : (
+                                <Badge variant="destructive">Failed</Badge>
+                              )}
+                            </div>
+                          ) : (
+                            <span className="text-muted-foreground">—</span>
                           )}
                         </TableCell>
                         <TableCell className="text-xs text-muted-foreground whitespace-nowrap">

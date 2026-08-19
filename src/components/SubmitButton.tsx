@@ -88,12 +88,18 @@ export default function SubmitButton({
         downloadBase64Pdf(data.pdfBase64, data.fileName);
       }
 
+      const hiringEmailSet = candidateInfo.hiringFacilityEmail.trim().length > 0;
+      const hiringNote =
+        hiringEmailSet && data.hiringEmailSent
+          ? ` A copy was also sent to ${candidateInfo.hiringFacilityEmail.trim()}.`
+          : "";
+
       toast({
         title: "Submitted!",
         description:
           data.emailSent === false
             ? "Your PDF downloaded, but the email couldn't be sent. Please save it now."
-            : `A copy has been emailed to ${candidateInfo.email}, and your PDF has downloaded.`,
+            : `A copy has been emailed to ${candidateInfo.email}, and your PDF has downloaded.${hiringNote}`,
       });
     } catch (err) {
       console.error("Submission error:", err);

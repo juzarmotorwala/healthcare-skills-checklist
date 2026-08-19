@@ -17,6 +17,8 @@ export interface SubmissionForExport {
   rated_skills: number;
   email_sent: boolean;
   created_at: string;
+  hiring_facility_email: string | null;
+  hiring_email_sent: boolean | null;
 }
 
 // Builds a two-sheet workbook from the given submissions and triggers a browser download.
@@ -34,6 +36,8 @@ export function downloadSubmissionsExcel(rows: SubmissionForExport[], fileNamePr
     "Rated": row.rated_skills,
     "Total Skills": row.total_skills,
     "Email Sent": row.email_sent ? "Yes" : "No",
+    "Hiring Facility Email": row.hiring_facility_email ?? "",
+    "Hiring Facility Email Sent": row.hiring_facility_email ? (row.hiring_email_sent ? "Yes" : "No") : "",
     "Submitted At": new Date(row.created_at).toLocaleString(),
   }));
 
@@ -64,7 +68,7 @@ export function downloadSubmissionsExcel(rows: SubmissionForExport[], fileNamePr
   summarySheet["!cols"] = [
     { wch: 22 }, { wch: 26 }, { wch: 14 }, { wch: 16 }, { wch: 8 },
     { wch: 30 }, { wch: 8 }, { wch: 12 },
-    { wch: 10 }, { wch: 20 },
+    { wch: 10 }, { wch: 26 }, { wch: 14 }, { wch: 20 },
   ];
   XLSX.utils.book_append_sheet(workbook, summarySheet, "Submissions");
 
