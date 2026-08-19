@@ -1,6 +1,7 @@
 import { jsPDF } from "jspdf";
 import { ChecklistCategory } from "@/data/checklistData";
 import { toTitleCase } from "@/lib/titleCase";
+import { computeProficiencySummary } from "@/lib/proficiencySummary";
 
 const proficiencyLabels = ["No Experience", "Need Training", "With Supervision", "Independent"];
 
@@ -82,6 +83,57 @@ export function downloadSubmissionPdf(sub: SubmissionForPdf) {
     : `${sub.candidateCity}, ${sub.candidateState}`;
   doc.text(`Location: ${location}`, col2, y + 20);
   y += 34;
+
+  // Cumulative self-assessed proficiency summary — an overall average plus a
+  // per-category breakdown, so a recruiter skimming the top of the PDF gets
+  // the gist without reading every line, but still sees where the gaps are
+  // rather than one blended number hiding them.
+  const summary = computeProficiencySummary(sub.categories, sub.ratings);
+  if (summary.overallAverage != null) {
+    checkPage(20);
+    doc.setDrawColor(200, 200, 200);
+    doc.setFillColor(248, 250, 252);
+    doc.roundedRect(margin, y, contentWidth, 18, 2, 2, "FD");
+    doc.setFontSize(10);
+    doc.setFont("helvetica", "bold");
+    doc.setTextColor(30, 60, 90);
+    doc.text("Self-Assessed Proficiency Summary", margin + 4, y + 6);
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(9);
+    doc.setTextColor(60, 60, 60);
+    doc.text(`Overall: ${summary.overallAverage.toFixed(1)} of 4 — ${summary.descriptor}`, margin + 4, y + 13);
+    doc.setFontSize(7);
+    doc.setFont("helvetica", "italic");
+    doc.setTextColor(130, 130, 130);
+    doc.text("Self-reported average across all rated skills — not a validated assessment.", margin + 4, y + 16.5);
+    y += 24;
+
+    checkPage(8);
+    doc.setFontSize(8.5);
+    doc.setFont("helvetica", "bold");
+    doc.setTextColor(100, 100, 100);
+    doc.text("By Category", margin, y);
+    y += 5;
+
+    for (const cat of summary.categories) {
+      doc.setFontSize(8);
+      doc.setFont("helvetica", "normal");
+      const titleText = doc.splitTextToSize(cat.title, contentWidth - 35);
+      const rowHeight = titleText.length > 1 ? titleText.length * 4 : 5;
+      checkPage(rowHeight + 1);
+
+      doc.setTextColor(60, 60, 60);
+      doc.text(titleText, margin + 2, y + 3.5);
+      doc.setTextColor(30, 100, 60);
+      const scoreText = cat.average != null ? `${cat.average.toFixed(1)} / 4` : "—";
+      doc.text(scoreText, margin + contentWidth - 18, y + 3.5);
+
+      doc.setDrawColor(235, 235, 235);
+      doc.line(margin, y + rowHeight, margin + contentWidth, y + rowHeight);
+      y += rowHeight + 1;
+    }
+    y += 5;
+  }
 
   doc.setFontSize(8);
   doc.setTextColor(100, 100, 100);

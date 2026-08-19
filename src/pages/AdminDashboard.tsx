@@ -4,6 +4,7 @@ import { supabase } from "@/lib/supabaseClient";
 import { getChecklistBySlug } from "@/data/checklistData";
 import { downloadSubmissionPdf } from "@/lib/adminPdf";
 import { downloadSubmissionsExcel } from "@/lib/adminExport";
+import { computeProficiencySummary } from "@/lib/proficiencySummary";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -15,7 +16,9 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-import { Download, FileSpreadsheet, LogOut, Search, ShieldAlert, Loader2, ClipboardCheck } from "lucide-react";
+import { Download, FileSpreadsheet, LogOut, Search, ShieldAlert, Loader2, ClipboardCheck, ArrowUp, ArrowDown } from "lucide-react";
+
+type SortField = "created_at" | "overall_average";
 
 interface SubmissionRow {
   id: string;
@@ -43,6 +46,8 @@ export default function AdminDashboard() {
   const [rows, setRows] = useState<SubmissionRow[] | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [search, setSearch] = useState("");
+  const [sortField, setSortField] = useState<SortField>("created_at");
+  const [sortDir, setSortDir] = useState<"asc" | "desc">("desc");
 
   useEffect(() => {
     let mounted = true;
@@ -87,17 +92,52 @@ export default function AdminDashboard() {
       });
   }, [checking]);
 
-  const filtered = useMemo(() => {
+  // Overall self-assessed average per row, computed once per row rather than
+  // per render — needs the checklist's category/skill structure (from the
+  // static data, not the DB) to know which rating keys belong to which
+  // category, same as the PDF regeneration does.
+  const rowsWithOverall = useMemo(() => {
     if (!rows) return [];
+    return rows.map((row) => {
+      const checklist = getChecklistBySlug(row.checklist_slug);
+      const overallAverage = checklist
+        ? computeProficiencySummary(checklist.categories, row.ratings).overallAverage
+        : null;
+      return { ...row, overallAverage };
+    });
+  }, [rows]);
+
+  const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
-    if (!q) return rows;
-    return rows.filter(
-      (r) =>
-        r.candidate_name.toLowerCase().includes(q) ||
-        r.candidate_email.toLowerCase().includes(q) ||
-        r.checklist_title.toLowerCase().includes(q)
-    );
-  }, [rows, search]);
+    const list = q
+      ? rowsWithOverall.filter(
+          (r) =>
+            r.candidate_name.toLowerCase().includes(q) ||
+            r.candidate_email.toLowerCase().includes(q) ||
+            r.checklist_title.toLowerCase().includes(q)
+        )
+      : rowsWithOverall;
+
+    const sorted = [...list].sort((a, b) => {
+      let diff: number;
+      if (sortField === "overall_average") {
+        diff = (a.overallAverage ?? -1) - (b.overallAverage ?? -1);
+      } else {
+        diff = new Date(a.created_at).getTime() - new Date(b.created_at).getTime();
+      }
+      return sortDir === "asc" ? diff : -diff;
+    });
+    return sorted;
+  }, [rowsWithOverall, search, sortField, sortDir]);
+
+  const toggleSort = (field: SortField) => {
+    if (sortField === field) {
+      setSortDir((d) => (d === "asc" ? "desc" : "asc"));
+    } else {
+      setSortField(field);
+      setSortDir(field === "overall_average" ? "desc" : "desc");
+    }
+  };
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
@@ -202,9 +242,30 @@ export default function AdminDashboard() {
                       <TableHead>Candidate</TableHead>
                       <TableHead>Checklist</TableHead>
                       <TableHead>Rated</TableHead>
+                      <TableHead>
+                        <button
+                          onClick={() => toggleSort("overall_average")}
+                          className="inline-flex items-center gap-1 hover:text-foreground transition-colors"
+                        >
+                          Overall
+                          {sortField === "overall_average" && (
+                            sortDir === "asc" ? <ArrowUp className="h-3 w-3" /> : <ArrowDown className="h-3 w-3" />
+                          )}
+                        </button>
+                      </TableHead>
                       <TableHead>Email</TableHead>
                       <TableHead>Hiring Facility</TableHead>
-                      <TableHead>Submitted</TableHead>
+                      <TableHead>
+                        <button
+                          onClick={() => toggleSort("created_at")}
+                          className="inline-flex items-center gap-1 hover:text-foreground transition-colors"
+                        >
+                          Submitted
+                          {sortField === "created_at" && (
+                            sortDir === "asc" ? <ArrowUp className="h-3 w-3" /> : <ArrowDown className="h-3 w-3" />
+                          )}
+                        </button>
+                      </TableHead>
                       <TableHead className="text-right">PDF</TableHead>
                     </TableRow>
                   </TableHeader>
@@ -219,6 +280,9 @@ export default function AdminDashboard() {
                         <TableCell className="text-sm">{row.checklist_title}</TableCell>
                         <TableCell className="text-sm">
                           {row.rated_skills}/{row.total_skills}
+                        </TableCell>
+                        <TableCell className="text-sm font-medium">
+                          {row.overallAverage != null ? `${row.overallAverage.toFixed(1)} / 4` : "—"}
                         </TableCell>
                         <TableCell>
                           {row.email_sent ? (

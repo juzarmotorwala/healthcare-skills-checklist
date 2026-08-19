@@ -92,6 +92,54 @@ function toTitleCase(input: string): string {
     .join(" ");
 }
 
+// Cumulative self-assessed proficiency summary (kept in sync with
+// src/lib/proficiencySummary.ts — this edge function is deployed standalone
+// and cannot import from the repo). Computes an overall average plus a
+// per-category average from the same ratings map used for the detail table.
+interface CategoryProficiency { title: string; average: number | null }
+interface ProficiencySummary { overallAverage: number | null; categories: CategoryProficiency[]; descriptor: string }
+
+const DESCRIPTORS: Array<[number, string]> = [
+  [3.5, "Independent across most skills"],
+  [2.5, "Mostly independent, occasional supervision needed"],
+  [1.5, "Developing — needs supervision or training in several areas"],
+  [0, "New to this specialty — needs training in most areas"],
+];
+
+function describeAverage(avg: number): string {
+  for (const [threshold, label] of DESCRIPTORS) {
+    if (avg >= threshold) return label;
+  }
+  return DESCRIPTORS[DESCRIPTORS.length - 1][1];
+}
+
+function computeProficiencySummary(categories: Category[], ratings: Record<string, number | null | undefined>): ProficiencySummary {
+  let overallSum = 0;
+  let overallRated = 0;
+
+  const categorySummaries: CategoryProficiency[] = categories.map((category, catIdx) => {
+    let sum = 0;
+    let rated = 0;
+    category.skills.forEach((_, skillIdx) => {
+      const r = ratings[`${catIdx}:${skillIdx}`];
+      if (r != null) {
+        sum += r;
+        rated++;
+        overallSum += r;
+        overallRated++;
+      }
+    });
+    return { title: category.title, average: rated > 0 ? sum / rated : null };
+  });
+
+  const overallAverage = overallRated > 0 ? overallSum / overallRated : null;
+  return {
+    overallAverage,
+    categories: categorySummaries,
+    descriptor: overallAverage != null ? describeAverage(overallAverage) : "Not yet rated",
+  };
+}
+
 function uint8ToBase64(bytes: Uint8Array): string {
   let binary = "";
   const chunkSize = 0x8000;
@@ -162,6 +210,57 @@ function buildPdf(payload: Payload): Uint8Array {
     : `${candidate.city}, ${candidate.state}`;
   doc.text(`Location: ${location}`, col2, y + 20);
   y += 34;
+
+  // Cumulative self-assessed proficiency summary — an overall average plus a
+  // per-category breakdown, so a recruiter skimming the top of the PDF gets
+  // the gist without reading every line, but still sees where the gaps are
+  // rather than one blended number hiding them.
+  const summary = computeProficiencySummary(categories, ratings);
+  if (summary.overallAverage != null) {
+    checkPage(20);
+    doc.setDrawColor(200, 200, 200);
+    doc.setFillColor(248, 250, 252);
+    doc.roundedRect(margin, y, contentWidth, 18, 2, 2, "FD");
+    doc.setFontSize(10);
+    doc.setFont("helvetica", "bold");
+    doc.setTextColor(30, 60, 90);
+    doc.text("Self-Assessed Proficiency Summary", margin + 4, y + 6);
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(9);
+    doc.setTextColor(60, 60, 60);
+    doc.text(`Overall: ${summary.overallAverage.toFixed(1)} of 4 — ${summary.descriptor}`, margin + 4, y + 13);
+    doc.setFontSize(7);
+    doc.setFont("helvetica", "italic");
+    doc.setTextColor(130, 130, 130);
+    doc.text("Self-reported average across all rated skills — not a validated assessment.", margin + 4, y + 16.5);
+    y += 24;
+
+    checkPage(8);
+    doc.setFontSize(8.5);
+    doc.setFont("helvetica", "bold");
+    doc.setTextColor(100, 100, 100);
+    doc.text("By Category", margin, y);
+    y += 5;
+
+    for (const cat of summary.categories) {
+      doc.setFontSize(8);
+      doc.setFont("helvetica", "normal");
+      const titleText = doc.splitTextToSize(cat.title, contentWidth - 35);
+      const rowHeight = titleText.length > 1 ? titleText.length * 4 : 5;
+      checkPage(rowHeight + 1);
+
+      doc.setTextColor(60, 60, 60);
+      doc.text(titleText, margin + 2, y + 3.5);
+      doc.setTextColor(30, 100, 60);
+      const scoreText = cat.average != null ? `${cat.average.toFixed(1)} / 4` : "—";
+      doc.text(scoreText, margin + contentWidth - 18, y + 3.5);
+
+      doc.setDrawColor(235, 235, 235);
+      doc.line(margin, y + rowHeight, margin + contentWidth, y + rowHeight);
+      y += rowHeight + 1;
+    }
+    y += 5;
+  }
 
   doc.setFontSize(8);
   doc.setTextColor(100, 100, 100);

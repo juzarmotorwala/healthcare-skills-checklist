@@ -1,5 +1,6 @@
 import * as XLSX from "xlsx";
 import { getChecklistBySlug } from "@/data/checklistData";
+import { computeProficiencySummary } from "@/lib/proficiencySummary";
 
 const proficiencyLabels = ["No Experience", "Need Training", "With Supervision", "Independent"];
 
@@ -25,21 +26,28 @@ export interface SubmissionForExport {
 // Sheet 1 ("Submissions") is one row per candidate — matches what's shown in the admin table.
 // Sheet 2 ("Skill Ratings") is one row per skill rating, so category/skill-level detail isn't lost.
 export function downloadSubmissionsExcel(rows: SubmissionForExport[], fileNamePrefix = "skills_checklist_submissions") {
-  const summarySheetData = rows.map((row) => ({
-    "Candidate Name": row.candidate_name,
-    "Email": row.candidate_email,
-    "Phone": row.candidate_phone,
-    "City": row.candidate_city,
-    "State": row.candidate_state,
-    "Zip": row.candidate_zip ?? "",
-    "Checklist": row.checklist_title,
-    "Rated": row.rated_skills,
-    "Total Skills": row.total_skills,
-    "Email Sent": row.email_sent ? "Yes" : "No",
-    "Hiring Facility Email": row.hiring_facility_email ?? "",
-    "Hiring Facility Email Sent": row.hiring_facility_email ? (row.hiring_email_sent ? "Yes" : "No") : "",
-    "Submitted At": new Date(row.created_at).toLocaleString(),
-  }));
+  const summarySheetData = rows.map((row) => {
+    const checklist = getChecklistBySlug(row.checklist_slug);
+    const overallAverage = checklist
+      ? computeProficiencySummary(checklist.categories, row.ratings).overallAverage
+      : null;
+    return {
+      "Candidate Name": row.candidate_name,
+      "Email": row.candidate_email,
+      "Phone": row.candidate_phone,
+      "City": row.candidate_city,
+      "State": row.candidate_state,
+      "Zip": row.candidate_zip ?? "",
+      "Checklist": row.checklist_title,
+      "Rated": row.rated_skills,
+      "Total Skills": row.total_skills,
+      "Overall Proficiency (of 4)": overallAverage != null ? Number(overallAverage.toFixed(2)) : "",
+      "Email Sent": row.email_sent ? "Yes" : "No",
+      "Hiring Facility Email": row.hiring_facility_email ?? "",
+      "Hiring Facility Email Sent": row.hiring_facility_email ? (row.hiring_email_sent ? "Yes" : "No") : "",
+      "Submitted At": new Date(row.created_at).toLocaleString(),
+    };
+  });
 
   const detailSheetData: Record<string, string | number>[] = [];
   for (const row of rows) {
@@ -67,7 +75,7 @@ export function downloadSubmissionsExcel(rows: SubmissionForExport[], fileNamePr
   const summarySheet = XLSX.utils.json_to_sheet(summarySheetData);
   summarySheet["!cols"] = [
     { wch: 22 }, { wch: 26 }, { wch: 14 }, { wch: 16 }, { wch: 8 },
-    { wch: 30 }, { wch: 8 }, { wch: 12 },
+    { wch: 30 }, { wch: 8 }, { wch: 12 }, { wch: 18 },
     { wch: 10 }, { wch: 26 }, { wch: 14 }, { wch: 20 },
   ];
   XLSX.utils.book_append_sheet(workbook, summarySheet, "Submissions");
