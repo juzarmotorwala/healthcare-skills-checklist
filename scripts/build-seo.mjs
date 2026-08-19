@@ -58,6 +58,23 @@ function pageFor({ title, description, url }) {
 
 const urls = [{ loc: `${siteUrl}/`, priority: "1.0" }];
 
+// Keep the homepage's meta description in sync with the live specialty count
+// shown in the hero (see src/pages/Index.tsx's `displayedTotal`, which uses
+// the same floor-to-nearest-5 math) so the two never drift out of sync as
+// checklists are added.
+const displayedTotal = Math.floor(checklists.length / 5) * 5;
+const homeDescription = `Helping healthcare professionals self-assess their skills across ${displayedTotal}+ clinical specialties. Rate your experience and download a clean PDF for free.`;
+let homeHtml = template;
+homeHtml = homeHtml.replace(
+  /<meta name="description" content=".*?" \/>/,
+  `<meta name="description" content="${escapeHtml(homeDescription)}" />`,
+);
+homeHtml = homeHtml.replace(
+  /<meta property="og:description" content=".*?" \/>/,
+  `<meta property="og:description" content="${escapeHtml(homeDescription)}" />`,
+);
+await writeFile(path.join(distDir, "index.html"), homeHtml);
+
 for (const c of checklists) {
   if (!c.categories?.length) continue; // skip "coming soon" checklists — nothing to index yet
   const dir = path.join(distDir, "checklist", c.slug);

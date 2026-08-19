@@ -6,7 +6,6 @@ import { Input } from "@/components/ui/input";
 import { usePageMeta } from "@/hooks/use-page-meta";
 
 export default function Index() {
-  usePageMeta();
   const [search, setSearch] = useState("");
 
   const filteredByGroup = specialtyGroups.map(group => ({
@@ -19,6 +18,14 @@ export default function Index() {
 
   const totalChecklists = checklists.length;
   const displayedTotal = Math.floor(totalChecklists / 5) * 5;
+
+  // Mirrors the resonating copy baked into the homepage at build time (see
+  // scripts/build-seo.mjs) so a client-side navigation back to "/" shows the
+  // same live count instead of a generic fallback.
+  usePageMeta(
+    undefined,
+    `Helping healthcare professionals self-assess their skills across ${displayedTotal}+ clinical specialties. Rate your experience and download a clean PDF for free.`,
+  );
 
   return (
     <div className="min-h-screen bg-background">
