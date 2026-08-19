@@ -3,8 +3,10 @@ import { useState } from "react";
 import { checklists, specialtyGroups, getChecklistsByGroup } from "@/data/checklistData";
 import { Search, ArrowRight, ClipboardCheck, ListChecks, FileDown } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 export default function Index() {
+  usePageMeta();
   const [search, setSearch] = useState("");
 
   const filteredByGroup = specialtyGroups.map(group => ({

@@ -1,4 +1,5 @@
 import { useState, useRef, useCallback } from "react";
+import { usePageMeta } from "@/hooks/use-page-meta";
 import { useParams, Link } from "react-router-dom";
 import { getChecklistBySlug } from "@/data/checklistData";
 import ChecklistTable, { ChecklistTableHandle } from "@/components/ChecklistTable";
@@ -14,6 +15,13 @@ export default function ChecklistPage() {
   const { slug } = useParams<{ slug: string }>();
   const checklist = slug ? getChecklistBySlug(slug) : undefined;
   const tableRef = useRef<ChecklistTableHandle>(null);
+
+  usePageMeta(
+    checklist?.title,
+    checklist
+      ? `Free self-assessment checklist for ${checklist.shortTitle}. Rate your skills, download a PDF, and use it wherever you apply.`
+      : undefined,
+  );
 
   const [candidateInfo, setCandidateInfo] = useState<CandidateInfo>({
     fullName: "",
