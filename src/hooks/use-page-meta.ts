@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 const DEFAULT_TITLE = "Healthcare Skills Checklist";
 const DEFAULT_DESCRIPTION =
-  "Free self-assessment checklists for healthcare professionals. Rate your skills, download a PDF, and use it wherever you apply.";
+  "Self-assessment checklists for healthcare professionals. Rate your skills, download a PDF, and use it wherever you apply.";
 
 function setMetaContent(selector: string, content: string) {
   const el = document.head.querySelector<HTMLMetaElement>(selector);

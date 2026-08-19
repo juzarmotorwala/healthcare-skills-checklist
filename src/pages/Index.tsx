@@ -29,10 +29,11 @@ export default function Index() {
           <h1 className="text-3xl sm:text-5xl font-serif font-semibold text-primary tracking-normal mb-4">
             Healthcare Skills Checklist
           </h1>
+          <p className="text-lg sm:text-2xl font-medium text-emerald-700 mb-3">
+            Helping Healthcare Professionals Self-Assess Their Skills
+          </p>
           <p className="text-muted-foreground max-w-lg mx-auto mb-8 text-sm sm:text-base leading-relaxed">
-            Free, self-assessment checklists across {displayedTotal}+ clinical specialties.
-            <br />
-            Rate your experience and download a clean PDF.
+            Rate your experience across {displayedTotal}+ Clinical Specialties and download a clean PDF for free.
           </p>
 
           {/* Search */}
