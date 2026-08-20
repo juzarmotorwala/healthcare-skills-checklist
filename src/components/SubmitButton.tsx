@@ -20,6 +20,10 @@ interface SubmitButtonProps {
   consent: boolean;
   website: string;
   onSubmitted?: () => void;
+  // Called instead of submitting when the form isn't ready yet — scrolls to
+  // and highlights whatever's actually missing, so a candidate doesn't have
+  // to guess why a grayed-out button won't respond.
+  onIncomplete?: () => void;
 }
 
 function downloadBase64Pdf(base64: string, fileName: string) {
@@ -50,6 +54,7 @@ export default function SubmitButton({
   consent,
   website,
   onSubmitted,
+  onIncomplete,
 }: SubmitButtonProps) {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -138,10 +143,11 @@ export default function SubmitButton({
 
   return (
     <Button
-      onClick={handleSubmit}
-      disabled={disabled || loading}
+      onClick={disabled ? onIncomplete : handleSubmit}
+      disabled={loading}
+      aria-disabled={disabled}
       size="lg"
-      className="w-full sm:w-auto"
+      className={`w-full sm:w-auto ${disabled ? "opacity-50" : ""}`}
     >
       {loading ? (
         <Loader2 className="mr-2 h-4 w-4 animate-spin" />

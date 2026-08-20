@@ -73,13 +73,15 @@ export default function ChecklistPage() {
 
   const phoneValid = phoneRegex.test(candidateInfo.phone.trim());
 
-  const yearsExperienceValid =
+  const yearsTotalValid =
     candidateInfo.yearsExperienceTotal.trim().length > 0 &&
     !Number.isNaN(Number(candidateInfo.yearsExperienceTotal)) &&
-    Number(candidateInfo.yearsExperienceTotal) >= 0 &&
+    Number(candidateInfo.yearsExperienceTotal) >= 0;
+  const yearsSpecialtyValid =
     candidateInfo.yearsExperienceSpecialty.trim().length > 0 &&
     !Number.isNaN(Number(candidateInfo.yearsExperienceSpecialty)) &&
     Number(candidateInfo.yearsExperienceSpecialty) >= 0;
+  const yearsExperienceValid = yearsTotalValid && yearsSpecialtyValid;
 
   const infoComplete =
     candidateInfo.fullName.trim().length > 0 &&
@@ -95,6 +97,46 @@ export default function ChecklistPage() {
   const allRated = totalSkills > 0 && ratedCount === totalSkills;
 
   const canSave = infoComplete && allRated && consent;
+
+  // Briefly rings a field/section so a candidate can see exactly what's
+  // flagged, rather than just being told something's missing.
+  const flash = (id: string) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.scrollIntoView({ behavior: "smooth", block: "center" });
+    el.focus?.();
+    el.classList.add("ring-2", "ring-amber-400", "rounded-md");
+    setTimeout(() => el.classList.remove("ring-2", "ring-amber-400", "rounded-md"), 2500);
+  };
+
+  // Walks the same checks as `canSave`, in the order the fields appear on
+  // the page, and jumps to the first one that's actually wrong — so a
+  // grayed-out submit button tells a candidate exactly what to fix instead
+  // of leaving them to guess (we won't be there to walk them through it).
+  const scrollToFirstIssue = () => {
+    const fieldIssues: Array<[boolean, string]> = [
+      [candidateInfo.fullName.trim().length === 0, "fullName"],
+      [!emailRegex.test(candidateInfo.email.trim()), "email"],
+      [!phoneValid, "phone"],
+      [candidateInfo.city.trim().length === 0, "city"],
+      [candidateInfo.state.trim().length === 0, "state"],
+      [candidateInfo.zipCode.trim().length === 0, "zipCode"],
+      [!yearsTotalValid, "yearsExperienceTotal"],
+      [!yearsSpecialtyValid, "yearsExperienceSpecialty"],
+      [!hiringEmailValid, "hiringFacilityEmail"],
+    ];
+    const firstFieldIssue = fieldIssues.find(([broken]) => broken);
+    if (firstFieldIssue) {
+      flash(firstFieldIssue[1]);
+      return;
+    }
+    if (!allRated && tableRef.current?.scrollToFirstUnrated()) {
+      return;
+    }
+    if (!consent) {
+      flash("consent");
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
@@ -207,6 +249,7 @@ export default function ChecklistPage() {
                   consent={consent}
                   website={website}
                   onSubmitted={() => tableRef.current?.clearSavedProgress()}
+                  onIncomplete={scrollToFirstIssue}
                 />
               </div>
             </div>

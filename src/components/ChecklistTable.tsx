@@ -32,6 +32,10 @@ export interface ChecklistTableHandle {
   // Called after a successful submission so saved progress doesn't linger
   // in localStorage on a shared/public computer.
   clearSavedProgress: () => void;
+  // Expands the category (if collapsed) containing the first unrated skill,
+  // scrolls to it, and briefly highlights it — so a candidate stuck on
+  // "rate every skill" can see exactly what's missing without guessing.
+  scrollToFirstUnrated: () => boolean;
 }
 
 const proficiencyLabels = [
@@ -65,6 +69,8 @@ const ChecklistTable = forwardRef<ChecklistTableHandle, ChecklistTableProps>(
       () => loadRatings(slug, totalSkills) ?? {}
     );
     const [collapsed, setCollapsed] = useState<Record<number, boolean>>({});
+    // Briefly highlighted after scrollToFirstUnrated locates a missing skill.
+    const [highlightedKey, setHighlightedKey] = useState<string | null>(null);
 
     const ratedSkills = Object.values(ratings).filter(v => v !== null && v !== undefined).length;
     const progressPercent = totalSkills > 0 ? Math.round((ratedSkills / totalSkills) * 100) : 0;
@@ -88,21 +94,51 @@ const ChecklistTable = forwardRef<ChecklistTableHandle, ChecklistTableProps>(
       getTotalSkills: () => totalSkills,
       getRatedCount: () => ratedSkills,
       clearSavedProgress: () => clearRatings(slug),
+      scrollToFirstUnrated: () => {
+        for (let catIdx = 0; catIdx < categories.length; catIdx++) {
+          const cat = categories[catIdx];
+          for (let skillIdx = 0; skillIdx < cat.skills.length; skillIdx++) {
+            const key = skillKey(catIdx, skillIdx);
+            if (ratings[key] == null) {
+              setCollapsed(prev => (prev[catIdx] ? { ...prev, [catIdx]: false } : prev));
+              setHighlightedKey(key);
+              // Let the category expand (if it was collapsed) before scrolling,
+              // otherwise the target row isn't in the DOM yet.
+              requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                  document
+                    .getElementById(`skill-${key}`)
+                    ?.scrollIntoView({ behavior: "smooth", block: "center" });
+                });
+              });
+              setTimeout(() => {
+                setHighlightedKey(prev => (prev === key ? null : prev));
+              }, 2500);
+              return true;
+            }
+          }
+        }
+        return false;
+      },
     }));
 
     const toggleCategory = (catIdx: number) => {
       setCollapsed(prev => ({ ...prev, [catIdx]: !prev[catIdx] }));
     };
 
+    // Always sets the clicked value — earlier versions toggled a rating back
+    // to null if the same button was clicked twice, meant as a quiet "undo".
+    // In practice a candidate could trigger that unintentionally (an
+    // impatient re-tap, a double-click) and lose a rating with no visible
+    // cause, leaving "missing information" on submit with no way for them to
+    // know why. Removing the toggle removes that failure mode entirely.
     const setRating = (key: string, value: number) => {
-      const next = {
-        ...ratings,
-        [key]: ratings[key] === value ? null : value,
-      };
+      const next = { ...ratings, [key]: value };
       setRatings(next);
       saveRatings(slug, totalSkills, next);
       const nextRatedCount = Object.values(next).filter(v => v !== null && v !== undefined).length;
       onRatingChange?.(nextRatedCount);
+      if (highlightedKey === key) setHighlightedKey(null);
     };
 
     const allRated = ratedSkills === totalSkills && totalSkills > 0;
@@ -187,12 +223,16 @@ const ChecklistTable = forwardRef<ChecklistTableHandle, ChecklistTableProps>(
                   </div>
                   {category.skills.map((skill, skillIdx) => {
                     const key = skillKey(catIdx, skillIdx);
+                    const isHighlighted = highlightedKey === key;
                     return (
                       <div
                         key={key}
-                        className={`grid grid-cols-1 sm:grid-cols-[1fr_repeat(4,3rem)] gap-1 px-4 py-3 items-center ${
-                          skillIdx % 2 === 0 ? "bg-card" : "bg-muted/20"
-                        } hover:bg-accent/30 transition-colors`}
+                        id={`skill-${key}`}
+                        className={`grid grid-cols-1 sm:grid-cols-[1fr_repeat(4,3rem)] gap-1 px-4 py-3 items-center transition-colors ${
+                          isHighlighted
+                            ? "ring-2 ring-amber-400 bg-amber-50 dark:bg-amber-950/30"
+                            : `${skillIdx % 2 === 0 ? "bg-card" : "bg-muted/20"} hover:bg-accent/30`
+                        }`}
                       >
                         <span className="text-base font-medium text-foreground">{toTitleCase(skill.name)}</span>
                         <div className="flex sm:contents gap-2 mt-1.5 sm:mt-0">
