@@ -1,5 +1,7 @@
 import postgres from "npm:postgres";
 import { jsPDF } from "npm:jspdf@2.5.2";
+import { poppinsBoldBase64 } from "./fonts/poppinsBold.ts";
+import { montserratSemiBoldItalicBase64 } from "./fonts/montserratSemiBoldItalic.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -175,17 +177,25 @@ function buildPdf(payload: Payload): Uint8Array {
     }
   };
 
+  // Brand fonts (Poppins Bold for the domain name, Montserrat SemiBold
+  // Italic for the tagline) are embedded here since jsPDF only ships the
+  // 14 core PDF fonts by default.
+  doc.addFileToVFS("Poppins-Bold.ttf", poppinsBoldBase64);
+  doc.addFont("Poppins-Bold.ttf", "Poppins", "bold");
+  doc.addFileToVFS("Montserrat-SemiBoldItalic.ttf", montserratSemiBoldItalicBase64);
+  doc.addFont("Montserrat-SemiBoldItalic.ttf", "Montserrat", "italic");
+
   // Brand line is the dominant visual element on the page — bigger, bolder,
   // and in brand blue — since this PDF is the primary thing candidates keep
   // and share, and it should read as ours at a glance.
   doc.setFontSize(20);
-  doc.setFont("helvetica", "bold");
+  doc.setFont("Poppins", "bold");
   doc.setTextColor(30, 60, 90);
   doc.text("HealthcareSkillsChecklist.com", margin, y);
   y += 6;
-  doc.setFontSize(8.5);
-  doc.setFont("helvetica", "italic");
-  doc.setTextColor(120, 120, 120);
+  doc.setFontSize(9.5);
+  doc.setFont("Montserrat", "italic");
+  doc.setTextColor(4, 120, 87);
   doc.text("Helping Healthcare Professionals Self-Assess Their Skills", margin, y);
   y += 10;
 
