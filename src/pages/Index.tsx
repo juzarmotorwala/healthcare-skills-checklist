@@ -32,7 +32,7 @@ export default function Index() {
       {/* Hero */}
       <header className="relative overflow-hidden border-b">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
-        <div className="relative max-w-6xl mx-auto px-4 py-10 sm:py-14 text-center">
+        <div className="relative max-w-6xl mx-auto px-4 pt-6 pb-6 sm:pt-8 sm:pb-8 text-center">
           <h1 className="text-3xl sm:text-5xl font-serif font-semibold text-primary tracking-normal mb-4">
             Healthcare Skills Checklist
           </h1>
@@ -58,7 +58,7 @@ export default function Index() {
 
       {/* How it works */}
       <section className="border-b bg-card/40">
-        <div className="max-w-6xl mx-auto px-4 py-6">
+        <div className="max-w-6xl mx-auto px-4 py-4">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
             <div className="space-y-2">
               <div className="mx-auto h-9 w-9 rounded-full bg-primary/10 flex items-center justify-center">
