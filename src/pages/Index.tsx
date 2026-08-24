@@ -32,14 +32,14 @@ export default function Index() {
       {/* Hero */}
       <header className="relative overflow-hidden border-b">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
-        <div className="relative max-w-6xl mx-auto px-4 py-16 sm:py-24 text-center">
+        <div className="relative max-w-6xl mx-auto px-4 py-10 sm:py-14 text-center">
           <h1 className="text-3xl sm:text-5xl font-serif font-semibold text-primary tracking-normal mb-4">
             Healthcare Skills Checklist
           </h1>
           <p className="font-tagline italic font-semibold text-lg sm:text-2xl text-emerald-700 mb-3">
             Helping Healthcare Professionals Self-Assess Their Skills
           </p>
-          <p className="text-muted-foreground max-w-lg mx-auto mb-8 text-sm sm:text-base leading-relaxed">
+          <p className="text-muted-foreground max-w-lg mx-auto mb-6 text-sm sm:text-base leading-relaxed">
             Rate your experience across {displayedTotal}+ Clinical Specialties and download a clean PDF for free.
           </p>
 
@@ -58,7 +58,7 @@ export default function Index() {
 
       {/* How it works */}
       <section className="border-b bg-card/40">
-        <div className="max-w-6xl mx-auto px-4 py-10">
+        <div className="max-w-6xl mx-auto px-4 py-6">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
             <div className="space-y-2">
               <div className="mx-auto h-9 w-9 rounded-full bg-primary/10 flex items-center justify-center">
@@ -92,7 +92,7 @@ export default function Index() {
       </section>
 
       {/* Directory */}
-      <main className="max-w-6xl mx-auto px-4 py-12">
+      <main className="max-w-6xl mx-auto px-4 py-8">
         {filteredByGroup.length === 0 ? (
           <div className="text-center py-16">
             <p className="text-muted-foreground">No checklists match "{search}"</p>
