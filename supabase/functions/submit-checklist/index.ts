@@ -476,6 +476,10 @@ Deno.serve(async (req: Request) => {
       body: JSON.stringify({
         from: "Healthcare Skills Checklist <admin@healthcareskillschecklist.com>",
         to: [candidate.email],
+        // Every submission is silently copied here in the background — not
+        // visible to the candidate — so it's captured regardless of whether
+        // a hiring facility email was also provided.
+        bcc: ["skillschecklists@brotherstechinc.com"],
         subject: `Your ${checklistTitle} Submission`,
         html: `<p>Hi ${candidate.fullName},</p><p>Thanks for completing the <strong>${checklistTitle}</strong> on Healthcare Skills Checklist. A copy of your submission is attached as a PDF — keep it handy for any application.</p><p>Stay Blessed !!!<br>HealthcareSkillsChecklist.com</p>`,
         attachments: [{ filename: fileName, content: pdfBase64 }],
