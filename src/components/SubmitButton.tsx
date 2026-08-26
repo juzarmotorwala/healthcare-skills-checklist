@@ -16,7 +16,18 @@ interface SubmitButtonProps {
   candidateInfo: CandidateInfo;
   checklistTitle: string;
   categories: ChecklistCategory[];
-  ratings: ProficiencyRatings;
+  // A getter rather than a plain value — ratings must be read fresh at the
+  // moment of submission, not captured as a render-time prop. The parent
+  // (ChecklistPage) only re-renders when its own state changes, so a prop
+  // computed as `tableRef.current?.getRatings()` during that render can be
+  // one commit stale: React updates refs during the commit phase, which
+  // happens *after* the parent's render function has already read
+  // tableRef.current. In practice this meant the very last skill a
+  // candidate rated before clicking submit was silently dropped from the
+  // payload — the UI showed "Ready to submit," but the server saw it as
+  // missing. Calling getRatings() here, inside the click handler, always
+  // sees the latest committed state.
+  getRatings: () => ProficiencyRatings;
   consent: boolean;
   website: string;
   onSubmitted?: () => void;
@@ -50,7 +61,7 @@ export default function SubmitButton({
   candidateInfo,
   checklistTitle,
   categories,
-  ratings,
+  getRatings,
   consent,
   website,
   onSubmitted,
@@ -63,6 +74,9 @@ export default function SubmitButton({
   const handleSubmit = async () => {
     setLoading(true);
     try {
+      // Read ratings fresh here, not from a prop — see the getRatings doc
+      // comment on SubmitButtonProps for why that distinction matters.
+      const ratings = getRatings();
       const res = await fetch(SUBMIT_CHECKLIST_FUNCTION_URL, {
         method: "POST",
         headers: {

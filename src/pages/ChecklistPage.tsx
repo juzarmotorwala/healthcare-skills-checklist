@@ -245,7 +245,7 @@ export default function ChecklistPage() {
                   candidateInfo={candidateInfo}
                   checklistTitle={checklist.title}
                   categories={checklist.categories}
-                  ratings={tableRef.current?.getRatings() ?? {}}
+                  getRatings={() => tableRef.current?.getRatings() ?? {}}
                   consent={consent}
                   website={website}
                   onSubmitted={() => tableRef.current?.clearSavedProgress()}
