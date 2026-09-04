@@ -13,6 +13,18 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const phoneRegex = /^\d{3}-\d{3}-\d{4}$/;
 const proficiencyLabels = ["No Experience", "Need Training", "With Supervision", "Independent"];
 
+// The edge function runtime defaults to UTC, so a bare `new Date().toLocaleString()`
+// silently rendered a UTC time with no label — confusing for a candidate checking it
+// against their own local clock. Format explicitly in Eastern time (the business's
+// home timezone) with the zone abbreviation shown, so the PDF timestamp is unambiguous
+// no matter where the candidate is reading it from.
+function formatTimestampEastern(date: Date): string {
+  return date.toLocaleString("en-US", {
+    timeZone: "America/New_York",
+    timeZoneName: "short",
+  });
+}
+
 interface Skill { name: string }
 interface Category { title: string; skills: Skill[] }
 interface Candidate {
@@ -209,7 +221,7 @@ function buildPdf(payload: Payload): Uint8Array {
   doc.setFontSize(8);
   doc.setFont("helvetica", "normal");
   doc.setTextColor(120, 120, 120);
-  doc.text(`Generated: ${new Date().toLocaleString()}`, margin, y);
+  doc.text(`Generated: ${formatTimestampEastern(new Date())}`, margin, y);
   y += 10;
 
   const hasExperience = candidate.yearsExperienceTotal?.trim() || candidate.yearsExperienceSpecialty?.trim();
@@ -344,7 +356,7 @@ function buildPdf(payload: Payload): Uint8Array {
 
   checkPage(26);
   y += 8;
-  const submittedAt = new Date().toLocaleString();
+  const submittedAt = formatTimestampEastern(new Date());
   const footerHeight = summary.overallAverage != null ? 22 : 16;
   doc.setDrawColor(200, 200, 200);
   doc.setFillColor(248, 250, 252);
