@@ -8,7 +8,7 @@
 import { build } from "esbuild";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
@@ -26,7 +26,12 @@ const bundled = await build({
 });
 const tempModulePath = path.join(root, "scripts/.checklist-data.mjs");
 await writeFile(tempModulePath, bundled.outputFiles[0].text);
-const { checklists } = await import(`${tempModulePath}?t=${Date.now()}`);
+// Use a proper file:// URL rather than the raw filesystem path — on Windows,
+// Node's ESM loader rejects bare "D:\..." paths passed to import() (it reads
+// the drive letter as an unsupported URL scheme), so this needs pathToFileURL
+// to work cross-platform.
+const tempModuleUrl = pathToFileURL(tempModulePath).href;
+const { checklists } = await import(`${tempModuleUrl}?t=${Date.now()}`);
 
 const template = await readFile(path.join(distDir, "index.html"), "utf-8");
 

@@ -542,4 +542,136 @@ export const newAdditionsChecklists: ChecklistSpec[] = [
       { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
     ]},
   ]},
+
+  { slug: "medical-surgical-rn", title: "Medical/Surgical Registered Nurse Skills Checklist", shortTitle: "RN – Med/Surg", icon: "🧑‍⚕️", group: "Nursing", categories: [
+    { title: "Patient Assessment & Monitoring", skills: [
+      { name: "Head-to-Toe Physical Assessment" }, { name: "Vital Signs Monitoring and Trending" }, { name: "Pain Assessment and Reassessment" }, { name: "Neurological Checks" }, { name: "Intake and Output Monitoring" }, { name: "Fall Risk Assessment" }, { name: "Skin/Braden Scale Assessment" }, { name: "Early Warning Score Recognition and Rapid Response Activation" }, { name: "Focused Reassessment After Interventions" },
+    ]},
+    { title: "Care of Patient With", skills: [
+      { name: "Pneumonia" }, { name: "COPD Exacerbation" }, { name: "Congestive Heart Failure" }, { name: "Diabetes/Hyperglycemia Management" }, { name: "Sepsis (Non-ICU Level)" }, { name: "Post-Operative Recovery" }, { name: "Cellulitis" }, { name: "GI Bleed (Stable)" }, { name: "Acute Kidney Injury" }, { name: "Urinary Tract Infection" }, { name: "Stroke/TIA (Stable)" }, { name: "DVT/PE Management" },
+    ]},
+    { title: "Medication Administration", skills: [
+      { name: "Oral Medication Administration" }, { name: "IV Push Medications" }, { name: "IV Piggyback/Continuous Infusions" }, { name: "Subcutaneous Injections" }, { name: "Pain Management via PCA Pumps" }, { name: "Insulin Administration and Sliding Scale" }, { name: "Medication Reconciliation" }, { name: "High-Alert Medication Double-Checks" }, { name: "Blood Product Administration" },
+    ]},
+    { title: "Wound & Skin Care", skills: [
+      { name: "Pressure Injury Staging and Prevention" }, { name: "Wound Dressing Changes" }, { name: "Negative Pressure Wound Therapy (Wound Vac) Management" }, { name: "Ostomy Care" }, { name: "Surgical Incision Site Assessment" }, { name: "Skin Tear Management" },
+    ]},
+    { title: "Tubes, Drains & Devices", skills: [
+      { name: "Foley Catheter Care and Removal" }, { name: "NG Tube Care and Feeding" }, { name: "Chest Tube Monitoring" }, { name: "JP Drain Management" }, { name: "PICC/Central Line Care" }, { name: "Peripheral IV Insertion and Maintenance" }, { name: "Oxygen Therapy (Nasal Cannula, Non-Rebreather)" },
+    ]},
+    { title: "Patient Safety & Mobility", skills: [
+      { name: "Fall Prevention Interventions" }, { name: "Safe Patient Handling and Transfers" }, { name: "Ambulation Assistance" }, { name: "Restraint Use and Monitoring" }, { name: "Bed/Chair Alarm Use" }, { name: "Isolation Precautions (Contact, Droplet, Airborne)" },
+    ]},
+    { title: "Discharge Planning & Education", skills: [
+      { name: "Discharge Instruction Education" }, { name: "Medication Teaching" }, { name: "Care Coordination with Case Management/Social Work" }, { name: "Home Health/DME Referral Coordination" }, { name: "Follow-Up Appointment Scheduling" }, { name: "Readmission Risk Screening" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
+    ]},
+  ]},
+
+  { slug: "mds-coordinator", title: "MDS Coordinator Skills Checklist", shortTitle: "MDS Coordinator", icon: "🗒️", group: "Administration & Leadership", categories: [
+    { title: "Regulatory & Compliance", skills: [
+      { name: "RAI (Resident Assessment Instrument) Manual Application" }, { name: "CMS Regulatory Assessment Timelines" }, { name: "OBRA Requirements" }, { name: "PDPM (Patient-Driven Payment Model) Guidelines" }, { name: "State Survey Regulations" }, { name: "HIPAA Compliance in Documentation" },
+    ]},
+    { title: "MDS Assessment Process", skills: [
+      { name: "Scheduling and Tracking Assessment Due Dates" }, { name: "Comprehensive Assessment (Admission/Annual)" }, { name: "Quarterly Assessment Completion" }, { name: "Significant Change in Status Assessment (SCSA)" }, { name: "PPS/Medicare Assessment Scheduling" }, { name: "Coding Accuracy Across MDS Sections" }, { name: "ARD (Assessment Reference Date) Setting" },
+    ]},
+    { title: "Care Area Assessments (CAAs) & Care Planning", skills: [
+      { name: "Triggering and Completing CAAs" }, { name: "Individualized Care Plan Development" }, { name: "Care Plan Conferences" }, { name: "Resident/Family Involvement in Care Planning" }, { name: "Care Plan Revisions Based on Status Change" },
+    ]},
+    { title: "Case Mix & Reimbursement", skills: [
+      { name: "PDPM Component Classification (Nursing, PT/OT, SLP, NTA)" }, { name: "Case Mix Index Calculation" }, { name: "Medicare Part A Certification/Recertification" }, { name: "Managed Care Assessment Coordination" }, { name: "Reimbursement Optimization Through Accurate Coding" },
+    ]},
+    { title: "Interdisciplinary Coordination", skills: [
+      { name: "Collaboration with Nursing Staff for Accurate Coding" }, { name: "Therapy Department Coordination (PT/OT/SLP)" }, { name: "Dietary and Social Services Input Gathering" }, { name: "Physician Certification Coordination" }, { name: "IDT (Interdisciplinary Team) Meeting Facilitation" },
+    ]},
+    { title: "Quality Measures & Survey Readiness", skills: [
+      { name: "Quality Measure (QM) Monitoring" }, { name: "Survey Preparation and Mock Surveys" }, { name: "Root Cause Analysis for QM Outliers" }, { name: "Five-Star Rating Impact Awareness" }, { name: "Incident/Accident Reporting Review" },
+    ]},
+    { title: "Documentation & Systems", skills: [
+      { name: "MDS Software Proficiency (e.g., PointClickCare, MatrixCare)" }, { name: "Electronic Health Record Documentation Review" }, { name: "Medical Record Audits" }, { name: "Data Validation and Error Correction" }, { name: "Transmission of MDS to CMS (via QIES/iQIES)" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
+    ]},
+  ]},
+
+  { slug: "infusion-rn", title: "Infusion Registered Nurse Skills Checklist", shortTitle: "Infusion RN", icon: "💉", group: "Specialty Care", categories: [
+    { title: "Vascular Access & Line Management", skills: [
+      { name: "Peripheral IV Insertion" }, { name: "Central Line Access (Port-a-Cath, PICC, Hickman)" }, { name: "Port Access and De-Access" }, { name: "Line Patency Assessment" }, { name: "Site Care and Dressing Changes" }, { name: "Difficult Access Management/Ultrasound-Guided IV" },
+    ]},
+    { title: "Medication & Infusion Administration", skills: [
+      { name: "IV Push Medications" }, { name: "IV Piggyback/Continuous Infusions" }, { name: "Pump Programming and Troubleshooting" }, { name: "Hydration Therapy Administration" }, { name: "IVIG (Intravenous Immunoglobulin) Administration" }, { name: "Antibiotic Infusion Therapy" }, { name: "Blood Product Transfusion" },
+    ]},
+    { title: "Chemotherapy & Biologic Therapy", skills: [
+      { name: "Chemotherapy Administration (Per ONS/ASCO Standards)" }, { name: "Biologic/Targeted Therapy Administration" }, { name: "Immunotherapy Administration" }, { name: "Chemotherapy Order Verification (Independent Double-Check)" }, { name: "Extravasation Recognition and Management" }, { name: "Vesicant/Irritant Drug Handling" }, { name: "Hazardous Drug Handling and PPE" },
+    ]},
+    { title: "Patient Monitoring & Reaction Management", skills: [
+      { name: "Pre-Infusion Assessment and Vital Signs" }, { name: "Infusion Reaction Recognition and Management" }, { name: "Anaphylaxis Response" }, { name: "Premedication Administration" }, { name: "Post-Infusion Monitoring" }, { name: "Adverse Event Documentation and Reporting" },
+    ]},
+    { title: "Patient Education & Psychosocial Support", skills: [
+      { name: "Treatment Plan Education" }, { name: "Side Effect Management Education" }, { name: "Home Care Instructions" }, { name: "Emotional Support and Coping Resources" }, { name: "Coordination with Social Work/Financial Navigators" },
+    ]},
+    { title: "Infection Control & Safety", skills: [
+      { name: "Hand Hygiene and Aseptic Technique" }, { name: "Chemotherapy Spill Management" }, { name: "Sharps Safety and Disposal" }, { name: "Personal Protective Equipment Use" }, { name: "Hazardous Waste Disposal Protocols" },
+    ]},
+    { title: "Documentation & Care Coordination", skills: [
+      { name: "Infusion Documentation and Flow Sheets" }, { name: "Physician Order Verification" }, { name: "Scheduling and Treatment Plan Coordination" }, { name: "Insurance Authorization Coordination" }, { name: "Communication with Referring Providers" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
+    ]},
+  ]},
+
+  { slug: "dietary-aide", title: "Dietary Aide Skills Checklist", shortTitle: "Dietary Aide", icon: "🍽️", group: "Allied Health", categories: [
+    { title: "Food Preparation & Service", skills: [
+      { name: "Basic Food Preparation Techniques" }, { name: "Portion Control" }, { name: "Menu Reading and Interpretation" }, { name: "Food Presentation Standards" }, { name: "Beverage Preparation" }, { name: "Special Occasion/Holiday Meal Service" },
+    ]},
+    { title: "Therapeutic Diets & Nutrition", skills: [
+      { name: "Understanding Therapeutic Diet Orders (e.g., Renal, Cardiac, Diabetic)" }, { name: "Texture-Modified Diets (Pureed, Mechanical Soft, IDDSI Levels)" }, { name: "Thickened Liquid Preparation" }, { name: "Food Allergy and Intolerance Awareness" }, { name: "Calorie Count and Intake Tracking" }, { name: "Nothing By Mouth (NPO) Protocol Awareness" },
+    ]},
+    { title: "Food Safety & Sanitation", skills: [
+      { name: "Proper Handwashing and Glove Use" }, { name: "Safe Food Handling Temperatures" }, { name: "Cross-Contamination Prevention" }, { name: "Dishwashing and Sanitation Procedures" }, { name: "HACCP Principles" }, { name: "Date Labeling and Food Rotation (FIFO)" },
+    ]},
+    { title: "Tray Assembly & Delivery", skills: [
+      { name: "Accurate Tray Assembly per Diet Order" }, { name: "Tray Ticket Verification" }, { name: "Timely Meal Delivery" }, { name: "Tray Pickup and Cleanup" }, { name: "Special Request Accommodation" },
+    ]},
+    { title: "Resident/Patient Interaction", skills: [
+      { name: "Courteous and Respectful Service" }, { name: "Assisting with Meal Setup" }, { name: "Reporting Changes in Appetite or Intake" }, { name: "Recognizing Signs of Dysphagia/Choking Risk" }, { name: "Communicating with Nursing Staff on Dietary Concerns" },
+    ]},
+    { title: "Equipment & Inventory", skills: [
+      { name: "Safe Operation of Kitchen Equipment" }, { name: "Inventory Stocking and Rotation" }, { name: "Receiving and Storing Deliveries" }, { name: "Equipment Cleaning and Maintenance" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
+    ]},
+  ]},
+
+  { slug: "adon", title: "Assistant Director of Nursing (ADON) Skills Checklist", shortTitle: "ADON", icon: "🎖️", group: "Nursing", categories: [
+    { title: "Leadership & Supervision", skills: [
+      { name: "Support Director of Nursing in Daily Operations" }, { name: "Supervise Nursing Staff Performance" }, { name: "Conduct Staff Performance Evaluations" }, { name: "Delegate Nursing Assignments Appropriately" }, { name: "Provide Coverage in DON's Absence" }, { name: "Conflict Resolution Among Staff" },
+    ]},
+    { title: "Clinical Oversight", skills: [
+      { name: "Review and Approve Care Plans" }, { name: "Oversee Medication Administration Practices" }, { name: "Monitor High-Risk Resident/Patient Care" }, { name: "Rounding on Units for Clinical Oversight" }, { name: "Respond to Clinical Emergencies and Escalations" }, { name: "Oversee Wound Care and Skin Integrity Programs" },
+    ]},
+    { title: "Regulatory & Compliance", skills: [
+      { name: "Ensure Compliance with State and Federal Regulations" }, { name: "Support Survey Readiness and Response" }, { name: "Oversee Incident/Accident Reporting" }, { name: "Monitor Infection Control Practices" }, { name: "HIPAA and Patient Rights Compliance" }, { name: "Policy and Procedure Implementation" },
+    ]},
+    { title: "Staffing & Scheduling", skills: [
+      { name: "Develop and Adjust Staffing Schedules" }, { name: "Manage Call-Offs and Coverage Gaps" }, { name: "Monitor Staffing Ratios for Regulatory Compliance" }, { name: "Coordinate with Staffing Agencies as Needed" }, { name: "Overtime and Labor Cost Monitoring" },
+    ]},
+    { title: "Quality Improvement & Risk Management", skills: [
+      { name: "Participate in Quality Assurance/Performance Improvement (QAPI)" }, { name: "Monitor Quality Measures and Outcomes" }, { name: "Root Cause Analysis of Adverse Events" }, { name: "Fall and Pressure Injury Prevention Program Oversight" }, { name: "Grievance Investigation and Resolution" },
+    ]},
+    { title: "Staff Development & Education", skills: [
+      { name: "New Hire Orientation and Onboarding" }, { name: "Ongoing Staff In-Service Education" }, { name: "Competency Validation and Skills Checks" }, { name: "Mentorship and Professional Development Support" }, { name: "Annual Mandatory Training Compliance" },
+    ]},
+    { title: "Interdisciplinary Collaboration", skills: [
+      { name: "Collaborate with Physicians and Medical Director" }, { name: "Coordinate with Therapy, Dietary, and Social Services" }, { name: "Family and Resident/Patient Communication" }, { name: "Liaise with Administration on Operational Issues" },
+    ]},
+    { title: "Age Specific Competencies", skills: [
+      { name: "Infant (Birth to 1 Year)" }, { name: "Toddler (1-3 Years)" }, { name: "Pre-School (3-6 Years)" }, { name: "School Age (6-12 Years)" }, { name: "Adolescent (12-18 Years)" }, { name: "Young Adult (18-30 Years)" }, { name: "Mature Adult (30-60 Years)" }, { name: "Elderly (>60 Years)" },
+    ]},
+  ]},
 ];
