@@ -82,10 +82,10 @@ for (const c of checklists) {
   const html = pageFor({
     title: `${c.title} | Healthcare Skills Checklist`,
     description: `Free self-assessment checklist for ${c.shortTitle}. Rate your skills, download a PDF, and use it wherever you apply.`,
-    url: `${siteUrl}/checklist/${c.slug}`,
+    url: `${siteUrl}/checklist/${c.slug}/`,
   });
   await writeFile(path.join(dir, "index.html"), html);
-  urls.push({ loc: `${siteUrl}/checklist/${c.slug}`, priority: "0.8" });
+  urls.push({ loc: `${siteUrl}/checklist/${c.slug}/`, priority: "0.8" });
 }
 
 for (const [route, title, description] of [
@@ -94,8 +94,8 @@ for (const [route, title, description] of [
 ]) {
   const dir = path.join(distDir, route);
   await mkdir(dir, { recursive: true });
-  await writeFile(path.join(dir, "index.html"), pageFor({ title, description, url: `${siteUrl}/${route}` }));
-  urls.push({ loc: `${siteUrl}/${route}`, priority: "0.3" });
+  await writeFile(path.join(dir, "index.html"), pageFor({ title, description, url: `${siteUrl}/${route}/` }));
+  urls.push({ loc: `${siteUrl}/${route}/`, priority: "0.3" });
 }
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
