@@ -110,7 +110,7 @@ export default function Index() {
                     return (
                       <Link
                         key={item.slug}
-                        to={`/checklist/${item.slug}`}
+                        to={`/checklist/${item.slug}/`}
                         className="group flex items-center gap-3 bg-card border rounded-lg px-4 py-3 hover:shadow-md hover:border-emerald-400/60 transition-all duration-200"
                       >
                         <span className="text-xl flex-shrink-0">{item.icon}</span>
