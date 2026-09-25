@@ -199,10 +199,13 @@ function buildPdf(payload: Payload): Uint8Array {
 
   // Brand line is the dominant visual element on the page — bigger, bolder,
   // and in brand blue — since this PDF is the primary thing candidates keep
-  // and share, and it should read as ours at a glance.
+  // and share, and it should read as ours at a glance. Color (38, 152, 223)
+  // is the exact RGB of the website's --primary CSS variable (HSL 203 74%
+  // 51%), so the wordmark reads as the identical blue on the homepage,
+  // every checklist page, and this PDF.
   doc.setFontSize(20);
   doc.setFont("Poppins", "bold");
-  doc.setTextColor(30, 60, 90);
+  doc.setTextColor(38, 152, 223);
   doc.text("HealthcareSkillsChecklist.com", margin, y);
   y += 6;
   doc.setFontSize(9.5);

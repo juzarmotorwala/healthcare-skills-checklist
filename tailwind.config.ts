@@ -17,6 +17,12 @@ export default {
         sans: ["DM Sans", "sans-serif"],
         serif: ["DM Serif Display", "serif"],
         tagline: ["Montserrat", "sans-serif"],
+        // Matches the brand wordmark embedded in every generated PDF
+        // (Poppins Bold), used for the "HealthcareSkillsChecklist.com"
+        // brand mark on the homepage hero and checklist page header so the
+        // name reads identically wherever a candidate or hiring manager
+        // sees it.
+        brand: ["Poppins", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -141,20 +141,30 @@ export default function ChecklistPage() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <header className="border-b bg-card/80 backdrop-blur-sm sticky top-0 z-10">
-        <div className="max-w-4xl mx-auto px-4 py-3 flex items-center gap-3">
-          <ClipboardCheck className="h-6 w-6 text-primary flex-shrink-0" />
-          <Link
-            to="/"
-            className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            <span className="hidden sm:inline">All Checklists</span>
-          </Link>
-          <div className="h-4 w-px bg-border" />
-          <span className="text-lg">{checklist.icon}</span>
-          <h1 className="font-serif text-lg text-foreground truncate">
-            {checklist.shortTitle}
-          </h1>
+        <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+          <div className="flex items-center gap-3 min-w-0">
+            <ClipboardCheck className="h-6 w-6 text-primary flex-shrink-0" />
+            <Link
+              to="/"
+              className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors flex-shrink-0"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              <span className="hidden sm:inline">All Checklists</span>
+            </Link>
+            <div className="h-4 w-px bg-border flex-shrink-0" />
+            <span className="text-lg flex-shrink-0">{checklist.icon}</span>
+            <h1 className="font-serif text-lg text-foreground truncate">
+              {checklist.shortTitle}
+            </h1>
+          </div>
+          {/* Brand wordmark, top right — same font (Poppins bold) and color
+              (text-primary) as the homepage hero, so the brand reads
+              identically wherever a candidate lands. Scales down on
+              narrow screens instead of hiding, so it's still visible on
+              phones alongside the checklist title. */}
+          <span className="font-brand font-bold text-primary text-xs sm:text-base flex-shrink-0 whitespace-nowrap">
+            HealthcareSkillsChecklist.com
+          </span>
         </div>
       </header>
 

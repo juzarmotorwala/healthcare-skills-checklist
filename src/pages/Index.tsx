@@ -33,14 +33,20 @@ export default function Index() {
       <header className="relative overflow-hidden border-b">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
         <div className="relative max-w-6xl mx-auto px-4 pt-6 pb-6 sm:pt-8 sm:pb-8 text-center">
-          <h1 className="text-3xl sm:text-5xl font-serif font-semibold text-primary tracking-normal mb-4">
-            Healthcare Skills Checklist
+          {/* Brand wordmark: font (Poppins bold) and copy ("HealthcareSkillsChecklist.com")
+              intentionally match the header of every generated PDF, so the
+              name reads identically whether someone lands here first or
+              sees the PDF first. Color is unchanged (still text-primary) —
+              only the generated PDF's brand-name color was updated to match
+              this, not the other way around. */}
+          <h1 className="text-3xl sm:text-5xl font-brand font-bold text-primary tracking-normal mb-4">
+            HealthcareSkillsChecklist.com
           </h1>
           <p className="font-tagline italic font-semibold text-lg sm:text-2xl text-emerald-700 mb-3">
             Helping Healthcare Professionals Self-Assess Their Skills
           </p>
           <p className="text-muted-foreground max-w-lg mx-auto mb-6 text-sm sm:text-base leading-relaxed">
-            Rate your experience across {displayedTotal}+ Clinical Specialties and download a clean PDF for free.
+            Rate your experience across {displayedTotal}+ Clinical Specialties & download your Healthcare Skills Checklist in PDF format for free.
           </p>
 
           {/* Search */}
